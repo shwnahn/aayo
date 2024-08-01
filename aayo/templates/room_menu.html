@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>{{ room.name }} / 메뉴: {{ room.cafe }}</h2>
+    <p>안녕하세요, {{ guest_name }}님!</p>
+
+    <form id="menuForm" method="post" action="{% url 'confirm_menu' room.unique_id %}">
+        {% csrf_token %}
+        <div class="menu-grid">
+        {% for menu in menus %}
+            <div class="menu-item">
+                <p class="menu-name">{{ menu.name }}</p>
+                <input type="checkbox" name="selected_menus" value="{{ menu.name }}" class="menu-checkbox">
+            </div>
+        {% empty %}
+            <p>메뉴를 불러오지 못했습니다.</p>
+        {% endfor %}
+        </div>
+        <button type="submit" id="confirmButton" disabled>메뉴 확정하기</button>
+    </form>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('menuForm');
+    const checkboxes = form.querySelectorAll('.menu-checkbox');
+    const confirmButton = document.getElementById('confirmButton');
+
+    function updateButtonState() {
+        confirmButton.disabled = ![...checkboxes].some(cb => cb.checked);
+    }
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateButtonState);
+    });
+
+    form.addEventListener('submit', function(e) {
+        const selectedMenus = [...checkboxes]
+            .filter(cb => cb.checked)
+            .map(cb => cb.value);
+        
+        if (selectedMenus.length === 0) {
+            e.preventDefault();
+            alert('최소 하나의 메뉴를 선택해주세요.');
+        }
+    });
+
+    updateButtonState();
+});
+</script>
+{% endblock %}
