@@ -13,7 +13,6 @@ def generate_unique_id():
 def main(request):
     if request.method == 'POST':
         name = request.POST.get('name')
-        creator = request.POST.get('creator')
         password = request.POST.get('password')
         cafe = request.POST.get('cafe')
         
@@ -23,7 +22,6 @@ def main(request):
         
         new_room = Room.objects.create(
             name=name,
-            creator=creator,
             password=password,
             cafe=cafe,
             unique_id=unique_id
