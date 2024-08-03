@@ -13,7 +13,6 @@ def generate_unique_id():
 def main(request):
     if request.method == 'POST':
         name = request.POST.get('name')
-        creator = request.POST.get('creator')
         password = request.POST.get('password')
         cafe = request.POST.get('cafe')
         
@@ -23,7 +22,6 @@ def main(request):
         
         new_room = Room.objects.create(
             name=name,
-            creator=creator,
             password=password,
             cafe=cafe,
             unique_id=unique_id
@@ -32,10 +30,16 @@ def main(request):
     return render(request, 'main.html')
 
 def room_detail(request, unique_id):
-    room = get_object_or_404(Room, unique_id=unique_id)
+    try:
+        room = Room.objects.get(unique_id=unique_id)
+    except Room.DoesNotExist:
+        return HttpResponse("방을 찾을 수 없습니다.", status=404)
+
     context = {
         'room': room,
+        'share_link': request.build_absolute_uri(),
     }
+
     return render(request, 'room_detail.html', context)
 
 from django.contrib import messages
@@ -137,10 +141,3 @@ def room_orders(request, unique_id):
         'total': total,
     }
     return render(request, 'room_orders.html', context)
-
-# 임시로 메뉴 정보를 저장 (실제로는 데이터베이스에서 가져와야 함)
-MENUS = [
-    {'id': 1, 'name': '아메리카노', 'price': 4500, 'description': '깔끔한 에스프레소와 물의 조화'},
-    {'id': 2, 'name': '카페라떼', 'price': 5000, 'description': '부드러운 우유와 에스프레소의 만남'},
-    {'id': 3, 'name': '카푸치노', 'price': 5000, 'description': '우유 거품이 풍성한 커피'},
-]
