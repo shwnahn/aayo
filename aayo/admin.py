@@ -20,3 +20,5 @@ class RoomAdmin(admin.ModelAdmin):
     )
 
 admin.site.register(GuestOrder)
+admin.site.register(Cafe)
+admin.site.register(MenuItem)
