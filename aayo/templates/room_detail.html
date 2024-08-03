@@ -7,29 +7,41 @@
     <p>카페: {{ room.cafe }}</p>
     <p>생성자: {{ room.creator }}</p>
     <p>생성 시간: {{ room.created_at }}</p>
-    <p>방 링크: <a href="{% url 'room_view' room.unique_id %}" id="roomLink">{{ request.build_absolute_uri }}{% url 'room_view' room.unique_id %}</a></p>
-    <button onclick="copyLink()">링크 공유하기</button>
-    
-    <!-- 여기에 order_total 화면으로 이동하는 버튼을 추가합니다 -->
-    <a href="{% url 'order_total' room.unique_id %}" class="btn btn-primary"><button>주문 총계 보기</button></a>
-</div>
+    <p>방 링크: <span id="room-link">{{ share_link }}</span></p>
 
+<button id="share-link">링크 공유</button>
+<a href="{% url 'room_orders' unique_id=room.unique_id %}" class="button">주문 총계</a>
+<a href="{% url 'room_menu' unique_id=room.unique_id %}" class="button">방 입장</a>
+
+<div id="message" style="display: none;"></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-function copyLink() {
-    // 임시 텍스트 영역 생성
-    var tempTextArea = document.createElement("textarea");
-    tempTextArea.value = document.getElementById("roomLink").href;
-    document.body.appendChild(tempTextArea);
-
-    // 텍스트 선택 및 복사
-    tempTextArea.select();
-    document.execCommand("copy");
-
-    // 임시 텍스트 영역 제거
-    document.body.removeChild(tempTextArea);
-
-    // 알림 메시지 표시
-    alert("방 링크가 클립보드에 복사되었습니다!");
-}
+$(document).ready(function() {
+    $('#share-link').click(function() {
+        $.ajax({
+            url: "{% url 'share_link' unique_id=room.unique_id %}",
+            type: "POST",
+            data: {
+                csrfmiddlewaretoken: '{{ csrf_token }}'
+            },
+            success: function(response) {
+                if (response.status === 'success') {
+                    navigator.clipboard.writeText(response.link).then(function() {
+                        $('#message').text('링크가 클립보드에 복사되었습니다.').show().fadeOut(3000);
+                    }, function(err) {
+                        $('#message').text('링크 복사에 실패했습니다: ' + err).show().fadeOut(3000);
+                    });
+                }
+            },
+            error: function(xhr, status, error) {
+                $('#message').text('오류가 발생했습니다.').show().fadeOut(3000);
+            }
+        });
+    });
+});
 </script>
 {% endblock %}
