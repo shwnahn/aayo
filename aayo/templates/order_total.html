@@ -1,8 +1,0 @@
-<h1>{{ room_name }} 방의 총 주문</h1>
-<h2>총 주문 수: {{ total_orders }}</h2>
-<h3>메뉴별 주문 횟수:</h3>
-<ul>
-{% for menu, count in menu_counts.items %}
-    <li>{{ menu }}: {{ count }}개</li>
-{% endfor %}
-</ul>
