@@ -4,7 +4,6 @@ from django.db import models
 # 방 정보를 저장하는 모델
 class Room(models.Model):
     name = models.CharField(max_length=100)
-    creator = models.CharField(max_length=50)
     password = models.CharField(max_length=50, blank=True, null=True)
     cafe = models.CharField(max_length=20)
     unique_id = models.CharField(max_length=8, unique=True)
@@ -22,3 +21,16 @@ class GuestOrder(models.Model):
 
     def __str__(self):
         return f"{self.guest_name}'s order in {self.room.name}"
+    
+# 카페 / 메뉴
+class Cafe(models.Model):
+    name = models.CharField(max_length=255)
+    def __str__(self):
+        return self.name
+
+class MenuItem(models.Model):
+    cafe = models.ForeignKey(Cafe, on_delete=models.CASCADE, related_name='menu_items')
+    name = models.CharField(max_length=255)
+    image_url = models.URLField(blank=True, null=True)  # 이미지 URL 필드 추가
+    def __str__(self):
+        return f"{self.name} ({self.cafe.name})"

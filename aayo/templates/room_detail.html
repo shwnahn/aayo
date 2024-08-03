@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
 <div class="container">
@@ -13,6 +13,14 @@
     <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-primary"><button>주문 총계 보기</button></a>
 </div>
 
+<button id="share-link">링크 공유</button>
+<a href="{% url 'room_menu' unique_id=room.unique_id %}" class="button">방 입장</a>
+<a href="{% url 'room_orders' unique_id=room.unique_id %}" class="button">주문 총계</a>
+
+<div id="message" style="display: none;"></div>
+{% endblock %}
+
+{% block scripts %}
 <script>
 function copyLink() {
     var tempTextArea = document.createElement("textarea");
