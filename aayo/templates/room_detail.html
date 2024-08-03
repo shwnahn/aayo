@@ -1,45 +1,40 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
-    <h2>방이 성공적으로 생성되었습니다!</h2>
-    <p>방 이름: {{ room.name }}</p>
-    <p>카페: {{ room.cafe }}</p>
-    <p>생성자: {{ room.creator }}</p>
-    <p>생성 시간: {{ room.created_at }}</p>
-    <p>방 링크: <span id="room-link">{{ share_link }}</span></p>
+<h2>방이 성공적으로 생성되었습니다!</h2>
+<p>방 이름: {{ room.name }}</p>
+<p>카페: {{ room.cafe }}</p>
+<p>생성자: {{ room.creator }}</p>
+<p>생성 시간: {{ created_at }}</p>
+<p>방 링크: <span id="room-link">{{ share_link }}</span></p>
 
 <button id="share-link">링크 공유</button>
-<a href="{% url 'room_orders' unique_id=room.unique_id %}" class="button">주문 총계</a>
 <a href="{% url 'room_menu' unique_id=room.unique_id %}" class="button">방 입장</a>
+<a href="{% url 'room_orders' unique_id=room.unique_id %}" class="button">주문 총계</a>
 
 <div id="message" style="display: none;"></div>
-
 {% endblock %}
 
 {% block scripts %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function() {
-    $('#share-link').click(function() {
-        $.ajax({
-            url: "{% url 'share_link' unique_id=room.unique_id %}",
-            type: "POST",
-            data: {
-                csrfmiddlewaretoken: '{{ csrf_token }}'
-            },
-            success: function(response) {
-                if (response.status === 'success') {
-                    navigator.clipboard.writeText(response.link).then(function() {
-                        $('#message').text('링크가 클립보드에 복사되었습니다.').show().fadeOut(3000);
-                    }, function(err) {
-                        $('#message').text('링크 복사에 실패했습니다: ' + err).show().fadeOut(3000);
-                    });
-                }
-            },
-            error: function(xhr, status, error) {
-                $('#message').text('오류가 발생했습니다.').show().fadeOut(3000);
-            }
+document.addEventListener('DOMContentLoaded', function() {
+    const shareButton = document.getElementById('share-link');
+    const messageDiv = document.getElementById('message');
+
+    shareButton.addEventListener('click', function() {
+        const link = document.getElementById('room-link').textContent;
+        navigator.clipboard.writeText(link).then(function() {
+            messageDiv.textContent = '링크가 클립보드에 복사되었습니다.';
+            messageDiv.style.display = 'block';
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 3000);
+        }, function(err) {
+            messageDiv.textContent = '링크 복사에 실패했습니다: ' + err;
+            messageDiv.style.display = 'block';
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 3000);
         });
     });
 });
