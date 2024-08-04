@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block title %}주문 현황 - {{ room.name }}{% endblock %}
+
 {% block content %}
 <div class="container">
     <h2>{{ room.name }} - 주문 현황</h2>
@@ -13,64 +15,95 @@
                     <thead>
                         <tr>
                             <th>메뉴</th>
-                            <th>크기</th>
-                            <th>당도</th>
-                            <th>얼음</th>
-                            <th>가격</th>
+                            <th>옵션</th>
+                            <th>기타 세부사항</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for menu in order.menus %}
                             <tr>
                                 <td>{{ menu.name }}</td>
-                                <td>{{ menu.size }}</td>
-                                <td>{{ menu.sugar }}%</td>
-                                <td>{% if menu.ice %}있음{% else %}없음{% endif %}</td>
-                                <td>{{ menu.price }}원</td>
+                                <td>
+                                    {% if menu.options.temperature %}온도: {{ menu.options.temperature }}<br>{% endif %}
+                                    {% if menu.options.size %}크기: {{ menu.options.size }}<br>{% endif %}
+                                    {% if menu.options.ice %}얼음: {{ menu.options.ice }}{% endif %}
+                                </td>
+                                <td>{{ menu.options.instructions }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="4" class="text-right"><strong>합계:</strong></td>
-                            <td><strong>{{ order.total }}원</strong></td>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
         {% endfor %}
-
-        <div class="total-order mt-4">
-            <h3>전체 주문 합계: {{ total }}원</h3>
-        </div>
     {% else %}
         <p>아직 주문이 없습니다.</p>
     {% endif %}
 
-    <form id="resetOrderForm" method="POST" action="{% url 'room_menu' room.unique_id %}">
-        {% csrf_token %}
-        <input type="hidden" name="action" value="reset_order">
-        <button type="submit" class="btn btn-primary mt-3">메뉴 페이지로 돌아가기 (주문 초기화)</button>
-    </form>
-    
+    <button id="resetOrderBtn" class="btn btn-primary mt-3">메뉴 페이지로 돌아가기</button>
 </div>
+
+<script>
+document.getElementById('resetOrderBtn').addEventListener('click', function() {
+    fetch('', {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': '{{ csrf_token }}',
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            window.location.href = "{% url 'room_menu' room.unique_id %}";
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('오류가 발생했습니다.');
+    });
+});
+</script>
 {% endblock %}
 
 {% block extra_css %}
 <style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
     .order-card {
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 20px;
+        margin-bottom: 20px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .table {
+        width: 100%;
+        border-collapse: collapse;
         margin-bottom: 0;
     }
-    .total-order {
-        background-color: #f8f9fa;
-        padding: 15px;
-        border-radius: 8px;
+    .table th, .table td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
     }
 </style>
 {% endblock %}
