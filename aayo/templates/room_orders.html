@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>{{ room.name }} - 주문 현황</h2>
+    <h3>카페: {{ room.cafe }}</h3>
+
+    {% if orders_details %}
+        {% for order in orders_details %}
+            <div class="order-card mb-4">
+                <h4>주문자: {{ order.guest_name }}</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>메뉴</th>
+                            <th>크기</th>
+                            <th>당도</th>
+                            <th>얼음</th>
+                            <th>가격</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for menu in order.menus %}
+                            <tr>
+                                <td>{{ menu.name }}</td>
+                                <td>{{ menu.size }}</td>
+                                <td>{{ menu.sugar }}%</td>
+                                <td>{% if menu.ice %}있음{% else %}없음{% endif %}</td>
+                                <td>{{ menu.price }}원</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="text-right"><strong>합계:</strong></td>
+                            <td><strong>{{ order.total }}원</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        {% endfor %}
+
+        <div class="total-order mt-4">
+            <h3>전체 주문 합계: {{ total }}원</h3>
+        </div>
+    {% else %}
+        <p>아직 주문이 없습니다.</p>
+    {% endif %}
+
+    <form id="resetOrderForm" method="POST" action="{% url 'room_menu' room.unique_id %}">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="reset_order">
+        <button type="submit" class="btn btn-primary mt-3">메뉴 페이지로 돌아가기 (주문 초기화)</button>
+    </form>
+    
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .order-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .table {
+        margin-bottom: 0;
+    }
+    .total-order {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+    }
+</style>
+{% endblock %}
