@@ -1,45 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>방이 성공적으로 생성되었습니다!</h2>
-<p>방 이름: {{ room.name }}</p>
-<p>카페: {{ room.cafe }}</p>
-<p>생성자: {{ room.creator }}</p>
-<p>생성 시간: {{ created_at }}</p>
-<p>방 링크: <span id="room-link">{{ share_link }}</span></p>
-
-<button id="share-link">링크 공유</button>
-<a href="{% url 'room_menu' unique_id=room.unique_id %}" class="button">방 입장</a>
-<a href="{% url 'room_orders' unique_id=room.unique_id %}" class="button">주문 총계</a>
+<div class="container">
+    <h2>방이 성공적으로 생성되었습니다!</h2>
+    <p>방 이름: {{ room.name }}</p>
+    <p>카페: {{ room.cafe }}</p>
+    <p>방 링크: <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ request.build_absolute_uri }}{% url 'room_menu' room.unique_id %}</a></p>
+    <button type="button" id="copyLinkBtn">링크 공유하기</button>
+    
+    <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-primary">주문 총계 보기</a>
+    <a href="{% url 'room_menu' unique_id=room.unique_id %}" class="btn btn-secondary">방 입장</a>
+</div>
 
 <div id="message" style="display: none;"></div>
 {% endblock %}
-<<<<<<< Updated upstream
-
-{% block scripts %}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const shareButton = document.getElementById('share-link');
-    const messageDiv = document.getElementById('message');
-
-    shareButton.addEventListener('click', function() {
-        const link = document.getElementById('room-link').textContent;
-        navigator.clipboard.writeText(link).then(function() {
-            messageDiv.textContent = '링크가 클립보드에 복사되었습니다.';
-            messageDiv.style.display = 'block';
-            setTimeout(() => {
-                messageDiv.style.display = 'none';
-            }, 3000);
-        }, function(err) {
-            messageDiv.textContent = '링크 복사에 실패했습니다: ' + err;
-            messageDiv.style.display = 'block';
-            setTimeout(() => {
-                messageDiv.style.display = 'none';
-            }, 3000);
-        });
-    });
-});
-</script>
-{% endblock %}
-=======
->>>>>>> Stashed changes

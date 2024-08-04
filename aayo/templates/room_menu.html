@@ -2,58 +2,59 @@
 
 {% block content %}
 <div class="container">
-    <h2>{{ room.name }} / 메뉴: {{ room.cafe }}</h2>
+    <h2>{{ room.name }} / 선택된 카페: {{ room.cafe }}</h2>
+
+    {% if not guest_name %}
+    <form id="guestNameForm">
+        {% csrf_token %}
+        <input type="text" name="guest_name" required placeholder="이름을 입력하세요">
+        <button type="submit">입장</button>
+    </form>
+    {% else %}
     <p>안녕하세요, {{ guest_name }}님!</p>
 
-    <form id="menuForm" method="post" action="{% url 'confirm_menu' room.unique_id %}">
+    <form id="menuForm">
         {% csrf_token %}
-        <div class="menu-grid">
-        {% for menu in menus %}
-            <div class="menu-item">
-                <p class="menu-name">{{ menu.name }}</p>
-                <input type="checkbox" name="selected_menus" value="{{ menu.name }}" class="menu-checkbox">
-            </div>
-        {% empty %}
-            <p>메뉴를 불러오지 못했습니다.</p>
-        {% endfor %}
-        </div>
-<<<<<<< Updated upstream
-        <button type="submit" id="confirmButton" disabled>메뉴 확정하기</button>
+        <button type="submit" id="confirmButton" disabled>주문 확정하기</button>
     </form>
-</div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('menuForm');
-    const checkboxes = form.querySelectorAll('.menu-checkbox');
-    const confirmButton = document.getElementById('confirmButton');
+    <div id="menuListContainer" class="menu-grid">
+        {% for menu in menus %}
+        <div class="menu-item" data-menu-id="{{ menu.id }}">
+            {% if menu.image_url %}
+                <img src="{{ menu.image_url }}" alt="{{ menu.name }}" class="menu-image">
+            {% endif %}
+            <p class="menu-name">{{ menu.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
 
-    function updateButtonState() {
-        confirmButton.disabled = ![...checkboxes].some(cb => cb.checked);
-    }
-
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', updateButtonState);
-    });
-
-    form.addEventListener('submit', function(e) {
-        const selectedMenus = [...checkboxes]
-            .filter(cb => cb.checked)
-            .map(cb => cb.value);
-        
-        if (selectedMenus.length === 0) {
-            e.preventDefault();
-            alert('최소 하나의 메뉴를 선택해주세요.');
-        }
-    });
-
-    updateButtonState();
-});
-</script>
-{% endblock %}
-=======
+    <!-- Modal -->
+    <div class="modal" id="menuDetailModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="menuDetailModalLabel"></h2>
+            <img id="modalMenuImage" src="" alt="" class="menu-image">
+            <div class="btn-group">
+                <button type="button" class="btn" id="hotButton">🔥 HOT</button>
+                <button type="button" class="btn" id="iceButton">🧊 ICE</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn" id="regularButton">Regular</button>
+                <button type="button" class="btn" id="extraButton">Extra</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn" id="noSyrupButton">얼음 많이</button>
+                <button type="button" class="btn" id="lessSyrupButton">얼음 보통</button>
+                <button type="button" class="btn" id="regularSyrupButton">얼음 적게</button>
+            </div>
+            <div class="form-group">
+                <label for="additionalInstructions">기타 세부사항:</label>
+                <textarea id="additionalInstructions" rows="3"></textarea>
+            </div>
+            <button type="button" id="saveMenuItem">내 메뉴 저장하기</button>
+        </div>
     </div>
     {% endif %}
 </div>
 {% endblock %}
->>>>>>> Stashed changes
