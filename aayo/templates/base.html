@@ -5,17 +5,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>아아요!</title>
+  <title>아아요! - {% block title %}{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
-<<<<<<< Updated upstream
-  <link rel="stylesheet" href="{% static 'css/room_menu.css' %}">
-</head>
-<body>
-  <h1>☕ 아아요! ☕</h1>
-  {% block content %}
-
-  {% endblock %}
-=======
   {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -33,6 +24,5 @@
 
   <script src="{% static 'js/main.js' %}"></script>
   {% block scripts %}{% endblock %}
->>>>>>> Stashed changes
 </body>
 </html>
