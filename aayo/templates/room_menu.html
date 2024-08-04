@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>{{ room.name }} / 메뉴: {{ room.cafe }}</h2>
+
+    {% if not guest_name %}
+    <form id="guestNameForm">
+        {% csrf_token %}
+        <input type="text" name="guest_name" required placeholder="이름을 입력하세요">
+        <button type="submit">입장</button>
+    </form>
+    {% else %}
+    <p>안녕하세요, {{ guest_name }}님!</p>
+
+    <form id="menuForm">
+        {% csrf_token %}
+        <div class="menu-grid">
+        {% for menu in menus %}
+            <div class="menu-item" data-menu-id="{{ menu.id }}">
+                <p class="menu-name">{{ menu.name }}</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#menuModal{{ menu.id }}">
+                    상세 보기
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="menuModal{{ menu.id }}" tabindex="-1" role="dialog" aria-labelledby="menuModalLabel{{ menu.id }}" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="menuModalLabel{{ menu.id }}">{{ menu.name }} 상세 정보</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>가격: {{ menu.price }}원</p>
+                            <p>설명: {{ menu.description }}</p>
+                            <!-- 추가 옵션들 -->
+                            <div class="form-group">
+                                <label for="size{{ menu.id }}">크기:</label>
+                                <select class="form-control" id="size{{ menu.id }}" name="size{{ menu.id }}">
+                                    <option value="small">Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="sugar{{ menu.id }}">당도:</label>
+                                <input type="range" class="form-control-range" id="sugar{{ menu.id }}" name="sugar{{ menu.id }}" min="0" max="100">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="ice{{ menu.id }}" name="ice{{ menu.id }}">
+                                <label class="form-check-label" for="ice{{ menu.id }}">얼음 추가</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                            <button type="button" class="btn btn-primary confirm-menu" data-menu-id="{{ menu.id }}">선택 확정</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        <button type="submit" id="confirmButton" disabled>주문 확정하기</button>
+    </form>
+    {% endif %}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const guestNameForm = document.getElementById('guestNameForm');
+    const menuForm = document.getElementById('menuForm');
+    const confirmButton = document.getElementById('confirmButton');
+    const selectedMenus = new Set();
+
+    if (guestNameForm) {
+        guestNameForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(guestNameForm);
+            fetch('', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload();
+                }
+            });
+        });
+    }
+
+    if (menuForm) {
+        function updateButtonState() {
+            confirmButton.disabled = selectedMenus.size === 0;
+        }
+
+        document.querySelectorAll('.confirm-menu').forEach(button => {
+            button.addEventListener('click', function() {
+                const menuId = this.getAttribute('data-menu-id');
+                const modal = document.getElementById(`menuModal${menuId}`);
+                const menuItem = document.querySelector(`.menu-item[data-menu-id="${menuId}"]`);
+                
+                if (selectedMenus.has(menuId)) {
+                    selectedMenus.delete(menuId);
+                    menuItem.classList.remove('selected');
+                } else {
+                    selectedMenus.add(menuId);
+                    menuItem.classList.add('selected');
+                }
+
+                updateButtonState();
+                $(modal).modal('hide');
+            });
+        });
+
+        menuForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (selectedMenus.size === 0) {
+                alert('최소 하나의 메뉴를 선택해주세요.');
+                return;
+            }
+
+            const menus = Array.from(selectedMenus).map(menuId => {
+                const size = document.getElementById(`size${menuId}`).value;
+                const sugar = document.getElementById(`sugar${menuId}`).value;
+                const ice = document.getElementById(`ice${menuId}`).checked;
+                return {id: menuId, options: {size, sugar, ice}};
+            });
+
+            const formData = new FormData(menuForm);
+            formData.append('menus', JSON.stringify(menus));
+
+            fetch('', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success && data.redirect_url) {
+                    window.location.href = data.redirect_url;
+                }
+            });
+        });
+
+        updateButtonState();
+    }
+});
+</script>
+{% endblock %}

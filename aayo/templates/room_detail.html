@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>방이 성공적으로 생성되었습니다!</h2>
+    <p>방 이름: {{ room.name }}</p>
+    <p>카페: {{ room.cafe }}</p>
+    <p>생성자: {{ room.creator }}</p>
+    <p>생성 시간: {{ room.created_at }}</p>
+    <p>방 링크: <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ request.build_absolute_uri }}{% url 'room_menu' room.unique_id %}</a></p>
+    <button type="button" onclick="copyLink()">링크 공유하기</button>
+    
+    <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-primary"><button>주문 총계 보기</button></a>
+</div>
+<a href="{% url 'room_menu' unique_id=room.unique_id %}" class="button"><button>방 입장</button></a>
+
+<div id="message" style="display: none;"></div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function copyLink() {
+    var tempTextArea = document.createElement("textarea");
+    tempTextArea.value = document.getElementById("roomLink").href;
+    document.body.appendChild(tempTextArea);
+
+    tempTextArea.select();
+    document.execCommand("copy");
+
+    document.body.removeChild(tempTextArea);
+
+    alert("방 링크가 클립보드에 복사되었습니다!");
+}
+</script>
+{% endblock %}
