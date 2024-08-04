@@ -1,1 +1,48 @@
+<<<<<<< Updated upstream
 <h1>room_orders 페이지!!</h1>
+=======
+{% extends "base.html" %}
+
+{% block title %}주문 현황 - {{ room.name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>{{ room.name }} - 주문 현황</h2>
+    <h3>카페: {{ room.cafe }}</h3>
+
+    {% if orders_details %}
+        {% for order in orders_details %}
+            <div class="order-card mb-4">
+                <h4>주문자: {{ order.guest_name }}</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>메뉴</th>
+                            <th>옵션</th>
+                            <th>기타 세부사항</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for menu in order.menus %}
+                            <tr>
+                                <td>{{ menu.name }}</td>
+                                <td>
+                                    {% if menu.options.temperature %}온도: {{ menu.options.temperature }}<br>{% endif %}
+                                    {% if menu.options.size %}크기: {{ menu.options.size }}<br>{% endif %}
+                                    {% if menu.options.ice %}얼음: {{ menu.options.ice }}{% endif %}
+                                </td>
+                                <td>{{ menu.options.instructions }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>아직 주문이 없습니다.</p>
+    {% endif %}
+
+    <button id="resetOrderBtn" class="btn btn-primary mt-3">메뉴 페이지로 돌아가기</button>
+</div>
+{% endblock %}
+>>>>>>> Stashed changes
