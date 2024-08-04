@@ -116,7 +116,7 @@ def room_orders(request, unique_id):
             options = menu['options']
             # 여기서 menu_id를 사용하여 실제 메뉴 정보를 조회해야 합니다.
             # 예: menu_info = Menu.objects.get(id=menu_id)
-            menu_info = next((m for m in MENUS if m['id'] == int(menu_id)), None)
+            menu_info = next((m for m in menus if m['id'] == int(menu_id)), None)
             if menu_info:
                 price = menu_info['price']
                 # 옵션에 따른 가격 조정 로직을 여기에 추가할 수 있습니다.

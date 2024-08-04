@@ -8,14 +8,11 @@
     <p>생성자: {{ room.creator }}</p>
     <p>생성 시간: {{ room.created_at }}</p>
     <p>방 링크: <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ request.build_absolute_uri }}{% url 'room_menu' room.unique_id %}</a></p>
-    <button onclick="copyLink()">링크 공유하기</button>
+    <button type="button" onclick="copyLink()">링크 공유하기</button>
     
     <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-primary"><button>주문 총계 보기</button></a>
 </div>
-
-<button id="share-link">링크 공유</button>
-<a href="{% url 'room_menu' unique_id=room.unique_id %}" class="button">방 입장</a>
-<a href="{% url 'room_orders' unique_id=room.unique_id %}" class="button">주문 총계</a>
+<a href="{% url 'room_menu' unique_id=room.unique_id %}" class="button"><button>방 입장</button></a>
 
 <div id="message" style="display: none;"></div>
 {% endblock %}
