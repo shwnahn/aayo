@@ -1,7 +1,7 @@
 # views.py
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse
-from .models import Room, GuestOrder
+from .models import *
 from django.urls import reverse
 import json
 import random
@@ -14,20 +14,22 @@ def main(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         password = request.POST.get('password')
-        cafe = request.POST.get('cafe')
-        
+        cafe_name = request.POST.get('cafe')
+        cafe = Cafe.objects.get(name=cafe_name)
         unique_id = generate_unique_id()
         while Room.objects.filter(unique_id=unique_id).exists():
             unique_id = generate_unique_id()
-        
         new_room = Room.objects.create(
             name=name,
             password=password,
             cafe=cafe,
-            unique_id=unique_id
+            unique_id=unique_id,
         )
         return redirect('room_detail', unique_id=new_room.unique_id)
-    return render(request, 'main.html')
+    ctx = {
+        'cafes': Cafe.objects.all(),
+    }
+    return render(request, 'main.html', ctx)
 
 def room_detail(request, unique_id):
     try:
