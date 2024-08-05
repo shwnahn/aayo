@@ -31,7 +31,12 @@ def main():
         func_name = f'crawl_{cafe_name}'
         func = globals().get(func_name)
         if callable(func):
-            func()
+            print(f"## {cafe_name} 크롤링")
+            try:
+                func()
+            except Exception as e:
+                print(f"크롤링 실패: {cafe_name}, 오류: {e}")
+            print(f"## {cafe_name} 크롤링 COMPLETE")
 
 if __name__ == "__main__":
     main()
