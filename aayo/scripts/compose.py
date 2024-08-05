@@ -26,8 +26,7 @@ def crawl_compose():
         total_pages = len(page_buttons)
 
         for page in range(1, total_pages - 3): 
-            # 현재 음료가 6페이지까지만 있어서 부득이하게 하드코딩... 도넛 두 개 딸려옴;;
-            print(f"페이지 {page} 크롤링 중...")
+            # print(f"페이지 {page} 크롤링 중...")
             
             if page > 1:
                 # 현재 페이지 버튼 클릭 (첫 페이지는 클릭할 필요 없음)
@@ -42,6 +41,12 @@ def crawl_compose():
             for item in menu_items:
                 try:
                     menu_name = item.find_element(By.CSS_SELECTOR, 'h3').text
+
+                    # 도넛 메뉴 제외
+                    if "도넛" in menu_name:
+                        print(f"도넛 메뉴 제외: {menu_name}")
+                        continue
+                    
                     image_url = item.find_element(By.CSS_SELECTOR, '#rthumbnail > img').get_attribute('src')
                     
                     print(f"메뉴명: {menu_name}, 이미지 URL: {image_url}") # 크롤링 잘 되는지 테스트용
