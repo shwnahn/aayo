@@ -12,8 +12,6 @@ body, html {
     align-items: center;
 }
 
-
-
 #particles-js {
     position: absolute;
     width: 100%;
@@ -72,6 +70,18 @@ header {
     transition: transform 0.2s;
 }
 
+#resetOrderBtn {
+    background-color: #6D4C41;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s; /* 애니메이션 추가 */
+    animation: pulse 1.5s infinite; /* Add pulse animation */
+}
+
 #start-button:hover {
     background-color: #8D6E63;
 }
@@ -106,6 +116,18 @@ header {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+.order-container {
+    max-width: 700px;
+    margin: 105px auto 50px auto; /* Center the container and add margin */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow-y: auto; /* Enable vertical scrolling within the container */
+    max-height: calc(100vh - 200px); /* Ensure the container doesn't overflow the viewport */
+}
+
 .room-container {
     max-width: 700px;
     margin: 105px auto 50px auto; /* Center the container and add margin */
@@ -127,6 +149,12 @@ h2 {
     animation: fadeInDown 1s ease-in-out; /* 애니메이션 추가 */
 }
 
+h3 {
+    color: #6D4C41;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 p {
     font-size: 18px;
     color: #333;
@@ -146,6 +174,65 @@ p span::before {
     content: attr(data-emoji);
     margin-right: 8px;
     font-size: 20px;
+}
+
+.summary {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff8dc; /* 크림색 배경 추가 */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.summary-item {
+    margin-bottom: 10px;
+}
+
+.summary-item p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-y: auto; /* Enable vertical scrolling within the container */
+    max-height: calc(100vh - 200px); /* Ensure the container doesn't overflow the viewport */
+}
+
+.order-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff8dc; /* 크림색 배경 추가 */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f5f5f5;
+    color: #6D4C41;
+    font-weight: bold;
+}
+
+.table td {
+    background-color: #fff;
 }
 
 .centered-text {
@@ -242,6 +329,10 @@ a.btn-secondary:hover {
     background-color: #5A5A5A;
 }
 
+.mt-3 {
+    margin-top: 1rem;
+}
+
 #copyLinkBtn {
     background-color: #A1887F;
     color: white;
@@ -329,7 +420,7 @@ a.btn-secondary:hover {
 
 .modal-content {
     background-color: #fff;
-    margin: auto;
+    margin: 100px auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -429,7 +520,7 @@ textarea {
 #additionalInstructions {
     border: 1px solid #6D4C41; /* 갈색 테두리 */
     width: calc(100% - 20px); /* 패딩을 고려한 너비 조정 */
-    margin: 0 auto;
+    margin: 10px auto;
     display: block;
     padding: 10px;
     box-sizing: border-box; /* 패딩 포함 너비 계산 */
@@ -647,6 +738,11 @@ main {
     transform: scale(1.2);
     border-color: #6D4C41;
 }
+
+.btn-group-ice {
+    margin-bottom: 10px;
+}
+
 
 
 /* Animation for initial load */
