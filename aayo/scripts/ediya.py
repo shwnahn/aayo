@@ -5,8 +5,8 @@ from selenium.common.exceptions import TimeoutException
 from crawler import *
 import time
 
-def crawl_idiya():
-    cafe_name = 'idiya'
+def crawl_ediya():
+    cafe_name = 'ediya'
     url = "https://ediya.com/contents/drink.html#c"
     driver = setup_driver()
 
@@ -55,4 +55,4 @@ def crawl_idiya():
         driver.quit()
 
 if __name__ == "__main__":
-    crawl_idiya()
+    crawl_ediya()
