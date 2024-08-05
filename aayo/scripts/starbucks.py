@@ -32,9 +32,11 @@ def crawl_starbucks():
         
         # JSON 파일로 저장
         save_data(cafe_name, data)
+
     finally:
         # 크롤링 성공여부 상관없이 무조건 실행되어 웹드라이버를 종료
         driver.quit()
+
 
 # 이 코드 실행 시 crawl_starbucks 함수 호출
 if __name__ == "__main__":
