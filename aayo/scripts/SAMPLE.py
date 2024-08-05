@@ -7,7 +7,7 @@ def crawl_hasamdong():
     cafe_name = ''
     url = ""
 
-    # 웹드라이버 설정
+    # 웹드라이버 설정 
     driver = setup_driver()
 
     try:
