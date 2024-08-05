@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <h2>{{ room.name }} / 선택된 카페: {{ room.cafe }}</h2>
+<div class="room-container">
+    <h2 class="page-title"><span> 👋{{ room.name }} </span>님이 선택한 카페는 <span> {{ room.cafe }} </span>입니다!</h2>
 
     {% if not guest_name %}
     <form id="guestNameForm">
@@ -11,7 +11,7 @@
         <button type="submit">입장</button>
     </form>
     {% else %}
-    <p>안녕하세요, {{ guest_name }}님!</p>
+    <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
 
     <form id="menuForm">
         {% csrf_token %}
@@ -29,28 +29,28 @@
         {% endfor %}
     </div>
 
-    
-
     <!-- Modal -->
     <div class="modal" id="menuDetailModal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="menuDetailModalLabel"></h2>
-            <img id="modalMenuImage" src="" alt="" class="menu-image">
-            <div class="btn-group">
+            <div class="image-container">
+                <img id="modalMenuImage" src="" alt="" class="menu-image">
+            </div>
+            <div class="btn-group-temp">
                 <button type="button" class="btn" id="hotButton">🔥 HOT</button>
                 <button type="button" class="btn" id="iceButton">🧊 ICE</button>
             </div>
-            <div class="btn-group">
+            <div class="btn-group-size">
                 <button type="button" class="btn" id="regularButton">Regular</button>
                 <button type="button" class="btn" id="extraButton">Extra</button>
             </div>
-            <div class="btn-group">
+            <div class="btn-group-ice">
                 <button type="button" class="btn" id="bigIceButton">얼음 많이</button>
                 <button type="button" class="btn" id="regularIceButton">얼음 보통</button>
                 <button type="button" class="btn" id="lessIceButton">얼음 적게</button>
             </div>
-            <div class="form-group">
+            <div class="form-group-etc">
                 <label for="additionalInstructions">기타 세부사항:</label>
                 <textarea id="additionalInstructions" rows="3"></textarea>
             </div>
