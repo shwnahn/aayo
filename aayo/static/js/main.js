@@ -130,14 +130,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(id => {
-            document.getElementById(id).addEventListener('click', function() {
-                ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(btnId => {
-                    document.getElementById(btnId).classList.remove('active');
-                });
-                toggleButtonActive(this);
-            });
-        });
+        // ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(id => {
+        //     document.getElementById(id).addEventListener('click', function() {
+        //         ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(btnId => {
+        //             document.getElementById(btnId).classList.remove('active');
+        //         });
+        //         toggleButtonActive(this);
+        //     });
+        // });
     }
 
     function fallbackCopyTextToClipboard(text) {
