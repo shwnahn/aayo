@@ -2,7 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.main, name='main'), 
+    path('', views.index, name='index'),
+
+    path('main/', views.main, name='main'),
     # 메인, 방 생성 form
 
     path('room/<str:unique_id>/', views.room_detail, name='room_detail'), 
