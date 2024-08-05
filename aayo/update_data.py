@@ -1,15 +1,13 @@
 import json
 import os
 import sys
+# Django settings 설정 - models 정보 가져오기
 import django
 from django.conf import settings
-
-# Django settings 설정
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 django.setup()
-
-from aayo.models import Cafe, MenuItem  # 여기서 myapp은 실제 앱 이름으로 변경해야 합니다
+from aayo.models import Cafe, MenuItem
 
 def load_json_data(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
