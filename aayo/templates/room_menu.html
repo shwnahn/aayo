@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container">
-    <h2>{{ room.name }} / 메뉴: {{ room.cafe }}</h2>
+    <h2>{{ room.name }} / 선택된 카페: {{ room.cafe }}</h2>
 
     {% if not guest_name %}
     <form id="guestNameForm">
@@ -15,145 +15,296 @@
 
     <form id="menuForm">
         {% csrf_token %}
-        <div class="menu-grid">
-        {% for menu in menus %}
-            <div class="menu-item" data-menu-id="{{ menu.id }}">
-                <p class="menu-name">{{ menu.name }}</p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#menuModal{{ menu.id }}">
-                    상세 보기
-                </button>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="menuModal{{ menu.id }}" tabindex="-1" role="dialog" aria-labelledby="menuModalLabel{{ menu.id }}" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="menuModalLabel{{ menu.id }}">{{ menu.name }} 상세 정보</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>가격: {{ menu.price }}원</p>
-                            <p>설명: {{ menu.description }}</p>
-                            <!-- 추가 옵션들 -->
-                            <div class="form-group">
-                                <label for="size{{ menu.id }}">크기:</label>
-                                <select class="form-control" id="size{{ menu.id }}" name="size{{ menu.id }}">
-                                    <option value="small">Small</option>
-                                    <option value="medium">Medium</option>
-                                    <option value="large">Large</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="sugar{{ menu.id }}">당도:</label>
-                                <input type="range" class="form-control-range" id="sugar{{ menu.id }}" name="sugar{{ menu.id }}" min="0" max="100">
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="ice{{ menu.id }}" name="ice{{ menu.id }}">
-                                <label class="form-check-label" for="ice{{ menu.id }}">얼음 추가</label>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                            <button type="button" class="btn btn-primary confirm-menu" data-menu-id="{{ menu.id }}">선택 확정</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-        </div>
         <button type="submit" id="confirmButton" disabled>주문 확정하기</button>
     </form>
+
+    <div id="menuListContainer" class="menu-grid">
+        {% for menu in menus %}
+        <div class="menu-item" data-menu-id="{{ menu.id }}">
+            {% if menu.image_url %}
+                <img src="{{ menu.image_url }}" alt="{{ menu.name }}" class="menu-image">
+            {% endif %}
+            <p class="menu-name">{{ menu.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="menuDetailModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="menuDetailModalLabel"></h2>
+            <img id="modalMenuImage" src="" alt="" class="menu-image">
+            <div class="btn-group">
+                <button type="button" class="btn" id="hotButton">🔥 HOT</button>
+                <button type="button" class="btn" id="iceButton">🧊 ICE</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn" id="regularButton">Regular</button>
+                <button type="button" class="btn" id="extraButton">Extra</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn" id="noSyrupButton">얼음 많이</button>
+                <button type="button" class="btn" id="lessSyrupButton">얼음 보통</button>
+                <button type="button" class="btn" id="regularSyrupButton">얼음 적게</button>
+            </div>
+            <div class="form-group">
+                <label for="additionalInstructions">기타 세부사항:</label>
+                <textarea id="additionalInstructions" rows="3"></textarea>
+            </div>
+            <button type="button" id="saveMenuItem">내 메뉴 저장하기</button>
+        </div>
+    </div>
+
     {% endif %}
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const guestNameForm = document.getElementById('guestNameForm');
-    const menuForm = document.getElementById('menuForm');
+    if (guestNameForm) {
+        guestNameForm.addEventListener('submit', handleGuestNameSubmit);
+    } else {
+        setupMenuInteractions();
+    }
+});
+
+function handleGuestNameSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    fetch(window.location.href, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            return response.text().then(text => {
+                throw new Error('Server error: ' + text);
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            location.reload();
+        } else {
+            throw new Error(data.error || 'Unknown error occurred');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred: ' + error.message);
+    });
+}
+
+function setupMenuInteractions() {
+    const menuItems = document.querySelectorAll('.menu-item');
+    const modal = document.getElementById('menuDetailModal');
+    const modalTitle = document.getElementById('menuDetailModalLabel');
+    const modalImage = document.getElementById('modalMenuImage');
+    const saveMenuItem = document.getElementById('saveMenuItem');
+    const closeBtn = modal.querySelector('.close');
     const confirmButton = document.getElementById('confirmButton');
     const selectedMenus = new Set();
 
-    if (guestNameForm) {
-        guestNameForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(guestNameForm);
-            fetch('', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRFToken': formData.get('csrfmiddlewaretoken')
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    location.reload();
-                }
-            });
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const menuId = this.getAttribute('data-menu-id');
+            const menuName = this.querySelector('.menu-name').textContent;
+            const menuImageSrc = this.querySelector('.menu-image')?.src;
+
+            modalTitle.textContent = menuName;
+            if (menuImageSrc) {
+                modalImage.src = menuImageSrc;
+                modalImage.style.display = 'block';
+            } else {
+                modalImage.style.display = 'none';
+            }
+            modal.style.display = 'block';
+            saveMenuItem.setAttribute('data-menu-id', menuId);
         });
+    });
+
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
     }
 
-    if (menuForm) {
-        function updateButtonState() {
-            confirmButton.disabled = selectedMenus.size === 0;
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
         }
+    }
 
-        document.querySelectorAll('.confirm-menu').forEach(button => {
-            button.addEventListener('click', function() {
-                const menuId = this.getAttribute('data-menu-id');
-                const modal = document.getElementById(`menuModal${menuId}`);
-                const menuItem = document.querySelector(`.menu-item[data-menu-id="${menuId}"]`);
-                
-                if (selectedMenus.has(menuId)) {
-                    selectedMenus.delete(menuId);
-                    menuItem.classList.remove('selected');
-                } else {
-                    selectedMenus.add(menuId);
-                    menuItem.classList.add('selected');
-                }
+    saveMenuItem.addEventListener('click', function() {
+        const menuId = this.getAttribute('data-menu-id');
+        const temperature = document.querySelector('#hotButton.active, #iceButton.active') ? document.querySelector('#hotButton.active, #iceButton.active').textContent.trim() : '';
+        const size = document.querySelector('#regularButton.active, #extraButton.active') ? document.querySelector('#regularButton.active, #extraButton.active').textContent.trim() : '';
+        const ice = document.querySelector('#noSyrupButton.active, #lessSyrupButton.active, #regularSyrupButton.active') ? document.querySelector('#noSyrupButton.active, #lessSyrupButton.active, #regularSyrupButton.active').textContent.trim() : '';
+        const instructions = document.getElementById('additionalInstructions').value;
 
-                updateButtonState();
-                $(modal).modal('hide');
-            });
-        });
-
-        menuForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (selectedMenus.size === 0) {
-                alert('최소 하나의 메뉴를 선택해주세요.');
-                return;
-            }
-
-            const menus = Array.from(selectedMenus).map(menuId => {
-                const size = document.getElementById(`size${menuId}`).value;
-                const sugar = document.getElementById(`sugar${menuId}`).value;
-                const ice = document.getElementById(`ice${menuId}`).checked;
-                return {id: menuId, options: {size, sugar, ice}};
-            });
-
-            const formData = new FormData(menuForm);
-            formData.append('menus', JSON.stringify(menus));
-
-            fetch('', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRFToken': formData.get('csrfmiddlewaretoken')
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success && data.redirect_url) {
-                    window.location.href = data.redirect_url;
-                }
-            });
+        selectedMenus.add({
+            id: menuId,
+            options: { temperature, size, ice, instructions }
         });
 
         updateButtonState();
+        modal.style.display = 'none';
+    });
+
+    const menuForm = document.getElementById('menuForm');
+    menuForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (selectedMenus.size === 0) {
+            alert('최소 하나의 메뉴를 선택해주세요.');
+            return;
+        }
+
+        const formData = new FormData(menuForm);
+        formData.append('menus', JSON.stringify(Array.from(selectedMenus)));
+
+        fetch(window.location.href, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.redirect_url) {
+                window.location.href = data.redirect_url;
+            }
+        });
+    });
+
+    function updateButtonState() {
+        confirmButton.disabled = selectedMenus.size === 0;
     }
-});
+
+    function toggleButtonActive(button) {
+        button.classList.toggle('active');
+    }
+
+    ['hotButton', 'iceButton'].forEach(id => {
+        document.getElementById(id).addEventListener('click', function() {
+            ['hotButton', 'iceButton'].forEach(btnId => {
+                document.getElementById(btnId).classList.remove('active');
+            });
+            toggleButtonActive(this);
+        });
+    });
+
+    ['regularButton', 'extraButton'].forEach(id => {
+        document.getElementById(id).addEventListener('click', function() {
+            ['regularButton', 'extraButton'].forEach(btnId => {
+                document.getElementById(btnId).classList.remove('active');
+            });
+            toggleButtonActive(this);
+        });
+    });
+
+    ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(id => {
+        document.getElementById(id).addEventListener('click', function() {
+            ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(btnId => {
+                document.getElementById(btnId).classList.remove('active');
+            });
+            toggleButtonActive(this);
+        });
+    });
+}
 </script>
+{% endblock %}
+
+{% block extra_css %}
+
+<style>
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+#additionalInstructions {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#saveMenuItem {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-image {
+    max-width: 100%;
+    height: auto;
+}
+</style>
 {% endblock %}
