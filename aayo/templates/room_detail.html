@@ -1,113 +1,16 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="container">
     <h2>방이 성공적으로 생성되었습니다!</h2>
-    <p>방 이름: {{ room.name }}</p>
-    <p>카페: {{ room.cafe }}</p>
-    <p>방 링크: <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ request.build_absolute_uri }}{% url 'room_menu' room.unique_id %}</a></p>
-    <button type="button" id="copyLinkBtn">링크 공유하기</button>
-    
+    <p><span data-emoji="🏷️">방 이름:</span> {{ room.name }}</p>
+    <p><span data-emoji="☕">카페:</span> {{ room.cafe }}</p>
+    <p><span data-emoji="🔗">방 링크:</span> <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ request.build_absolute_uri }}{% url 'room_menu' room.unique_id %}</a></p>
+    <button type="button" id="copyLinkBtn" class="btn btn-primary">링크 공유하기</button>
     <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-primary">주문 총계 보기</a>
     <a href="{% url 'room_menu' unique_id=room.unique_id %}" class="btn btn-secondary">방 입장</a>
+    </div>
 </div>
 
-<div id="message" style="display: none;"></div>
-{% endblock %}
-
-{% block scripts %}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const copyLinkBtn = document.getElementById('copyLinkBtn');
-    const roomLink = document.getElementById('roomLink');
-
-    copyLinkBtn.addEventListener('click', function() {
-        const linkToCopy = roomLink.href;
-
-        if (navigator.clipboard) {
-            navigator.clipboard.writeText(linkToCopy)
-                .then(() => {
-                    alert("방 링크가 클립보드에 복사되었습니다!");
-                })
-                .catch(err => {
-                    console.error('클립보드 복사 실패:', err);
-                    fallbackCopyTextToClipboard(linkToCopy);
-                });
-        } else {
-            fallbackCopyTextToClipboard(linkToCopy);
-        }
-    });
-
-    function fallbackCopyTextToClipboard(text) {
-        const textArea = document.createElement("textarea");
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-
-        try {
-            const successful = document.execCommand('copy');
-            const msg = successful ? '성공적으로 복사되었습니다.' : '복사에 실패했습니다.';
-            alert(msg);
-        } catch (err) {
-            console.error('Fallback: 복사 실패', err);
-            alert("링크 복사에 실패했습니다. 수동으로 복사해주세요.");
-        }
-
-        document.body.removeChild(textArea);
-    }
-});
-</script>
-{% endblock %}
-
-{% block extra_css %}
-<style>
-    .container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    h2 {
-        color: #333;
-        margin-bottom: 20px;
-    }
-    p {
-        margin-bottom: 10px;
-    }
-    .btn {
-        display: inline-block;
-        padding: 10px 15px;
-        margin: 10px 5px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-        font-size: 16px;
-    }
-    .btn-primary {
-        background-color: #007bff;
-        color: white;
-    }
-    .btn-secondary {
-        background-color: #6c757d;
-        color: white;
-    }
-    #copyLinkBtn {
-        background-color: #28a745;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    #message {
-        margin-top: 20px;
-        padding: 10px;
-        border-radius: 5px;
-        display: none;
-    }
-    #roomLink {
-        word-break: break-all;
-    }
-</style>
 {% endblock %}
