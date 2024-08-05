@@ -54,9 +54,9 @@
             </div>
             <button type="button" id="saveMenuItem">내 메뉴 저장하기</button>
         </div>
-    </div>
-
-    {% endif %}
+<<<<<<< Updated upstream
+        <button type="submit" id="confirmButton" disabled>메뉴 확정하기</button>
+    </form>
 </div>
 
 <script>
@@ -217,94 +217,9 @@ function setupMenuInteractions() {
 }
 </script>
 {% endblock %}
-
-{% block extra_css %}
-
-<style>
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.btn-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.btn {
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #f8f9fa;
-    cursor: pointer;
-}
-
-.btn.active {
-    background-color: #007bff;
-    color: white;
-}
-
-#additionalInstructions {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-#saveMenuItem {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.menu-item {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.menu-image {
-    max-width: 100%;
-    height: auto;
-}
-</style>
+=======
+    </div>
+    {% endif %}
+</div>
 {% endblock %}
+>>>>>>> Stashed changes
