@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from crawler import *
 import time
 
-def crawl_paikdabang(driver, url, is_new_menu=False):
+def crawl_paik(driver, url, is_new_menu=False):
     data = []
 
     try:
@@ -38,14 +38,14 @@ def crawl_paikdabang(driver, url, is_new_menu=False):
     return data
 
 def main():
-    cafe_name = 'paikdabang'
+    cafe_name = 'paik'
     all_data = []
 
     urls = [
-        "https://paikdabang.com/menu/menu_new/",
-        "https://paikdabang.com/menu/menu_coffee/",
-        "https://paikdabang.com/menu/menu_drink/",
-        "https://paikdabang.com/menu/menu_ccino/"
+        "https://paik.com/menu/menu_new/",
+        "https://paik.com/menu/menu_coffee/",
+        "https://paik.com/menu/menu_drink/",
+        "https://paik.com/menu/menu_ccino/"
     ]
 
     driver = setup_driver()
@@ -53,7 +53,7 @@ def main():
     try:
         for url in urls:
             is_new_menu = 'menu_new' in url
-            data = crawl_paikdabang(driver, url, is_new_menu)
+            data = crawl_paik(driver, url, is_new_menu)
             all_data.extend(data)
             time.sleep(2) # 웹사이트 부하 방지
 

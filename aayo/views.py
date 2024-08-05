@@ -14,6 +14,9 @@ import logging
 def generate_unique_id():
     return ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
 
+def index(request):
+    return render(request, 'index.html')
+
 def main(request):
     if request.method == 'POST':
         name = request.POST.get('name')

@@ -7,7 +7,7 @@ def crawl_cafename():
     cafe_name = 'cafename'
     url = ""
 
-    # 웹드라이버 설정 
+    # 웹드라이버 설정
     driver = setup_driver()
 
     try:
@@ -18,7 +18,7 @@ def crawl_cafename():
 
         ###### 메뉴명과 이미지 URL 추출 - 카페마다 코드 다르게 할 부분! ######
         data = []
-        menu_items = driver.find_elements(By.CLASS_NAME, "")
+        menu_items = driver.find_elements(By.CSS_SELECTOR, "li.menuDataSet")
         
         # for문으로 메뉴 전체 순회하며 'menu_name', 'image_url'를 가져와서 data 리스트에 추가하기
         for item in menu_items:
