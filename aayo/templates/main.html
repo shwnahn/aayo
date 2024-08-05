@@ -16,23 +16,30 @@
         </div>
         <div class="form-group">
             <label for="cafe">카페를 선택하세요 <span>☕</span></label>
+            <input type="hidden" id="cafe" name="cafe" required>
             <div class="cafe-selection">
-                <input type="hidden" id="cafe" name="cafe" required>
-                <div class="cafe-logo" data-cafe="스타벅스" style="background-image: url('{% static 'images/starbucks.png' %}');"></div>
-                <div class="cafe-logo" data-cafe="메가커피" style="background-image: url('{% static 'images/mega.png' %}');"></div>
-                <div class="cafe-logo" data-cafe="할리스" style="background-image: url('{% static 'images/hollys.jpg' %}');"></div>
-                <div class="cafe-logo" data-cafe="탐앤탐스" style="background-image: url('{% static 'images/tom_n_toms.png' %}');"></div>
-                <div class="cafe-logo" data-cafe="이디야" style="background-image: url('{% static 'images/ediya.png' %}');"></div>
-                <div class="cafe-logo" data-cafe="컴포즈" style="background-image: url('{% static 'images/compose.png' %}');"></div>
-                <div class="cafe-logo" data-cafe="빽다방" style="background-image: url('{% static 'images/paik.png' %}');"></div>
-                <div class="cafe-logo" data-cafe="매머드커피" style="background-image: url('{% static 'images/mammoth.png' %}');"></div>
-                <div class="cafe-logo" data-cafe="투썸플레이스" style="background-image: url('{% static 'images/twosome.jpg' %}');"></div>
-                <div class="cafe-logo" data-cafe="공차" style="background-image: url('{% static 'images/gongcha.png' %}');"></div>
+                {% for cafe in cafes %}
+                    <label for="{{ cafe.name }}" class="cafe-logo" style="background-image: url('{% static 'images/' %}{{ cafe.logoimage }}')">
+                        <input type="radio" id="{{ cafe.name }}" name="cafe" value="{{ cafe.name }}" style="display: none;"{% if forloop.first %}checked{% endif %}>
+                    </label>
+                {% endfor %}
             </div>
         </div>
         <div class="submit-button-container">
             <button type="submit" class="submit-button">방 생성하기</button>
         </div>
     </form>
+
+    <script>
+        function selectCafe(cafeName) {
+            document.getElementById('cafe').value = cafeName;
+            var cafeLogos = document.querySelectorAll('.cafe-logo');
+            cafeLogos.forEach(function(logo) {
+                logo.classList.remove('selected');
+            });
+            var selectedLogo = document.querySelector('.cafe-logo[data-cafe="' + cafeName + '"]');
+            selectedLogo.classList.add('selected');
+        }
+    </script>
 </div>
 {% endblock %}
