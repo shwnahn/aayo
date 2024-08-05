@@ -1,27 +1,38 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<div class="container">
+<div class="main-container">
+    <h1 class="page-title">방을 생성하세요!</h1>
     <form method="post">
       {% csrf_token %}
         <div class="form-group">
-            <label for="name">방 이름을 입력하세요!</label>
+            <label for="name">방 이름을 입력하세요! <span>🏷️</span></label>
             <input type="text" id="name" name="name" required>
         </div>
         <div class="form-group">
-            <label for="password">비밀번호를 입력하세요(선택사항)</label>
+            <label for="password">비밀번호를 입력하세요(선택사항) <span>🔒</span></label>
             <input type="password" id="password" name="password">
         </div>
         <div class="form-group">
-            <label for="cafe">카페를 선택하세요</label>
-            <select id="cafe" name="cafe" required>
-                <option value="">-- 선택 --</option>
-                {% for cafe in cafes %}
-                    <option value="{{ cafe.name }}">{{ cafe.name }}</option>
-                {% endfor %}
-            </select>
+            <label for="cafe">카페를 선택하세요 <span>☕</span></label>
+            <div class="cafe-selection">
+                <input type="hidden" id="cafe" name="cafe" required>
+                <div class="cafe-logo" data-cafe="스타벅스" style="background-image: url('{% static 'images/starbucks.png' %}');"></div>
+                <div class="cafe-logo" data-cafe="메가커피" style="background-image: url('{% static 'images/mega.png' %}');"></div>
+                <div class="cafe-logo" data-cafe="할리스" style="background-image: url('{% static 'images/hollys.jpg' %}');"></div>
+                <div class="cafe-logo" data-cafe="탐앤탐스" style="background-image: url('{% static 'images/tom_n_toms.png' %}');"></div>
+                <div class="cafe-logo" data-cafe="이디야" style="background-image: url('{% static 'images/ediya.png' %}');"></div>
+                <div class="cafe-logo" data-cafe="컴포즈" style="background-image: url('{% static 'images/compose.png' %}');"></div>
+                <div class="cafe-logo" data-cafe="빽다방" style="background-image: url('{% static 'images/paik.png' %}');"></div>
+                <div class="cafe-logo" data-cafe="매머드커피" style="background-image: url('{% static 'images/mammoth.png' %}');"></div>
+                <div class="cafe-logo" data-cafe="투썸플레이스" style="background-image: url('{% static 'images/twosome.jpg' %}');"></div>
+                <div class="cafe-logo" data-cafe="공차" style="background-image: url('{% static 'images/gongcha.png' %}');"></div>
+            </div>
         </div>
-        <button type="submit">방 생성하기</button>
+        <div class="submit-button-container">
+            <button type="submit" class="submit-button">방 생성하기</button>
+        </div>
     </form>
 </div>
 {% endblock %}
