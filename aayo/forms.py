@@ -5,12 +5,14 @@ class RoomCreationForm(forms.Form):
     name = forms.CharField(max_length=100, label="방 이름")
     user_id = forms.CharField(max_length=50, label="아이디(이름)")
     password = forms.CharField(widget=forms.PasswordInput, required=False, label="비밀번호")
-    cafe = forms.ChoiceField(choices=[
-        ('스타벅스', 'starbucks'),
-        ('빽다방', 'paikdabang'),
-        ('이디야', 'ediya'),
-        ('메가', 'mega')
-    ], label="카페")
+    cafeimage = forms.ModelChoiceField(queryset=Cafe.objects.all(), label="카페", widget=forms.RadioSelect)
+
+    def __init__(self, *args, **kwargs):
+        super(RoomCreationForm, self).__init__(*args, **kwargs)
+        self.fields['cafe'].empty_label = None
+        self.fields['cafe'].widget.attrs.update({
+            'class': 'cafe-selection'
+        })
 
 class EnterRoomForm(forms.Form):
     guest_name = forms.CharField(max_length=100, required=True)
