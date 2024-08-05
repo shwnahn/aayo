@@ -57,7 +57,11 @@
         <button type="submit" id="confirmButton" disabled>메뉴 확정하기</button>
     </form>
 </div>
+{% endif %}
 
+{% endblock %}
+
+{% block script %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const guestNameForm = document.getElementById('guestNameForm');
