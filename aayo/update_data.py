@@ -13,8 +13,7 @@ def load_json_data(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def update_menu_items(cafe_name, json_data):
-    cafe, created = Cafe.objects.get_or_create(name=cafe_name)
+def update_menu_items(cafe, json_data):
     for item in json_data:
         menu_item, created = MenuItem.objects.get_or_create(
             cafe=cafe,
@@ -27,11 +26,15 @@ def update_menu_items(cafe_name, json_data):
 
 if __name__ == "__main__":
     data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
-    for file_name in os.listdir(data_dir):
-        if file_name.endswith('.json'):
-            cafe_name = os.path.splitext(file_name)[0]
-            file_path = os.path.join(data_dir, file_name)
+    cafes = Cafe.objects.all()
+    for cafe in cafes:
+        print(f"## 업데이트중: {cafe.name}...")
+        file_name = f"{cafe.name_eng}.json"
+        file_path = os.path.join(data_dir, file_name)
+        if os.path.exists(file_path):
             json_data = load_json_data(file_path)
-            update_menu_items(cafe_name, json_data)
+            update_menu_items(cafe, json_data)
+        else:
+            print(f"File {file_name} not found for cafe {cafe.name}")
 
     print("Data update complete.")

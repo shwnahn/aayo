@@ -28,6 +28,6 @@ class Cafe(models.Model):
 class MenuItem(models.Model):
     cafe = models.ForeignKey(Cafe, on_delete=models.CASCADE, related_name='menu_items')
     name = models.CharField(max_length=255)
-    image_url = models.URLField(blank=True, null=True)  # 이미지 URL 필드 추가
+    image_url = models.URLField(max_length=450, blank=True, null=True)  # 이미지 URL 필드 추가
     def __str__(self):
         return f"{self.name} ({self.cafe.name})"
