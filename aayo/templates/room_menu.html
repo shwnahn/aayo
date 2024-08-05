@@ -60,18 +60,37 @@
     </div>
 </div>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const guestNameForm = document.getElementById('guestNameForm');
-    if (guestNameForm) {
-        guestNameForm.addEventListener('submit', handleGuestNameSubmit);
-    } else {
-        setupMenuInteractions();
-    }
-});
+// 중복 설정 방지
+if (!window.menuInteractionsSetup) {
+    document.addEventListener('DOMContentLoaded', function() {
+        const guestNameForm = document.getElementById('guestNameForm');
+        if (guestNameForm) {
+            guestNameForm.addEventListener('submit', handleGuestNameSubmit);
+        } else {
+            setupMenuInteractions();
+        }
+    });
+    window.menuInteractionsSetup = true;
+}
+
+function debounce(func, wait) { // 디바운스 함수로 호출 지연(timeout) -> post 요청이 두 번 가는 것 방지
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
 
 function handleGuestNameSubmit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
+    const submitButton = e.target.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+
     fetch(window.location.href, {
         method: 'POST',
         body: formData,
@@ -97,6 +116,9 @@ function handleGuestNameSubmit(e) {
     .catch(error => {
         console.error('Error:', error);
         alert('An error occurred: ' + error.message);
+    })
+    .finally(() => {
+        submitButton.disabled = false;
     });
 }
 
@@ -111,11 +133,9 @@ function setupMenuInteractions() {
     const selectedMenus = new Set();
 
     function resetModal() {
-        // 모든 버튼의 active 클래스 제거
         ['hotButton', 'iceButton', 'regularButton', 'extraButton', 'bigIceButton', 'regularIceButton', 'lessIceButton'].forEach(id => {
             document.getElementById(id).classList.remove('active');
         });
-        // 추가 지시사항 텍스트 영역 초기화
         document.getElementById('additionalInstructions').value = '';
     }
 
@@ -133,8 +153,7 @@ function setupMenuInteractions() {
                 modalImage.style.display = 'none';
             }
 
-            resetModal(); // 모달창 초기화 함수 실행
-
+            resetModal();
             modal.style.display = 'block';
             saveMenuItem.setAttribute('data-menu-id', menuId);
         });
@@ -167,12 +186,15 @@ function setupMenuInteractions() {
     });
 
     const menuForm = document.getElementById('menuForm');
-    menuForm.addEventListener('submit', function(e) {
+    menuForm.addEventListener('submit', debounce(function(e) {
         e.preventDefault();
         if (selectedMenus.size === 0) {
             alert('최소 하나의 메뉴를 선택해주세요.');
             return;
         }
+
+        const submitButton = this.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
 
         const formData = new FormData(menuForm);
         formData.append('menus', JSON.stringify(Array.from(selectedMenus)));
@@ -184,13 +206,27 @@ function setupMenuInteractions() {
                 'X-CSRFToken': formData.get('csrfmiddlewaretoken')
             }
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Server responded with an error');
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.success && data.redirect_url) {
                 window.location.href = data.redirect_url;
+            } else {
+                throw new Error('Invalid server response');
             }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('주문 처리 중 오류가 발생했습니다: ' + error.message);
+        })
+        .finally(() => {
+            submitButton.disabled = false;
         });
-    });
+    }, 300));
 
     function updateButtonState() {
         confirmButton.disabled = selectedMenus.size === 0;
@@ -227,5 +263,5 @@ function setupMenuInteractions() {
         });
     });
 }
-</script>   
+</script>
 {% endblock %}
