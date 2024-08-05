@@ -44,9 +44,9 @@
                 <button type="button" class="btn" id="extraButton">Extra</button>
             </div>
             <div class="btn-group">
-                <button type="button" class="btn" id="noSyrupButton">얼음 많이</button>
-                <button type="button" class="btn" id="lessSyrupButton">얼음 보통</button>
-                <button type="button" class="btn" id="regularSyrupButton">얼음 적게</button>
+                <button type="button" class="btn" id="bigIceButton">얼음 많이</button>
+                <button type="button" class="btn" id="regularIceButton">얼음 보통</button>
+                <button type="button" class="btn" id="lessIceButton">얼음 적게</button>
             </div>
             <div class="form-group">
                 <label for="additionalInstructions">기타 세부사항:</label>
@@ -110,6 +110,15 @@ function setupMenuInteractions() {
     const confirmButton = document.getElementById('confirmButton');
     const selectedMenus = new Set();
 
+    function resetModal() {
+        // 모든 버튼의 active 클래스 제거
+        ['hotButton', 'iceButton', 'regularButton', 'extraButton', 'bigIceButton', 'regularIceButton', 'lessIceButton'].forEach(id => {
+            document.getElementById(id).classList.remove('active');
+        });
+        // 추가 지시사항 텍스트 영역 초기화
+        document.getElementById('additionalInstructions').value = '';
+    }
+
     menuItems.forEach(item => {
         item.addEventListener('click', function() {
             const menuId = this.getAttribute('data-menu-id');
@@ -123,6 +132,9 @@ function setupMenuInteractions() {
             } else {
                 modalImage.style.display = 'none';
             }
+
+            resetModal(); // 모달창 초기화 함수 실행
+
             modal.style.display = 'block';
             saveMenuItem.setAttribute('data-menu-id', menuId);
         });
@@ -142,7 +154,7 @@ function setupMenuInteractions() {
         const menuId = this.getAttribute('data-menu-id');
         const temperature = document.querySelector('#hotButton.active, #iceButton.active') ? document.querySelector('#hotButton.active, #iceButton.active').textContent.trim() : '';
         const size = document.querySelector('#regularButton.active, #extraButton.active') ? document.querySelector('#regularButton.active, #extraButton.active').textContent.trim() : '';
-        const ice = document.querySelector('#noSyrupButton.active, #lessSyrupButton.active, #regularSyrupButton.active') ? document.querySelector('#noSyrupButton.active, #lessSyrupButton.active, #regularSyrupButton.active').textContent.trim() : '';
+        const ice = document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active') ? document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active').textContent.trim() : '';
         const instructions = document.getElementById('additionalInstructions').value;
 
         selectedMenus.add({
@@ -206,9 +218,9 @@ function setupMenuInteractions() {
         });
     });
 
-    ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(id => {
+    ['bigIceButton', 'regularIceButton', 'lessIceButton'].forEach(id => {
         document.getElementById(id).addEventListener('click', function() {
-            ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(btnId => {
+            ['bigIceButton', 'regularIceButton', 'lessIceButton'].forEach(btnId => {
                 document.getElementById(btnId).classList.remove('active');
             });
             toggleButtonActive(this);
