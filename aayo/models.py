@@ -21,7 +21,7 @@ class GuestOrder(models.Model):
 # 카페 / 메뉴
 class Cafe(models.Model):
     name = models.CharField(max_length=255)
-    logoimage = models.ImageField(default='default.jpg')
+    name_eng = models.CharField(max_length=255, blank=True)
     def __str__(self):
         return self.name
 

@@ -19,7 +19,7 @@
             <input type="hidden" id="cafe" name="cafe" required>
             <div class="cafe-selection">
                 {% for cafe in cafes %}
-                    <label for="{{ cafe.name }}" class="cafe-logo" style="background-image: url('{% static 'images/' %}{{ cafe.logoimage }}')">
+                    <label for="{{ cafe.name }}" class="cafe-logo" style="background-image: url('{% static 'images/' %}{{ cafe.name_eng }}.png')">
                         <input type="radio" id="{{ cafe.name }}" name="cafe" value="{{ cafe.name }}" style="display: none;"{% if forloop.first %}checked{% endif %}>
                     </label>
                 {% endfor %}
