@@ -22,23 +22,30 @@ def crawl_mammoth_ex():
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(3)
 
-        menu_items = driver.find_elements(By.CLASS_NAME, "del2")
-        
-        # for문으로 메뉴 전체 순회하며 'menu_name', 'image_url'를 가져와서 data 리스트에 추가하기
-        for item in menu_items:
-            menu_name = item.find_element(By.CSS_SELECTOR, 'div.txt_wrap strong').text
-            image_url = item.find_element(By.CSS_SELECTOR, 'div.img_wrap > img').get_attribute('src')
-            # image_url = "https://mmthcoffee.com" + image_url_short
+        list_groups_all = driver.find_elements(By.CSS_SELECTOR, "div.con02 > div.inner > div")
+        list_groups = list_groups_all[:7]
+        for list_group in list_groups:
+           
+            category = list_group.find_element(By.CSS_SELECTOR, "strong.animation").text
+            menu_items = list_group.find_elements(By.CSS_SELECTOR, "ul.clear > li")
             
-            print(menu_name, image_url) # 이렇게 테스트해보면서 하면 좋다.
-            if menu_name:
-                # menu_name, image_url을 data 리스트에 하나씩 추가
-                data.append({
-                    "menu_name": menu_name,
-                    "image_url": image_url,
-                })
-            else:
-                raise ValueError("메뉴명이 비어있습니다 - 크롤링 시 크롬 화면에 포커즈를 맞추고 켜두세요!")
+            # for문으로 메뉴 전체 순회하며 'menu_name', 'image_url'를 가져와서 data 리스트에 추가하기
+            for item in menu_items:
+                menu_name = item.find_element(By.CSS_SELECTOR, 'div.txt_wrap > strong').text
+                image_url = item.find_element(By.CSS_SELECTOR, 'div.img_wrap > img').get_attribute('src')
+                # image_url = "https://mmthcoffee.com" + image_url_short
+                note = ''
+                if menu_name:
+                    data.append({
+                        "menu_name": menu_name,
+                        "image_url": image_url,
+                        "category": category,
+                        "note": note,
+                    })
+                    print(f"[{category}] {menu_name} - {note}")
+                    print(image_url)
+                else:
+                    break
         # JSON 파일로 저장
         save_data(cafe_name, data)
     finally:

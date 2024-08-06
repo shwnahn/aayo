@@ -4,19 +4,24 @@ from crawler import * # setup_driver, save_data, scroll_down
 import time # time.sleep 쓰려고
 
 
-def update_data(data, driver):
+def update_data(data, driver, category):
     menu_items = driver.find_elements(By.CSS_SELECTOR, 'ul.ui-goods-list-default li:not(.next)')
 
     # for문으로 메뉴 전체 순회하며 'menu_name', 'image_url'를 가져와서 data 리스트에 추가하기
     for item in menu_items:
         menu_name = item.find_element(By.CSS_SELECTOR, 'p.menu-title').text
         image_url = item.find_element(By.CSS_SELECTOR, 'div.thum-img > img').get_attribute('src')
-
+        note = ''
         # menu_name, image_url을 data 리스트에 하나씩 추가
         data.append({
             "menu_name": menu_name,
             "image_url": image_url,
+            "category": category,
+            "note": note,
         })
+        
+        print(f"[{category}] {menu_name} - {note}")
+        print(image_url)
 
 def crawl_twosome():
     # 카페명과 메뉴URL
@@ -37,24 +42,26 @@ def crawl_twosome():
         data = []
 
         category_btn_coffee = driver.find_element(By.CSS_SELECTOR, 'li[name="midLi"] > a[name="midNm"][midval="01"][value="01"]')
+        category_coffee = category_btn_coffee.text
         category_btn_coffee.click()
         driver.implicitly_wait(3)
         
         scroll_down(driver)
-        update_data(data, driver)
+        update_data(data, driver,category_coffee)
 
         category_btn_beverage = driver.find_element(By.CSS_SELECTOR, 'li[name="midLi"] > a[name="midNm"][midval="02"][value="02"]')
+        category_beverage = category_btn_beverage.text
         category_btn_beverage.click()
         time.sleep(1)
         scroll_down(driver)
-        update_data(data, driver)
-
+        update_data(data, driver,category_beverage)
 
         category_btn_tea = driver.find_element(By.CSS_SELECTOR, 'li[name="midLi"] > a[name="midNm"][midval="03"][value="03"]')
+        category_tea = category_btn_tea.text
         category_btn_tea.click()
         time.sleep(1)
         scroll_down(driver)
-        update_data(data, driver)
+        update_data(data, driver, category_tea)
         
         # JSON 파일로 저장
         save_data(cafe_name, data)
