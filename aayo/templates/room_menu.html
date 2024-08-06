@@ -3,13 +3,14 @@
 
 {% block content %}
 <div class="room-container">
-    <h2 class="page-title"><span> 👋{{ room.name }} </span>님이 선택한 카페는 <span> {{ room.cafe }} </span>입니다!</h2>
+    <h2 class="page-title"><span> 👋{{ room.name }} </span> - <span> {{ room.cafe }} </span></h2>
 
     {% if not guest_name %}
     <form id="guestNameForm">
         {% csrf_token %}
-        <input type="text" name="guest_name" required placeholder="이름을 입력하세요">
-        <button type="submit">입장</button>
+        <input type="text" name="guest_name" required placeholder="이름">
+        <input type="password" name="password" placeholder="비밀번호 (선택)">
+        <button type="submit">메뉴 주문하기</button>
     </form>
     {% else %}
     <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
