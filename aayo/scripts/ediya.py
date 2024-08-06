@@ -5,8 +5,21 @@ from selenium.common.exceptions import TimeoutException
 from crawler import *
 import time
 
-def crawl_idiya():
-    cafe_name = 'idiya'
+def click_more_button(driver):
+    while True:
+        try:
+            more_button = WebDriverWait(driver, 3).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, "div.block_hot > div > div > a"))
+            )
+            driver.execute_script("arguments[0].click();", more_button)
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(0.5)
+        except TimeoutException:
+            print("더 이상 '더보기' 버튼이 없습니다.")
+            break
+
+def crawl_ediya():
+    cafe_name = 'ediya'
     url = "https://ediya.com/contents/drink.html#c"
     driver = setup_driver()
 
@@ -15,17 +28,7 @@ def crawl_idiya():
         driver.implicitly_wait(3)
 
         # 일단 더보기 버튼 싹 다 눌러서 모든 메뉴 띄우고 크롤링하는 로직
-        
-        while True:
-            try:
-                more_button = WebDriverWait(driver, 10).until(
-                    EC.element_to_be_clickable((By.CSS_SELECTOR, "div.block_hot > div > div > a"))
-                )
-                driver.execute_script("arguments[0].click();", more_button)
-                time.sleep(1)  # 로딩을 위해 잠시 대기
-            except TimeoutException:
-                print("더 이상 '더보기' 버튼이 없습니다.")
-                break
+        click_more_button(driver)
 
         # 모든 메뉴 아이템을 찾습니다.
         menu_items = driver.find_elements(By.CSS_SELECTOR, "#menu_ul > li")
@@ -34,7 +37,7 @@ def crawl_idiya():
         for item in menu_items:
             try:
                 menu_name = item.find_element(By.CSS_SELECTOR, 'div.menu_tt > a > span').text
-                image_url = item.find_element(By.CSS_SELECTOR, 'a > img').get_attribute('src')
+                image_url = item.find_element(By.CSS_SELECTOR, 'a:nth-child(2) > img').get_attribute('src')
                 
                 print(f"메뉴명: {menu_name}")
                 print(f"이미지 URL: {image_url}")
@@ -51,8 +54,9 @@ def crawl_idiya():
 
     except Exception as e:
         print(f"크롤링 중 오류 발생: {e}")
+    
     finally:
         driver.quit()
 
 if __name__ == "__main__":
-    crawl_idiya()
+    crawl_ediya()

@@ -14,10 +14,10 @@
     $(document).ready(function(){
         $('#start-button').click(function(){
             $.ajax({
-                url: "{% url 'main' %}",
+                url: "{% url 'room' %}",
                 type: 'GET',
                 success: function(response) {
-                    window.location.href = "{% url 'main' %}";
+                    window.location.href = "{% url 'room' %}";
                 }
             });
         });

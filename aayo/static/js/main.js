@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // 링크 공유하기 버튼 눌렀을 때 작동되는 ajax
+
     const modal = document.getElementById('menuDetailModal');
     if (modal) {
         const menuItems = document.querySelectorAll('.menu-item');
@@ -161,6 +163,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.removeChild(textArea);
     }
 });
+
+// modal창 동적 생성하는 ajax
+
 
 // 중복 설정 방지
 if (!window.menuInteractionsSetup) {
@@ -365,3 +370,5 @@ function setupMenuInteractions() {
         });
     });
 }
+
+// 모달 창(주문 상세 페이지) 상세 정보를 클릭하고 그걸 db로 보내는 ajax

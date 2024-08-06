@@ -6,7 +6,7 @@
     <h2>방이 성공적으로 생성되었습니다!</h2>
     <p><span data-emoji="🏷️">방 이름:</span> {{ room.name }}</p>
     <p><span data-emoji="☕">카페:</span> {{ room.cafe }}</p>
-    <p><span data-emoji="🔗">방 링크:</span> <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ request.build_absolute_uri }}{% url 'room_menu' room.unique_id %}</a></p>
+    <p><span data-emoji="🔗">방 링크:</span> <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ share_link }}</a></p>
     <button type="button" id="copyLinkBtn" class="btn btn-primary">링크 공유하기</button>
     <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-primary">주문 총계 보기</a>
     <a href="{% url 'room_menu' unique_id=room.unique_id %}" class="btn btn-secondary">방 입장</a>
