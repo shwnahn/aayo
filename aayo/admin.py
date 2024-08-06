@@ -40,7 +40,7 @@ class CafeAdmin(admin.ModelAdmin):
 admin.site.register(Cafe, CafeAdmin)
 
 class MenuItemAdmin(admin.ModelAdmin):
-    list_display = ('name', 'cafe', 'image_tag')
+    list_display = ('name', 'cafe', 'category', 'note', 'image_tag')
     list_filter = ('cafe',)
     search_fields = ('name', 'cafe__name')
 

@@ -1,22 +1,8 @@
 from selenium.webdriver.common.by import By # 요소 찾을 때 필요함
 from selenium.webdriver.common.keys import Keys
-from crawler import * # setup_driver, save_data 불러옴
+from crawler import * # setup_driver, save_data, scroll_down
 import time # time.sleep 쓰려고
 
-def scroll_down(driver):
-     # 스크롤을 무한 반복하여 맨 밑에 도달할 때까지
-        while True:
-            # 현재 페이지 높이 저장
-            last_height = driver.execute_script("return document.body.scrollHeight")
-            # 스크롤을 맨 아래로 내림
-            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            # 새로운 콘텐츠 로드 시간 대기
-            time.sleep(0.5)
-            # 새로운 페이지 높이 저장
-            new_height = driver.execute_script("return document.body.scrollHeight")
-            # 새로운 페이지 높이와 이전 페이지 높이를 비교하여 끝에 도달했는지 확인
-            if new_height == last_height:
-                break  # 더 이상 새로운 콘텐츠가 로드되지 않으면 반복 종료
 
 def update_data(data, driver):
     menu_items = driver.find_elements(By.CSS_SELECTOR, 'ul.ui-goods-list-default li:not(.next)')
