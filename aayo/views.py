@@ -11,16 +11,16 @@ import string
 from django.template.loader import render_to_string
 import logging
 
-def generate_unique_id():
+def generate_unique_id(): # 방 뒤에 생성되는 유니크 url을 생성하는 함수이다.
     return ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
 
-def index(request):
+def index(request): # 메인 화면 렌더링 함수
     return render(request, 'index.html')
 
-def main(request):
+def room(request): # 방 생성 함수 
     if request.method == 'POST':
         name = request.POST.get('name')
-        password = request.POST.get('password')
+        password = request.POST.get('password') # 숨기기 처리 해놓음
         cafe_name = request.POST.get('cafe')
         cafe = Cafe.objects.get(name=cafe_name)
         unique_id = generate_unique_id()
@@ -38,10 +38,11 @@ def main(request):
             del request.session['guest_name']
             
         return redirect('room_detail', unique_id=new_room.unique_id)
+    
     ctx = {
         'cafes': Cafe.objects.all(),
     }
-    return render(request, 'main.html', ctx)
+    return render(request, 'room.html', ctx)
 
 def room_detail(request, unique_id):
     try:
@@ -56,7 +57,7 @@ def room_detail(request, unique_id):
 
     return render(request, 'room_detail.html', context)
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__) # 버그 로그 찍어보려구 한 것
 
 def room_menu(request, unique_id):
     try:
@@ -113,7 +114,7 @@ def room_menu(request, unique_id):
         logger.error(f"Unexpected error in room_menu view: {str(e)}")
         return JsonResponse({'success': False, 'error': 'An unexpected error occurred'}, status=500)
 
-def room_orders(request, unique_id):
+def room_orders(request, unique_id): 
     try:
         room = get_object_or_404(Room, unique_id=unique_id)
         

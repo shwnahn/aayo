@@ -8,7 +8,7 @@ class Room(models.Model):
     cafe = models.CharField(max_length=20)
     unique_id = models.CharField(max_length=8, unique=True)
     def __str__(self):
-        return f"{self.name} - {self.cafe}"
+        return f"{self.name}"
 
 # 게스트 주문 정보를 저장하는 모델
 class GuestOrder(models.Model):
@@ -16,7 +16,7 @@ class GuestOrder(models.Model):
     guest_name = models.CharField(max_length=50)
     menus = models.TextField()  # JSON 문자열을 저장할 TextField
     def __str__(self):
-        return f"{self.guest_name}'s order in {self.room.name}"
+        return f"{self.guest_name}의 주문"
     
 # 카페 / 메뉴
 class Cafe(models.Model):
@@ -28,6 +28,6 @@ class Cafe(models.Model):
 class MenuItem(models.Model):
     cafe = models.ForeignKey(Cafe, on_delete=models.CASCADE, related_name='menu_items')
     name = models.CharField(max_length=255)
-    image_url = models.URLField(blank=True, null=True)  # 이미지 URL 필드 추가
+    image_url = models.URLField(max_length=450, blank=True, null=True)  # 이미지 URL 필드 추가
     def __str__(self):
         return f"{self.name} ({self.cafe.name})"

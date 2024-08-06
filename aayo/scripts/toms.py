@@ -5,9 +5,9 @@ from selenium.common.exceptions import TimeoutException
 from crawler import *  # setup_driver, save_data 불러옴
 import time  # time.sleep 쓰려고
 
-def crawl_tomntoms():
+def crawl_toms():
     # 카페명과 메뉴 URL
-    cafe_name = 'tomntoms'
+    cafe_name = 'toms'
     url = "https://www.tomntoms.com/menu/drink"
 
     # 웹드라이버 설정
@@ -51,4 +51,4 @@ def crawl_tomntoms():
 
 # 이 코드 실행 시 크롤링 함수 호출
 if __name__ == "__main__":
-    crawl_tomntoms()
+    crawl_toms()
