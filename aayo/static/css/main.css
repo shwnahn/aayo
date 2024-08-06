@@ -9,6 +9,10 @@
     font-family: 'MangoDdobak-B', sans-serif;
 }
 
+.hidden {
+    display: none;
+}
+
 body, html {
     /* font-family: 'Arial', sans-serif; */
     margin: 0;
