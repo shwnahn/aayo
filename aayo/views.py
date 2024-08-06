@@ -17,7 +17,7 @@ def generate_unique_id():
 def index(request):
     return render(request, 'index.html')
 
-def main(request):
+def room(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         password = request.POST.get('password')
@@ -41,7 +41,7 @@ def main(request):
     ctx = {
         'cafes': Cafe.objects.all(),
     }
-    return render(request, 'main.html', ctx)
+    return render(request, 'room.html', ctx)
 
 def room_detail(request, unique_id):
     try:
