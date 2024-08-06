@@ -7,7 +7,7 @@ def crawl_cafename():
     cafe_name = 'cafename'
     url = ""
 
-    # 웹드라이버 설정
+    # 웹드라이버 설정 
     driver = setup_driver()
 
     try:

@@ -66,8 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const menuId = this.getAttribute('data-menu-id');
             const temperature = document.querySelector('#hotButton.active, #iceButton.active') ? document.querySelector('#hotButton.active, #iceButton.active').textContent.trim() : '';
             const size = document.querySelector('#regularButton.active, #extraButton.active') ? document.querySelector('#regularButton.active, #extraButton.active').textContent.trim() : '';
-            const ice = document.querySelector('#noSyrupButton.active, #lessSyrupButton.active, #regularSyrupButton.active') ? document.querySelector('#noSyrupButton.active, #lessSyrupButton.active, #regularSyrupButton.active').textContent.trim() : '';
+            const ice = document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active') ? document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active').textContent.trim() : '';
             const instructions = document.getElementById('additionalInstructions').value;
+
 
             selectedMenus.add({
                 id: menuId,
@@ -94,7 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 body: formData,
                 headers: {
                     'X-CSRFToken': formData.get('csrfmiddlewaretoken')
-                }
+                    
+                },
             })
             .then(response => response.json())
             .then(data => {
@@ -130,14 +132,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(id => {
-        //     document.getElementById(id).addEventListener('click', function() {
-        //         ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(btnId => {
-        //             document.getElementById(btnId).classList.remove('active');
-        //         });
-        //         toggleButtonActive(this);
-        //     });
-        // });
+        ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(id => {
+            document.getElementById(id).addEventListener('click', function() {
+                ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(btnId => {
+                    document.getElementById(btnId).classList.remove('active');
+                });
+                toggleButtonActive(this);
+            });
+        });
     }
 
     function fallbackCopyTextToClipboard(text) {
