@@ -29,5 +29,7 @@ class MenuItem(models.Model):
     cafe = models.ForeignKey(Cafe, on_delete=models.CASCADE, related_name='menu_items')
     name = models.CharField(max_length=255)
     image_url = models.URLField(max_length=450, blank=True, null=True)  # 이미지 URL 필드 추가
+    category = models.CharField(max_length=50, blank=True, null=True) # 카테고리 추가
+    note = models.TextField(blank=True, null=True) #비고란 추가
     def __str__(self):
         return f"{self.name} ({self.cafe.name})"
