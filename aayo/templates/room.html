@@ -5,12 +5,12 @@
 <div class="main-container">
     <h1 class="page-title">방을 생성하세요!</h1>
     <form method="post">
-      {% csrf_token %}
+    {% csrf_token %}
         <div class="form-group">
             <label for="name">방 이름을 입력하세요! <span>🏷️</span></label>
             <input type="text" id="name" name="name" required>
         </div>
-        <div class="form-group">
+        <div class="form-group hidden">
             <label for="password">비밀번호를 입력하세요(선택사항) <span>🔒</span></label>
             <input type="password" id="password" name="password">
         </div>
