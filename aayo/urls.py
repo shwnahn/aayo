@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
 
-    path('main/', views.main, name='main'),
+    path('room/', views.room, name='room'),
     # 메인, 방 생성 form
 
     path('room/<str:unique_id>/', views.room_detail, name='room_detail'), 
