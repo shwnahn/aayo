@@ -69,14 +69,20 @@ def room_menu(request, unique_id):
                 del request.session['guest_name']
             request.session['current_room'] = unique_id
         
+        # POST 요청 처리
         if request.method == 'POST':
+            # 게스트 로그인 POST
             if 'guest_name' in request.POST:
                 guest_name = request.POST.get('guest_name')
+                password = request.POST.get('password')
                 request.session['guest_name'] = guest_name
+                request.session['password'] = password
                 return JsonResponse({'success': True})
             
+            # 메뉴 선택 POST
             elif 'menus' in request.POST:
                 guest_name = request.session.get('guest_name')
+                password = request.session.get('password')
                 if not guest_name:
                     return JsonResponse({'error': 'Guest name not found'}, status=400)
                 
@@ -88,6 +94,7 @@ def room_menu(request, unique_id):
                 GuestOrder.objects.create(
                     room=room,
                     guest_name=guest_name,
+                    password=password,
                     menus=json.dumps(menus)
                 )
                 
@@ -118,10 +125,12 @@ def room_orders(request, unique_id):
     try:
         room = get_object_or_404(Room, unique_id=unique_id)
         
+        # 주문 초기화 POST
         if request.method == 'POST' and request.headers.get('X-Requested-With') == 'XMLHttpRequest':
             guest_name = request.session.get('guest_name')
+            password = request.session.get('password')
             if guest_name:
-                GuestOrder.objects.filter(room=room, guest_name=guest_name).delete()
+                GuestOrder.objects.filter(room=room, guest_name=guest_name, password=password).delete()
                 if 'guest_name' in request.session:
                     # del request.session['guest_name']
                     return JsonResponse({'success': True, 'message': '주문이 초기화되었습니다.'})
