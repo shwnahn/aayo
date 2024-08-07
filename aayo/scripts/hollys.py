@@ -31,15 +31,15 @@ def crawl_hollys(driver, url):
                     "image_url": image_url,
                 })
 
-            try:
-                more_button = WebDriverWait(driver, 3).until(
-                    EC.element_to_be_clickable((By.CSS_SELECTOR, 'div.more_menu > a'))
-                )
-                driver.execute_script("arguments[0].click();", more_button)
-                time.sleep(1)  
-            except TimeoutException:
-                print("더 이상 '더보기' 버튼이 없습니다.")
-                break
+            # try:
+            #     more_button = WebDriverWait(driver, 3).until(
+            #         EC.element_to_be_clickable((By.CSS_SELECTOR, 'div.more_menu > a'))
+            #     )
+            #     driver.execute_script("arguments[0].click();", more_button)
+            #     time.sleep(5)  
+            # except TimeoutException:
+            #     print("더 이상 '더보기' 버튼이 없습니다.")
+            #     break
 
     except Exception as e:
         print(f"크롤링 중 오류 발생: {e}")
