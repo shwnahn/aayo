@@ -53,12 +53,19 @@ function setupMenuInteractions() {
     // 메뉴 상세 선택 - 버튼 활성화 토글 설정 함수
     function setupToggleButtons(buttonIds) {
         buttonIds.forEach(id => {
-            document.getElementById(id).addEventListener('click', function() {
-                buttonIds.forEach(btnId => {
-                    document.getElementById(btnId).classList.remove('active');
+            const button = document.getElementById(id);
+            if (button) {
+                button.addEventListener('click', function() {
+                    console.log(`Button clicked: ${id}`);
+                    buttonIds.forEach(btnId => {
+                        document.getElementById(btnId).classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    console.log(`Active button: ${id}`);
                 });
-                this.classList.add('active');
-            });
+            } else {
+                console.warn(`Button not found: ${id}`);
+            }
         });
     }
 
@@ -130,10 +137,25 @@ function setupMenuInteractions() {
             const ice = document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active') ? document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active').textContent.trim() : '';
             const instructions = document.getElementById('additionalInstructions').value;
 
+            // 필수 항목 검증
+            if (!temperature) {
+                alert('온도를 선택해주세요!');
+                return;
+            }
+            if (!size) {
+                alert('크기를 선택해주세요!');
+                return;
+            }
+            if (!ice) {
+                alert('얼음 양을 선택해주세요!');
+                return;
+            }
             // 선택된 옵션들을 Set에 추가
             selectedOptions.add({
                 id: menuId,
-                options: { temperature, size, ice, instructions }
+                options: { 
+                    temperature, size, ice, instructions
+                }
             });
 
             // [BORDER] 유저가 선택한 메뉴 아이템에 'selected' 클래스 추가
@@ -146,6 +168,8 @@ function setupMenuInteractions() {
             // 버튼 상태 업데이트 및 모달 창 닫기
             updateButtonState();
             modal.style.display = 'none';
+
+            console.log('메뉴가 저장되었습니다:', menuId);
         });
     };
     
