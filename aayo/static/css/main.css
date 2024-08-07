@@ -312,6 +312,14 @@ button, .btn {
     font-size: 16px;
 }
 
+button:disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+    animation: none !important;
+}
+
 a.btn-primary {
     background-color: #6D4C41;
     color: white;
