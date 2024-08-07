@@ -758,7 +758,10 @@ main {
     margin-bottom: 10px;
 }
 
-
+/* 유저가 선택한 메뉴 강조 css */
+.menu-item.selected {
+    border: 3px solid #5B4033;
+}
 
 /* Animation for initial load */
 @keyframes fadeIn {
