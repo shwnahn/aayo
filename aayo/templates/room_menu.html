@@ -22,7 +22,7 @@
 
     <div id="menuListContainer" class="menu-grid">
         {% for menu in menus %}
-        <div class="menu-item" data-menu-id="{{ menu.id }}">
+        <div class="menu-item{% if menu.id in selected_menu_ids %} selected{% endif %}" data-menu-id="{{ menu.id }}">
             {% if menu.image_url %}
                 <img src="{{ menu.image_url }}" alt="{{ menu.name }}" class="menu-image">
             {% endif %}

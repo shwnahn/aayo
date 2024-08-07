@@ -4,14 +4,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const cafeLogos = document.querySelectorAll('.cafe-logo');
     const cafeInput = document.getElementById('cafe');
 
+    // room.html 에서 카페 리스트 선택 시 AJAX
     cafeLogos.forEach(logo => {
         logo.addEventListener('click', function() {
+            // 모든 로고에서 'selected' 클래스를 제거하여 선택되지 않은 상태로 만들기
             cafeLogos.forEach(logo => logo.classList.remove('selected'));
+            // 클릭한 로고에 'selected' 클래스를 추가하여 선택된 상태로 만들기
             this.classList.add('selected');
+            // 클릭한 로고의 'data-cafe' 속성 값을 가져와 'cafeInput' 요소의 값으로 설정
             cafeInput.value = this.getAttribute('data-cafe');
         });
     });
 
+    // 링크 공유하기 버튼 눌렀을 때 클립보드에 링크 복사 AJAX
     if (copyLinkBtn && roomLink) {
         copyLinkBtn.addEventListener('click', function() {
             const linkToCopy = roomLink.href;
@@ -23,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    // 링크 공유하기 버튼 눌렀을 때 작동되는 ajax
 
     const modal = document.getElementById('menuDetailModal');
     if (modal) {
@@ -33,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const saveMenuItem = document.getElementById('saveMenuItem');
         const closeBtn = modal.querySelector('.close');
         const confirmButton = document.getElementById('confirmButton');
-        const selectedMenus = new Set();
+        const selectedOptions = new Set();
 
         menuItems.forEach(item => {
             item.addEventListener('click', function() {
@@ -71,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const instructions = document.getElementById('additionalInstructions').value;
 
 
-            selectedMenus.add({
+            selectedOptions.add({
                 id: menuId,
                 options: { temperature, size, ice, instructions }
             });
@@ -80,23 +84,23 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
         });
 
+        // 메뉴 선택하기 버튼 눌렀을 때 작동되는 ajax
         const menuForm = document.getElementById('menuForm');
         menuForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            if (selectedMenus.size === 0) {
+            if (selectedOptions.size === 0) {
                 alert('최소 하나의 메뉴를 선택해주세요.');
                 return;
             }
 
             const formData = new FormData(menuForm);
-            formData.append('menus', JSON.stringify(Array.from(selectedMenus)));
+            formData.append('menus', JSON.stringify(Array.from(selectedOptions)));
 
             fetch(window.location.href, {
                 method: 'POST',
                 body: formData,
                 headers: {
-                    'X-CSRFToken': formData.get('csrfmiddlewaretoken')
-                    
+                    'X-CSRFToken': formData.get('csrfmiddlewaretoken') 
                 },
             })
             .then(response => response.json())
@@ -108,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         function updateButtonState() {
-            confirmButton.disabled = selectedMenus.size === 0;
+            confirmButton.disabled = selectedOptions.size === 0;
         }
 
         function toggleButtonActive(button) {
@@ -227,6 +231,7 @@ function handleGuestNameSubmit(e) {
     });
 }
 
+// 메뉴 선택 상호작용
 function setupMenuInteractions() {
     const menuItems = document.querySelectorAll('.menu-item');
     const modal = document.getElementById('menuDetailModal');
@@ -235,7 +240,7 @@ function setupMenuInteractions() {
     const saveMenuItem = document.getElementById('saveMenuItem');
     const closeBtn = modal.querySelector('.close');
     const confirmButton = document.getElementById('confirmButton');
-    const selectedMenus = new Set();
+    const selectedOptions = new Set();
 
     function resetModal() {
         ['hotButton', 'iceButton', 'regularButton', 'extraButton', 'bigIceButton', 'regularIceButton', 'lessIceButton'].forEach(id => {
@@ -281,7 +286,7 @@ function setupMenuInteractions() {
         const ice = document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active') ? document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active').textContent.trim() : '';
         const instructions = document.getElementById('additionalInstructions').value;
 
-        selectedMenus.add({
+        selectedOptions.add({
             id: menuId,
             options: { temperature, size, ice, instructions }
         });
@@ -293,7 +298,7 @@ function setupMenuInteractions() {
     const menuForm = document.getElementById('menuForm');
     menuForm.addEventListener('submit', debounce(function(e) {
         e.preventDefault();
-        if (selectedMenus.size === 0) {
+        if (selectedOptions.size === 0) {
             alert('최소 하나의 메뉴를 선택해주세요.');
             return;
         }
@@ -302,7 +307,7 @@ function setupMenuInteractions() {
         submitButton.disabled = true;
 
         const formData = new FormData(menuForm);
-        formData.append('menus', JSON.stringify(Array.from(selectedMenus)));
+        formData.append('menus', JSON.stringify(Array.from(selectedOptions)));
 
         fetch(window.location.href, {
             method: 'POST',
@@ -334,7 +339,7 @@ function setupMenuInteractions() {
     }, 300));
 
     function updateButtonState() {
-        confirmButton.disabled = selectedMenus.size === 0;
+        confirmButton.disabled = selectedOptions.size === 0;
     }
 
     function toggleButtonActive(button) {
