@@ -9,6 +9,12 @@ button:disabled {
     opacity: 0.6 !important;
     animation: none !important;
 }
+
+/* 유저가 선택한 메뉴 강조 css */
+.menu-item.selected {
+    border: 3px solid #5B4033 !important;
+}
+
 /* 여기까지 ㅠㅠ */
 
 @font-face {
@@ -767,11 +773,6 @@ main {
 
 .btn-group-ice {
     margin-bottom: 10px;
-}
-
-/* 유저가 선택한 메뉴 강조 css */
-.menu-item.selected {
-    border: 3px solid #5B4033;
 }
 
 /* Animation for initial load */
