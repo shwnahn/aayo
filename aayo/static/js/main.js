@@ -80,6 +80,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 options: { temperature, size, ice, instructions }
             });
 
+            // 유저가 선택한 메뉴 아이템에 'selected' 클래스 추가
+            // selected로 바뀐 메뉴 아이템에 border 적용
+            const menuItem = document.querySelector(`.menu-item[data-menu-id="${menuId}"]`);
+            if (menuItem) {
+                menuItem.classList.add('selected');
+            }
+
             updateButtonState();
             modal.style.display = 'none';
         });
@@ -252,6 +259,20 @@ function setupMenuInteractions() {
     menuItems.forEach(item => {
         item.addEventListener('click', function() {
             const menuId = this.getAttribute('data-menu-id');
+
+            // 이미 선택된 메뉴인 경우, 선택 취소하는 로직 추가
+            // border로 선택된 메뉴 강조하는 부분과 연계
+            if (this.classList.contains('selected')) {
+                this.classList.remove('selected');
+                // selected 상태 삭제
+                selectedOptions.delete(Array.from(selectedOptions).find(option => option.id === menuId));
+                // 선택한 옵션도 삭제
+                updateButtonState();
+                // 주문 확정 버튼 비활성화 (시각적으로 확인할 수 있게 하면 좋을 듯)
+                alert('커스텀을 변경하시겠습니까?')
+                return;
+            }
+
             const menuName = this.querySelector('.menu-name').textContent;
             const menuImageSrc = this.querySelector('.menu-image')?.src;
 
