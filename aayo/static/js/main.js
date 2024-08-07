@@ -45,42 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM fully loaded');
 });
 
-function handleGuestNameSubmit(e) {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const submitButton = e.target.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-
-    fetch(window.location.href, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-CSRFToken': formData.get('csrfmiddlewaretoken')
-        }
-    })
-    .then(async response => {
-        if (!response.ok) {
-            const text = await response.text();
-            throw new Error('Server error: ' + text);
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (data.success) {
-            location.reload();
-        } else {
-            throw new Error(data.error || 'Unknown error occurred');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('An error occurred: ' + error.message);
-    })
-    .finally(() => {
-        submitButton.disabled = false;
-    });
-}
-
 // 링크 복사 API 안될 때 복사하기 함수(대체기능))
 function fallbackCopyTextToClipboard(text) {
     const textArea = document.createElement("textarea");
