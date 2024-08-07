@@ -1,3 +1,16 @@
+/* 기능적으로 필요한 코드임 ㅠㅠ */
+.hidden {
+    display: none;
+}
+button:disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+    animation: none !important;
+}
+/* 여기까지 ㅠㅠ */
+
 @font-face {
     font-family: 'MangoDdobak-B';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/MangoDdobak-B.woff2') format('woff2');
@@ -9,9 +22,6 @@
     font-family: 'MangoDdobak-B', sans-serif;
 }
 
-.hidden {
-    display: none;
-}
 
 body, html {
     /* font-family: 'Arial', sans-serif; */
@@ -312,13 +322,6 @@ button, .btn {
     font-size: 16px;
 }
 
-button:disabled {
-    background-color: #cccccc !important;
-    color: #666666 !important;
-    cursor: not-allowed !important;
-    opacity: 0.6 !important;
-    animation: none !important;
-}
 
 a.btn-primary {
     background-color: #6D4C41;
