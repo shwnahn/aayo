@@ -63,7 +63,9 @@
 
     <button id="resetOrderBtn" class="btn btn-primary mt-3">메뉴 페이지로 돌아가기</button>
 </div>
+{% endblock %}
 
+{% block scripts %}
 <script>
 document.getElementById('resetOrderBtn').addEventListener('click', function() {
     fetch('', {

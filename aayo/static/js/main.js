@@ -1,17 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const copyLinkBtn = document.getElementById('copyLinkBtn');
-    const roomLink = document.getElementById('roomLink');
+    console.log('DOM loading');
+
+    // room.html 에서 카페 리스트 선택 시 AJAX
     const cafeLogos = document.querySelectorAll('.cafe-logo');
     const cafeInput = document.getElementById('cafe');
-
     cafeLogos.forEach(logo => {
         logo.addEventListener('click', function() {
+            // 모든 로고에서 'selected' 클래스를 제거하여 선택되지 않은 상태로 만들기
             cafeLogos.forEach(logo => logo.classList.remove('selected'));
+            // 클릭한 로고에 'selected' 클래스를f 추가하여 선택된 상태로 만들기
             this.classList.add('selected');
+            // 클릭한 로고의 'data-cafe' 속성 값을 가져와 'cafeInput' 요소의 값으로 설정
             cafeInput.value = this.getAttribute('data-cafe');
         });
     });
 
+    // 카페 선택 안하고 넘어가는 것 막는 코드
+    const createRoomForm = document.getElementById('createRoomForm');
+    if (createRoomForm) {
+        createRoomForm.addEventListener('submit', function(e) {
+            if (!cafeInput.value) {
+                e.preventDefault(); // 폼 제출을 막습니다.
+                alert('카페를 선택해주세요!');
+            }
+        });
+    }
+    
+    // 링크 공유하기 버튼 눌렀을 때 클립보드에 링크 복사 AJAX
+    const copyLinkBtn = document.getElementById('copyLinkBtn');
+    const roomLink = document.getElementById('roomLink');
     if (copyLinkBtn && roomLink) {
         copyLinkBtn.addEventListener('click', function() {
             const linkToCopy = roomLink.href;
@@ -19,145 +36,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert("방 링크가 클립보드에 복사되었습니다!");
             }).catch(err => {
                 console.error('클립보드 복사 실패:', err);
+                // API 호출 오류날 때 대체기능 함수
                 fallbackCopyTextToClipboard(linkToCopy);
             });
         });
-    }
-
-    const modal = document.getElementById('menuDetailModal');
-    if (modal) {
-        const menuItems = document.querySelectorAll('.menu-item');
-        const modalTitle = document.getElementById('menuDetailModalLabel');
-        const modalImage = document.getElementById('modalMenuImage');
-        const saveMenuItem = document.getElementById('saveMenuItem');
-        const closeBtn = modal.querySelector('.close');
-        const confirmButton = document.getElementById('confirmButton');
-        const selectedMenus = new Set();
-
-        menuItems.forEach(item => {
-            item.addEventListener('click', function() {
-                const menuId = this.getAttribute('data-menu-id');
-                const menuName = this.querySelector('.menu-name').textContent;
-                const menuImageSrc = this.querySelector('.menu-image')?.src;
-
-                modalTitle.textContent = menuName;
-                if (menuImageSrc) {
-                    modalImage.src = menuImageSrc;
-                    modalImage.style.display = 'block';
-                } else {
-                    modalImage.style.display = 'none';
-                }
-                modal.style.display = 'block';
-                saveMenuItem.setAttribute('data-menu-id', menuId);
-            });
-        });
-
-        closeBtn.onclick = function() {
-            modal.style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
-
-        saveMenuItem.addEventListener('click', function() {
-            const menuId = this.getAttribute('data-menu-id');
-            const temperature = document.querySelector('#hotButton.active, #iceButton.active') ? document.querySelector('#hotButton.active, #iceButton.active').textContent.trim() : '';
-            const size = document.querySelector('#regularButton.active, #extraButton.active') ? document.querySelector('#regularButton.active, #extraButton.active').textContent.trim() : '';
-            const ice = document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active') ? document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active').textContent.trim() : '';
-            const instructions = document.getElementById('additionalInstructions').value;
-
-
-            selectedMenus.add({
-                id: menuId,
-                options: { temperature, size, ice, instructions }
-            });
-
-            updateButtonState();
-            modal.style.display = 'none';
-        });
-
-        const menuForm = document.getElementById('menuForm');
-        menuForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (selectedMenus.size === 0) {
-                alert('최소 하나의 메뉴를 선택해주세요.');
-                return;
-            }
-
-            const formData = new FormData(menuForm);
-            formData.append('menus', JSON.stringify(Array.from(selectedMenus)));
-
-            fetch(window.location.href, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRFToken': formData.get('csrfmiddlewaretoken')
-                    
-                },
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success && data.redirect_url) {
-                    window.location.href = data.redirect_url;
-                }
-            });
-        });
-
-        function updateButtonState() {
-            confirmButton.disabled = selectedMenus.size === 0;
-        }
-
-        function toggleButtonActive(button) {
-            button.classList.toggle('active');
-        }
-
-        ['hotButton', 'iceButton'].forEach(id => {
-            document.getElementById(id).addEventListener('click', function() {
-                ['hotButton', 'iceButton'].forEach(btnId => {
-                    document.getElementById(btnId).classList.remove('active');
-                });
-                toggleButtonActive(this);
-            });
-        });
-
-        ['regularButton', 'extraButton'].forEach(id => {
-            document.getElementById(id).addEventListener('click', function() {
-                ['regularButton', 'extraButton'].forEach(btnId => {
-                    document.getElementById(btnId).classList.remove('active');
-                });
-                toggleButtonActive(this);
-            });
-        });
-
-        ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(id => {
-            document.getElementById(id).addEventListener('click', function() {
-                ['noSyrupButton', 'lessSyrupButton', 'regularSyrupButton'].forEach(btnId => {
-                    document.getElementById(btnId).classList.remove('active');
-                });
-                toggleButtonActive(this);
-            });
-        });
-    }
-
-    function fallbackCopyTextToClipboard(text) {
-        const textArea = document.createElement("textarea");
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-
-        try {
-            const successful = document.execCommand('copy');
-            const msg = successful ? '성공적으로 복사되었습니다.' : '복사에 실패했습니다.';
-            alert(msg);
-        } catch (err) {
-            console.error('Fallback: 복사 실패', err);
-            alert("링크 복사에 실패했습니다. 수동으로 복사해주세요.");
-        }
-
-        document.body.removeChild(textArea);
-    }
+    };
+    
+    console.log('DOM fully loaded');
 });
+
+// 링크 복사 API 안될 때 복사하기 함수(대체기능))
+function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+        const successful = document.execCommand('copy');
+        const msg = successful ? '성공적으로 복사되었습니다.' : '복사에 실패했습니다.';
+        alert(msg);
+    } catch (err) {
+        console.error('Fallback: 복사 실패', err);
+        alert("링크 복사에 실패했습니다. 수동으로 복사해주세요.");
+    }
+
+    document.body.removeChild(textArea);
+}

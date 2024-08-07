@@ -11,18 +11,21 @@ import string
 from django.template.loader import render_to_string
 import logging
 
-def generate_unique_id():
+def generate_unique_id(): # 방 뒤에 생성되는 유니크 url을 생성하는 함수이다.
     return ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
 
-def index(request):
+def index(request): # 메인 화면 렌더링 함수
     return render(request, 'index.html')
 
-def room(request):
+def room(request): # 방 생성 함수 
+    # POST 요청 처리 (방 생성하기)
     if request.method == 'POST':
         name = request.POST.get('name')
-        password = request.POST.get('password')
+        password = request.POST.get('password') # 숨기기 처리 해놓음
         cafe_name = request.POST.get('cafe')
+        print(cafe_name)
         cafe = Cafe.objects.get(name=cafe_name)
+        print(cafe)
         unique_id = generate_unique_id()
         while Room.objects.filter(unique_id=unique_id).exists():
             unique_id = generate_unique_id()
@@ -38,6 +41,8 @@ def room(request):
             del request.session['guest_name']
             
         return redirect('room_detail', unique_id=new_room.unique_id)
+    
+    # GET 요청 처리
     ctx = {
         'cafes': Cafe.objects.all(),
     }
@@ -56,7 +61,7 @@ def room_detail(request, unique_id):
 
     return render(request, 'room_detail.html', context)
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__) # 버그 로그 찍어보려구 한 것
 
 def room_menu(request, unique_id):
     try:
@@ -68,14 +73,20 @@ def room_menu(request, unique_id):
                 del request.session['guest_name']
             request.session['current_room'] = unique_id
         
+        # POST 요청 처리
         if request.method == 'POST':
+            # 게스트 로그인 POST
             if 'guest_name' in request.POST:
                 guest_name = request.POST.get('guest_name')
+                password = request.POST.get('password')
                 request.session['guest_name'] = guest_name
+                request.session['password'] = password
                 return JsonResponse({'success': True})
             
+            # 메뉴 선택 POST
             elif 'menus' in request.POST:
                 guest_name = request.session.get('guest_name')
+                password = request.session.get('password')
                 if not guest_name:
                     return JsonResponse({'error': 'Guest name not found'}, status=400)
                 
@@ -87,40 +98,59 @@ def room_menu(request, unique_id):
                 GuestOrder.objects.create(
                     room=room,
                     guest_name=guest_name,
-                    menus=json.dumps(menus)
+                    password=password,
+                    menus=json.dumps(menus),
                 )
                 
                 return JsonResponse({'success': True, 'redirect_url': reverse('room_orders', args=[unique_id])})
         
         # GET 요청 처리
-        guest_name = request.session.get('guest_name')
-        menus = []
-        if guest_name:
-            try:
-                cafe = Cafe.objects.get(name=room.cafe)
-                menus = MenuItem.objects.filter(cafe=cafe).values('id', 'name', 'image_url')
-            except Cafe.DoesNotExist:
-                logger.error(f"Cafe not found: {room.cafe}")
-        
-        context = {
-            'room': room,
-            'guest_name': guest_name,
-            'menus': menus,
-        }
-        return render(request, 'room_menu.html', context)
+        if request.method == 'GET':
+            guest_name = request.session.get('guest_name')
+            password = request.session.get('password')
+            menus = []
+            selected_menu_ids = []
+            guest_order = None
+
+            if guest_name:
+                try:
+                    cafe = Cafe.objects.get(name=room.cafe)
+                    menus = MenuItem.objects.filter(cafe=cafe).values('id', 'name', 'image_url')
+
+                    # 주문내역 불러오기
+                    guest_order = GuestOrder.objects.filter(guest_name=guest_name, password=password, room=room).first()
+
+                    if guest_order:
+                        selected_menus = json.loads(guest_order.menus)
+                        selected_menu_ids = [menu['id'] for menu in selected_menus]
+                        print('Selected Menu IDs:', selected_menu_ids) 
+
+                except Cafe.DoesNotExist:
+                    logger.error(f"Cafe not found: {room.cafe}")
+            
+            context = {
+                'room': room,
+                'guest_name': guest_name,
+                'menus': menus,
+                'guest_order': guest_order,
+                'selected_menu_ids': selected_menu_ids,
+            }
+            return render(request, 'room_menu.html', context)
 
     except Exception as e:
         logger.error(f"Unexpected error in room_menu view: {str(e)}")
         return JsonResponse({'success': False, 'error': 'An unexpected error occurred'}, status=500)
 
-def room_orders(request, unique_id):
+def room_orders(request, unique_id): 
     try:
         room = get_object_or_404(Room, unique_id=unique_id)
         
+        # 주문 초기화 POST
         if request.method == 'POST' and request.headers.get('X-Requested-With') == 'XMLHttpRequest':
             guest_name = request.session.get('guest_name')
+            password = request.session.get('password')
             if guest_name:
-                GuestOrder.objects.filter(room=room, guest_name=guest_name).delete()
+                GuestOrder.objects.filter(room=room, guest_name=guest_name, password=password).delete()
                 if 'guest_name' in request.session:
                     # del request.session['guest_name']
                     return JsonResponse({'success': True, 'message': '주문이 초기화되었습니다.'})

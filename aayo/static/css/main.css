@@ -1,3 +1,22 @@
+/* 기능적으로 필요한 코드임 ㅠㅠ */
+.hidden {
+    display: none;
+}
+button:disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+    animation: none !important;
+}
+
+/* 유저가 선택한 메뉴 강조 css */
+.menu-item.selected {
+    border: 3px solid #5B4033 !important;
+}
+
+/* 여기까지 ㅠㅠ */
+
 @font-face {
     font-family: 'MangoDdobak-B';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/MangoDdobak-B.woff2') format('woff2');
@@ -9,9 +28,6 @@
     font-family: 'MangoDdobak-B', sans-serif;
 }
 
-.hidden {
-    display: none;
-}
 
 body, html {
     /* font-family: 'Arial', sans-serif; */
@@ -275,7 +291,7 @@ form {
     flex-direction: column;
 }
 
-form input[type="text"] {
+form input[type="text"], form input[type="password"], form textarea, input#cafe {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
@@ -311,6 +327,7 @@ button, .btn {
     text-decoration: none;
     font-size: 16px;
 }
+
 
 a.btn-primary {
     background-color: #6D4C41;
@@ -757,8 +774,6 @@ main {
 .btn-group-ice {
     margin-bottom: 10px;
 }
-
-
 
 /* Animation for initial load */
 @keyframes fadeIn {
