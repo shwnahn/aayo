@@ -5,7 +5,7 @@ urlpatterns = [
     path('', views.index, name='index'),
 
     path('room/', views.room, name='room'),
-    # 메인, 방 생성 form
+    # 메인, 방 생성 form (main -> room 이름 변경)
 
     path('room/<str:unique_id>/', views.room_detail, name='room_detail'), 
     # 방 개요 (방 이름, 방 링크 정보 보여주기) (리디렉션(버튼) : 방 입장 / 링크 공유 / 주문 총계)
