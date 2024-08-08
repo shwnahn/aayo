@@ -120,9 +120,9 @@ function setupMenuInteractions() {
 
     console.log(6);
 
+    // 모달창에서 '내 메뉴 저장하기' 버튼 클릭 시 선택된 옵션 저장
     const saveMenuItem = document.getElementById('saveMenuItem');
     if (saveMenuItem) {
-        // "저장" 버튼 클릭 시 선택된 메뉴 옵션 저장
         saveMenuItem.addEventListener('click', function() {
             const menuId = this.getAttribute('data-menu-id');
             const temperature = document.querySelector('#hotButton.active, #iceButton.active') ? document.querySelector('#hotButton.active, #iceButton.active').textContent.trim() : '';
