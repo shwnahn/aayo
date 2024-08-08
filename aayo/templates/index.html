@@ -2,14 +2,15 @@
 {% load static %}
 
 {% block content %}
-<div id="particles-js"></div>
 <div id="start-container">
-    <h1 class="main-title">당신의 완벽한 커피 주문,<br>여기서 시작하세요!</h1>
+    <h1>A A</br>Y<img src="{% static 'images/coffeebean.png' %}" alt="O" style="width: 1em; height: 1em; vertical-align: middle; margin-bottom: 10px;">
+    </h1>
+    <p>당신의 완벽한 커피 주문</p>
     <button id="start-button">시작하기</button>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 <script>
     $(document).ready(function(){
         $('#start-button').click(function(){
@@ -22,112 +23,76 @@
             });
         });
     });
-
-    particlesJS("particles-js", {
-        "particles": {
-            "number": {
-                "value": 50,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#D2B48C"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                },
-                "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                }
-            },
-            "opacity": {
-                "value": 0.4,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 1,
-                    "opacity_min": 0.1,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 10,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 40,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": false
-            },
-            "move": {
-                "enable": true,
-                "speed": 1,
-                "direction": "none",
-                "random": true,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "bubble"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 400,
-                    "line_linked": {
-                        "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 250,
-                    "size": 0,
-                    "duration": 2,
-                    "opacity": 0,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 400,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-            }
-        },
-        "retina_detect": true
-    });
 </script>
+
+<style>
+    .container {
+        text-align: center;
+        flex: 1;
+    }
+    header {
+        display: none;
+    }
+    #start-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        height: 100vh; /* 화면 전체 높이 */
+        margin-left: 100px;
+    }
+    h1 {
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-family: 'Roboto';
+        text-align: right;
+        font-size: 55px;
+        color: black;
+    }
+    p {
+        font-family: 'Roboto';
+        margin: 10px 0px;
+        font-size: 15px;
+        color: #666;
+    }
+    .button-container {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    #start-button {
+        font-family: 'Roboto';
+        width: 70%;
+        border: 1px solid #676767;
+        padding: 8px 20px;
+        font-size: 15px;
+        background-color: #FFD457;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    #start-button:hover {
+        background-color: #e6b800;
+
+    }
+    .wave-bottom {
+        display: block;
+    }
+    .wave-top {
+        display: none;
+    }
+    @media (max-width: 600px) {
+        h1 {
+            font-weight: 900;
+            font-family: 'Roboto';
+            margin-bottom: 5px;
+            font-size: 60px;
+        }
+        p, .start-button {
+            font-size: 16px;
+        }
+    }
+</style>
 {% endblock %}
