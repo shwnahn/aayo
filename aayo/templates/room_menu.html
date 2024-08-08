@@ -14,6 +14,8 @@
     </form>
     {% else %}
     <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
+    <p class="centered-text">현재 선택한 메뉴: <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span></p>
+    <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
 
     <form id="menuForm">
         {% csrf_token %}
