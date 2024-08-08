@@ -23,6 +23,25 @@ function setupMenuInteractions() {
     const confirmButton = document.getElementById('confirmButton');
     console.log('confirmButton:', confirmButton);
     const selectedOptions = new Set();
+    // 메뉴 검색창 가져오기
+    const searchInput = document.getElementById('menuSearch');
+
+    searchInput.addEventListener('input', function () {
+        // '검색어 입력' 이벤트리스너 추가
+        const searchTerm = this.value.toLowerCase();
+        // 대소문자 구분 없이 검색 가능하도록 toLowercase함수 적용
+        menuItems.forEach(item => {
+            const menuName = item.querySelector('.menu-name').textContent.toLowerCase();
+            // 메뉴 아이템의 메뉴 이름을 가져와서 소문자로 변경 후 저장
+            if (menuName.includes(searchTerm)) {
+            // 메뉴 이름에 유저가 입력한 검색어가 포함되는 경우
+                item.style.display = '';
+                // 그 메뉴 아이템만 보여줌
+            } else {
+                item.style.display = 'none'
+            }
+        });
+    });
 
     // 선택된 메뉴 이름 업데이트 함수
     function updateSelectedMenuNames() {
@@ -30,7 +49,7 @@ function setupMenuInteractions() {
             const menuItem = document.querySelector(`.menu-item[data-menu-id="${option.id}"]`);
             // selectedOption 집합의 option에 저장된 id와 동일한 id를 가진 메뉴 아이템을 불러와서,
             return menuItem ? menuItem.querySelector('.menu-name').textContent : '';
-            // 그 메뉴 아이템의 메뉴 이름을 반환, 만약 메뉴 아이템이 존재하지 않으면 빈 문자열을 반환
+            // (삼항 연산자) 그 메뉴 아이템의 메뉴 이름을 반환, 만약 메뉴 아이템이 존재하지 않으면(거의 그럴 일 없음) 빈 문자열을 반환
         })
         document.getElementById('selectedMenuNames').textContent = selectedMenuNames.join(', ');
         // 저장된 메뉴 배열의 요소들을 ', '로 구분하여 텍스트로 표시! 
