@@ -12,6 +12,7 @@ def crawl_toms():
 
     # 웹드라이버 설정
     driver = setup_driver()
+    crawled_items = set()
 
     try:
         driver.get(url)
@@ -33,7 +34,6 @@ def crawl_toms():
                     data.append({'menu_name': menu_name, 'image_url': image_url})
                     crawled_items.add((menu_name, image_url))
                     #print(menu_name, image_url)
-
             try:
                 more_button = WebDriverWait(driver, 10).until(
                     EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/section[5]/div[2]/button'))
