@@ -10,12 +10,12 @@
         <div class="form-group">
             <input type="text" id="name" name="name" placeholder="방 이름을 입력하세요" required>
         </div>
-        <!-- <div class="form-group hidden">
+        <div class="form-group hidden">
             <label for="password">비밀번호를 입력하세요(선택사항) <span>🔒</span></label>
             <input type="password" id="password" name="password">
-        </div> -->
+        </div>
         <div class="scrollable-cafe-content">
-            <!-- <input type="hidden" id="cafe" name="cafe" required> -->
+            <input type="hidden" id="cafe" name="cafe" required>
             <div id="cafeListContainer" class="cafe-grid">
                 {% for cafe in cafes %}
                     <label for="{{ cafe.name }}" class="cafe-logo" style="background-image: url('{% static 'images/' %}{{ cafe.name_eng }}.png')" data-cafe="{{ cafe.name }}">
