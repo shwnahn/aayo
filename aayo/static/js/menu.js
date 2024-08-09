@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const guestNameForm = document.getElementById('guestNameForm');
     
-    updateButtonState();
-
-    guestNameInput.addEventListener('input', updateButtonState);
-
     if (guestNameForm) {
         console.log('guestName 입력 필요');
         guestNameForm.addEventListener('submit', handleGuestNameSubmit);
@@ -142,21 +138,6 @@ function setupMenuInteractions() {
     // 확인 버튼 상태 업데이트 함수
     function updateButtonState() {
         confirmButton.disabled = selectedOptions.size === 0;
-
-        // 로그인 버튼 상태
-        const submitButton = document.getElementById('goToOrderBtn');
-        
-        if (guestNameInput.value.trim() === '') {
-            // 이름이 비어있을 경우 버튼을 비활성화하고 회색으로 변경
-            submitButton.disabled = true;
-            submitButton.style.backgroundColor = '#d3d3d3';
-            submitButton.style.cursor = 'not-allowed';
-        } else {
-            // 이름이 입력되었을 경우 버튼을 활성화하고 노란색으로 변경
-            submitButton.disabled = false;
-            submitButton.style.backgroundColor = '#ffc107';
-            submitButton.style.cursor = 'pointer';
-        }
     }
 
     function toggleButtonActive(button) {
