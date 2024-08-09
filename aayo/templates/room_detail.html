@@ -4,26 +4,26 @@
 {% block content %}
 <div class="room-container">
     <div class="cafe-logo-container">
-        {% with logo_file=cafe.name_eng|add:".png"|lower %}
-            <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
-        {% endwith %}
+    {% with logo_file=cafe.name_eng|add:".png"|lower %}
+        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+    {% endwith %}
     </div>
     <div class="message-container">
         <p>{{ room.name }}</p>
-        <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow">주문하기</a>
-        <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white">주문 모아보기</a>
+        <div class="btn-container">
+            <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow">주문하기</a>
+            <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white">주문 모아보기</a>
+        </div>
     </div>
 </div>
 
 <style>
 .room-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    overflow-y: auto;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    height: 95vh; 
+    flex-direction: column;
 }
 
 .cafe-logo-container {
@@ -37,24 +37,43 @@
     width: 220px;
 }
 
+.message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 버튼을 하단에 배치 */
+    align-items: center;
+    width: 240px;
+    height: 300px; /* 적절한 높이를 설정하세요 */
+    text-align: center;
+}
+
 .message-container p {
-    font-size: 1.5em;
-    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.btn-container {
+    width: 300px
 }
 
 .btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 30px;
     text-decoration: none;
+    text-align: center;
     font-size: 1.2em;
 }
 
 .btn-yellow {
     background-color: #FFD54F; 
-    color: #000;
+    color: #000;   
 }
 
 .btn-white {
@@ -64,4 +83,8 @@
 }
 
 </style>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/main.js' %}"></script>
 {% endblock %}

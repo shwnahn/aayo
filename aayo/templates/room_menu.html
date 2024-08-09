@@ -3,22 +3,29 @@
 
 {% block content %}
 <div class="room-container">
-    <div class="cafe-logo-container">
-    {% with logo_file=cafe.name_eng|add:".png"|lower %}
-        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="login-cafe-logo">
-    {% endwith %}
-    </div>
-    {% if not guest_name %}
-    <div class="guestNameForm-container">
-        <form id="guestNameForm">
-            {% csrf_token %}
-            <p class="noGuestName-text">메뉴 선택을 위해 이름을 입력하세요</p>
-            <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름">
-            <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
-            <button id="goToOrderBtn" type="submit" class="btn bottomBtn">메뉴 주문하러 가기</button>
-        </form>
+    <div class="login-container">
+        {% if not guest_name %}
+        <div class="cafe-logo-container">
+        {% with logo_file=cafe.name_eng|add:".png"|lower %}
+            <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="login-cafe-logo">
+        {% endwith %}
+        </div>
+        <div class="guestNameForm-container">
+            <form id="guestNameForm">
+                {% csrf_token %}
+                <p class="noGuestName-text">메뉴 선택을 위해 이름을 입력하세요</p>
+                <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름">
+                <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
+                <button id="goToOrderBtn" type="submit" class="btn bottomBtn">메뉴 주문하러 가기</button>
+            </form>
+        </div>
     </div>
     {% else %}
+    <div class="cafe-logo-container">
+    {% with logo_file=cafe.name_eng|add:".png"|lower %}
+        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+    {% endwith %}
+    </div>
     <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
     <div class="menuSearchContainer">
         <input type="text" id="menuSearch" placeholder="메뉴 검색...">
@@ -86,7 +93,7 @@
 </div>
 
 <style>
-.room-container {
+.login-container {
     text-align: center;
     padding: 20px;
     background-color: white; 
@@ -94,12 +101,14 @@
 
 .login-cafe-logo {
     display: block;
-    width: 220px;
+    width: 200px;
 }
 
 .noGuestName-text {
+    display: flex;
+    justify-content: center;
     margin: 20px 0;
-    font-size: 1.2em;
+    font-size: 1.0em;
 }
 
 #guestNameForm-container {
@@ -111,6 +120,7 @@
 .guestNameForm {
     width: 100%;
     padding: 10px 15px 10px 15px;
+    margin: 2px;
     border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
@@ -186,13 +196,18 @@ body {
 }
 
 .room-container {
+    width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin-top: 60px;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
     overflow-y: auto;
+    max-height: calc(100vh - 220px);
 }
 
 /* 스타벅스 로고 스타일 (이미지에 있는 것처럼) */
