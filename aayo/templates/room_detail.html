@@ -9,8 +9,9 @@
     {% endwith %}
     </div>
     <div class="message-container">
-        <p>{{ room.name }}</p>
+        <p class="room_name">{{ room.name }}</p>
         <div class="btn-container">
+            <span data-emoji="🔗">방 링크:</span> <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ share_link }}</a>
             <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow">주문하기</a>
             <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white">주문 모아보기</a>
         </div>
@@ -30,6 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .cafe-logo {
@@ -43,15 +45,30 @@
     justify-content: center; /* 버튼을 하단에 배치 */
     align-items: center;
     width: 240px;
-    height: 300px; /* 적절한 높이를 설정하세요 */
+    height: 270px; /* 적절한 높이를 설정하세요 */
     text-align: center;
 }
 
-.message-container p {
+.room_name {
     font-size: 45px;
     font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+}
+
+span {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+#roomLink {
+    font-size: 18px;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: #FFD54F; 
+    color: #000;   
 }
 
 .btn-container {
