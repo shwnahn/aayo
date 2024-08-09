@@ -5,15 +5,16 @@
 <div class="room-container">
     <div class="cafe-logo-container">
     {% with logo_file=cafe.name_eng|add:".png"|lower %}
-        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="login-cafe-logo">
     {% endwith %}
     </div>
     {% if not guest_name %}
-    <form id="guestNameForm">
+    <form id="guestNameForm-container">
         {% csrf_token %}
-        <input type="text" name="guest_name" required placeholder="이름">
-        <input type="password" name="password" placeholder="비밀번호 (선택)">
-        <button type="submit">메뉴 주문하기</button>
+        <p class="noGuestName-text">메뉴 선택을 위해 이름을 입력하세요</p>
+        <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름">
+        <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
+        <button id="goToOrderBtn" type="submit" class="btn bottomBtn">메뉴 주문하러 가기</button>
     </form>
     {% else %}
     <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
@@ -72,6 +73,53 @@
 </div>
 
 <style>
+.room-container {
+    text-align: center;
+    padding: 20px;
+    background-color: white; 
+}
+
+.login-cafe-logo {
+    display: block;
+    width: 220px;
+}
+
+.noGuestName-text {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+#guestNameForm-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guestNameForm {
+    width: 60%;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+}
+
+#goToOrderBtn {
+    background-color: #ffc107;
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
 
 .form-group-etc {
     display: flex;
