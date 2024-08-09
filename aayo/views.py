@@ -8,7 +8,6 @@ from django.template.loader import render_to_string
 import json
 import random
 import string
-from django.template.loader import render_to_string
 import logging
 
 def generate_unique_id(): # 방 뒤에 생성되는 유니크 url을 생성하는 함수이다.
@@ -175,25 +174,23 @@ def room_orders(request, unique_id):
                     return JsonResponse({'success': True, 'message': '주문이 초기화되었습니다.'})
             return JsonResponse({'success': False, 'message': '사용자를 찾을 수 없습니다.'})
 
-        guest_orders = GuestOrder.objects.filter(room=room)
+       # 모든 OrderItem 가져오기
+        order_items = OrderItem.objects.filter(order__room=room)
         
         orders_details = []
-        for order in guest_orders:
-            order_items = OrderItem.objects.filter(order=order)
-            order_menus = []
-            for item in order_items:
-                order_menus.append({
-                    'name': item.menu_item.name,
-                    'options': {
-                        'temperature': item.temperature,
-                        'size': item.size,
-                        'ice': item.ice,
-                        'note': item.note
-                    }
-                })
+        for item in order_items:
             orders_details.append({
-                'guest_name': order.guest_name,
-                'menus': order_menus,
+                'guest_name': item.order.guest_name,
+                'menu_item': {
+                    'name': item.menu_item.name,
+                    'image_url': item.menu_item.image_url
+                },
+                'options': {
+                    'temperature': item.temperature,
+                    'size': item.size,
+                    'ice': item.ice,
+                    'note': item.note
+                }
             })
         
         context = {

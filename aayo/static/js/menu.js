@@ -225,10 +225,10 @@ function setupMenuInteractions() {
                 alert('크기를 선택해주세요!');
                 return;
             }
-            if (!ice) {
-                alert('얼음 양을 선택해주세요!');
-                return;
-            }
+            // if (!ice) {
+            //     alert('얼음 양을 선택해주세요!');
+            //     return;
+            // }
             // 선택된 옵션들을 Set에 추가 - selectedOptions
             selectedOptions.add({
                 id: menuId,
