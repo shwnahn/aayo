@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         setupMenuInteractions();
     }
+    
 });
 
 // 메뉴 선택 상호작용 - 모달 창(주문 상세 페이지) 상세 정보를 클릭하고 그걸 db로 보내는 ajax
@@ -170,7 +171,7 @@ function setupMenuInteractions() {
                 }
             });
             
-            selected_menu_ids.add(menuId);  // 수정된 부분
+            // selected_menu_ids.add(menuId);  // 수정된 부분
             const menuItem = document.querySelector(`.menu-item[data-menu-id="${menuId}"]`);
             if (menuItem) {
                 menuItem.classList.add('selected');
