@@ -84,15 +84,15 @@ def room_menu(request, unique_id):
             return JsonResponse({'success': True})
         
         # 메뉴 선택 POST
-        elif 'menus' in request.POST:
+        elif 'menu_details' in request.POST:
             guest_name = request.session.get('guest_name')
             password = request.session.get('password')
             if not guest_name:
                 return JsonResponse({'error': 'Guest name not found'}, status=400)
             
-            menus = json.loads(request.POST.get('menus'))
-            if not menus:
-                return JsonResponse({'error': 'No menus selected'}, status=400)
+            menu_details = json.loads(request.POST.get('menu_details'))
+            if not menu_details:
+                return JsonResponse({'error': 'No menu_details selected'}, status=400)
             
             # 기존 GuestOrder 업데이트 또는 생성
             guest_order, created = GuestOrder.objects.update_or_create(
@@ -107,7 +107,7 @@ def room_menu(request, unique_id):
             guest_order.order_items.all().delete()
             
             # OrderItems 새로 추가 - Sihwan
-            for menu in menus:
+            for menu in menu_details:
                 try:
                     menu_item = MenuItem.objects.get(id=menu['id'])
                     OrderItem.objects.create(
@@ -127,28 +127,35 @@ def room_menu(request, unique_id):
     if request.method == 'GET':
         guest_name = request.session.get('guest_name')
         password = request.session.get('password')
-        menus = []
+        menu_items = MenuItem.objects.filter(cafe=cafe)
         selected_menu_ids = []
-        guest_order = None
+        selected_menu_options = {}
 
         if guest_name:
             try:
-                menus = MenuItem.objects.filter(cafe=cafe).values('id', 'name', 'image_url')
-                # 주문내역 불러오기
                 guest_order = GuestOrder.objects.filter(guest_name=guest_name, password=password, room=room).first()
-
                 if guest_order:
-                    selected_menu_ids = guest_order.order_items.values_list('menu_item_id', flat=True)
+                    order_items = OrderItem.objects.filter(order=guest_order)
+                    selected_menu_ids = [item.menu_item.id for item in order_items]
+                    for item in order_items:
+                        selected_menu_options[item.menu_item.id] = {
+                            'temperature': item.temperature,
+                            'size': item.size,
+                            'ice': item.ice,
+                            'note': item.note
+                        }
+                    
                     print('Selected Menu IDs:', selected_menu_ids) 
-
             except Cafe.DoesNotExist:
                 logger.error(f"Cafe not found: {room.cafe}")
         
+       
         context = {
             'room': room,
             'guest_name': guest_name,
-            'menus': menus,
+            'menu_items': menu_items,
             'selected_menu_ids': selected_menu_ids,
+            'selected_menu_options': selected_menu_options,
             'cafe': cafe # 이 줄 추가 (로고 가져오기)
         }
         return render(request, 'room_menu.html', context)

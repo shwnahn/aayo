@@ -9,10 +9,93 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('guestName 입력 필요');
         guestNameForm.addEventListener('submit', handleGuestNameSubmit);
     } else {
-        setupMenuInteractions();
+        console.log(selectedOptions);
+        setupMenuInteractions(); // 메뉴 선택 상호작용 - 모달 창(주문 상세 페이지) 상세 정보를 클릭하고 그걸 db로 보내는 ajax
+        markSelectedMenus(); // 기존 선택 메뉴 표시 함수 호출
+        updateSelectedMenuNames();  // 페이지 로드 시 기존 선택 메뉴 이름 업데이트
+        updateButtonState();  // 확인 버튼 상태 업데이트 함수
     }
     
 });
+
+const selectedOptions = new Set();
+const confirmButton = document.getElementById('confirmButton');
+
+// 확인 버튼 상태 업데이트 함수
+function updateButtonState() {
+    confirmButton.disabled = selectedOptions.size === 0;
+}
+
+// GuestNameForm 제출 처리
+function handleGuestNameSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const submitButton = e.target.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+
+    // [POST] GuestNameForm
+    fetch(window.location.href, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            return response.text().then(text => {
+                throw new Error('Server error: ' + text);
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            location.reload();
+        } else {
+            throw new Error(data.error || 'Unknown error occurred');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred: ' + error.message);
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+    });
+}
+
+ // 메뉴 선택 시 'Selected' 클래스 추가 함수
+ function markSelectedMenus() {
+    const selectedMenuIds = JSON.parse(document.getElementById('selectedMenuIds').textContent);
+    const selectedMenuOptions = JSON.parse(document.getElementById('selectedMenuOptions').textContent);
+    selectedMenuIds.forEach(id => {
+        const menuItem = document.querySelector(`.menu-item[data-menu-id="${id}"]`);
+        if (menuItem) {
+            menuItem.classList.add('selected');
+            const selectedOption = {
+                id: id,
+                options: selectedMenuOptions[id]  // 메뉴 옵션 업데이트
+            };
+            selectedOptions.add(selectedOption);  // selectedOptions에 기존 선택된 메뉴 추가
+        }
+    });
+    updateSelectedMenuNames();
+    updateButtonState();  // 페이지 로드 시 확인 버튼 상태 업데이트
+}
+
+// 선택된 메뉴 이름 상단 요약 - 업데이트 함수
+function updateSelectedMenuNames() {
+    const selectedMenuNames = Array.from(selectedOptions).map(option => {
+        // selectedOption 집합의 option에 저장된 id와 동일한 id를 가진 메뉴 아이템을 불러와서,
+        const menuItem = document.querySelector(`.menu-item[data-menu-id="${option.id}"]`);
+        // (삼항 연산자) 그 메뉴 아이템의 메뉴 이름을 반환, 만약 메뉴 아이템이 존재하지 않으면(거의 그럴 일 없음) 빈 문자열을 반환
+        return menuItem ? menuItem.querySelector('.menu-name').textContent : '';
+    })
+    // 저장된 메뉴 배열의 요소들을 ', '로 구분하여 텍스트로 표시! 
+    document.getElementById('selectedMenuNames').textContent = selectedMenuNames.join(', ');
+}
+
 
 // 메뉴 선택 상호작용 - 모달 창(주문 상세 페이지) 상세 정보를 클릭하고 그걸 db로 보내는 ajax
 function setupMenuInteractions() {
@@ -26,9 +109,6 @@ function setupMenuInteractions() {
     const modalImage = document.getElementById('modalMenuImage');
     console.log('modalImage:', modalImage);
     
-    const confirmButton = document.getElementById('confirmButton');
-    console.log('confirmButton:', confirmButton);
-    const selectedOptions = new Set();
     // 메뉴 검색창 가져오기
     const searchInput = document.getElementById('menuSearch');
 
@@ -48,18 +128,7 @@ function setupMenuInteractions() {
             }
         });
     });
-
-    // 선택된 메뉴 이름 업데이트 함수
-    function updateSelectedMenuNames() {
-        const selectedMenuNames = Array.from(selectedOptions).map(option => {
-            const menuItem = document.querySelector(`.menu-item[data-menu-id="${option.id}"]`);
-            // selectedOption 집합의 option에 저장된 id와 동일한 id를 가진 메뉴 아이템을 불러와서,
-            return menuItem ? menuItem.querySelector('.menu-name').textContent : '';
-            // (삼항 연산자) 그 메뉴 아이템의 메뉴 이름을 반환, 만약 메뉴 아이템이 존재하지 않으면(거의 그럴 일 없음) 빈 문자열을 반환
-        })
-        document.getElementById('selectedMenuNames').textContent = selectedMenuNames.join(', ');
-        // 저장된 메뉴 배열의 요소들을 ', '로 구분하여 텍스트로 표시! 
-    }
+    
 
     // 모달 초기화 함수
     function resetModal() {
@@ -70,6 +139,7 @@ function setupMenuInteractions() {
         document.getElementById('additionalInstructions').value = '';
     }
 
+<<<<<<< HEAD
     // 확인 버튼 상태 업데이트 함수
     function updateButtonState() {
         confirmButton.disabled = selectedOptions.size === 0;
@@ -89,6 +159,8 @@ function setupMenuInteractions() {
             submitButton.style.cursor = 'pointer';
         }
     }
+=======
+>>>>>>> d22e0d2404e6fbb529d3bc1598880474ff336bbf
 
     function toggleButtonActive(button) {
         button.classList.toggle('active');
@@ -183,7 +255,7 @@ function setupMenuInteractions() {
                 alert('얼음 양을 선택해주세요!');
                 return;
             }
-            // 선택된 옵션들을 Set에 추가
+            // 선택된 옵션들을 Set에 추가 - selectedOptions
             selectedOptions.add({
                 id: menuId,
                 options: { 
@@ -219,10 +291,10 @@ function setupMenuInteractions() {
         submitButton.disabled = true;
 
         const formData = new FormData(menuForm);
-        // menus 데이터를 JSON 문자열로 변환하여 추가
-        formData.append('menus', JSON.stringify(Array.from(selectedOptions)));
+        // selectedOptions 데이터를 JSON 문자열로 변환 - 'menu_details' 라는 key로 formData 추가
+        formData.append('menu_details', JSON.stringify(Array.from(selectedOptions)));
         
-
+        // [POST] MenuForm Formdata 제출
         fetch(window.location.href, {
             method: 'POST',
             body: formData,
@@ -262,40 +334,3 @@ function setupMenuInteractions() {
     }
 }
 
-// GuestNameForm 제출 처리
-function handleGuestNameSubmit(e) {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const submitButton = e.target.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-
-    fetch(window.location.href, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-CSRFToken': formData.get('csrfmiddlewaretoken')
-        }
-    })
-    .then(response => {
-        if (!response.ok) {
-            return response.text().then(text => {
-                throw new Error('Server error: ' + text);
-            });
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (data.success) {
-            location.reload();
-        } else {
-            throw new Error(data.error || 'Unknown error occurred');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('An error occurred: ' + error.message);
-    })
-    .finally(() => {
-        submitButton.disabled = false;
-    });
-}

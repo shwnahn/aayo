@@ -21,13 +21,24 @@
     <div class="menuSearchContainer">
         <input type="text" id="menuSearch" placeholder="메뉴 검색...">
     </div>
-    <p class="centered-text">현재 선택한 메뉴: <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span></p>
+    <p class="centered-text">현재 선택한 메뉴: 
+        <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span>
+        <!-- 기존에 선택된 메뉴에 대한 id, options 정보 추가 -->
+        <span id="selectedMenuIds" style="display: none;">{{ selected_menu_ids|json_script:"selectedMenuIds" }}</span>
+        <span id="selectedMenuOptions" style="display: none;">{{ selected_menu_options|json_script:"selectedMenuOptions" }}</span>
+
+    </p>
     <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
 
     <div class="scrollable-content">
         <div id="menuListContainer" class="menu-grid">
-            {% for menu in menus %}
-            <div class="menu-item itembox {% if menu.id in selected_menu_ids %} selected{% endif %}" data-menu-id="{{ menu.id }}">
+            {% for menu in menu_items %}
+            <div class="menu-item itembox {% if menu.id in selected_menu_ids %} selected{% endif %}" 
+                 data-menu-id="{{ menu.id }}" 
+                 data-temperature="{{ menu.temperature }}" 
+                 data-size="{{ menu.size }}" 
+                 data-ice="{{ menu.ice }}" 
+                 data-note="{{ menu.note }}">
                 {% if menu.image_url %}
                     <img src="{{ menu.image_url }}" alt="{{ menu.name }}" class="menu-image">
                 {% endif %}
