@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const guestNameForm = document.getElementById('guestNameForm-container');
+    const guestNameForm = document.getElementById('guestNameForm');
     if (guestNameForm) {
         console.log('guestName 입력 필요');
         guestNameForm.addEventListener('submit', handleGuestNameSubmit);
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateSelectedMenuNames();  // 페이지 로드 시 기존 선택 메뉴 이름 업데이트
         updateButtonState();  // 확인 버튼 상태 업데이트 함수
     }
-    
 });
 
 const selectedOptions = new Set();
