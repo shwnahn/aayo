@@ -3,21 +3,20 @@
 
 {% block content %}
 <div class="main-container">
-    <h1 class="page-title">방을 생성하세요!</h1>
+    <h1 class="page-title">방 생성하기</h1>
+    <p class="room-script">방 이름을 입력하고,</br>메뉴를 고를 카페를 선택하세요.</p>
     <form id="createRoomForm" method="post">
     {% csrf_token %}
         <div class="form-group">
-            <label for="name">방 이름을 입력하세요! <span>🏷️</span></label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="방 이름을 입력하세요" required>
         </div>
-        <div class="form-group hidden">
+        <!-- <div class="form-group hidden">
             <label for="password">비밀번호를 입력하세요(선택사항) <span>🔒</span></label>
             <input type="password" id="password" name="password">
-        </div>
-        <div class="form-group">
-            <label for="cafe">카페를 선택하세요 <span>☕</span></label>
-            <input type="hidden" id="cafe" name="cafe" required>
-            <div class="cafe-selection">
+        </div> -->
+        <div class="scrollable-cafe-content">
+            <!-- <input type="hidden" id="cafe" name="cafe" required> -->
+            <div id="cafeListContainer" class="cafe-grid">
                 {% for cafe in cafes %}
                     <label for="{{ cafe.name }}" class="cafe-logo" style="background-image: url('{% static 'images/' %}{{ cafe.name_eng }}.png')" data-cafe="{{ cafe.name }}">
                         <input type="radio" id="{{ cafe.name }}" name="cafe" value="{{ cafe.name }}" style="display: none;"{% if forloop.first %}checked{% endif %}>
@@ -34,14 +33,221 @@
 
 {% block extra_css %}
 <style>
-   .hidden {
+    h1 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-family: 'Roboto';
+        font-size: 45px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #666;
+    }
+
+    .content {
+        margin-top: 75px;
+    }
+
+    .main-container {
+        display: flex;
+        align-items: center; /* 수직 방향으로 중앙 정렬 */
+        flex-direction: column;
+        justify-content: center; /* 수평 방향으로 중앙 정렬 */
+    }
+
+    .hidden {
         display: none;
     }
+
     .wave-bottom {
         display: none;
     }
+
     .wave-top {
+        margin-top: 25px;
         display: block;
+    }
+
+    .form-group {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    input[type="text"] {
+        width: 60%;
+        padding: 10px 15px 10px 15px;
+        border: 2px solid #ddd;
+        border-radius: 20px;
+        font-size: 16px;
+        box-sizing: border-box;
+        background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E);
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 20px;
+    }
+
+    .scrollable-cafe-content {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 320px; /* 최대 너비 설정 */
+        max-height: 360px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .scrollable-cafe-content::-webkit-scrollbar {
+        width: 10px; /* 스크롤바의 너비 */
+    }
+    .scrollable-cafe-content::-webkit-scrollbar-track {
+        background: #f1f1f1; /* 스크롤바 트랙의 배경색 */
+        border-radius: 10px; /* 스크롤바 트랙의 둥근 모서리 */
+    }
+
+    .scrollable-cafe-content::-webkit-scrollbar-thumb {
+        background: #888; /* 스크롤바의 색상 */
+        border-radius: 10px; /* 스크롤바의 둥근 모서리 */
+    }
+
+    .scrollable-cafe-content::-webkit-scrollbar-thumb:hover {
+        background: #555; /* 스크롤바에 마우스 오버 시 색상 변경 */
+    }
+
+    .cafe-grid {
+        width: 100%;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 한 행에 2개씩 배치 */
+        column-gap: 20px;
+        row-gap: 50px;
+        justify-items: center;
+    }
+
+    .cafe-logo {
+        width: 120px;
+        height: 120px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        transition: background-color 0.3s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        cursor: pointer;
+        background-size: contain; /* 배경 이미지의 크기를 컨테이너 안에 맞춤 */
+        background-repeat: no-repeat; /* 이미지 반복을 없앰 */
+        background-position: center;
+    }
+
+    .cafe-name {
+        font-weight: bold;
+        color: #1e3932;
+    }
+    .cafe-logo:hover {
+        background-color: #f8f8f8;
+    }
+
+    .cafe-logo::after {
+        content: attr(data-cafe);
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        color: #333;
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: bolder;
+        opacity: 0;
+        width: 100%;
+        text-align: center;
+        transition: opacity 0.2s, background-color 0.2s;
+    }
+
+    /* .cafe-logo[data-cafe="스타벅스"]:hover::after {
+        background-color: #00623F;
+        color: white;
+    }
+
+    .cafe-logo[data-cafe="메가커피"]:hover::after {
+        background-color: #FFDC00;
+    }
+
+    .cafe-logo[data-cafe="할리스"]:hover::after {
+        background-color: #C6353A;
+        color: white;
+    }
+
+    .cafe-logo[data-cafe="탐앤탐스"]:hover::after {
+        background-color: #582931;
+        color: white;
+    }
+
+    .cafe-logo[data-cafe="이디야"]:hover::after {
+        background-color: #13235D;
+        color: white;
+    }
+
+    .cafe-logo[data-cafe="컴포즈커피"]:hover::after {
+        background-color: #FBD12B;
+    }
+
+    .cafe-logo[data-cafe="빽다방"]:hover::after {
+        background-color: #FFE80A;
+    }
+
+    .cafe-logo[data-cafe="매머드익스프레스"]:hover::after {
+        background-color: #D11A21;
+        color: white;
+    }
+
+    .cafe-logo[data-cafe="투썸플레이스"]:hover::after {
+        background-color: #D91E3B;
+        color: white;
+    }
+
+    .cafe-logo[data-cafe="공차"]:hover::after {
+        background-color: #B81C2E;
+        color: white;
+    }
+
+    .cafe-logo[data-cafe="하삼동커피"]:hover::after {
+        background-color: #C62F34;
+        color: white;
+    }
+
+    .cafe-logo:hover::after {
+        opacity: 1;
+    } */
+
+    .cafe-logo.selected {
+        border: 3px solid #FBD68E;
+    }
+
+    .submit-button {
+        width: 100%;
+        padding: 15px;
+        background-color: #FBD68E;
+        color: #1e3932;
+        border: none;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s ease
+    }
+
+    .submit-button:hover {
+        background-color: #f0c97d;
     }
 </style>
 {% endblock %}
