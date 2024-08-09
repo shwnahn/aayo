@@ -17,17 +17,24 @@
 
 <style>
 .room-container {
-    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #FFD457; /* Light yellow background */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow-y: auto;
 }
 
 .cafe-logo-container {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cafe-logo {
-    max-width: 150px;
+    display: block;
+    width: 220px;
 }
 
 .message-container p {
@@ -46,7 +53,7 @@
 }
 
 .btn-yellow {
-    background-color: #FFD54F; /* Yellow button */
+    background-color: #FFD54F; 
     color: #000;
 }
 
@@ -56,47 +63,5 @@
     border: 2px solid #FFD54F;
 }
 
-.centered-text {
-    margin: 20px 0;
-    font-size: 1.2em;
-}
-
-.menuSearchContainer input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.scrollable-content {
-    max-height: 400px;
-    overflow-y: auto;
-    margin-top: 20px;
-}
-
-.menu-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.menu-item {
-    width: calc(50% - 10px);
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-}
-
-.menu-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.bottomBtn {
-    margin-top: 20px;
-}
 </style>
 {% endblock %}
