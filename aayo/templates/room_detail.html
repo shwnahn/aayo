@@ -2,15 +2,101 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-    <h2>방이 성공적으로 생성되었습니다!</h2>
-    <p><span data-emoji="🏷️">방 이름:</span> {{ room.name }}</p>
-    <p><span data-emoji="☕">카페:</span> {{ room.cafe }}</p>
-    <p><span data-emoji="🔗">방 링크:</span> <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ share_link }}</a></p>
-    <button type="button" id="copyLinkBtn" class="btn btn-primary">링크 공유하기</button>
-    <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-primary">주문 총계 보기</a>
-    <a href="{% url 'room_menu' unique_id=room.unique_id %}" class="btn btn-secondary">방 입장</a>
+<div class="room-container">
+    <div class="cafe-logo-container">
+        {% with logo_file=cafe.name_eng|add:".png"|lower %}
+            <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+        {% endwith %}
+    </div>
+    <div class="message-container">
+        <p>{{ room.name }}</p>
+        <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow">주문하기</a>
+        <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white">주문 모아보기</a>
     </div>
 </div>
 
+<style>
+.room-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFD457; /* Light yellow background */
+}
+
+.cafe-logo-container {
+    margin-bottom: 20px;
+}
+
+.cafe-logo {
+    max-width: 150px;
+}
+
+.message-container p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.btn-yellow {
+    background-color: #FFD54F; /* Yellow button */
+    color: #000;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #FFD54F;
+}
+
+.centered-text {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.menuSearchContainer input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.scrollable-content {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-item {
+    width: calc(50% - 10px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.bottomBtn {
+    margin-top: 20px;
+}
+</style>
 {% endblock %}
