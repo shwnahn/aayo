@@ -110,6 +110,11 @@
     display: none;
 }
 
+.wave-top {
+    margin-top: 25px;
+    display: block;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -211,6 +216,42 @@ body {
 .menu-name {
     font-weight: bold;
     color: #1e3932;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 10px; /* 스크롤바의 너비 */
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 스크롤바 트랙의 배경색 */
+    border-radius: 10px; /* 스크롤바 트랙의 둥근 모서리 */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: #888; /* 스크롤바의 색상 */
+    border-radius: 10px; /* 스크롤바의 둥근 모서리 */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* 스크롤바에 마우스 오버 시 색상 변경 */
+}
+
+.room-container::-webkit-scrollbar {
+    width: 10px; /* 스크롤바의 너비 */
+}
+
+.room-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 스크롤바 트랙의 배경색 */
+    border-radius: 10px; /* 스크롤바 트랙의 둥근 모서리 */
+}
+
+.room-container::-webkit-scrollbar-thumb {
+    background: #888; /* 스크롤바의 색상 */
+    border-radius: 10px; /* 스크롤바의 둥근 모서리 */
+}
+
+.room-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* 스크롤바에 마우스 오버 시 색상 변경 */
 }
 
 #confirmButton {
