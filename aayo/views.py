@@ -91,7 +91,6 @@ def room_menu(request, unique_id):
                 return JsonResponse({'error': 'Guest name not found'}, status=400)
             
             menus = json.loads(request.POST.get('menus'))
-            
             if not menus:
                 return JsonResponse({'error': 'No menus selected'}, status=400)
             
