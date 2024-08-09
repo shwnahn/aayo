@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const guestNameForm = document.getElementById('guestNameForm');
+    const guestNameForm = document.getElementById('guestNameForm-container');
     if (guestNameForm) {
         console.log('guestName 입력 필요');
         guestNameForm.addEventListener('submit', handleGuestNameSubmit);
@@ -18,7 +18,9 @@ const confirmButton = document.getElementById('confirmButton');
 
 // 확인 버튼 상태 업데이트 함수
 function updateButtonState() {
-    confirmButton.disabled = selectedOptions.size === 0;
+    if (confirmButton) {
+        confirmButton.disabled = selectedOptions.size === 0;
+    }
 }
 
 // GuestNameForm 제출 처리
