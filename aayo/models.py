@@ -31,6 +31,15 @@ class GuestOrder(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     guest_name = models.CharField(max_length=50)
     password = models.CharField(max_length=50, blank=True, null=True)
-    menus = models.TextField()  # JSON 문자열을 저장할 TextField
     def __str__(self):
         return f"{self.guest_name}의 주문"
+
+class OrderItem(models.Model):
+    order = models.ForeignKey(GuestOrder, on_delete=models.CASCADE, related_name='order_items')
+    menu_item = models.ForeignKey(MenuItem, on_delete=models.CASCADE)
+    temperature = models.CharField(max_length=50)
+    size = models.CharField(max_length=50, blank=True, null=True)
+    ice = models.CharField(max_length=50, blank=True, null=True)
+    note = models.TextField(blank=True, null=True)
+    def __str__(self):
+        return f"{self.menu_item.name} ({self.order.guest_name})"
