@@ -3,8 +3,11 @@
 
 {% block content %}
 <div class="room-container">
-    <h2 class="page-title"><span> 👋{{ room.name }} </span> - <span> {{ room.cafe }} </span></h2>
-
+    <div class="cafe-logo-container">
+    {% with logo_file=cafe.name_eng|add:".png"|lower %}
+        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+    {% endwith %}
+    </div>
     {% if not guest_name %}
     <form id="guestNameForm">
         {% csrf_token %}
@@ -18,23 +21,21 @@
     <p class="centered-text">현재 선택한 메뉴: <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span></p>
     <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
 
-    <form id="menuForm">
-        {% csrf_token %}
-        <button type="submit" id="confirmButton" disabled>주문 확정하기</button>
-    </form>
-
-    <div id="menuListContainer" class="menu-grid">
-        {% for menu in menus %}
-        <div class="menu-item{% if menu.id in selected_menu_ids %} selected{% endif %}" data-menu-id="{{ menu.id }}">
-            {% if menu.image_url %}
-                <img src="{{ menu.image_url }}" alt="{{ menu.name }}" class="menu-image">
-            {% endif %}
-            <p class="menu-name">{{ menu.name }}</p>
+    <div class="scrollable-content">
+        <div id="menuListContainer" class="menu-grid">
+            {% for menu in menus %}
+            <div class="menu-item itembox {% if menu.id in selected_menu_ids %} selected{% endif %}" data-menu-id="{{ menu.id }}">
+                {% if menu.image_url %}
+                    <img src="{{ menu.image_url }}" alt="{{ menu.name }}" class="menu-image">
+                {% endif %}
+                <p class="menu-name">{{ menu.name }}</p>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-    {% endif %}
     
+    {% endif %}
+
     <!-- Modal -->
     <div class="modal" id="menuDetailModal">
         <div class="modal-content">
@@ -63,7 +64,281 @@
             <button type="button" id="saveMenuItem">내 메뉴 저장하기</button>
         </div>
     </div>
+
+    <form id="menuForm">
+        {% csrf_token %}
+        <button type="submit" id="confirmButton" disabled>주문 확정하기</button>
+    </form>
 </div>
+
+<style>
+
+.cafe-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cafe-logo {
+    width: 50%;
+    height: 50%;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+}
+
+.wave-bottom {
+    display: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.room-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+/* 스타벅스 로고 스타일 (이미지에 있는 것처럼) */
+.starbucks-logo {
+    display: block;
+    width: 50px;
+    margin: 0 auto 20px;
+}
+
+.centered-text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #1e3932;
+}
+
+#menuSearch {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#selectedMenuNames {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #1e3932;
+}
+
+.scrollable-content {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.itembox {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.itembox:hover {
+    background-color: #f8f8f8;
+}
+
+.itembox.selected {
+    border: 2px solid #FBD68E;
+}
+
+.menu-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-name {
+    font-weight: bold;
+    color: #1e3932;
+}
+
+#confirmButton {
+    width: 100%;
+    padding: 15px;
+    background-color: #FBD68E;
+    color: #1e3932;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#confirmButton:hover {
+    background-color: #f0c97d;
+}
+
+#confirmButton:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+/* 모달 스타일은 이전과 동일하게 유지 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#menuDetailModalLabel {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-group-temp,
+.btn-group-size,
+.btn-group-ice {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #e8e8e8;
+}
+
+.form-group-etc {
+    margin-bottom: 15px;
+}
+
+.form-group-etc label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#additionalInstructions {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#saveMenuItem {
+    width: 100%;
+    padding: 15px;
+    background-color: #FBD68E;
+    color: #1e3932;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#saveMenuItem:hover {
+    background-color: #f0c97d;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e8e8e8;
+}
+
+.btn.active {
+    background-color: #FFD457;
+    border-color: #FFD457;
+    color: #1e3932;
+}
+
+.btn-group-temp .btn.active,
+.btn-group-size .btn.active,
+.btn-group-ice .btn.active {
+    background-color: #FFD457;
+    border-color: #FFD457;
+    color: #1e3932;
+}
+</style>
+
+
+
 {% endblock %}
 
 {% block scripts %}

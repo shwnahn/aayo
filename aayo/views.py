@@ -66,6 +66,7 @@ logger = logging.getLogger(__name__) # 버그 로그 찍어보려구 한 것
 def room_menu(request, unique_id):
     try:
         room = get_object_or_404(Room, unique_id=unique_id)
+        cafe = Cafe.objects.get(name=room.cafe) # name_eng 가져오기 위해 추가
 
         # 추가된 부분: 새로운 방에 입장할 때마다 게스트 이름 초기화
         if 'current_room' not in request.session or request.session['current_room'] != unique_id:
@@ -134,6 +135,7 @@ def room_menu(request, unique_id):
                 'menus': menus,
                 'guest_order': guest_order,
                 'selected_menu_ids': selected_menu_ids,
+                'cafe': cafe # 이 줄 추가 (로고 가져오기)
             }
             return render(request, 'room_menu.html', context)
 
