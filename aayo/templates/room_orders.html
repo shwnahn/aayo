@@ -13,16 +13,14 @@
             {% for order in orders_details %}
                 <div class="order-card">
                     <div class="order-menu-img">
-                        <img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[4004000000066]_20210415155836395.jpg" alt="img">
+                        <img src="{{ order.menu_item.image_url }}" alt="img">
                     </div>
                     <div class="order-menu-info">
-                        <p>{{ order.menus.0.name }}</p>
+                        <p>{{ order.menu_item.name }}</p> <!-- 메뉴 이름 표시 -->
                         <p class="order-menu-details">
-                            {% for menu in order.menus %}
-                                {{ menu.options.temperature }} / {{ menu.options.size }} / {{ menu.options.ice }}
-                            {% endfor %}
+                            {{ order.options.temperature }} / {{ order.options.size }} / {{ order.options.ice }} / {{ order.options.note }} <!-- 옵션 표시 -->
                         </p>
-                        <p class="guest-names">🙋🏻 {{ order.guest_name }}</p>
+                        <p class="guest-names">🙋🏻 {{ order.guest_name }}</p> <!-- 게스트 이름 표시 -->
                     </div>
                     <div class="order-menu-count">
                         <span class="menu-count">1</span>
@@ -37,7 +35,9 @@
         {% endif %}
     </div>
 </div>
-<button id="resetOrderBtn" class="btn bottomBtn">메뉴 페이지로 돌아가기</button>
+<a href="{% url 'room_menu' room.unique_id %}">메뉴 선택으로 돌아가기</a>
+<button id="resetOrderBtn" class="btn bottomBtn">전체 주문 초기화</button>
+
 {% endblock %}
 
 {% block scripts %}
@@ -71,7 +71,7 @@ document.getElementById('resetOrderBtn').addEventListener('click', function() {
 <style>
     .order-container {
         max-width: 800px;
-        margin: 25px auto 0 auto;
+        margin: 45px auto 0 auto;
         height: 85%;
     }
     
