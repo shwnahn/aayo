@@ -64,84 +64,95 @@ def room_detail(request, unique_id):
 logger = logging.getLogger(__name__) # 버그 로그 찍어보려구 한 것
 
 def room_menu(request, unique_id):
-    try:
-        room = get_object_or_404(Room, unique_id=unique_id)
-        cafe = Cafe.objects.get(name=room.cafe) # name_eng 가져오기 위해 추가
+    room = get_object_or_404(Room, unique_id=unique_id)
+    cafe = Cafe.objects.get(name=room.cafe) # name_eng 가져오기 위해 추가
 
-        # 추가된 부분: 새로운 방에 입장할 때마다 게스트 이름 초기화
-        if 'current_room' not in request.session or request.session['current_room'] != unique_id:
-            if 'guest_name' in request.session:
-                del request.session['guest_name']
-            request.session['current_room'] = unique_id
+    # 추가된 부분: 새로운 방에 입장할 때마다 게스트 이름 초기화
+    if 'current_room' not in request.session or request.session['current_room'] != unique_id:
+        if 'guest_name' in request.session:
+            del request.session['guest_name']
+        request.session['current_room'] = unique_id
+    
+    # POST 요청 처리
+    if request.method == 'POST':
+        # 게스트 로그인 POST
+        if 'guest_name' in request.POST:
+            guest_name = request.POST.get('guest_name')
+            password = request.POST.get('password')
+            request.session['guest_name'] = guest_name
+            request.session['password'] = password
+            return JsonResponse({'success': True})
         
-        # POST 요청 처리
-        if request.method == 'POST':
-            # 게스트 로그인 POST
-            if 'guest_name' in request.POST:
-                guest_name = request.POST.get('guest_name')
-                password = request.POST.get('password')
-                request.session['guest_name'] = guest_name
-                request.session['password'] = password
-                return JsonResponse({'success': True})
-            
-            # 메뉴 선택 POST
-            elif 'menus' in request.POST:
-                guest_name = request.session.get('guest_name')
-                password = request.session.get('password')
-                if not guest_name:
-                    return JsonResponse({'error': 'Guest name not found'}, status=400)
-                
-                menus = json.loads(request.POST.get('menus'))
-                
-                if not menus:
-                    return JsonResponse({'error': 'No menus selected'}, status=400)
-                
-                GuestOrder.objects.create(
-                    room=room,
-                    guest_name=guest_name,
-                    password=password,
-                    menus=json.dumps(menus),
-                )
-                
-                return JsonResponse({'success': True, 'redirect_url': reverse('room_orders', args=[unique_id])})
-        
-        # GET 요청 처리
-        if request.method == 'GET':
+        # 메뉴 선택 POST
+        elif 'menus' in request.POST:
             guest_name = request.session.get('guest_name')
             password = request.session.get('password')
-            menus = []
-            selected_menu_ids = []
-            guest_order = None
-
-            if guest_name:
-                try:
-                    cafe = Cafe.objects.get(name=room.cafe)
-                    menus = MenuItem.objects.filter(cafe=cafe).values('id', 'name', 'image_url')
-
-                    # 주문내역 불러오기
-                    guest_order = GuestOrder.objects.filter(guest_name=guest_name, password=password, room=room).first()
-
-                    if guest_order:
-                        selected_menus = json.loads(guest_order.menus)
-                        selected_menu_ids = [menu['id'] for menu in selected_menus]
-                        print('Selected Menu IDs:', selected_menu_ids) 
-
-                except Cafe.DoesNotExist:
-                    logger.error(f"Cafe not found: {room.cafe}")
+            if not guest_name:
+                return JsonResponse({'error': 'Guest name not found'}, status=400)
             
-            context = {
-                'room': room,
-                'guest_name': guest_name,
-                'menus': menus,
-                'guest_order': guest_order,
-                'selected_menu_ids': selected_menu_ids,
-                'cafe': cafe # 이 줄 추가 (로고 가져오기)
-            }
-            return render(request, 'room_menu.html', context)
+            menus = json.loads(request.POST.get('menus'))
+            
+            if not menus:
+                return JsonResponse({'error': 'No menus selected'}, status=400)
+            
+            # 기존 GuestOrder 업데이트 또는 생성
+            guest_order, created = GuestOrder.objects.update_or_create(
+                room=room,
+                guest_name=guest_name,
+                password=password,
+                defaults={}
+                # menus 필드 삭제
+            )
+            
+            # 기존 OrderItem 삭제 후 새로 추가
+            guest_order.order_items.all().delete()
+            
+            # OrderItems 새로 추가 - Sihwan
+            for menu in menus:
+                try:
+                    menu_item = MenuItem.objects.get(id=menu['id'])
+                    OrderItem.objects.create(
+                        order=guest_order,
+                        menu_item=menu_item,
+                        temperature=menu['options']['temperature'],
+                        size=menu['options']['size'],
+                        ice=menu['options']['ice'],
+                        note=menu['options']['note'],
+                    )
+                except MenuItem.DoesNotExist:
+                    return JsonResponse({'error': f'MenuItem with id {menu["id"]} not found'}, status=400)
 
-    except Exception as e:
-        logger.error(f"Unexpected error in room_menu view: {str(e)}")
-        return JsonResponse({'success': False, 'error': 'An unexpected error occurred'}, status=500)
+            return JsonResponse({'success': True, 'redirect_url': reverse('room_orders', args=[unique_id])})
+    
+    # GET 요청 처리
+    if request.method == 'GET':
+        guest_name = request.session.get('guest_name')
+        password = request.session.get('password')
+        menus = []
+        selected_menu_ids = []
+        guest_order = None
+
+        if guest_name:
+            try:
+                menus = MenuItem.objects.filter(cafe=cafe).values('id', 'name', 'image_url')
+                # 주문내역 불러오기
+                guest_order = GuestOrder.objects.filter(guest_name=guest_name, password=password, room=room).first()
+
+                if guest_order:
+                    selected_menu_ids = guest_order.order_items.values_list('menu_item_id', flat=True)
+                    print('Selected Menu IDs:', selected_menu_ids) 
+
+            except Cafe.DoesNotExist:
+                logger.error(f"Cafe not found: {room.cafe}")
+        
+        context = {
+            'room': room,
+            'guest_name': guest_name,
+            'menus': menus,
+            'selected_menu_ids': selected_menu_ids,
+            'cafe': cafe # 이 줄 추가 (로고 가져오기)
+        }
+        return render(request, 'room_menu.html', context)
 
 def room_orders(request, unique_id): 
     try:
@@ -162,15 +173,17 @@ def room_orders(request, unique_id):
         
         orders_details = []
         for order in guest_orders:
-            menus = json.loads(order.menus)
+            order_items = OrderItem.objects.filter(order=order)
             order_menus = []
-            for menu in menus:
-                menu_id = menu['id']
-                options = menu['options']
-                menu_item = MenuItem.objects.get(id=menu_id)
+            for item in order_items:
                 order_menus.append({
-                    'name': menu_item.name,
-                    'options': options
+                    'name': item.menu_item.name,
+                    'options': {
+                        'temperature': item.temperature,
+                        'size': item.size,
+                        'ice': item.ice,
+                        'note': item.note
+                    }
                 })
             orders_details.append({
                 'guest_name': order.guest_name,

@@ -147,7 +147,7 @@ function setupMenuInteractions() {
             const temperature = document.querySelector('#hotButton.active, #iceButton.active') ? document.querySelector('#hotButton.active, #iceButton.active').textContent.trim() : '';
             const size = document.querySelector('#regularButton.active, #extraButton.active') ? document.querySelector('#regularButton.active, #extraButton.active').textContent.trim() : '';
             const ice = document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active') ? document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active').textContent.trim() : '';
-            const instructions = document.getElementById('additionalInstructions').value;
+            const note = document.getElementById('additionalInstructions').value;
 
             // 필수 항목 검증
             if (!temperature) {
@@ -166,10 +166,11 @@ function setupMenuInteractions() {
             selectedOptions.add({
                 id: menuId,
                 options: { 
-                    temperature, size, ice, instructions
+                    temperature, size, ice, note
                 }
             });
-
+            
+            selected_menu_ids.add(menuId);  // 수정된 부분
             const menuItem = document.querySelector(`.menu-item[data-menu-id="${menuId}"]`);
             if (menuItem) {
                 menuItem.classList.add('selected');
@@ -197,7 +198,9 @@ function setupMenuInteractions() {
         submitButton.disabled = true;
 
         const formData = new FormData(menuForm);
+        // menus 데이터를 JSON 문자열로 변환하여 추가
         formData.append('menus', JSON.stringify(Array.from(selectedOptions)));
+        
 
         fetch(window.location.href, {
             method: 'POST',
@@ -206,7 +209,14 @@ function setupMenuInteractions() {
                 'X-CSRFToken': formData.get('csrfmiddlewaretoken')
             }
         })
-        .then(response => response.json())
+        .then(async response => {
+            // 응답이 JSON이 아닌 경우를 처리
+            if (!response.ok) {
+                const text = await response.text();
+                throw new Error(text);
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.success && data.redirect_url) {
                 window.location.href = data.redirect_url;
