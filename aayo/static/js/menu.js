@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const guestNameForm = document.getElementById('guestNameForm-container');
+    const guestNameForm = document.getElementById('guestNameForm');
     
     updateButtonState();
 
@@ -139,7 +139,6 @@ function setupMenuInteractions() {
         document.getElementById('additionalInstructions').value = '';
     }
 
-<<<<<<< HEAD
     // 확인 버튼 상태 업데이트 함수
     function updateButtonState() {
         confirmButton.disabled = selectedOptions.size === 0;
@@ -159,8 +158,6 @@ function setupMenuInteractions() {
             submitButton.style.cursor = 'pointer';
         }
     }
-=======
->>>>>>> d22e0d2404e6fbb529d3bc1598880474ff336bbf
 
     function toggleButtonActive(button) {
         button.classList.toggle('active');

@@ -9,13 +9,15 @@
     {% endwith %}
     </div>
     {% if not guest_name %}
-    <form id="guestNameForm-container">
-        {% csrf_token %}
-        <p class="noGuestName-text">메뉴 선택을 위해 이름을 입력하세요</p>
-        <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름">
-        <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
-        <button id="goToOrderBtn" type="submit" class="btn bottomBtn">메뉴 주문하러 가기</button>
-    </form>
+    <div class="guestNameForm-container">
+        <form id="guestNameForm">
+            {% csrf_token %}
+            <p class="noGuestName-text">메뉴 선택을 위해 이름을 입력하세요</p>
+            <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름">
+            <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
+            <button id="goToOrderBtn" type="submit" class="btn bottomBtn">메뉴 주문하러 가기</button>
+        </form>
+    </div>
     {% else %}
     <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
     <div class="menuSearchContainer">
