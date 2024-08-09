@@ -17,7 +17,9 @@
     </form>
     {% else %}
     <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
-    <input type="text" id="menuSearch" placeholder="메뉴 검색...">
+    <div class="menuSearchContainer">
+        <input type="text" id="menuSearch" placeholder="메뉴 검색...">
+    </div>
     <p class="centered-text">현재 선택한 메뉴: <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span></p>
     <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
 
@@ -61,17 +63,23 @@
                 <label for="additionalInstructions">기타 세부사항</label>
                 <textarea id="additionalInstructions" rows="3"></textarea>
             </div>
-            <button type="button" id="saveMenuItem">내 메뉴 저장하기</button>
+            <button type="button" id="saveMenuItem" class="bottomBtn">내 메뉴 저장하기</button>
         </div>
     </div>
 
     <form id="menuForm">
         {% csrf_token %}
-        <button type="submit" id="confirmButton" disabled>주문 확정하기</button>
+        <button type="submit" id="confirmButton" disabled class="bottomBtn">주문 확정하기</button>
     </form>
 </div>
 
 <style>
+
+.form-group-etc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .cafe-logo-container {
     display: flex;
@@ -92,11 +100,18 @@
 .wave-bottom {
     display: none;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+}
+
+.menuSearchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .room-container {
@@ -124,13 +139,21 @@ body {
 }
 
 #menuSearch {
-    width: 100%;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
+    width: 60%;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid #ddd;
     border-radius: 20px;
     font-size: 16px;
-    margin-bottom: 20px;
     box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+}
+
+#menuSearch:focus {
+    outline: none;
+    border: 2px solid #f0c97d;
 }
 
 #selectedMenuNames {
@@ -167,7 +190,7 @@ body {
 }
 
 .itembox.selected {
-    border: 2px solid #FBD68E;
+    border: 3px solid #FBD68E;
 }
 
 .menu-image {
