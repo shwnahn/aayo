@@ -50,10 +50,12 @@ def room(request): # 방 생성 함수
 def room_detail(request, unique_id):
     try:
         room = Room.objects.get(unique_id=unique_id)
+        cafe = Cafe.objects.get(name=room.cafe)
     except Room.DoesNotExist:
         return HttpResponse("방을 찾을 수 없습니다.", status=404)
 
     context = {
+        'cafe': cafe,
         'room': room,
         'share_link': request.build_absolute_uri(),
     }
