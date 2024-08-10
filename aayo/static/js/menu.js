@@ -74,6 +74,7 @@ function handleGuestNameSubmit(e) {
                 options: selectedMenuOptions[id]  // 메뉴 옵션 업데이트
             };
             selectedOptions.add(selectedOption);  // selectedOptions에 기존 선택된 메뉴 추가
+            console.log('selectedOption:', selectedOption);
         }
     });
     updateSelectedMenuNames();
