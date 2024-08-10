@@ -44,6 +44,7 @@
       }
 
       .content {
+          margin-top: 75px;
           width: 100%;
           max-width: 600px;
           padding: 20px;
@@ -65,7 +66,7 @@
           color: #333;
           display: flex;
           align-items: center;
-          z-index: 10;
+          z-index: 1;
       }
 
       .wave-top {
@@ -95,7 +96,7 @@
       .room-container {
           max-width: 600px;
           width: 100%;
-          margin: 70px auto 150px;
+          margin: 0px auto 150px;
           padding: 20px;
           background-color: white;
           border-radius: 10px;
@@ -108,8 +109,25 @@
       }
 
       .hidden{
-          display: none;
+          display: none!important;
       }
+
+    .bottomBtn {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer; /* 커서 모양 */
+        z-index: 1000; /* 다른 요소들보다 위에 표시 */
+        width: 100%;
+        height: 6vh;
+        background-color: #FFD457;
+        color: #1e3932;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
   </style>
   {% block extra_css %}{% endblock %}
 
