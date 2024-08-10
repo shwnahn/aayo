@@ -15,7 +15,7 @@
             <p class="noGuestName-text">메뉴 선택을 위해 이름을 입력하세요</p>
             <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름">
             <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
-            <button id="goToOrderBtn" type="submit" class="btn bottomBtn">메뉴 주문하러 가기</button>
+            <button id="goToOrderBtn" type="submit" class="bottomBtn">메뉴 주문하러 가기</button>
         </form>
     </div>
     {% else %}
@@ -80,7 +80,7 @@
                 <label for="additionalInstructions">기타 세부사항</label>
                 <textarea id="additionalInstructions" rows="3"></textarea>
             </div>
-            <button type="button" id="saveMenuItem" class="bottomBtn">내 메뉴 저장하기</button>
+            <button type="button" id="saveMenuItem" class="modalConfirmBtn">내 메뉴 저장하기</button>
         </div>
     </div>
 </div>
@@ -257,19 +257,6 @@ body {
     background: #555; /* 스크롤바에 마우스 오버 시 색상 변경 */
 }
 
-#confirmButton {
-    width: 100%;
-    padding: 15px;
-    background-color: #FBD68E;
-    color: #1e3932;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
 #confirmButton:hover {
     background-color: #f0c97d;
 }
@@ -338,6 +325,8 @@ body {
     margin-bottom: 15px;
 }
 
+.modalConfirmBtn
+
 .btn {
     padding: 10px 15px;
     border: 1px solid #ddd;
@@ -372,7 +361,7 @@ body {
 #saveMenuItem {
     width: 100%;
     padding: 15px;
-    background-color: #FBD68E;
+    background-color: #FFD457;
     color: #1e3932;
     border: none;
     border-radius: 30px;

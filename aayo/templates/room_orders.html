@@ -35,8 +35,8 @@
         {% endif %}
     </div>
 </div>
-<a href="{% url 'room_menu' room.unique_id %}">메뉴 선택으로 돌아가기</a>
-<button id="resetOrderBtn" class="btn bottomBtn">전체 주문 초기화</button>
+<a href="{% url 'room_menu' room.unique_id %}" class="hidden">메뉴 선택으로 돌아가기</a>
+<button id="resetOrderBtn" class="bottomBtn">전체 주문 초기화</button>
 
 {% endblock %}
 
@@ -71,7 +71,7 @@ document.getElementById('resetOrderBtn').addEventListener('click', function() {
 <style>
     .order-container {
         max-width: 800px;
-        margin: 45px auto 0 auto;
+        margin: 0px auto 0 auto;
         height: 85%;
     }
     
@@ -151,21 +151,7 @@ document.getElementById('resetOrderBtn').addEventListener('click', function() {
         margin: 0;
         padding: 0;
     }
-
-    .bottomBtn {
-        background-color: #ffc107;
-        color: black;
-        font-weight: bold;
-        width: 100%;
-        padding: 15px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        text-align: center;
-        display: block;
-        margin-top: 20px;
-    }
-
+    
     #todaysmenu {
         font-weight: bold;
         text-align: center;
