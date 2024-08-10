@@ -8,7 +8,7 @@
     <p>당신의 완벽한 커피 주문</p>
     <button id="start-button">시작하기</button>
 </div>
-
+<div class="wave-bottom"></div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
@@ -78,6 +78,14 @@
     }
     .wave-bottom {
         display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background: #FFD457;
+        clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
+        z-index: 0;
     }
     .wave-top {
         display: none;
