@@ -23,6 +23,35 @@
       {% endblock %}
     </div>
   </main>
+  <!-- 여기에 모달을 열기 위한 버튼을 추가합니다 -->
+  <button id="open-modal-btn">Open Modal</button>
+  <!-- 공유 modal -->
+  <div id="share-modal" class="share-modal hidden">
+    <span class="share-close">&times;</span>
+    <h2>메뉴를 고를 사람을 초대합니다.</h2>
+    <!-- <div class="share-options hidden">
+        <div class="share-option">
+            <img src="{% static 'images/kakao.png' %}" alt="Kakao">
+            <span>카카오톡</span>
+        </div>
+        <div class="share-option">
+            <img src="{% static 'images/instagram.png' %}" alt="Instagram">
+            <span>인스타그램</span>
+        </div>
+        <div class="share-option">
+            <img src="{% static 'images/email.png' %}" alt="Email">
+            <span>E-mail</span>
+        </div>
+        <div class="share-option">
+            <img src="{% static 'images/other.png' %}" alt="Other">
+            <span>기타</span>
+        </div>
+    </div> -->
+    <div class="share-link">
+      <input id="roomLink" type="text" value="{% if room.unique_id %}{% url 'room_menu' room.unique_id %}{% else %}null{% endif %}" readonly>
+      <button id="copyLinkBtn"><img src="{% static 'images/copy.svg' %}" alt="Copy" width="20" height="20"></button>
+    </div>
+  </div>
 
   <style>
       body, html {
@@ -105,22 +134,7 @@
           margin-left: 30px;
       }
 
-      /* .room-container {
-          max-width: 600px;
-          width: 100%;
-          margin: 0px auto 150px;
-          padding: 20px;
-          background-color: white;
-          border-radius: 10px;
-          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-          box-sizing: border-box;
-          position: relative;
-          z-index: 1;
-          overflow-y: auto;
-          max-height: calc(100vh - 220px);  
-      } */
-
-      .hidden{
+      .hidden {
           display: none!important;
       }
 
@@ -129,8 +143,8 @@
           bottom: 0;
           left: 50%;
           transform: translateX(-50%);
-          cursor: pointer; /* 커서 모양 */
-          z-index: 1000; /* 다른 요소들보다 위에 표시 */
+          cursor: pointer;
+          z-index: 1000;
           width: 100%;
           height: 6vh;
           background-color: #FFD457;
@@ -140,11 +154,88 @@
           font-weight: bold;
           cursor: pointer;
       }
+
+      .share-modal {
+          background: white;
+          border-radius: 15px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+      .share-modal h2 {
+          margin: 0;
+          font-size: 18px;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      .share-modal .share-close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 18px;
+          cursor: pointer;
+      }
+      .share-modal .share-options {
+          display: flex;
+          justify-content: space-around;
+          margin-bottom: 20px;
+      }
+      .share-modal .share-option {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: #555;
+      }
+      .share-modal .share-option img {
+          width: 40px;
+          height: 40px;
+          margin-bottom: 5px;
+      }
+      .share-modal .share-link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #f0f0f0;
+          padding: 10px;
+          border-radius: 5px;
+      }
+      .share-modal .share-link input {
+          border: none;
+          background: transparent;
+          margin-right: 10px;
+          width: 100%;
+      }
+      .share-modal .share-link button {
+          background: none;
+          border: none;
+          cursor: pointer;
+      }
+      #open-modal-btn {
+          position: fixed;
+          bottom: 55px;
+          right: 20px;
+          cursor: pointer;
+      }
   </style>
   {% block extra_css %}{% endblock %}
 
-  {% block scripts %}
+  {% block scripts %}{% endblock %}
+  <!-- base.html 부분 코드 -->
   <script src="{% static 'js/main.js' %}"></script>
-  {% endblock %}
+  <script>
+      document.getElementById('open-modal-btn').addEventListener('click', function() {
+          console.log('open modal');
+          document.getElementById('share-modal').classList.remove('hidden');
+      });
+
+      document.querySelector('.share-close').addEventListener('click', function() {
+          console.log('close modal');
+          document.getElementById('share-modal').classList.add('hidden');
+      });
+  </script>
 </body>
 </html>
