@@ -22,9 +22,47 @@
       {% block content %}
       {% endblock %}
     </div>
+
+    <div class="icon-container">
+      <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      </svg>
+    </div>
   </main>
 
   <style>
+
+    .icon-container {
+      width: 40px;
+      height: 40px;
+      background-color: #FFD700;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      /* 고정 위치 설정 */
+      position: fixed;
+      bottom: 20px;  /* 하단에서 20px 떨어진 위치 */
+      right: 20px;   /* 우측에서 20px 떨어진 위치 */
+      
+      /* 다른 요소들보다 위에 표시되도록 z-index 설정 */
+      z-index: 1000;
+      
+      /* 선택적: 그림자 효과 추가 */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .share-icon {
+    width: 24px;
+    height: 24px;
+    color: #000000;
+  }
+
       body, html {
           font-family: 'Roboto', Arial, sans-serif;
           margin: 0;
