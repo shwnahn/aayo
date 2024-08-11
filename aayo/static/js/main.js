@@ -30,9 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const copyLinkBtn = document.getElementById('copyLinkBtn');
     const roomLink = document.getElementById('roomLink');
     if (copyLinkBtn && roomLink) {
+        console.log('Event listener added');
         copyLinkBtn.addEventListener('click', function() {
-            console.log('copyLinkBtn clicked');
+            console.log('copyLinkBtn clicked', new Date().getTime());
             const linkToCopy = roomLink.href;
+            console.log('방 링크:', linkToCopy)
             navigator.clipboard.writeText(linkToCopy).then(() => {
                 alert("방 링크가 클립보드에 복사되었습니다!");
             }).catch(err => {

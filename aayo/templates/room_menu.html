@@ -18,6 +18,8 @@
                 <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
                 <button id="goToOrderBtn" type="submit" class="bottomBtn">메뉴 주문하러 가기</button>
             </form>
+            <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
+            <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
         </div>
     </div>
     {% else %}
@@ -39,6 +41,9 @@
         
             </p>
             <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
+             
+            <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
+            <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
     </div>
     
 
@@ -96,13 +101,18 @@
 </div>
 
 <style>
+
 .content {
-    margin-top: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 40px; */
 }
 
 .login-container {
     text-align: center;
     padding: 20px;
+    margin-bottom: 75px;
     background-color: white; 
 }
 
