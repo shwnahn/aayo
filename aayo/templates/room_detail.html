@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="room-container">
+<div class="room-detail-container">
     <div class="cafe-logo-container">
     {% with logo_file=cafe.name_eng|add:".png"|lower %}
         <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
@@ -11,7 +11,9 @@
     <div class="message-container">
         <p class="room_name">{{ room.name }}</p>
         <div class="btn-container">
-            <span data-emoji="🔗">방 링크:</span> <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ share_link }}</a>
+            <span data-emoji="🔗">방 링크:
+                <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ share_link }}</a>
+            </span> 
             <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow">주문하기</a>
             <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white">주문 모아보기</a>
         </div>
@@ -19,13 +21,13 @@
 </div>
 
 <style>
-    
-.room-container {
+.room-detail-container {
     display: flex;
     align-items: center; 
     justify-content: center;
     height: 70vh; 
     flex-direction: column;
+    margin-top: 56px;
 }
 
 .cafe-logo-container {
@@ -37,7 +39,7 @@
 
 .cafe-logo {
     display: block;
-    width: 220px;
+    width: 200px;
 }
 
 .message-container {
@@ -45,15 +47,15 @@
     flex-direction: column;
     justify-content: center; /* 버튼을 하단에 배치 */
     align-items: center;
-    width: 240px;
-    height: 270px; /* 적절한 높이를 설정하세요 */
+    width: 100%;
+    height: 50%; /* 적절한 높이를 설정하세요 */
     text-align: center;
 }
 
 .room_name {
     font-size: 45px;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 span {
@@ -73,7 +75,7 @@ span {
 }
 
 .btn-container {
-    width: 300px
+    width: 100%
 }
 
 .btn {
@@ -81,12 +83,13 @@ span {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 10px;
+    padding: 15px 0;
     margin-top: 10px;
     border-radius: 30px;
     text-decoration: none;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .btn-yellow {
@@ -99,7 +102,9 @@ span {
     color: #000;
     border: 2px solid #FFD54F;
 }
-
+.wave-bottom {
+    display: none;
+}
 </style>
 {% endblock %}
 

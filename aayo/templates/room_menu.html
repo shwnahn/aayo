@@ -16,28 +16,31 @@
                 <p class="noGuestName-text">메뉴 선택을 위해 이름을 입력하세요</p>
                 <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름">
                 <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
-                <button id="goToOrderBtn" type="submit" class="btn bottomBtn">메뉴 주문하러 가기</button>
+                <button id="goToOrderBtn" type="submit" class="bottomBtn">메뉴 주문하러 가기</button>
             </form>
         </div>
     </div>
     {% else %}
-    <div class="cafe-logo-container">
-    {% with logo_file=cafe.name_eng|add:".png"|lower %}
-        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
-    {% endwith %}
+    <div class="context-container">
+        <div class="cafe-logo-container">
+            {% with logo_file=cafe.name_eng|add:".png"|lower %}
+                <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+            {% endwith %}
+            </div>
+            <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
+            <div class="menuSearchContainer">
+                <input type="text" id="menuSearch" placeholder="메뉴 검색...">
+            </div>
+            <p class="centered-text">현재 선택한 메뉴: 
+                <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span>
+                <!-- 기존에 선택된 메뉴에 대한 id, options 정보 추가 -->
+                <span id="selectedMenuIds" style="display: none;">{{ selected_menu_ids|json_script:"selectedMenuIds" }}</span>
+                <span id="selectedMenuOptions" style="display: none;">{{ selected_menu_options|json_script:"selectedMenuOptions" }}</span>
+        
+            </p>
+            <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
     </div>
-    <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
-    <div class="menuSearchContainer">
-        <input type="text" id="menuSearch" placeholder="메뉴 검색...">
-    </div>
-    <p class="centered-text">현재 선택한 메뉴: 
-        <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span>
-        <!-- 기존에 선택된 메뉴에 대한 id, options 정보 추가 -->
-        <span id="selectedMenuIds" style="display: none;">{{ selected_menu_ids|json_script:"selectedMenuIds" }}</span>
-        <span id="selectedMenuOptions" style="display: none;">{{ selected_menu_options|json_script:"selectedMenuOptions" }}</span>
-
-    </p>
-    <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
+    
 
     <div class="scrollable-content">
         <div id="menuListContainer" class="menu-grid">
@@ -93,6 +96,10 @@
 </div>
 
 <style>
+.content {
+    margin-top: 40px !important;
+}
+
 .login-container {
     text-align: center;
     padding: 20px;
@@ -137,20 +144,6 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 포커스 시 그림자 더 강조 */
 }
 
-#goToOrderBtn {
-    background-color: #ffc107;
-    color: black;
-    font-weight: bold;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    display: block;
-    margin-top: 20px;
-}
-
 .form-group-etc {
     display: flex;
     flex-direction: column;
@@ -164,8 +157,8 @@
 }
 
 .cafe-logo {
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
 }
 
 .page-title {
@@ -175,11 +168,6 @@
 
 .wave-bottom {
     display: none;
-}
-
-.wave-top {
-    margin-top: 25px;
-    display: block;
 }
 
 body {
@@ -198,15 +186,14 @@ body {
 .room-container {
     width: 100%;
     max-width: 600px;
-    margin-top: 4.5rem;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-    overflow-y: auto;
-    max-height: calc(100vh - 220px);
+    overflow-y: hidden;
+    max-height: calc(100vh - 190px);
 }
 
 /* 스타벅스 로고 스타일 (이미지에 있는 것처럼) */
@@ -224,7 +211,7 @@ body {
 }
 
 #menuSearch {
-    width: 60%;
+    width: 90%;
     padding: 10px 15px 10px 15px;
     border: 2px solid #ddd;
     border-radius: 20px;
@@ -263,7 +250,7 @@ body {
 .itembox {
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 10px;
+    padding: 0 10px;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -281,7 +268,6 @@ body {
 .menu-image {
     width: 100%;
     border-radius: 8px;
-    margin-bottom: 10px;
 }
 
 .menu-name {
@@ -389,11 +375,13 @@ body {
 .btn-group-size,
 .btn-group-ice {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 15px;
 }
 
-.modalConfirmBtn
+#hotButton.btn, #iceButton.btn, #regularButton.btn, #extraButton.btn {
+    width: 100px;
+}
 
 .btn {
     padding: 10px 15px;

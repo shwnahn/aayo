@@ -34,7 +34,6 @@
 {% block extra_css %}
 <style>
     h1 {
-        margin-top: 0;
         margin-bottom: 15px;
         font-family: 'Roboto';
         font-size: 45px;
@@ -55,17 +54,16 @@
         justify-content: center; /* 수평 방향으로 중앙 정렬 */
     }
 
+    #createRoomForm{
+        width: 100%;
+    }
+
     .hidden {
         display: none;
     }
 
     .wave-bottom {
         display: none;
-    }
-
-    .wave-top {
-        margin-top: 25px;
-        display: block;
     }
 
     .form-group {
@@ -229,9 +227,9 @@
     }
 
     .submit-button {
-        width: 100%;
+        width: 75%;
         padding: 15px;
-        background-color: #FBD68E;
+        background-color: #FFD457;
         color: #1e3932;
         border: none;
         border-radius: 30px;
@@ -239,11 +237,16 @@
         font-weight: bold;
         cursor: pointer;
         margin-top: 20px;
-        transition: background-color 0.3s ease
+        transition: background-color 0.3s ease;
+        position: fixed;
+        bottom: 5%; /* 화면 하단에서 위에 위치 */
+        left: 50%; /* 화면의 수평 중앙에 위치 */
+        transform: translateX(-50%); /* 버튼을 수평 중앙에 맞추기 위해 사용 */
+        z-index: 1000; /* 다른 요소들보다 위에 표시 */
     }
 
     .submit-button:hover {
-        background-color: #f0c97d;
+        background-color: #ffdd78;
     }
 </style>
 {% endblock %}
