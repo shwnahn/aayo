@@ -2,100 +2,102 @@
 {% load static %}
 
 {% block content %}
-<div class="room-container">
-    <div class="login-container">
-        {% if not guest_name %}
-        <div class="cafe-logo-container">
-        {% with logo_file=cafe.name_eng|add:".png"|lower %}
-            <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="login-cafe-logo">
-        {% endwith %}
-        </div>
-        <div class="guestNameForm-container">
-            <form id="guestNameForm">
-                {% csrf_token %}
-                <p class="noGuestName-text">메뉴 선택을 위해 이름을 입력하세요</p>
-                <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름">
-                <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
-                <button id="goToOrderBtn" type="submit" class="bottomBtn">메뉴 주문하러 가기</button>
-            </form>
-            <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
-            <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
-        </div>
-    </div>
-    {% else %}
-    <div class="context-container">
-        <div class="cafe-logo-container">
+<div class="room-container-wrap">
+    <div class="room-container">
+        <div class="login-container">
+            {% if not guest_name %}
+            <div class="cafe-logo-container">
             {% with logo_file=cafe.name_eng|add:".png"|lower %}
-                <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+                <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="login-cafe-logo">
             {% endwith %}
             </div>
-            <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
-            <div class="menuSearchContainer">
-                <input type="text" id="menuSearch" placeholder="메뉴 검색...">
+            <div class="guestNameForm-container">
+                <form id="guestNameForm">
+                    {% csrf_token %}
+                    <p class="noGuestName-text">메뉴 선택을 위해 이름을 입력하세요</p>
+                    <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름">
+                    <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
+                    <button id="goToOrderBtn" type="submit" class="bottomBtn">메뉴 주문하러 가기</button>
+                </form>
+                <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
+                <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
             </div>
-            <p class="centered-text">현재 선택한 메뉴: 
-                <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span>
-                <!-- 기존에 선택된 메뉴에 대한 id, options 정보 추가 -->
-                <span id="selectedMenuIds" style="display: none;">{{ selected_menu_ids|json_script:"selectedMenuIds" }}</span>
-                <span id="selectedMenuOptions" style="display: none;">{{ selected_menu_options|json_script:"selectedMenuOptions" }}</span>
-        
-            </p>
-            <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
-             
-            <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
-            <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
-    </div>
-    
-
-    <div class="scrollable-content">
-        <div id="menuListContainer" class="menu-grid">
-            {% for menu in menu_items %}
-            <div class="menu-item itembox {% if menu.id in selected_menu_ids %} selected{% endif %}" 
-                 data-menu-id="{{ menu.id }}" 
-                 data-temperature="{{ menu.temperature }}" 
-                 data-size="{{ menu.size }}" 
-                 data-ice="{{ menu.ice }}" 
-                 data-note="{{ menu.note }}">
-                {% if menu.image_url %}
-                    <img src="{{ menu.image_url }}" alt="{{ menu.name }}" class="menu-image">
-                {% endif %}
-                <p class="menu-name">{{ menu.name }}</p>
-            </div>
-            {% endfor %}
         </div>
-    </div>
-    <form id="menuForm">
-        {% csrf_token %}
-        <button type="submit" id="confirmButton" disabled class="bottomBtn">주문 확정하기</button>
-    </form>
-    {% endif %}
-
-    <!-- Modal -->
-    <div class="modal" id="menuDetailModal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="menuDetailModalLabel"></h2>
-            <div class="image-container">
-                <img id="modalMenuImage" src="" alt="" class="menu-image">
+        {% else %}
+        <div class="context-container">
+            <div class="cafe-logo-container">
+                {% with logo_file=cafe.name_eng|add:".png"|lower %}
+                    <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+                {% endwith %}
+                </div>
+                <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
+                <div class="menuSearchContainer">
+                    <input type="text" id="menuSearch" placeholder="메뉴 검색...">
+                </div>
+                <p class="centered-text">현재 선택한 메뉴:
+                    <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span>
+                    <!-- 기존에 선택된 메뉴에 대한 id, options 정보 추가 -->
+                    <span id="selectedMenuIds" style="display: none;">{{ selected_menu_ids|json_script:"selectedMenuIds" }}</span>
+                    <span id="selectedMenuOptions" style="display: none;">{{ selected_menu_options|json_script:"selectedMenuOptions" }}</span>
+    
+                </p>
+                <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
+    
+                <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
+                <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
+        </div>
+    
+    
+        <div class="scrollable-content">
+            <div id="menuListContainer" class="menu-grid">
+                {% for menu in menu_items %}
+                <div class="menu-item itembox {% if menu.id in selected_menu_ids %} selected{% endif %}"
+                     data-menu-id="{{ menu.id }}"
+                     data-temperature="{{ menu.temperature }}"
+                     data-size="{{ menu.size }}"
+                     data-ice="{{ menu.ice }}"
+                     data-note="{{ menu.note }}">
+                    {% if menu.image_url %}
+                        <img src="{{ menu.image_url }}" alt="{{ menu.name }}" class="menu-image">
+                    {% endif %}
+                    <p class="menu-name">{{ menu.name }}</p>
+                </div>
+                {% endfor %}
             </div>
-            <div class="btn-group-temp">
-                <button type="button" class="btn" id="hotButton">🔥 HOT</button>
-                <button type="button" class="btn" id="iceButton">🧊 ICE</button>
+        </div>
+        <form id="menuForm">
+            {% csrf_token %}
+            <button type="submit" id="confirmButton" disabled class="bottomBtn">주문 확정하기</button>
+        </form>
+        {% endif %}
+    
+        <!-- Modal -->
+        <div class="modal" id="menuDetailModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="menuDetailModalLabel"></h2>
+                <div class="image-container">
+                    <img id="modalMenuImage" src="" alt="" class="menu-image">
+                </div>
+                <div class="btn-group-temp">
+                    <button type="button" class="btn" id="hotButton">🔥 HOT</button>
+                    <button type="button" class="btn" id="iceButton">🧊 ICE</button>
+                </div>
+                <div class="btn-group-size">
+                    <button type="button" class="btn" id="regularButton">Regular</button>
+                    <button type="button" class="btn" id="extraButton">Extra</button>
+                </div>
+                <div class="btn-group-ice">
+                    <button type="button" class="btn" id="bigIceButton">얼음 많이</button>
+                    <button type="button" class="btn" id="regularIceButton">얼음 보통</button>
+                    <button type="button" class="btn" id="lessIceButton">얼음 적게</button>
+                </div>
+                <div class="form-group-etc">
+                    <label for="additionalInstructions">기타 세부사항</label>
+                    <textarea id="additionalInstructions" rows="3"></textarea>
+                </div>
+                <button type="button" id="saveMenuItem" class="modalConfirmBtn">내 메뉴 저장하기</button>
             </div>
-            <div class="btn-group-size">
-                <button type="button" class="btn" id="regularButton">Regular</button>
-                <button type="button" class="btn" id="extraButton">Extra</button>
-            </div>
-            <div class="btn-group-ice">
-                <button type="button" class="btn" id="bigIceButton">얼음 많이</button>
-                <button type="button" class="btn" id="regularIceButton">얼음 보통</button>
-                <button type="button" class="btn" id="lessIceButton">얼음 적게</button>
-            </div>
-            <div class="form-group-etc">
-                <label for="additionalInstructions">기타 세부사항</label>
-                <textarea id="additionalInstructions" rows="3"></textarea>
-            </div>
-            <button type="button" id="saveMenuItem" class="modalConfirmBtn">내 메뉴 저장하기</button>
         </div>
     </div>
 </div>
@@ -103,6 +105,7 @@
 <style>
 
 .content {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
