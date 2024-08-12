@@ -237,7 +237,6 @@ function setupMenuInteractions() {
             const size = document.querySelector('#regularButton.active, #extraButton.active') ? document.querySelector('#regularButton.active, #extraButton.active').textContent.trim() : '';
             const ice = document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active') ? document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active').textContent.trim() : '';
             const note = document.getElementById('additionalInstructions').value;
-            // hot 버튼이 클릭 되면 얼음 선택 옵션 버튼들이 비활성화되도록 만들기
 
             console.log('Selected temperature:', temperature); // 디버깅용
             console.log('Selected ice:', ice); // 디버깅용
