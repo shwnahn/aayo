@@ -6,7 +6,8 @@
 {% block content %}
 <div class="order-container">
     <h2 id="todaysmenu">TODAY's MENU</h2>
-
+    <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
+    <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
     <!-- 간단한 주문 요약 부분 -->
     <div class="summary">
         {% if orders_details %}
