@@ -11,9 +11,11 @@
     <div class="message-container">
         <p class="room_name">{{ room.name }}</p>
         <div class="btn-container">
-            <span data-emoji="🔗">방 링크:
-                <a href="{% url 'room_menu' room.unique_id %}" id="roomLink">{{ share_link }}</a>
-            </span> 
+            <!-- <span data-emoji="🔗">방 링크:
+                <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="color: black;">{{ share_link }}</a>
+            </span>  -->
+            <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
+            <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
             <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow">주문하기</a>
             <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white">주문 모아보기</a>
         </div>
@@ -21,13 +23,14 @@
 </div>
 
 <style>
+
 .room-detail-container {
     display: flex;
     align-items: center; 
     justify-content: center;
     height: 70vh; 
     flex-direction: column;
-    margin-top: 56px;
+    /* margin-top: 56px; */
 }
 
 .cafe-logo-container {
@@ -106,8 +109,13 @@ span {
     display: none;
 }
 </style>
+
 {% endblock %}
 
+
+<!-- 이 부분이 문제였음: main.js가 base.html에서 이미 로드 되었기 때문에 여기서도 로드하면 중복 -->
+<!-- {% comment%} 
 {% block scripts %}
 <script src="{% static 'js/main.js' %}"></script>
 {% endblock %}
+{% endcomment %} -->
