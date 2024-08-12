@@ -216,6 +216,8 @@ function setupMenuInteractions() {
     const iceOptions = document.querySelectorAll('#bigIceButton, #regularIceButton, #lessIceButton');
 
     if (hotButton && iceButton) {
+        let touchHandled = false;
+
         function disableIceOptions() {
             iceOptions.forEach(button => {
                 button.disabled = true;
@@ -229,13 +231,35 @@ function setupMenuInteractions() {
             });
         }
 
-        // 모바일 환경에서는 'touchstart' 이벤트 리스너를 따로 추가해줘야 예외가 없음
-        hotButton.addEventListener('click', disableIceOptions);
-        hotButton.addEventListener('touchstart', disableIceOptions);
+        function handleClickOrTouchStart(event) {
+            if (event.type === 'touchstart') {
+                touchHandled = true;
+                disableIceOptions();
+            } else if (!touchHandled) {
+                disableIceOptions();
+            } else {
+                touchHandled = false;
+            }
+        }
 
-        iceButton.addEventListener('click', enableIceOptions);
-        iceButton.addEventListener('touchstart', enableIceOptions);
+        function handleClickOrTouchStartIce(event) {
+            if (event.type === 'touchstart') {
+                touchHandled = true;
+                enableIceOptions();
+            } else if (!touchHandled) {
+                enableIceOptions();
+            } else {
+                touchHandled = false;
+            }
+        }
+
+        hotButton.addEventListener('click', handleClickOrTouchStart);
+        hotButton.addEventListener('touchstart', handleClickOrTouchStart);
+
+        iceButton.addEventListener('click', handleClickOrTouchStartIce);
+        iceButton.addEventListener('touchstart', handleClickOrTouchStartIce);
     }
+
 
     if (saveMenuItem) {
         saveMenuItem.addEventListener('click', function() {
