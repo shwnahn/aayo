@@ -4,8 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from crawler import *
 import time
 
-def crawl_coffeebean():
-    cafe_name = 'coffeebean'
+def crawl_bean():
+    cafe_name = 'bean'
     base_url = "https://www.coffeebeankorea.com/menu/list.asp?category="
 
     driver = setup_driver()
@@ -19,7 +19,6 @@ def crawl_coffeebean():
                 # (2) 페이지 순회
                     # (3) 메뉴 아이템 순회하며 정보 받아오기
                 
-
         for category in categories : # (1) 카테고리 순회
             print("# 카테고리 순회")
             url = base_url + category
@@ -67,4 +66,4 @@ def crawl_coffeebean():
         driver.quit()
 
 if __name__ == "__main__":
-    crawl_coffeebean()
+    crawl_bean()
