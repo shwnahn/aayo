@@ -231,8 +231,8 @@ function setupMenuInteractions() {
         }
 
         // pointerdown -> 터치, 클릭 모두 인식
-        hotButton.addEventListener('pointerdown', disableIceOptions);
-        iceButton.addEventListener('pointerdown', enableIceOptions);
+        hotButton.addEventListener('click', disableIceOptions);
+        iceButton.addEventListener('click', enableIceOptions);
     }
 
 
