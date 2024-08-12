@@ -218,18 +218,19 @@ function setupMenuInteractions() {
     if (hotButton && iceButton) {
         function disableIceOptions() {
             iceOptions.forEach(button => {
-                button.disabled = true;
+                button.style.display = 'none';
+                // disabled 대신 아예 사라지게 만듦
                 button.classList.remove('active');
             });
         }
 
         function enableIceOptions() {
             iceOptions.forEach(button => {
-                button.disabled = false;
+                button.style.display = 'block';
             });
         }
 
-        // pointerdown 이벤트는 모바일 터치와 마우스 클릭을 모두 처리합니다.
+        // pointerdown -> 터치, 클릭 모두 인식
         hotButton.addEventListener('pointerdown', disableIceOptions);
         iceButton.addEventListener('pointerdown', enableIceOptions);
     }
