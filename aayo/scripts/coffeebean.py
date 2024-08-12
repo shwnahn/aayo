@@ -14,38 +14,53 @@ def crawl_coffeebean():
         data = []
         categories = ['11', '12', '13', '14', '17', '18', '24', '26']
 
-        for category in categories :
+        # 코드 구조:
+            # (1) 카테고리 순회
+                # (2) 페이지 순회
+                    # (3) 메뉴 아이템 순회하며 정보 받아오기
+                
+
+        for category in categories : # (1) 카테고리 순회
+            print("# 카테고리 순회")
             url = base_url + category
             driver.get(url)
             driver.implicitly_wait(3)
+            
+            while True: # (2) 페이지 순회
+                print("# 웹 페이지 순회")
 
-            menu_items = driver.find_elements(By.CSS_SELECTOR, ".menu_list > ul > li")
+                pages = driver.find_elements(By.CSS_SELECTOR, "div.paging > a")
 
-        
-            for item in menu_items:
-                try:
-                    menu_name = item.find_element(By.CLASS_NAME, 'kor').text
-                    image_url = item.find_element(By.TAG_NAME, 'img').get_attribute('src')
-                    
-                    print(menu_name, image_url)
+                # (3) 메뉴 아이템 순회하며 정보 받아오기
+                print("# 메뉴 아이템 순회")
+                menu_items = driver.find_elements(By.CSS_SELECTOR, "ul.menu_list > li")
+                for item in menu_items:
+                    try:
+                        menu_name = item.find_element(By.CSS_SELECTOR, 'span.kor').text
+                        print(menu_name)
+                        image_url = item.find_element(By.TAG_NAME, 'img').get_attribute('src')
+                        print(image_url)
 
-                    data.append({
-                        "menu_name": menu_name,
-                        "image_url": image_url,
-                    })
+                        data.append({
+                            "menu_name": menu_name,
+                            "image_url": image_url,
+                        })
 
-                except Exception as e:
-                    print(f"Error processing menu item: {str(e)}")
-                    
-                # try:
-                #     next_button = driver.find_element(By.CSS_SELECTOR, "div.paging > a.next")
-                #     if 'disabled' in next_button.get_attribute('class'):
-                #         break
-                #     next_button.click()
-                #     time.sleep(2)
-                # except Exception as e:
-                #     print(f"No more pages or error navigating: {str(e)}")
-                #     break
+                    except Exception as e:
+                        print(f"Error processing menu item: {str(e)}")
+
+                # 만약 마지막 페이지가 'on'(활성화) 되어있다면 While문 break
+                if 'on' in pages[-1].get_attribute('class'):
+                    print("## last page")
+                    # 1번
+                    break
+
+                # 마지막 페이지가 활성화되어있지 않다면 next button 클릭하기
+                next_button = driver.find_element(By.CSS_SELECTOR, "div.paging > a.next")
+                print("next page")
+                next_button.click()
+                driver.implicitly_wait(3)
+            
         
         save_data(cafe_name, data)
     finally:
