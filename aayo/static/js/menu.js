@@ -216,18 +216,25 @@ function setupMenuInteractions() {
     const iceOptions = document.querySelectorAll('#bigIceButton, #regularIceButton, #lessIceButton');
 
     if (hotButton && iceButton) {
-        hotButton.addEventListener('click', function() {
+        function disableIceOptions() {
             iceOptions.forEach(button => {
                 button.disabled = true;
                 button.classList.remove('active');
             });
-        });
+        }
 
-        iceButton.addEventListener('click', function() {
+        function enableIceOptions() {
             iceOptions.forEach(button => {
                 button.disabled = false;
             });
-        });
+        }
+
+        // 모바일 환경에서는 'touchstart' 이벤트 리스너를 따로 추가해줘야 예외가 없음
+        hotButton.addEventListener('click', disableIceOptions);
+        hotButton.addEventListener('touchstart', disableIceOptions);
+
+        iceButton.addEventListener('click', enableIceOptions);
+        iceButton.addEventListener('touchstart', enableIceOptions);
     }
 
     if (saveMenuItem) {
