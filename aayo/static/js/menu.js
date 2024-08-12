@@ -216,8 +216,6 @@ function setupMenuInteractions() {
     const iceOptions = document.querySelectorAll('#bigIceButton, #regularIceButton, #lessIceButton');
 
     if (hotButton && iceButton) {
-        let touchHandled = false;
-
         function disableIceOptions() {
             iceOptions.forEach(button => {
                 button.disabled = true;
@@ -231,34 +229,11 @@ function setupMenuInteractions() {
             });
         }
 
-        function handleClickOrTouchStart(event) {
-            if (event.type === 'touchstart') {
-                touchHandled = true;
-                disableIceOptions();
-            } else if (!touchHandled) {
-                disableIceOptions();
-            } else {
-                touchHandled = false;
-            }
-        }
-
-        function handleClickOrTouchStartIce(event) {
-            if (event.type === 'touchstart') {
-                touchHandled = true;
-                enableIceOptions();
-            } else if (!touchHandled) {
-                enableIceOptions();
-            } else {
-                touchHandled = false;
-            }
-        }
-
-        hotButton.addEventListener('click', handleClickOrTouchStart);
-        hotButton.addEventListener('touchstart', handleClickOrTouchStart);
-
-        iceButton.addEventListener('click', handleClickOrTouchStartIce);
-        iceButton.addEventListener('touchstart', handleClickOrTouchStartIce);
+        // pointerdown 이벤트는 모바일 터치와 마우스 클릭을 모두 처리합니다.
+        hotButton.addEventListener('pointerdown', disableIceOptions);
+        iceButton.addEventListener('pointerdown', enableIceOptions);
     }
+
 
 
     if (saveMenuItem) {
