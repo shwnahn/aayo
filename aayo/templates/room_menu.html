@@ -73,8 +73,8 @@
         <!-- Modal -->
         <div class="modal" id="menuDetailModal">
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 id="menuDetailModalLabel"></h2>
+                    <span class="close">&times;</span>
+                    <h2 id="menuDetailModalLabel"></h2>
                 <div class="image-container">
                     <img id="modalMenuImage" src="" alt="" class="menu-image">
                 </div>
@@ -278,7 +278,7 @@ body {
 }
 
 .menu-image {
-    width: 70%;
+    width: 55%;
     border-radius: 8px;
 }
 
@@ -334,13 +334,16 @@ body {
 
 /* 모달 스타일은 이전과 동일하게 유지 */
 .modal {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
+    margin-top: 10px;
     background-color: rgba(0,0,0,0.4);
     overflow-y: auto;
 }
@@ -348,11 +351,11 @@ body {
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
-    margin-top: 29%;
+    margin-top: 10vh;
     padding: 20px;
     border: 1px solid #888;
     width: 80vw;
-    /* height:75vh; */
+    max-height: 80vh;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -375,6 +378,7 @@ body {
 #menuDetailModalLabel {
     font-size: 24px;
     font-weight: bold;
+    margin-top: 2vh;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -391,6 +395,8 @@ body {
 .btn-group-ice {
     display: flex;
     justify-content: space-evenly;
+    height: 40px;
+    width: 100%;
     margin-bottom: 15px;
 }
 

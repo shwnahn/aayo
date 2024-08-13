@@ -37,12 +37,12 @@
     h1 {
         margin-bottom: 15px;
         font-family: 'Roboto';
-        font-size: 40px;
+        font-size: 35px;
     }
 
     p {
         text-align: center;
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 0;
         margin-bottom: 15px;
         color: #666;
@@ -53,7 +53,7 @@
         align-items: center; /* 수직 방향으로 중앙 정렬 */
         flex-direction: column;
         justify-content: center; /* 수평 방향으로 중앙 정렬 */
-        margin-top: -5%;
+        margin-top: -6vh;
     }
 
     #createRoomForm{
@@ -71,7 +71,7 @@
     .form-group {
         display: flex;
         justify-content: center;
-        width: 100%;
+        width: 100vw;
     }
 
     input[type="text"] {
@@ -90,18 +90,16 @@
     .scrollable-cafe-content {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
         width: 85vw;
-        /* max-width: 320px; */
-        /* max-height: 435px; */
+        margin: 18px;
         max-width: 85vw;
-        max-height: 42vh;
+        max-height: 52vh;
         overflow-y: visible;
         overflow-x: hidden;
         background-color: white;
         border-radius: 10px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
+        padding: 0px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -128,7 +126,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* 한 행에 2개씩 배치 */
         column-gap: 20px;
-        row-gap: 50px;
+        row-gap: 20px;
         justify-items: center;
     }
 
