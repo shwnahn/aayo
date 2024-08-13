@@ -6,7 +6,8 @@
 {% block content %}
 <div class="order-container">
     <h2 id="todaysmenu">TODAY's MENU</h2>
-
+    <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
+    <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
     <!-- 간단한 주문 요약 부분 -->
     <div class="summary">
         {% if orders_details %}
@@ -36,7 +37,7 @@
     </div>
 </div>
 <a href="{% url 'room_menu' room.unique_id %}" class="hidden">메뉴 선택으로 돌아가기</a>
-<button id="resetOrderBtn" class="bottomBtn">전체 주문 초기화</button>
+<button id="resetOrderBtn" class="bottomBtn"> 현재 주문 초기화</button>
 
 {% endblock %}
 
@@ -94,6 +95,7 @@ document.getElementById('resetOrderBtn').addEventListener('click', function() {
         padding: 10px;
         margin-bottom: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 85vw; 
     }
     
     /* 이미지 파트 */

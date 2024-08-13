@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // room.html 에서 카페 리스트 선택 시 AJAX
     const cafeLogos = document.querySelectorAll('.cafe-logo');
     const cafeInput = document.getElementById('cafe');
+    
     cafeLogos.forEach(logo => {
         logo.addEventListener('click', function() {
             // 모든 로고에서 'selected' 클래스를 제거하여 선택되지 않은 상태로 만들기
@@ -30,9 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const copyLinkBtn = document.getElementById('copyLinkBtn');
     const roomLink = document.getElementById('roomLink');
     if (copyLinkBtn && roomLink) {
+        console.log('Event listener added');
         copyLinkBtn.addEventListener('click', function() {
-            console.log('copyLinkBtn clicked');
+            console.log('copyLinkBtn clicked', new Date().getTime());
             const linkToCopy = roomLink.href;
+            console.log('방 링크:', linkToCopy)
             navigator.clipboard.writeText(linkToCopy).then(() => {
                 alert("방 링크가 클립보드에 복사되었습니다!");
             }).catch(err => {
