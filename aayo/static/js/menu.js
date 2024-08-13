@@ -62,7 +62,7 @@ function handleGuestNameSubmit(e) {
 }
 
  // 메뉴 선택 시 'Selected' 클래스 추가 함수
- function markSelectedMenus() {
+function markSelectedMenus() {
     const selectedMenuIds = JSON.parse(document.getElementById('selectedMenuIds').textContent);
     const selectedMenuOptions = JSON.parse(document.getElementById('selectedMenuOptions').textContent);
     selectedMenuIds.forEach(id => {
@@ -93,10 +93,9 @@ function updateSelectedMenuNames() {
     document.getElementById('selectedMenuNames').textContent = selectedMenuNames.join(', ');
 }
 
-
 // 메뉴 선택 상호작용 - 모달 창(주문 상세 페이지) 상세 정보를 클릭하고 그걸 db로 보내는 ajax
 function setupMenuInteractions() {
-    console.log('# 함수 실행');
+    console.log('# 메뉴 선택 함수 실행');
     const menuItems = document.querySelectorAll('.menu-item');
     console.log('menuItems:', menuItems);
     const modal = document.getElementById('menuDetailModal');
@@ -106,9 +105,8 @@ function setupMenuInteractions() {
     const modalImage = document.getElementById('modalMenuImage');
     console.log('modalImage:', modalImage);
     
-    // 메뉴 검색창 가져오기
+    // 메뉴 검색창 이벤트리스너 추가
     const searchInput = document.getElementById('menuSearch');
-
     searchInput.addEventListener('input', function () {
         // '검색어 입력' 이벤트리스너 추가
         const searchTerm = this.value.toLowerCase();
@@ -125,17 +123,6 @@ function setupMenuInteractions() {
             }
         });
     });
-    
-
-    // 모달 초기화 함수
-    function resetModal() {
-        ['hotButton', 'iceButton', 'regularButton', 'extraButton', 'bigIceButton', 'regularIceButton', 'lessIceButton'].
-        forEach(id => {
-            document.getElementById(id).classList.remove('active');
-        });
-        document.getElementById('additionalInstructions').value = '';
-    }
-
 
     function toggleButtonActive(button) {
         button.classList.toggle('active');
@@ -160,14 +147,14 @@ function setupMenuInteractions() {
         });
     }
 
-    // 각 메뉴 항목에 클릭 이벤트 리스너 추가
+    // 각 메뉴 항목에 클릭 이벤트 리스너 추가 [ 모달을 여는 코드 ]
     menuItems.forEach(item => {
         item.addEventListener('click', function() {
             const menuId = this.getAttribute('data-menu-id');
             const menuName = this.querySelector('.menu-name').textContent;
             const menuImageSrc = this.querySelector('.menu-image')?.src;
 
-            // 선택된 메뉴를 다시 클릭할 시 선택 취소
+            // 선택된 메뉴를 다시 클릭할 시 선택 취소 [ 커스텀 초기화 코드 ]
             if (this.classList.contains('selected')) {
                 this.classList.remove('selected');
                 selectedOptions.delete(Array.from(selectedOptions).find(option => option.id === menuId));
@@ -175,11 +162,12 @@ function setupMenuInteractions() {
                 updateSelectedMenuNames();
                 alert('커스텀을 수정하시겠습니까?')
                 resetModal(); // 모달 초기화 (기존 선택내역 초기화)
-                modal.style.display = 'block' // 사용자 편의를 위해 모달을 다시 열어줌
+                openModal(); // 사용자 편의를 위해 모달을 다시 열어줌
                 return;
             }
-
+            
             modalTitle.textContent = menuName;
+            // 해당 메뉴 이미지 없으면 display: none
             if (menuImageSrc) {
                 modalImage.src = menuImageSrc;
                 modalImage.style.display = 'block';
@@ -187,15 +175,18 @@ function setupMenuInteractions() {
                 modalImage.style.display = 'none';
             }
 
+            // 모달 초기화 후 열기
             resetModal();
-            modal.style.display = 'block';
+            openModal();;
             saveMenuItem.setAttribute('data-menu-id', menuId);
 
+            // 닫기 버튼에 이벤트리스너 추가
             const closeBtn = modal.querySelector('.close');
-            if (closeBtn) {
+            if (closeBtn && !closeBtn.dataset.listenerAdded) {
                 closeBtn.addEventListener('click', function() {
-                    modal.style.display = 'none';
+                    closeModal()
                 });
+                closeBtn.dataset.listenerAdded = 'true'; // 이벤트 리스너 중복 방지 플래그 설정
             }
         });
     });
@@ -203,12 +194,9 @@ function setupMenuInteractions() {
     // 모달 창 외부 클릭 시 모달 창 닫기
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.display = 'none';
+            closeModal()
         }
     }
-
-    // 모달창에서 '내 메뉴 저장하기' 버튼 클릭 시 선택된 옵션 저장
-    const saveMenuItem = document.getElementById('saveMenuItem');
 
     // hot 버튼이 클릭 되면 얼음 선택 옵션 버튼들이 비활성화되도록 만들기
     const hotButton = document.getElementById('hotButton');
@@ -235,8 +223,8 @@ function setupMenuInteractions() {
         iceButton.addEventListener('click', enableIceOptions);
     }
 
-
-
+    // 모달창에서 '내 메뉴 저장하기' 버튼 클릭 시 선택된 옵션 저장
+    const saveMenuItem = document.getElementById('saveMenuItem');
     if (saveMenuItem) {
         saveMenuItem.addEventListener('click', function() {
             const menuId = this.getAttribute('data-menu-id');
@@ -278,7 +266,7 @@ function setupMenuInteractions() {
 
             updateButtonState();
             updateSelectedMenuNames();
-            modal.style.display = 'none';
+            closeModal()
 
             console.log('메뉴가 저장되었습니다:', menuId);
         });
@@ -341,3 +329,23 @@ function setupMenuInteractions() {
     }
 }
 
+
+function openModal() {
+    const modal = document.getElementById('menuDetailModal');
+    modal.classList.add('show');
+    modal.style.display = 'block';
+}
+function closeModal() {
+    const modal = document.getElementById('menuDetailModal');
+    modal.classList.remove('show');
+    modal.style.display = 'none';
+}
+
+// 모달 초기화 함수
+function resetModal() {
+    ['hotButton', 'iceButton', 'regularButton', 'extraButton', 'bigIceButton', 'regularIceButton', 'lessIceButton'].
+    forEach(id => {
+        document.getElementById(id).classList.remove('active');
+    });
+    document.getElementById('additionalInstructions').value = '';
+}

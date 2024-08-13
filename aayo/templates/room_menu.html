@@ -329,8 +329,13 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
-    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: auto;
+}
+
+.modal.show {
+    display: block;
+    animation: slideIn 0.5s ease-out,fadeInBackground 0.6s cubic-bezier(0.4, 0, 1, 1) 0.2s forwards; /* 모달 슬라이드 애니메이션 */
 }
 
 .modal-wrap {
@@ -480,10 +485,31 @@
     font-weight: bold;
     cursor: pointer;
 }
-
+/* 모달 애니메이션 정의 */
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInBackground {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
 </style>
 {% endblock %}
 
 {% block scripts %}
 <script src="{% static 'js/menu.js' %}"></script>
+<script>
+    
+</script>
 {% endblock %}
