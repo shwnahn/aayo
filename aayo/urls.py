@@ -15,4 +15,6 @@ urlpatterns = [
 
     path('room/<str:unique_id>/orders/', views.room_orders, name='room_orders'),
     # 주문 총계 / 메뉴 커스텀 정보 보기
+
+    path('ads.txt/', views.ads, name='ads'),
 ]

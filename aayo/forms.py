@@ -1,5 +1,6 @@
 # forms.py
 from django import forms
+from .models import Cafe
 
 class RoomCreationForm(forms.Form):
     name = forms.CharField(max_length=100, label="방 이름")

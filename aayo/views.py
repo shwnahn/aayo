@@ -204,3 +204,6 @@ def room_orders(request, unique_id):
     except Exception as e:
         logger.error(f"Unexpected error in room_orders view: {str(e)}")
         return JsonResponse({'success': False, 'error': 'An unexpected error occurred'}, status=500)
+
+def ads(request):
+    return render(request, 'ads.txt', content_type='text/plain')
