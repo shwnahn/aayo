@@ -31,7 +31,7 @@
 </div>
 {% endblock %}
 
-{% block extra_css %}
+{% block css %}
 <style>
 
     h1 {
@@ -255,4 +255,8 @@
         background-color: #ffdd78;
     }
 </style>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/room.js' %}"></script>
 {% endblock %}

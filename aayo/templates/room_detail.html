@@ -21,7 +21,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
+{% block css %}
 <style>
 .room-detail-container {
     display: flex;
@@ -110,9 +112,10 @@ span {
     display: none;
 }
 </style>
-
 {% endblock %}
 
+{% block scripts %}
+{% endblock %}
 
 <!-- 이 부분이 문제였음: main.js가 base.html에서 이미 로드 되었기 때문에 여기서도 로드하면 중복 -->
 <!-- {% comment%} 
