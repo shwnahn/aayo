@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // room.html 에서 카페 리스트 선택 시 AJAX
     const cafeLogos = document.querySelectorAll('.cafe-logo');
     const cafeInput = document.getElementById('cafe');
+    
     cafeLogos.forEach(logo => {
         logo.addEventListener('click', function() {
             // 모든 로고에서 'selected' 클래스를 제거하여 선택되지 않은 상태로 만들기

@@ -216,19 +216,26 @@ function setupMenuInteractions() {
     const iceOptions = document.querySelectorAll('#bigIceButton, #regularIceButton, #lessIceButton');
 
     if (hotButton && iceButton) {
-        hotButton.addEventListener('click', function() {
+        function disableIceOptions() {
             iceOptions.forEach(button => {
-                button.disabled = true;
+                button.style.display = 'none';
+                // disabled 대신 아예 사라지게 만듦
                 button.classList.remove('active');
             });
-        });
+        }
 
-        iceButton.addEventListener('click', function() {
+        function enableIceOptions() {
             iceOptions.forEach(button => {
-                button.disabled = false;
+                button.style.display = 'block';
             });
-        });
+        }
+
+        // pointerdown -> 터치, 클릭 모두 인식
+        hotButton.addEventListener('click', disableIceOptions);
+        iceButton.addEventListener('click', enableIceOptions);
     }
+
+
 
     if (saveMenuItem) {
         saveMenuItem.addEventListener('click', function() {
