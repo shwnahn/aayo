@@ -1,14 +1,14 @@
-const menuItems = document.querySelectorAll('.menu-item');
+// const menuItems = document.querySelectorAll('.menu-item');
 
-menuItems.forEach(item => {
-    item.addEventListener('click', function() {
-        // 메뉴 항목의 데이터 속성 값을 가져와 모달 창에 표시
-        const menuName = this.querySelector('.menu-name').textContent;
-        console.log(menuName);
+// menuItems.forEach(item => {
+//     item.addEventListener('click', function() {
+//         // 메뉴 항목의 데이터 속성 값을 가져와 모달 창에 표시
+//         const menuName = this.querySelector('.menu-name').textContent;
+//         console.log(menuName);
 
-        // 모달 창의 제목과 이미지 설정
-    });
-})
+//         // 모달 창의 제목과 이미지 설정
+//     });
+// })
 
 console.log(1);
 console.log(2);
