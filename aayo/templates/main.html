@@ -29,17 +29,21 @@
             <button type="submit" class="submit-button">방 생성하기</button>
         </div>
     </form>
-
-    <script>
-        function selectCafe(cafeName) {
-            document.getElementById('cafe').value = cafeName;
-            var cafeLogos = document.querySelectorAll('.cafe-logo');
-            cafeLogos.forEach(function(logo) {
-                logo.classList.remove('selected');
-            });
-            var selectedLogo = document.querySelector('.cafe-logo[data-cafe="' + cafeName + '"]');
-            selectedLogo.classList.add('selected');
-        }
-    </script>
 </div>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block scripts %}
+<script>
+    function selectCafe(cafeName) {
+        document.getElementById('cafe').value = cafeName;
+        var cafeLogos = document.querySelectorAll('.cafe-logo');
+        cafeLogos.forEach(function(logo) {
+            logo.classList.remove('selected');
+        });
+        var selectedLogo = document.querySelector('.cafe-logo[data-cafe="' + cafeName + '"]');
+        selectedLogo.classList.add('selected');
+    }
+</script>
 {% endblock %}
