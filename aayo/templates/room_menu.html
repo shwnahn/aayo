@@ -4,8 +4,8 @@
 {% block content %}
 <div class="room-container-wrap">
     <div class="room-container">
+        {% if not guest_name %}
         <div class="login-container">
-            {% if not guest_name %}
             <div class="cafe-logo-container">
             {% with logo_file=cafe.name_eng|add:".png"|lower %}
                 <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="login-cafe-logo">
@@ -46,7 +46,6 @@
                 <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
                 <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
         </div>
-    
     
         <div class="scrollable-content">
             <div id="menuListContainer" class="menu-grid">
@@ -115,13 +114,14 @@
 .login-container {
     text-align: center;
     padding: 20px;
+    margin-top: 10vh;
     margin-bottom: 75px;
     background-color: white; 
 }
 
 .login-cafe-logo {
     display: block;
-    width: 200px;
+    width: 33vw;
 }
 
 .noGuestName-text {
@@ -170,8 +170,7 @@
 }
 
 .cafe-logo {
-    width: 30%;
-    height: 30%;
+    width: 23vw;
 }
 
 .page-title {
@@ -197,13 +196,13 @@ body {
 }
 
 .context-container {
-    margin-top: -6%;
+    margin-top: 2vh;
 }
 
 .room-container {
-    width: 100%;
+    width: 92vw;
     max-width: 600px;
-    margin-top: -8%;
+    margin-top: -4vh;
     /* padding: 20px; */
     background-color: white;
     border-radius: 10px;
@@ -214,26 +213,21 @@ body {
     /* max-height: calc(100vh - 190px); */
 }
 
-/* 스타벅스 로고 스타일 (이미지에 있는 것처럼) */
-.starbucks-logo {
-    display: block;
-    width: 50px;
-    margin: 0 auto 20px;
-}
-
 .centered-text {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
     color: #1e3932;
 }
 
 #menuSearch {
-    width: 90%;
+    width: 63vw;
+    height: 5vh;
     padding: 10px 15px 10px 15px;
     border: 2px solid #ddd;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 14px;
     box-sizing: border-box;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -284,7 +278,7 @@ body {
 }
 
 .menu-image {
-    width: 100%;
+    width: 70%;
     border-radius: 8px;
 }
 
@@ -345,8 +339,8 @@ body {
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0,0,0,0.4);
     overflow-y: auto;
 }
@@ -354,10 +348,11 @@ body {
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
+    margin-top: 29%;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
+    width: 80vw;
+    height:75vh;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -385,6 +380,8 @@ body {
 }
 
 .image-container {
+    display: flex;
+    justify-content: center;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -434,6 +431,7 @@ body {
 
 #saveMenuItem {
     width: 100%;
+    height: 8%;
     padding: 15px;
     background-color: #FFD457;
     color: #1e3932;
