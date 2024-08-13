@@ -72,31 +72,33 @@
     
         <!-- Modal -->
         <div class="modal" id="menuDetailModal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 id="menuDetailModalLabel"></h2>
-                <div class="image-container">
-                    <img id="modalMenuImage" src="" alt="" class="menu-image">
+            <wrap class="modal-wrap">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="menuDetailModalLabel"></h2>
+                    <div class="image-container">
+                        <img id="modalMenuImage" src="" alt="" class="menu-image">
+                    </div>
+                    <div class="btn-group-temp">
+                        <button type="button" class="btn" id="hotButton">🔥 HOT</button>
+                        <button type="button" class="btn" id="iceButton">🧊 ICE</button>
+                    </div>
+                    <div class="btn-group-size">
+                        <button type="button" class="btn" id="regularButton">Regular</button>
+                        <button type="button" class="btn" id="extraButton">Extra</button>
+                    </div>
+                    <div class="btn-group-ice">
+                        <button type="button" class="btn" id="bigIceButton">얼음 많이</button>
+                        <button type="button" class="btn" id="regularIceButton">얼음 보통</button>
+                        <button type="button" class="btn" id="lessIceButton">얼음 적게</button>
+                    </div>
+                    <div class="form-group-etc">
+                        <label for="additionalInstructions">기타 세부사항</label>
+                        <textarea id="additionalInstructions" rows="3"></textarea>
+                    </div>
+                    <button type="button" id="saveMenuItem" class="modalConfirmBtn">내 메뉴 저장하기</button>
                 </div>
-                <div class="btn-group-temp">
-                    <button type="button" class="btn" id="hotButton">🔥 HOT</button>
-                    <button type="button" class="btn" id="iceButton">🧊 ICE</button>
-                </div>
-                <div class="btn-group-size">
-                    <button type="button" class="btn" id="regularButton">Regular</button>
-                    <button type="button" class="btn" id="extraButton">Extra</button>
-                </div>
-                <div class="btn-group-ice">
-                    <button type="button" class="btn" id="bigIceButton">얼음 많이</button>
-                    <button type="button" class="btn" id="regularIceButton">얼음 보통</button>
-                    <button type="button" class="btn" id="lessIceButton">얼음 적게</button>
-                </div>
-                <div class="form-group-etc">
-                    <label for="additionalInstructions">기타 세부사항</label>
-                    <textarea id="additionalInstructions" rows="3"></textarea>
-                </div>
-                <button type="button" id="saveMenuItem" class="modalConfirmBtn">내 메뉴 저장하기</button>
-            </div>
+            </wrap>
         </div>
     </div>
 </div>
@@ -344,17 +346,33 @@ body {
     background-color: rgba(0,0,0,0.4);
     overflow-y: auto;
 }
+/* 
+.icon-container{
+    display: none !important;
+} */
+
+.modal-wrap {
+    display:flex;
+    flex-direction:column;
+    width: 90vw;
+    height: 80vh;
+    margin: 25% auto;
+}
+
+#modalMenuImage{
+    width: auto;
+}
 
 .modal-content {
+    display:flex;
+    box-sizing: border-box; /* 여백과 테두리를 포함한 박스 모델 */
+    flex-direction:column;
     background-color: #fefefe;
-    margin: 15% auto;
-    margin-top: 29%;
-    padding: 20px;
     border: 1px solid #888;
-    width: 80vw;
-    /* height:75vh; */
     border-radius: 10px;
+    padding: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
 .close {
@@ -363,6 +381,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    position: absolute;
 }
 
 .close:hover,
@@ -372,18 +391,25 @@ body {
     cursor: pointer;
 }
 
+#menuDetailModal {
+    overflow: hidden;
+}
+
 #menuDetailModalLabel {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin: 15px 0;
     text-align: center;
+    max-height: 10%;
 }
 
 .image-container {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    max-height: 40%;
+    width: auto;
 }
 
 .btn-group-temp,
@@ -391,7 +417,8 @@ body {
 .btn-group-ice {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    max-height: 10%;
 }
 
 #hotButton.btn, #iceButton.btn, #regularButton.btn, #extraButton.btn {
@@ -413,6 +440,7 @@ body {
 
 .form-group-etc {
     margin-bottom: 15px;
+    height: 100%;
 }
 
 .form-group-etc label {
@@ -423,10 +451,13 @@ body {
 
 #additionalInstructions {
     width: 100%;
+    height: 100%;
     padding: 10px;
+    
     border: 1px solid #ddd;
     border-radius: 5px;
     resize: vertical;
+    max-height: 10%;
 }
 
 #saveMenuItem {
@@ -444,6 +475,7 @@ body {
 
 #saveMenuItem:hover {
     background-color: #f0c97d;
+    max-height: 10%;
 }
 
 .btn {
