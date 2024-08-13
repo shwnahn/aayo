@@ -22,6 +22,17 @@ def crawl_toms():
         crawled_items = set()  # 중복된 항목을 저장하는 집합(확인하려고)
 
         while True:
+            sorts = driver.find_elements(By.CSS_SELECTOR, "div.product_list > dl > dt")
+            menus = driver.find_elements(By.CSS_SELECTOR, "div.product_list > dl > dd")
+
+            for sort, menu in zip(sorts, menus):
+                category = sort.find_element(By.TAG_NAME, 'a').text
+                try:
+                    note = sort.find_element(By.CLASS_NAME, 'summary').text
+                except:
+                    note = ''
+
+
             menu_items = driver.find_elements(By.CSS_SELECTOR, 'div.relative.w-full')
 
             # for문으로 메뉴 전체 순회하며 'menu_name', 'image_url'를 가져와서 data 리스트에 추가하기
@@ -30,9 +41,15 @@ def crawl_toms():
                 image_url = item.find_element(By.TAG_NAME, 'img').get_attribute('src')
 
                 # 이미 크롤링된 항목이 아닌 경우에만 추가
-                if (menu_name, image_url) not in crawled_items:
-                    data.append({'menu_name': menu_name, 'image_url': image_url})
-                    crawled_items.add((menu_name, image_url))
+                if (menu_name, image_url, category, note) not in crawled_items:
+                    data.append({
+                        'menu_name': menu_name, 
+                        'image_url': image_url,
+                        'category': category,
+                        'note': note,
+                    })
+                    crawled_items.add((menu_name, image_url, category, note))
+                    print(f"[{category}] {menu_name} - {note}")
                     #print(menu_name, image_url)
             try:
                 more_button = WebDriverWait(driver, 10).until(
