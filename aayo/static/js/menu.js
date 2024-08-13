@@ -62,7 +62,7 @@ function handleGuestNameSubmit(e) {
 }
 
  // 메뉴 선택 시 'Selected' 클래스 추가 함수
- function markSelectedMenus() {
+function markSelectedMenus() {
     const selectedMenuIds = JSON.parse(document.getElementById('selectedMenuIds').textContent);
     const selectedMenuOptions = JSON.parse(document.getElementById('selectedMenuOptions').textContent);
     selectedMenuIds.forEach(id => {
@@ -88,9 +88,15 @@ function updateSelectedMenuNames() {
         const menuItem = document.querySelector(`.menu-item[data-menu-id="${option.id}"]`);
         // (삼항 연산자) 그 메뉴 아이템의 메뉴 이름을 반환, 만약 메뉴 아이템이 존재하지 않으면(거의 그럴 일 없음) 빈 문자열을 반환
         return menuItem ? menuItem.querySelector('.menu-name').textContent : '';
-    })
-    // 저장된 메뉴 배열의 요소들을 ', '로 구분하여 텍스트로 표시! 
-    document.getElementById('selectedMenuNames').textContent = selectedMenuNames.join(', ');
+    });
+
+    const selectedMenuNamesElement = document.getElementById('selectedMenuNames');
+    
+    if (selectedMenuNames.length === 0) { // 선택한 메뉴 아이템이 없는 경우(배열의 길이가 0인 경우)
+        selectedMenuNamesElement.textContent = "아직 고르신 메뉴가 없어요.";
+    } else {
+        selectedMenuNamesElement.textContent = selectedMenuNames.join(', ');
+    }
 }
 
 

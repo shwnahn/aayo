@@ -14,9 +14,9 @@
             <div class="guestNameForm-container">
                 <form id="guestNameForm">
                     {% csrf_token %}
-                    <p class="noGuestName-text">메뉴 선택을 위해 이름을 입력하세요</p>
-                    <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름">
-                    <input type="password" class="guestNameForm" name="password" placeholder="비밀번호 (선택)">
+                    <p class="noGuestName-text">주문자님의 이름을 입력해주세요.</p>
+                    <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름을 입력하세요">    
+                    <!-- <input type="password" class="guestNameForm" name="password" placeholder="비밀번호를 입력하세요"> -->
                     <button id="goToOrderBtn" type="submit" class="bottomBtn">메뉴 주문하러 가기</button>
                 </form>
                 <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
@@ -26,22 +26,20 @@
         {% else %}
         <div class="context-container">
             <div class="cafe-logo-container">
-                {% with logo_file=cafe.name_eng|add:".png"|lower %}
+                <!-- {% with logo_file=cafe.name_eng|add:".png"|lower %}
                     <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
-                {% endwith %}
-                </div>
-                <p class="centered-text">안녕하세요, {{ guest_name }}님!</p>
-                <div class="menuSearchContainer">
-                    <input type="text" id="menuSearch" placeholder="메뉴 검색...">
-                </div>
-                <p class="centered-text">현재 선택한 메뉴:
+                {% endwith %} -->
+            </div>
+                <p class="centered-text">{{ guest_name }}님이 고른 메뉴:
                     <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span>
                     <!-- 기존에 선택된 메뉴에 대한 id, options 정보 추가 -->
                     <span id="selectedMenuIds" style="display: none;">{{ selected_menu_ids|json_script:"selectedMenuIds" }}</span>
                     <span id="selectedMenuOptions" style="display: none;">{{ selected_menu_options|json_script:"selectedMenuOptions" }}</span>
-    
                 </p>
                 <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
+                <div class="menuSearchContainer">
+                    <input type="text" id="menuSearch" placeholder="메뉴 검색...">
+                </div>
     
                 <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
                 <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
@@ -197,6 +195,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3vh;
 }
 
 .context-container {
