@@ -214,20 +214,20 @@ function setupMenuInteractions() {
     const hotButton = document.getElementById('hotButton');
     const iceButton = document.getElementById('iceButton');
     const iceOptions = document.querySelectorAll('#bigIceButton, #regularIceButton, #lessIceButton');
-
+    const iceOptionsGroup = document.querySelector('.btn-group-ice');
     if (hotButton && iceButton) {
         function disableIceOptions() {
+            // button.style.display = 'none'; 에서 buttonGroup class hidden 으로 작동하도록 수정!
+            iceOptionsGroup.classList.add('hidden');
             iceOptions.forEach(button => {
-                button.style.display = 'none';
                 // disabled 대신 아예 사라지게 만듦
                 button.classList.remove('active');
             });
         }
 
         function enableIceOptions() {
-            iceOptions.forEach(button => {
-                button.style.display = 'block';
-            });
+            // button.style.display = 'block'; -> buttonGroup class에서 remove hidden 으로 작동하도록 수정!
+            iceOptionsGroup.classList.remove('hidden'); 
         }
 
         // pointerdown -> 터치, 클릭 모두 인식
