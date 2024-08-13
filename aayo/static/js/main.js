@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // room.html 에서 카페 리스트 선택 시 AJAX
     const cafeLogos = document.querySelectorAll('.cafe-logo');
     const cafeInput = document.getElementById('cafe');
+    const submitButtonContainer = document.querySelector('.submit-button-container');
+    
     cafeLogos.forEach(logo => {
         logo.addEventListener('click', function() {
             // 모든 로고에서 'selected' 클래스를 제거하여 선택되지 않은 상태로 만들기
@@ -12,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('selected');
             // 클릭한 로고의 'data-cafe' 속성 값을 가져와 'cafeInput' 요소의 값으로 설정
             cafeInput.value = this.getAttribute('data-cafe');
+            // 카페가 선택되면 submit 버튼 컨테이너를 보이게 함
+            submitButtonContainer.style.display = 'block';
         });
     });
 
