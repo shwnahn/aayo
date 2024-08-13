@@ -3,8 +3,8 @@
 
 {% block content %}
 <div class="main-container">
-    <h1 class="page-title">방 생성하기</h1>
-    <p class="room-script">방 이름을 입력하고,</br>메뉴를 고를 카페를 선택하세요.</p>
+    <h1 class="page-title" style="font-size: 25px; margin-bottom: 7px;">방 생성하기</h1>
+    <p class="room-script" style="font-size: 13px;">방 이름을 입력하고,</br>메뉴를 고를 카페를 선택하세요.</p>
     <form id="createRoomForm" method="post">
     {% csrf_token %}
         <div class="form-group">
@@ -33,10 +33,11 @@
 
 {% block extra_css %}
 <style>
+
     h1 {
         margin-bottom: 15px;
         font-family: 'Roboto';
-        font-size: 45px;
+        font-size: 40px;
     }
 
     p {
@@ -52,6 +53,7 @@
         align-items: center; /* 수직 방향으로 중앙 정렬 */
         flex-direction: column;
         justify-content: center; /* 수평 방향으로 중앙 정렬 */
+        margin-top: -5vh;
     }
 
     #createRoomForm{
@@ -86,11 +88,15 @@
     }
 
     .scrollable-cafe-content {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
-        width: 100%;
-        max-width: 320px; /* 최대 너비 설정 */
-        max-height: 360px;
-        overflow-y: auto;
+        width: 85vw;
+        /* max-width: 320px; */
+        /* max-height: 435px; */
+        max-width: 85vw;
+        max-height: 42vh;
+        overflow-y: visible;
         overflow-x: hidden;
         background-color: white;
         border-radius: 10px;

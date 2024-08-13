@@ -209,6 +209,34 @@ function setupMenuInteractions() {
 
     // 모달창에서 '내 메뉴 저장하기' 버튼 클릭 시 선택된 옵션 저장
     const saveMenuItem = document.getElementById('saveMenuItem');
+
+    // hot 버튼이 클릭 되면 얼음 선택 옵션 버튼들이 비활성화되도록 만들기
+    const hotButton = document.getElementById('hotButton');
+    const iceButton = document.getElementById('iceButton');
+    const iceOptions = document.querySelectorAll('#bigIceButton, #regularIceButton, #lessIceButton');
+
+    if (hotButton && iceButton) {
+        function disableIceOptions() {
+            iceOptions.forEach(button => {
+                button.style.display = 'none';
+                // disabled 대신 아예 사라지게 만듦
+                button.classList.remove('active');
+            });
+        }
+
+        function enableIceOptions() {
+            iceOptions.forEach(button => {
+                button.style.display = 'block';
+            });
+        }
+
+        // pointerdown -> 터치, 클릭 모두 인식
+        hotButton.addEventListener('click', disableIceOptions);
+        iceButton.addEventListener('click', enableIceOptions);
+    }
+
+
+
     if (saveMenuItem) {
         saveMenuItem.addEventListener('click', function() {
             const menuId = this.getAttribute('data-menu-id');
@@ -216,6 +244,9 @@ function setupMenuInteractions() {
             const size = document.querySelector('#regularButton.active, #extraButton.active') ? document.querySelector('#regularButton.active, #extraButton.active').textContent.trim() : '';
             const ice = document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active') ? document.querySelector('#bigIceButton.active, #regularIceButton.active, #lessIceButton.active').textContent.trim() : '';
             const note = document.getElementById('additionalInstructions').value;
+
+            console.log('Selected temperature:', temperature); // 디버깅용
+            console.log('Selected ice:', ice); // 디버깅용
 
             // 필수 항목 검증
             if (!temperature) {
@@ -226,10 +257,11 @@ function setupMenuInteractions() {
                 alert('크기를 선택해주세요!');
                 return;
             }
-            // if (!ice) {
-            //     alert('얼음 양을 선택해주세요!');
-            //     return;
-            // }
+            // ice 버튼을 눌렀을 때만 얼음 양 선택을 필수로 하도록 만들기
+            if (temperature.includes('ICE') && !ice) {
+                alert('얼음 양을 선택해주세요!');
+                return;
+            }
             // 선택된 옵션들을 Set에 추가 - selectedOptions
             selectedOptions.add({
                 id: menuId,
