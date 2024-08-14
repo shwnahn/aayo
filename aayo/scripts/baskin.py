@@ -4,15 +4,15 @@ from selenium.webdriver.support import expected_conditions as EC
 from crawler import *
 import time
 
-def crawl_theventi():
-    cafe_name = 'theventi'
-    base_url = "https://www.theventi.co.kr/new2022/menu/all.html?mode="
+def crawl_baskin():
+    cafe_name = 'baskin'
+    base_url = "https://www.baskinrobbins.co.kr/menu/list.php?category="
 
     driver = setup_driver()
 
     try:
         data = []
-        categories = ['1', '2', '3', '4', '5', '6', '7', '8']
+        categories = ['A', 'F', 'B', 'E', '5', '6', '7', '8']
 
         for category in categories :
             url = base_url + category
