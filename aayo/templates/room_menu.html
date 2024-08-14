@@ -52,10 +52,11 @@
                 {% for menu in menu_items %}
                 <div class="menu-item itembox {% if menu.id in selected_menu_ids %} selected{% endif %}"
                      data-menu-id="{{ menu.id }}"
-                     data-temperature="{{ menu.temperature }}"
+                     data-menu-category="{{ menu.category }}"
+                     data-menu-note="{{ menu.note }}">
+                     <!-- data-temperature="{{ menu.temperature }}"
                      data-size="{{ menu.size }}"
-                     data-ice="{{ menu.ice }}"
-                     data-note="{{ menu.note }}">
+                     data-ice="{{ menu.ice }}" -->
                     {% if menu.image_url %}
                         <img src="{{ menu.image_url }}" alt="{{ menu.name }}" class="menu-image">
                     {% endif %}
@@ -77,28 +78,44 @@
     <wrap class="modal-wrap">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2 id="menuDetailModalLabel"></h2>
             <div class="image-container">
                 <img id="modalMenuImage" src="" alt="" class="menu-image">
             </div>
+            <div class="menu-label-container">
+                <p id="menuCategory">카테고리</p>
+                <h2 id="menuDetailModalLabel"></h2>
+                <p id="menuNote">기타 설명...</p>
+            </div>
             <div class="btn-group-temp">
-                <button type="button" class="btn" id="hotButton">🔥 HOT</button>
-                <button type="button" class="btn" id="iceButton">🧊 ICE</button>
+                <button type="button" class="btn-temp" id="hotButton">🔥 HOT</button>
+                <button type="button" class="btn-temp active" id="iceButton">🧊 ICE</button>
             </div>
-            <div class="btn-group-size">
-                <button type="button" class="btn" id="regularButton">Regular</button>
-                <button type="button" class="btn" id="extraButton">Extra</button>
+            
+            <hr class="modal-hr">
+            
+            
+            <div class="menu-customization">
+                <span id="modal-customization-title">커스터마이징 (선택)</span>
+                <div class="customization-form custom-size">
+                    <span class="customization_label">사이즈</span>
+                    <div class="btn-group-size">
+                        <button type="button" class="btn" id="regularButton">Regular</button>
+                        <button type="button" class="btn" id="extraButton">Extra</button>
+                    </div>
+                </div>
+                <div class="customization-form custom-ice">
+                    <span class="customization_label">얼음 양</span>
+                    <div class="btn-group-ice">
+                        <button type="button" class="btn" id="bigIceButton">많이</button>
+                        <button type="button" class="btn" id="regularIceButton">보통</button>
+                        <button type="button" class="btn" id="lessIceButton">적게</button>
+                    </div>
+                </div>
+                <div class="customization-form form-group-etc">
+                    <textarea id="additionalInstructions" rows="2" placeholder="추가 주문 사항이 있다면 작성해주세요"></textarea>
+                </div>
             </div>
-            <div class="btn-group-ice hidden">
-                <button type="button" class="btn" id="bigIceButton">얼음 많이</button>
-                <button type="button" class="btn" id="regularIceButton">얼음 보통</button>
-                <button type="button" class="btn" id="lessIceButton">얼음 적게</button>
-            </div>
-            <div class="form-group-etc">
-                <label for="additionalInstructions">추가 주문사항</label>
-                <textarea id="additionalInstructions" rows="3"></textarea>
-            </div>
-            <button type="button" id="saveMenuItem" class="modalConfirmBtn">내 메뉴 저장하기</button>
+            <button type="button" id="saveMenuItem" class="bottomBtn">내 메뉴 저장하기</button>
         </div>
     </wrap>
 </div>
@@ -153,9 +170,7 @@
 }
 
 .form-group-etc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
 }
 
 .cafe-logo-container {
@@ -321,6 +336,7 @@
 }
 
 /*  ==== 아래부터는 modal css ==== */
+
 .modal {
     display: none;
     position: fixed;
@@ -339,24 +355,25 @@
 }
 
 .modal-wrap {
+    position: fixed;
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 100vw;
     height: 85vh;
-    margin: 15% auto;
 }
 
 .modal-content {
     display: flex;
     flex-direction: column;
     background-color: #fefefe;
-    border: 1px solid #888;
-    border-radius: 10px;
+    border: none; /* 테두리 제거 */
+    border-radius: 30px 30px 0 0 ; /* 둥근 모서리 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
     height: 100%;
-    padding: 20px;
+    padding: 15px;
 
     /* modal 높이에 대한 커스텀 프로퍼티 정의 */
     --content-height: calc(100% - 40px); /* 전체 높이에서 padding을 뺀 값 */
@@ -380,14 +397,48 @@
     text-decoration: none;
 }
 
-#menuDetailModalLabel,
+.modal-hr{
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 0 0 var(--margin-bottom) 0; /* 상하 마진을 추가하여 공간을 확보 */
+}
+
+.menu-label-container,
 .image-container,
-.btn-group-temp,
-.btn-group-size,
-.btn-group-ice,
 .form-group-etc,
+#modal-customization-title,
 #saveMenuItem {
     flex: 0 0 auto;
+    margin-bottom: var(--margin-bottom);
+}
+
+.menu-label-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--margin-bottom);
+}
+.menu-label-container > p {
+    margin: 0;
+    color: #888;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+#modal-customization-title {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
+
+.image-container {
+    height: calc(var(--adjusted-content-height) * 0.40); /* 40% 높이 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     margin-bottom: var(--margin-bottom);
 }
 
@@ -396,17 +447,15 @@
     align-items: center;
     justify-content: center;
     margin: 0 0 0 0;
-    height: calc(var(--adjusted-content-height) * 0.15); /* 15% 높이 */
     font-size: 24px;
     font-weight: bold;
     text-align: center;
 }
 
-.image-container {
-    height: calc(var(--adjusted-content-height) * 0.40); /* 40% 높이 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#menuNote {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-size: 14px;
+    color: #888;
 }
 
 #modalMenuImage {
@@ -415,15 +464,32 @@
     object-fit: contain; /* 이미지 비율 유지 */
 }
 
-.btn-group-temp,
-.btn-group-size,
-.btn-group-ice {
-    display: flex;
-    justify-content: space-evenly;
+.menu-customization {
+    width: 80%; /* 원하는 넓이 설정 */
+    margin: 0 auto; /* 자동으로 좌우 정렬 */
+    font-size: 14px;
 }
 
-.btn-group-temp {
-    height: calc(var(--adjusted-content-height) * 0.10); /* 10% 높이 */
+.customization-form {
+    margin-bottom: var(--margin-bottom); /* 각 폼 그룹 간의 간격 추가 */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.customization_label {
+    flex: 0 0 40%;
+    text-align: left;
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-group-size,
+.btn-group-ice {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;;
 }
 
 .btn-group-size {
@@ -433,15 +499,48 @@
 .btn-group-ice {
     height: calc(var(--adjusted-content-height) * 0.10); /* 10% 높이 */
 }
-.btn {
-    padding: 10px 15px;
+
+.btn-group-temp {
+    display: flex;
+    justify-content: space-evenly;
     border: 1px solid #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 75%;
+    min-width: 75%;
+    margin: 0 auto var(--margin-bottom) auto;
+    box-sizing: border-box;
+    /* height: 6% */
+    /* height: calc(var(--adjusted-content-height) * 0.10); */
+}
+
+.menu-customization .btn{
+    border: 1px solid #eaeaea;
     background-color: #f8f8f8;
-    border-radius: 20px;
+    border-radius: 12px;
     cursor: pointer;
-    font-size: 14px;
     transition: background-color 0.3s, border-color 0.3s;
 }
+.btn-group-size .btn {
+    padding: 4px 11%;
+}
+.btn-group-ice .btn {
+    padding: 4px 8%;
+}
+
+
+.btn-group-temp .btn-temp{
+    flex: 1;
+    padding: 3px 0;
+    border: none;
+    background-color: #f8f8f8;
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
 
 .btn:hover {
     background-color: #e8e8e8;
@@ -453,37 +552,56 @@
     color: #1e3932;
 }
 
-.form-group-etc {
-    height: calc(var(--adjusted-content-height) * 0.15); /* 15% 높이 */
+.btn-group-temp .btn-temp:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 0;
+    padding-left: 10px;
 }
 
-.form-group-etc label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.btn-group-temp .btn-temp:last-child {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 0;
+    padding-right: 10px;
+}
+
+.btn-group-temp .btn-temp:first-child.active {
+    background-color: #ff3737;
+    color: white;
+}
+
+.btn-group-temp .btn-temp:last-child.active {
+    background-color: #4285f4;
+    color: white;
+}
+
+.btn-group-temp .btn-temp:not(.active):hover {
+    background-color: #e8e8e8;
 }
 
 #additionalInstructions {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    resize: vertical;
+    width: 100%; /* 텍스트 영역이 부모 요소의 너비를 차지하도록 */
+    min-height: 50px; /* 최소 높이 설정 */
+    padding: 10px; /* 내부 패딩으로 인덴트 효과 */
+    border: 1px solid #ddd; /* 경계선 설정 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+    resize: vertical; /* 세로 크기 조절 가능 */
+    font-size: 14px; /* 텍스트 크기 설정 */
+}
+
+/* 플레이스홀더 텍스트 스타일 */
+#additionalInstructions::placeholder {
+    color: #888; /* 플레이스홀더 텍스트 색상 */
+    font-style: italic; /* 플레이스홀더 텍스트 기울임 */
 }
 
 #saveMenuItem {
     height: calc(var(--adjusted-content-height) * 0.10); /* 10% 높이 */
     margin-bottom: 0; /* 마지막 요소의 margin-bottom 제거 */
-    width: 100%;
-    padding: 15px;
-    background-color: #FFD457;
-    color: #1e3932;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
 }
 /* 모달 애니메이션 정의 */
 @keyframes slideIn {
