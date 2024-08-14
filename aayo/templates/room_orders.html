@@ -36,8 +36,9 @@
         {% endif %}
     </div>
 </div>
-<a href="{% url 'room_menu' room.unique_id %}" class="hidden">메뉴 선택으로 돌아가기</a>
-<button id="resetOrderBtn" class="bottomBtn"> 현재 주문 초기화</button>
+<!-- <a href="{% url 'room_menu' room.unique_id %}" class="hidden">메뉴 선택으로 돌아가기</a> -->
+<button id="resetOrderBtn" class="bottomBtn">현재 주문 초기화</button>
+<div class="open-modal-btn-wrap"><a id="open-modal-btn" class="sendlinkbtn"><p class="sendlinktext">앗! 놓치신 분이 계신가요?</p></a></div>
 
 {% endblock %}
 
@@ -70,6 +71,30 @@ document.getElementById('resetOrderBtn').addEventListener('click', function() {
 
 {% block css %}
 <style>
+
+    span {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    }
+
+    #roomLink {
+        font-size: 18px;
+        align-items: center;
+    }
+
+    .sendlinktext {
+        color: #3c3c3c;
+        font-size: 14px;
+        text-decoration: underline;
+        margin: 0;
+        padding: 24px;
+    }
+
+    .open-modal-btn-wrap {
+        display: flex;
+        justify-content: center;
+    }
     .order-container {
         max-width: 800px;
         margin: 0px auto 0 auto;
@@ -95,7 +120,7 @@ document.getElementById('resetOrderBtn').addEventListener('click', function() {
         padding: 10px;
         margin-bottom: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 85vw; 
+        width: 85vw;
     }
     
     /* 이미지 파트 */
