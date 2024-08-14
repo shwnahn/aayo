@@ -226,31 +226,19 @@ function setupMenuInteractions() {
     const iceOptions = document.querySelectorAll('#bigIceButton, #regularIceButton, #lessIceButton');
     const iceOptionsGroup = document.querySelector('.custom-ice');
     if (hotButton && iceButton) {
-<<<<<<< HEAD
         
         function disableIceOptions() {
             // button.style.display = 'none'; 에서 buttonGroup class hidden 으로 작동하도록 수정!
             iceOptionsGroup.classList.add('hidden');
             iceOptions.forEach(button => {
-=======
-        function disableIceOptions() {
-            iceOptions.forEach(button => {
-                button.style.display = 'none';
->>>>>>> jihyeon/feature
                 // disabled 대신 아예 사라지게 만듦
                 button.classList.remove('active');
             });
         }
 
         function enableIceOptions() {
-<<<<<<< HEAD
             // button.style.display = 'block'; -> buttonGroup class에서 remove hidden 으로 작동하도록 수정!
             iceOptionsGroup.classList.remove('hidden'); 
-=======
-            iceOptions.forEach(button => {
-                button.style.display = 'block';
-            });
->>>>>>> jihyeon/feature
         }
 
         // pointerdown -> 터치, 클릭 모두 인식
@@ -258,13 +246,8 @@ function setupMenuInteractions() {
         iceButton.addEventListener('click', enableIceOptions);
     }
 
-<<<<<<< HEAD
     // 모달창에서 '내 메뉴 저장하기' 버튼 클릭 시 선택된 옵션 저장
     const saveMenuItem = document.getElementById('saveMenuItem');
-=======
-
-
->>>>>>> jihyeon/feature
     if (saveMenuItem) {
         saveMenuItem.addEventListener('click', function() {
             const menuId = this.getAttribute('data-menu-id');
