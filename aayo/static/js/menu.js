@@ -102,6 +102,9 @@ function setupMenuInteractions() {
     console.log('modal:', modal);
     const modalTitle = document.getElementById('menuDetailModalLabel');
     console.log('modalTitle:', modalTitle);
+    const modalMenuCategory = document.getElementById('menuCategory');
+    const modalMenuNote = document.getElementById('menuNote');
+
     const modalImage = document.getElementById('modalMenuImage');
     console.log('modalImage:', modalImage);
     
@@ -153,6 +156,8 @@ function setupMenuInteractions() {
             const menuId = this.getAttribute('data-menu-id');
             const menuName = this.querySelector('.menu-name').textContent;
             const menuImageSrc = this.querySelector('.menu-image')?.src;
+            const menuCategory = this.getAttribute('data-menu-category');
+            const menuNote = this.getAttribute('data-menu-note');
 
             // 선택된 메뉴를 다시 클릭할 시 선택 취소 [ 커스텀 초기화 코드 ]
             if (this.classList.contains('selected')) {
@@ -167,6 +172,17 @@ function setupMenuInteractions() {
             }
             
             modalTitle.textContent = menuName;
+            if (menuCategory == 'None') {
+                modalMenuCategory.textContent = '';
+            } else {
+                modalMenuCategory.textContent = menuCategory;
+            }
+            if (menuNote == 'None') {
+                modalMenuNote.textContent = '';
+            } else {
+                modalMenuNote.textContent = menuNote;
+            }
+
             // 해당 메뉴 이미지 없으면 display: none
             if (menuImageSrc) {
                 modalImage.src = menuImageSrc;
@@ -202,8 +218,9 @@ function setupMenuInteractions() {
     const hotButton = document.getElementById('hotButton');
     const iceButton = document.getElementById('iceButton');
     const iceOptions = document.querySelectorAll('#bigIceButton, #regularIceButton, #lessIceButton');
-    const iceOptionsGroup = document.querySelector('.btn-group-ice');
+    const iceOptionsGroup = document.querySelector('.custom-ice');
     if (hotButton && iceButton) {
+        
         function disableIceOptions() {
             // button.style.display = 'none'; 에서 buttonGroup class hidden 으로 작동하도록 수정!
             iceOptionsGroup.classList.add('hidden');
@@ -332,18 +349,23 @@ function setupMenuInteractions() {
 
 function openModal() {
     const modal = document.getElementById('menuDetailModal');
+    const shareBtn = document.getElementById('open-modal-btn');
     modal.classList.add('show');
     modal.style.display = 'block';
+    shareBtn.classList.add('hidden');
 }
 function closeModal() {
     const modal = document.getElementById('menuDetailModal');
+    const shareBtn = document.getElementById('open-modal-btn');
     modal.classList.remove('show');
     modal.style.display = 'none';
+    shareBtn.classList.remove('hidden');
 }
 
 // 모달 초기화 함수
 function resetModal() {
-    ['hotButton', 'iceButton', 'regularButton', 'extraButton', 'bigIceButton', 'regularIceButton', 'lessIceButton'].
+    ['hotButton', 'regularButton', 'extraButton', 'bigIceButton', 'regularIceButton', 'lessIceButton'].
+    // icebutton은 기본값이므로 제거함.
     forEach(id => {
         document.getElementById(id).classList.remove('active');
     });
