@@ -8,7 +8,7 @@
     <form id="createRoomForm" method="post">
     {% csrf_token %}
         <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="방 이름을 입력하세요" required>
+            <input type="text" id="name" name="name" placeholder="ex) 마케팅 1팀 커피방" required>
             <input type="hidden" id="cafe" name="cafe" required>
         </div>
         <div class="form-group hidden">
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="submit-button-container">
-            <button type="submit" class="submit-button">방 생성하기</button>
+            <button type="submit" class="submit-button" style="display: none;">방 생성하기</button>
         </div>
     </form>
 </div>
@@ -57,7 +57,11 @@
     }
 
     #createRoomForm{
-        width: 100%;
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .hidden {
@@ -90,8 +94,15 @@
     .scrollable-cafe-content {
         display: flex;
         justify-content: center;
+<<<<<<< HEAD
         width: 85vw;
         margin: 18px;
+=======
+        margin-top: 20px;
+        /* width: 85vw; */
+        /* max-width: 320px; */
+        /* max-height: 435px; */
+>>>>>>> minsu/feature
         max-width: 85vw;
         max-height: 52vh;
         overflow-y: visible;
@@ -228,6 +239,9 @@
 
     .cafe-logo.selected {
         box-shadow: inset 0 0 0 3px #FBD68E;
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+        
     }
 
     .submit-button {
