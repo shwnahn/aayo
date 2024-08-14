@@ -258,15 +258,15 @@ function setupMenuInteractions() {
                 alert('온도를 선택해주세요!');
                 return;
             }
-            if (!size) {
-                alert('크기를 선택해주세요!');
-                return;
-            }
-            // ice 버튼을 눌렀을 때만 얼음 양 선택을 필수로 하도록 만들기
-            if (temperature.includes('ICE') && !ice) {
-                alert('얼음 양을 선택해주세요!');
-                return;
-            }
+            // if (!size) {
+            //     alert('크기를 선택해주세요!');
+            //     return;
+            // }
+            // // ice 버튼을 눌렀을 때만 얼음 양 선택을 필수로 하도록 만들기
+            // if (temperature.includes('ICE') && !ice) {
+            //     alert('얼음 양을 선택해주세요!');
+            //     return;
+            // }
             // 선택된 옵션들을 Set에 추가 - selectedOptions
             selectedOptions.add({
                 id: menuId,
