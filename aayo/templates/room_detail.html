@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="guide-text-wrap">
-    <p class="guide-text"><br>같이 메뉴를 주문할 사람들에게<br>링크를 공유해주세요</p>
+    <p class="guide-text">방 생성 완료!<br>같이 메뉴를 주문할 분들에게<br>링크를 공유해주세요</p>
 </div>
 <div class="room-detail-container">
     <div class="cafe-logo-container">
@@ -17,7 +17,7 @@
             <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
             <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
             
-            <a id="open-modal-btn" class="btn btn-yellow sendlinkbtn">초대장 보내기</a>
+            <a id="open-modal-btn" class="btn btn-yellow sendlinkbtn">링크 공유하기</a>
             <div class="btn-wrap">
                 <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn">주문 모아보기</a>
                 <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-white gotoorderbtn">메뉴 주문하러 가기</a>
@@ -70,7 +70,7 @@
 
 .cafe-logo {
     display: block;
-    width: 30vw;
+    height: 20vh;
 }
 
 .message-container {
