@@ -19,6 +19,34 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     };
+
+    try {
+        const openModalBtn = document.getElementById('open-modal-btn');
+        console.log('openmodal 있다')
+        if (openModalBtn) {
+            openModalBtn.addEventListener('click', function() {
+                console.log('open modal');
+                document.getElementById('share-modal').classList.remove('hidden');
+            });
+        }
+    } catch (error) {
+        console.log('openmodal 없다')
+        console.error('Error adding event listener to open modal button:', error);
+    }
+    
+    try {
+        const shareCloseBtn = document.querySelector('.share-close');
+        console.log('shareClose 있다')
+        if (shareCloseBtn) {
+            shareCloseBtn.addEventListener('click', function() {
+                console.log('close modal');
+                document.getElementById('share-modal').classList.add('hidden');
+            });
+        }
+    } catch (error) {
+        console.log('shareClose 없다')
+        console.error('Error adding event listener to close modal button:', error);
+    }
     
     console.log('main.js DOM fully loaded');
 });

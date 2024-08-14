@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const cafeInput = document.getElementById('cafe');
     const nameInput = document.getElementById('name');
     const submitButton = document.querySelector('.submit-button')
+    console.log(submitButton)
 
     function checkFormCompletion() {
+        console.log("checkForm")
         if (nameInput.value.trim() !== '' && cafeInput.value !== '') {
             submitButton.style.display = 'block';
         } else {
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cafeLogos.forEach(logo => {
         logo.addEventListener('click', function() {
+            console.log('cafe logo clicked');
             // 모든 로고에서 'selected' 클래스를 제거하여 선택되지 않은 상태로 만들기
             cafeLogos.forEach(logo => logo.classList.remove('selected'));
             // 클릭한 로고에 'selected' 클래스를 추가하여 선택된 상태로 만들기

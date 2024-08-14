@@ -24,19 +24,6 @@
       {% endblock %}
     </div>
 
-    <!--방 링크 공유 버튼 -->
-    <!-- <div id="open-modal-btn" class="icon-container" {% if not room.unique_id %} style="display: none;" {% endif %}> -->
-      <!-- 링크 미생성 단계일 시 공유 버튼 안보이게 설정 -->
-      <!-- <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="18" cy="5" r="3"></circle>
-        <circle cx="6" cy="12" r="3"></circle>
-        <circle cx="18" cy="19" r="3"></circle>
-        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-      </svg>
-    </div> -->
-  </main>
-
   <!-- 링크 공유 modal -->
   <div id="share-modal" class="share-modal hidden">
     <span class="share-close">&times;</span>
@@ -273,15 +260,6 @@
   <!-- base.html 부분 코드 -->
   <script src="{% static 'js/main.js' %}"></script>
   <script>
-      document.getElementById('open-modal-btn').addEventListener('click', function() {
-          console.log('open modal');
-          document.getElementById('share-modal').classList.remove('hidden');
-      });
-
-      document.querySelector('.share-close').addEventListener('click', function() {
-          console.log('close modal');
-          document.getElementById('share-modal').classList.add('hidden');
-      });
   </script>
   {% block scripts %}{% endblock %}
 </body>
