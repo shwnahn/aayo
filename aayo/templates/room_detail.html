@@ -2,6 +2,9 @@
 {% load static %}
 
 {% block content %}
+<div class="guide-text-wrap">
+    <p class="guide-text"><br>같이 메뉴를 주문할 사람들에게<br>링크를 공유해주세요</p>
+</div>
 <div class="room-detail-container">
     <div class="cafe-logo-container">
     {% with logo_file=cafe.name_eng|add:".png"|lower %}
@@ -11,13 +14,14 @@
     <div class="message-container">
         <p class="room_name">{{ room.name }}</p>
         <div class="btn-container">
-            <!-- <span data-emoji="🔗">방 링크:
-                <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="color: black;">{{ share_link }}</a>
-            </span>  -->
             <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
             <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
-            <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow">주문하기</a>
-            <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white">주문 모아보기</a>
+            
+            <a id="open-modal-btn" class="btn btn-yellow sendlinkbtn">초대장 보내기</a>
+            <div class="btn-wrap">
+                <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn">주문 모아보기</a>
+                <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-white gotoorderbtn">메뉴 주문하러 가기</a>
+            </div>
         </div>
     </div>
 </div>
@@ -25,6 +29,29 @@
 
 {% block css %}
 <style>
+.btn-wrap {
+    display: flex;
+}
+
+.viewallordersbtn {
+    margin-right: 5px;
+}
+
+.gotoorderbtn {
+    margin-left: 5px;
+}
+
+.guide-text-wrap {
+    width: 90vw;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.guide-text {
+    margin: 0;
+    font-weight: 600;
+}
+
 .room-detail-container {
     display: flex;
     align-items: center; 
@@ -38,7 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .cafe-logo {
@@ -59,8 +86,8 @@
 .room_name {
     font-size: 40px;
     font-weight: bold;
-    margin-top: 35px;
-    margin-bottom: 15px;
+    /* margin-top: 35px;
+    margin-bottom: 15px; */
 }
 
 span {
@@ -80,7 +107,8 @@ span {
 }
 
 .btn-container {
-    width: 80vw
+    width: 90vw;
+    margin-bottom: -22vh;
 }
 
 .btn {
@@ -88,7 +116,7 @@ span {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 8%;
+    height: 19.4%;
     padding: 15px 0;
     margin-top: 10px;
     border-radius: 30px;
