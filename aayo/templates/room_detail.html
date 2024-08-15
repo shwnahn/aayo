@@ -2,26 +2,40 @@
 {% load static %}
 
 {% block content %}
-<div class="guide-text-wrap">
-    <p class="guide-text">방 생성 완료!<br>같이 메뉴를 주문할 분들에게<br>링크를 공유해주세요</p>
+<div class="header-wrap">
+    <div class="guide-text-wrap">
+        <p class="guide-text">카페 메뉴를 간단하게 주문할 수 있어요! (임시 멘트)</p>
+    </div>
+    <div class="room-name-and-logo">
+            {% with logo_file=cafe.name_eng|add:".png"|lower %}
+        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+            {% endwith %}
+        <p class="room_name">{{ room.name }}</p>
+    </div>
 </div>
 <div class="room-detail-container">
-    <div class="cafe-logo-container">
-    {% with logo_file=cafe.name_eng|add:".png"|lower %}
-        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
-    {% endwith %}
-    </div>
     <div class="message-container">
-        <p class="room_name">{{ room.name }}</p>
-        <div class="btn-container">
-            <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
+        <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
             <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
+        <div class="btn-container">
+
+            <div class="btn-wrap-top">
+                <a id="open-modal-btn" class="btn btn-white sendlinkbtn">링크 공유하기
+                    <p>같이 주문할 사람에게<br>링크를 공유하세요!</p>
+                </a>
+                <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow gotoorderbtn">메뉴 주문하기
+                    <p style="margin-bottom: 28px;">메뉴를 주문하러 가볼까요?</p>
+                </a>
+            </div>  
             
-            <a id="open-modal-btn" class="btn btn-yellow sendlinkbtn">링크 공유하기</a>
-            <div class="btn-wrap">
-                <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn">주문 모아보기</a>
-                <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-white gotoorderbtn">메뉴 주문하러 가기</a>
+            <div class="btn-wrap-bottom">
+                <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn">주문 모아보기
+                    <p>현재까지 주문 현황을<br>알려드릴게요</p>
+                </a>
+                <a href="#" class="btn btn-white heart">🖤
+                </a>
             </div>
+
         </div>
     </div>
 </div>
@@ -29,6 +43,41 @@
 
 {% block css %}
 <style>
+
+.header-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* background-color: #FFD457; */
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+    margin-top: -12vh;
+    /* padding-left: 13vw; */
+    position: relative;
+    z-index: 1;
+}
+.btn > p {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.btn-wrap-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-wrap-bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.room-name-and-logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
 .btn-wrap {
     display: flex;
 }
@@ -49,16 +98,18 @@
 
 .guide-text {
     margin: 0;
-    font-weight: 600;
+    font-weight: lighter;
 }
 
 .room-detail-container {
     display: flex;
     align-items: center; 
-    justify-content: center;
-    height: 54vh; 
+    justify-content: flex-start; /* 변경 */
+    height: 70vh; /* 변경 */
     flex-direction: column;
-    /* margin-top: 56px; */
+    position: relative; /* 추가 */
+    z-index: 2; /* 추가 */
+    margin-top: -10vh; /* 추가: btn-container를 위로 올립니다 */
 }
 
 .cafe-logo-container {
@@ -70,7 +121,7 @@
 
 .cafe-logo {
     display: block;
-    height: 20vh;
+    height: 7vh;
 }
 
 .message-container {
@@ -84,8 +135,10 @@
 }
 
 .room_name {
-    font-size: 40px;
+    margin: 0px;
+    font-size: 15px;
     font-weight: bold;
+    margin-left: 3vw;
     /* margin-top: 35px;
     margin-bottom: 15px; */
 }
@@ -107,8 +160,10 @@ span {
 }
 
 .btn-container {
+    margin-top: 35vh;
     width: 90vw;
-    margin-bottom: -22vh;
+    position: relative; /* 추가 */
+    z-index: 3; /* 추가: btn-container가 가장 앞에 오도록 합니다 */
 }
 
 .btn {
@@ -124,17 +179,30 @@ span {
     text-align: center;
     font-size: 16px;
     font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
 }
 
 .btn-yellow {
-    background-color: #FFD54F; 
-    color: #000;   
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    height: 36vw;
+    color: #000;
+    font-size: 21px;
+    /* border: 2px solid #FFE8A4; */
+    background-color: #FFE8A4;  
 }
 
 .btn-white {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    height: 36vw;
     background-color: #fff;
     color: #000;
-    border: 2px solid #FFD54F;
+    font-size: 21px;
+    /* border: 2px solid #FFD54F; */
 }
 .wave-bottom {
     display: none;
