@@ -173,7 +173,7 @@ function setupMenuInteractions() {
                 updateSelectedMenuNames();
                 alert('커스텀을 수정하시겠습니까?')
                 resetModal(); // 모달 초기화 (기존 선택내역 초기화)
-                openModal(); // 사용자 편의를 위해 모달을 다시 열어줌
+                openMenuModal(); // 사용자 편의를 위해 모달을 다시 열어줌
                 return;
             }
             
@@ -199,14 +199,14 @@ function setupMenuInteractions() {
 
             // 모달 초기화 후 열기
             resetModal();
-            openModal();;
+            openMenuModal();;
             saveMenuItem.setAttribute('data-menu-id', menuId);
 
             // 닫기 버튼에 이벤트리스너 추가
             const closeBtn = modal.querySelector('.close');
             if (closeBtn && !closeBtn.dataset.listenerAdded) {
                 closeBtn.addEventListener('click', function() {
-                    closeModal()
+                    closeMenuModal()
                 });
                 closeBtn.dataset.listenerAdded = 'true'; // 이벤트 리스너 중복 방지 플래그 설정
             }
@@ -216,7 +216,7 @@ function setupMenuInteractions() {
     // 모달 창 외부 클릭 시 모달 창 닫기
     window.onclick = function(event) {
         if (event.target == modal) {
-            closeModal()
+            closeMenuModal()
         }
     }
 
@@ -289,7 +289,7 @@ function setupMenuInteractions() {
 
             updateButtonState();
             updateSelectedMenuNames();
-            closeModal()
+            closeMenuModal()
 
             console.log('메뉴가 저장되었습니다:', menuId);
         });
@@ -353,19 +353,19 @@ function setupMenuInteractions() {
 }
 
 
-function openModal() {
+function openMenuModal() {
     const modal = document.getElementById('menuDetailModal');
-    const shareBtn = document.getElementById('open-modal-btn');
     modal.classList.add('show');
     modal.style.display = 'block';
-    shareBtn.classList.add('hidden');
+    // const shareBtn = document.getElementById('open-modal-btn');
+    // shareBtn.classList.add('hidden');
 }
-function closeModal() {
+function closeMenuModal() {
     const modal = document.getElementById('menuDetailModal');
-    const shareBtn = document.getElementById('open-modal-btn');
     modal.classList.remove('show');
     modal.style.display = 'none';
-    shareBtn.classList.remove('hidden');
+    // const shareBtn = document.getElementById('open-modal-btn');
+    // shareBtn.classList.remove('hidden');
 }
 
 // 모달 초기화 함수
