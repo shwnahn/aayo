@@ -17,4 +17,6 @@ urlpatterns = [
     # 주문 총계 / 메뉴 커스텀 정보 보기
 
     path('ads.txt/', views.ads, name='ads'),
+
+    path('room/<str:unique_id>/order-complete/', views.order_complete, name='order_complete'),
 ]
