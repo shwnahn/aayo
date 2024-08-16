@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (openModalBtn && shareModal) {
         console.log('openModal 버튼과 모달 요소 찾음');
-        openModalBtn.addEventListener('click', function() {
+        openModalBtn.addEventListener('touchstart', function() {
             console.log('open modal 버튼 클릭됨');
             alert('open modal');
             shareModal.style.display = 'block';
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (shareCloseBtn && shareModal) {
         console.log('shareClose 버튼과 모달 요소 찾음');
-        shareCloseBtn.addEventListener('click', function() {
+        shareCloseBtn.addEventListener('touchstart', function() {
             console.log('close modal 버튼 클릭됨');
             shareModal.style.display = 'none';
         });
