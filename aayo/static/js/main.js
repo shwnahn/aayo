@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             event.stopPropagation();
             console.log('open modal 버튼 클릭됨');
-            // alert('open modal');
-            shareModal.style.display = 'block';
+            alert('open modal');
+            shareModal.classList.remove('hidden');
         });
     } else {
         // alert('openModal 버튼 또는 모달 요소를 찾을 수 없음');
@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             event.stopPropagation();
             console.log('close modal 버튼 클릭됨');
-            shareModal.style.display = 'none';
+            shareModal.classList.add('hidden');
+
         });
     } else {
         // alert('shareClose 버튼 또는 모달 요소를 찾을 수 없음');
