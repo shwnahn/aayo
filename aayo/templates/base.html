@@ -13,7 +13,9 @@
 <body>
   <header>
     <a href="{% url 'room' %}">
-      <h1 class="header-title">AAYO!</h1>
+      <h1 class="header-title">
+        <img class='aayologo' src="{% static 'images/aayologo.png' %}">
+      </h1>
     </a>
   </header>
   <div class="wave-top"></div>
@@ -56,6 +58,11 @@
   </div>
 
   <style>
+    .aayologo {
+        margin-top: 39px;
+        width: 63px;
+        z-index: 000;
+    }
     body, html {
         display: flex;
         justify-content: center;
