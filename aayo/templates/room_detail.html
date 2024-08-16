@@ -47,12 +47,12 @@
 .header-wrap {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     /* background-color: #FFD457; */
     justify-content: center;
-    width: 100%;
+    width: 375px;
     height: 30vh;
-    margin-top: -12vh;
+    /* margin-top: -12vh; */
     /* padding-left: 13vw; */
     position: relative;
     z-index: 1;
@@ -63,53 +63,63 @@
 }
 
 .btn-wrap-top {
+    width: 375px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .btn-wrap-bottom {
+    width: 375px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .room-name-and-logo {
-    display: inline-flex;
-    justify-content: center;
+    
+    display: flex;
+    margin-left: 10%;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 1vh;
+    margin-top: 2%;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* align-content: flex-end; */
+    /* text-align: left; */
+    height: 30%;
+    width: 375px;
 }
+
 .btn-wrap {
     display: flex;
 }
 
-.viewallordersbtn {
-    margin-right: 5px;
-}
-
-.gotoorderbtn {
-    margin-left: 5px;
-}
-
 .guide-text-wrap {
-    width: 90vw;
+    width: 375px;
+    height: 10%;
     display: flex;
     justify-content: flex-start;
+    margin-left: 10%;
+    margin-top: 6%;
 }
 
 .guide-text {
+    display: block;
+    position: fixed;
     margin: 0;
     font-weight: lighter;
 }
 
 .room-detail-container {
+    width: 375px;
     display: flex;
-    align-items: center; 
-    justify-content: flex-start; /* 변경 */
-    height: 70vh; /* 변경 */
+    align-items: center;
+    justify-content: flex-start;
+    height: 80%;
     flex-direction: column;
-    position: relative; /* 추가 */
-    z-index: 2; /* 추가 */
-    margin-top: -10vh; /* 추가: btn-container를 위로 올립니다 */
+    /* position: relative; */
+    z-index: 2;
 }
 
 .cafe-logo-container {
@@ -121,16 +131,16 @@
 
 .cafe-logo {
     display: block;
-    height: 7vh;
+    height: 64%;
 }
 
 .message-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 버튼을 하단에 배치 */
+    justify-content: center;
     align-items: center;
-    width: 160%;
-    height: 30%; /* 적절한 높이를 설정하세요 */
+    width: 375px;
+    height: 0%;
     text-align: center;
 }
 
@@ -138,9 +148,7 @@
     margin: 0px;
     font-size: 15px;
     font-weight: bold;
-    margin-left: 3vw;
-    /* margin-top: 35px;
-    margin-bottom: 15px; */
+    margin-left: 3%;
 }
 
 span {
@@ -160,20 +168,25 @@ span {
 }
 
 .btn-container {
-    margin-top: 35vh;
-    width: 90vw;
-    position: relative; /* 추가 */
-    z-index: 3; /* 추가: btn-container가 가장 앞에 오도록 합니다 */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 80%;
+    width: 375px;
+    position: relative;
+    z-index: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.btn {
+.btn {    
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 19.4%;
-    padding: 15px 0;
-    margin-top: 10px;
+    /* height: 19.4%; */
+    /* padding: 15px 0; */
+    margin-top: 17px;
     border-radius: 30px;
     text-decoration: none;
     text-align: center;
@@ -186,8 +199,8 @@ span {
 .btn-yellow {
     display: flex;
     flex-direction: column;
-    width: 45vw;
-    height: 36vw;
+    width: 160px;
+    height: 160px;
     color: #000;
     font-size: 21px;
     /* border: 2px solid #FFE8A4; */
@@ -197,13 +210,14 @@ span {
 .btn-white {
     display: flex;
     flex-direction: column;
-    width: 45vw;
-    height: 36vw;
+    width: 160px;
+    height: 160px;
     background-color: #fff;
     color: #000;
     font-size: 21px;
-    /* border: 2px solid #FFD54F; */
+    /* /* border: 2px solid #FFD54F;  */
 }
+
 .wave-bottom {
     display: none;
 }
