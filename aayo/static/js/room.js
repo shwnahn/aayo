@@ -11,9 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function checkFormCompletion() {
         console.log("checkForm")
         if (nameInput.value.trim() !== '' && cafeInput.value !== '') {
-            submitButton.style.display = 'block';
+            submitButton.style.backgroundColor = '#FFD457'; // 노란색으로 변경
+            submitButton.style.cursor = 'pointer';
+            submitButton.disabled = false;
+
         } else {
-            submitButton.style.display = 'none';
+            submitButton.disabled = true;
+            submitButton.style.cursor = 'not-allowed';
         }
     }
 
