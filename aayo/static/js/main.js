@@ -27,23 +27,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (openModalBtn && shareModal) {
         console.log('openModal 버튼과 모달 요소 찾음');
-        openModalBtn.addEventListener('touchstart', function() {
+        openModalBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
             console.log('open modal 버튼 클릭됨');
             // alert('open modal');
             shareModal.style.display = 'block';
         });
     } else {
-        alert('openModal 버튼 또는 모달 요소를 찾을 수 없음');
+        // alert('openModal 버튼 또는 모달 요소를 찾을 수 없음');
     }
     
     if (shareCloseBtn && shareModal) {
         console.log('shareClose 버튼과 모달 요소 찾음');
-        shareCloseBtn.addEventListener('touchstart', function() {
+        shareCloseBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
             console.log('close modal 버튼 클릭됨');
             shareModal.style.display = 'none';
         });
     } else {
-        alert('shareClose 버튼 또는 모달 요소를 찾을 수 없음');
+        // alert('shareClose 버튼 또는 모달 요소를 찾을 수 없음');
     }
     
     console.log('main.js DOM fully loaded');

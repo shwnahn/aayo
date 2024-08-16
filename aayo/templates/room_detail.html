@@ -20,9 +20,9 @@
         <div class="btn-container">
 
             <div class="btn-wrap-top">
-                <button type="button" id="open-modal-btn" class="btn btn-white sendlinkbtn" style="border: none;">링크 공유하기
+                <a type="button" id="open-modal-btn" class="btn btn-white sendlinkbtn" style="border: none;">링크 공유하기
                     <p>같이 주문할 사람에게<br>링크를 공유하세요!</p>
-                </button>
+                </a>
                 <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow gotoorderbtn">메뉴 주문하기
                     <p style="margin-bottom: 28px;">메뉴를 주문하러 가볼까요?</p>
                 </a>
@@ -40,6 +40,7 @@
     </div>
 </div>
 <!-- 링크 공유 modal -->
+<!-- 기본값은 display: none -->
 <div id="share-modal" class="share-modal" style="display: none;">
     <span class="share-close">&times;</span>
     <h2>메뉴를 고를 사람을 초대합니다.</h2>
