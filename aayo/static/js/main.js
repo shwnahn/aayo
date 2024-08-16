@@ -25,10 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const shareModal = document.querySelector('.share-modal');
     const shareCloseBtn = document.querySelector('.share-close');
 
-    console.log('openModalBtn:', openModalBtn);
-    console.log('shareModal:', shareModal);
-    console.log('shareCloseBtn:', shareCloseBtn);
-
     if (openModalBtn && shareModal) {
         console.log('openModal 버튼과 모달 요소 찾음');
         openModalBtn.addEventListener('touchstart', function() {
@@ -37,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             shareModal.style.display = 'block';
         });
     } else {
-        console.log('openModal 버튼 또는 모달 요소를 찾을 수 없음');
+        alert('openModal 버튼 또는 모달 요소를 찾을 수 없음');
     }
     
     if (shareCloseBtn && shareModal) {
@@ -47,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             shareModal.style.display = 'none';
         });
     } else {
-        console.log('shareClose 버튼 또는 모달 요소를 찾을 수 없음');
+        alert('shareClose 버튼 또는 모달 요소를 찾을 수 없음');
     }
     
     console.log('main.js DOM fully loaded');
