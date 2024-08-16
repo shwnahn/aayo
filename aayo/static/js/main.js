@@ -20,33 +20,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
-    // 링크 공유하기 버튼 눌렀을 때 모달 뜨는 에이잭스
-    try {
-        const openModalBtn = document.getElementById('open-modal-btn');
-        console.log('openmodal 있다')
-        if (openModalBtn) {
-            openModalBtn.addEventListener('click', function() {
-                console.log('open modal');
-                document.getElementById('share-modal').classList.remove('hidden');
-            });
-        }
-    } catch (error) {
-        console.log('openmodal 없다')
-        console.error('Error adding event listener to open modal button:', error);
+    // 링크 공유하기 버튼 눌렀을 때 모달 뜨는 기능
+    const openModalBtn = document.getElementById('open-modal-btn');
+    const shareModal = document.querySelector('.share-modal');
+    const shareCloseBtn = document.querySelector('.share-close');
+
+    console.log('openModalBtn:', openModalBtn);
+    console.log('shareModal:', shareModal);
+    console.log('shareCloseBtn:', shareCloseBtn);
+
+    if (openModalBtn && shareModal) {
+        console.log('openModal 버튼과 모달 요소 찾음');
+        openModalBtn.addEventListener('click', function() {
+            console.log('open modal 버튼 클릭됨');
+            shareModal.style.display = 'block';
+        });
+    } else {
+        console.log('openModal 버튼 또는 모달 요소를 찾을 수 없음');
     }
     
-    try {
-        const shareCloseBtn = document.querySelector('.share-close');
-        console.log('shareClose 있다')
-        if (shareCloseBtn) {
-            shareCloseBtn.addEventListener('click', function() {
-                console.log('close modal');
-                document.getElementById('share-modal').classList.add('hidden');
-            });
-        }
-    } catch (error) {
-        console.log('shareClose 없다')
-        console.error('Error adding event listener to close modal button:', error);
+    if (shareCloseBtn && shareModal) {
+        console.log('shareClose 버튼과 모달 요소 찾음');
+        shareCloseBtn.addEventListener('click', function() {
+            console.log('close modal 버튼 클릭됨');
+            shareModal.style.display = 'none';
+        });
+    } else {
+        console.log('shareClose 버튼 또는 모달 요소를 찾을 수 없음');
     }
     
     console.log('main.js DOM fully loaded');
