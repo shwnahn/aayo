@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('openModal 버튼과 모달 요소 찾음');
         openModalBtn.addEventListener('click', function() {
             console.log('open modal 버튼 클릭됨');
+            alert('open modal');
             shareModal.style.display = 'block';
         });
     } else {
