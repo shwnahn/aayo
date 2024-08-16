@@ -53,7 +53,7 @@
         align-items: center; /* 수직 방향으로 중앙 정렬 */
         flex-direction: column;
         justify-content: center; /* 수평 방향으로 중앙 정렬 */
-        margin-top: -5vh;
+        /* margin-top: -5vh; */
     }
 
     #createRoomForm{
@@ -79,13 +79,13 @@
     }
 
     input[type="text"] {
-        width: 100%;
+        /* width: 100%; */
         padding: 10px 15px 10px 15px;
         border: 2px solid #ddd;
         border-radius: 20px;
         font-size: 16px;
         box-sizing: border-box;
-        background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: right 15px center;
         background-size: 20px;
@@ -93,12 +93,13 @@
 
     .scrollable-cafe-content {
         display: flex;
+        /* align-items: center; */
         justify-content: center;
         margin-top: 20px;
-        /* width: 85vw; */
-        /* max-width: 320px; */
+        width: 100vw;
+        max-width: 320px;
         /* max-height: 435px; */
-        max-width: 85vw;
+        /* max-width: 85vw; */
         max-height: 52vh;
         overflow-y: visible;
         overflow-x: hidden;
@@ -109,6 +110,7 @@
         margin-left: auto;
         margin-right: auto;
     }
+
     .scrollable-cafe-content::-webkit-scrollbar {
         width: 10px; /* 스크롤바의 너비 */
     }
@@ -127,20 +129,18 @@
     }
 
     .cafe-grid {
-        width: 100%;
-        margin-top: 20px;
-        margin-right: 20px;
-        margin-left: 20px;
+        margin: 20px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 한 행에 2개씩 배치 */
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 20px;
         row-gap: 20px;
+        align-items: center;
         justify-items: center;
     }
 
     .cafe-logo {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         background-color: #ffffff;
         border-radius: 10px;
         padding: 10px;
@@ -243,27 +243,24 @@
 
     .submit-button {
         max-width: calc(500px* 0.75);
-        width: 75%;
+        width: 375px;
         padding: 15px;
         background-color: #FFD457;
         color: #1e3932;
         border: none;
-        border-radius: 30px;
+        /* border-radius: 30px; */
         font-size: 18px;
         font-weight: bold;
         cursor: pointer;
         margin-top: 20px;
         transition: background-color 0.3s ease;
         position: fixed;
-        bottom: 5%; /* 화면 하단에서 위에 위치 */
-        left: 50%; /* 화면의 수평 중앙에 위치 */
-        transform: translateX(-50%); /* 버튼을 수평 중앙에 맞추기 위해 사용 */
-        z-index: 1000; /* 다른 요소들보다 위에 표시 */
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
     }
 
-    .submit-button:hover {
-        background-color: #ffdd78;
-    }
 </style>
 {% endblock %}
 
