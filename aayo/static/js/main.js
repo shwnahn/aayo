@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
+    // 링크 공유하기 버튼 눌렀을 때 모달 뜨는 에이잭스
     try {
         const openModalBtn = document.getElementById('open-modal-btn');
         console.log('openmodal 있다')
