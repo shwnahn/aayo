@@ -1,4 +1,3 @@
-
 .login-container {
     text-align: center;
     padding: 20px;
@@ -72,6 +71,9 @@
 }
 
 .room-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 600px;
     background-color: white;
     border-radius: 10px;
