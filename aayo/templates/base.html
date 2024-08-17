@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
   
 </head>
 <body>
+
   <header>
     <a href="{% url 'room' %}">
       <h1 class="header-title">
@@ -19,6 +20,7 @@
     </a>
   </header>
   <div class="wave-top"></div>
+  {% block wave-bottom %}{% endblock %}
 
   <main>
     <div class="content">
@@ -27,7 +29,7 @@
     </div>
 
   <!-- 링크 공유 modal -->
-  <div id="share-modal" class="share-modal hidden">
+  <div id="share-modal" class="share-modal" style="display: none;">
     <span class="share-close">&times;</span>
     <h2>메뉴를 고를 사람을 초대합니다.</h2>
 
@@ -58,29 +60,50 @@
   </div>
 
   <style>
+    
     .aayologo {
         margin-top: 39px;
         width: 63px;
         z-index: 000;
     }
-    body, html {
+    
+    html{
+        /* width: 100vw;
+        height: 100vh; */
+        /* background-color: lightgray; */
         display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         font-family: 'Roboto', Arial, sans-serif;
-        margin: 0;
+        margin: 0 auto !important;
         padding: 0;
+        min-height: 100%;
         height: 100vh;
+        /* width: 100%; */
+        min-width: 220px;
+        max-width: 500px;
         background-color: #ffffff;
         overflow-x: hidden;
+        /* min-height: 100%; */
+        /* margin: 0 auto !important; */
+        width: 375px;
     }
 
     main {
         display: flex;
         position: fixed;
+        width: 375px;
         flex-direction: column;
         align-items: center;
         height: 100%;
-        padding-top: 50px;
         box-sizing: border-box;
     }
 
@@ -89,50 +112,57 @@
         width: 100%;
         max-width: 600px;
         padding: 20px;
-        box-sizing: border-box;
+        /* box-sizing: border-box; */
         flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     header {
+        width: 375px;
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
         height: 50px;
         padding: 10px 0;
         background-color: #FFD457;
         text-align: left;
-        font-size: 18px;
+        font-size: 22px;
         font-weight: bold;
         color: #333;
         display: flex;
         align-items: center;
-        z-index: 0;
+        z-index: 1;
     }
 
+    .wave-top, .wave-bottom {
+        width: 100%;
+        min-width: 320px;
+        max-width: 500px;
+    }
     .wave-bottom {
+        width: 375px;
+        /* max-width: 600px; */
         display: block;
         position: fixed;
         bottom: 0;
-        left: 0;
-        width: 100%;
         height: 150px;
         background: #FFD457;
         clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
         z-index: 0;
     }
+
     .wave-top {
-        margin-top: 25px;
+        /* z-index: 0; */
+        width: 375px;
+        margin-top: 20px;
         display: block;
         position: fixed;
         transform: rotate(180deg);
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 120px;
+        height: 125px;
         background: #FFD457;
         clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
-        z-index: -1;
     }
 
     header a {
@@ -144,11 +174,11 @@
         color: black;
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
-        margin-left: 30px;
+        margin-left: 45px;
     }
 
     .hidden {
-        display: none!important;
+        display: none !important;
     }
 
     /* 최하단 버튼 css */
@@ -159,8 +189,8 @@
         transform: translateX(-50%);
         cursor: pointer;
         z-index: 1000;
-        width: 100%;
-        height: 7vh;
+        width: 375px;
+        height: 7%;
         background-color: #FFD457;
         color: #1e3932;
         border: none;
@@ -203,9 +233,10 @@
         padding: 20px;
         width: 300px;
         position: absolute;
-        top: 50%;
+        top: 69%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 2;
     }
     .share-modal h2 {
         margin: 0;
