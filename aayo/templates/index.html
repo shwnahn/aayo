@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block wave-bottom %}<div class="wave-bottom"></div>{% endblock %}
 {% block content %}
 <div id="start-container">
     <h1>A A</br>Y<img src="{% static 'images/coffeebean.png' %}" alt="커피콩이미지" style="
@@ -15,7 +16,7 @@
     <button id="start-button" style="color: black; text-decoration: none;">시작하기</button>
     <!-- ios 환경에서 파란색 뜨는 버그 -> font-color 명시적으로 주기 -->
 </div>
-<div class="wave-bottom"></div>
+
 {% endblock %}
 
 {% block scripts %}
@@ -73,7 +74,8 @@
     }
     #start-button {
         font-family: 'Roboto';
-        border: 1px solid #676767;
+        /* border: 1px solid #676767; */
+        border: none;
         padding: 8px 20px;
         font-size: 15px;
         font-style: black;
@@ -91,7 +93,7 @@
     .wave-top {
         display: none !important;
     }
-    @media (max-width: 600px) {
+    /* @media (max-width: 600px) {
         h1 {
             font-weight: 900;
             font-family: 'Roboto';
@@ -101,6 +103,6 @@
         p, .start-button {
             font-size: 16px;
         }
-    }
+    } */
 </style>
 {% endblock %}
