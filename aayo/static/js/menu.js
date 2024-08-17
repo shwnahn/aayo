@@ -352,7 +352,6 @@ function setupMenuInteractions() {
     }
 }
 
-
 function openMenuModal() {
     const modal = document.getElementById('menuDetailModal');
     modal.classList.add('show');
