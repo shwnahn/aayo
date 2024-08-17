@@ -1,28 +1,32 @@
+const selectedOptions = new Set();
+
 document.addEventListener('DOMContentLoaded', function() {
     const guestNameForm = document.getElementById('guestNameForm');
     if (guestNameForm) {
         console.log('guestName 입력 필요');
         guestNameForm.addEventListener('submit', handleGuestNameSubmit);
     } else {
+        loadSelectedOptions();
         console.log(selectedOptions);
-        setupMenuInteractions(); // 메뉴 선택 상호작용 - 모달 창(주문 상세 페이지) 상세 정보를 클릭하고 그걸 db로 보내는 ajax
-        markSelectedMenus(); // 기존 선택 메뉴 표시 함수 호출
-        updateSelectedMenuNames();  // 페이지 로드 시 기존 선택 메뉴 이름 업데이트
-        updateButtonState();  // 확인 버튼 상태 업데이트 함수
+        setupMenuInteractions();
+        updateUIFromSelectedOptions();
     }
 });
 
-const selectedOptions = new Set();
-const confirmButton = document.getElementById('confirmButton');
-
-// 확인 버튼 상태 업데이트 함수
-function updateButtonState() {
-    if (confirmButton) {
-        confirmButton.disabled = selectedOptions.size === 0;
-    }
+// # 서버(html 코드)에서 가져온 데이터를 사용해 selectedOptions에 기존값 불러오기
+function loadSelectedOptions() {
+    const selectedMenuIds = JSON.parse(document.getElementById('selectedMenuIds').textContent);
+    const selectedMenuOptions = JSON.parse(document.getElementById('selectedMenuOptions').textContent);
+    // selectedOptions에 메뉴 ID와 옵션을 한 번에 추가
+    selectedMenuIds.forEach(id => {
+        selectedOptions.add({
+            id: id,
+            options: selectedMenuOptions[id]
+        });
+    });
 }
 
-// GuestNameForm 제출 처리
+// # GuestNameForm 제출 처리
 function handleGuestNameSubmit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -61,27 +65,24 @@ function handleGuestNameSubmit(e) {
     });
 }
 
- // 메뉴 선택 시 'Selected' 클래스 추가 함수
-function markSelectedMenus() {
-    const selectedMenuIds = JSON.parse(document.getElementById('selectedMenuIds').textContent);
-    const selectedMenuOptions = JSON.parse(document.getElementById('selectedMenuOptions').textContent);
-    selectedMenuIds.forEach(id => {
-        const menuItem = document.querySelector(`.menu-item[data-menu-id="${id}"]`);
-        if (menuItem) {
-            menuItem.classList.add('selected');
-            const selectedOption = {
-                id: id,
-                options: selectedMenuOptions[id]  // 메뉴 옵션 업데이트
-            };
-            selectedOptions.add(selectedOption);  // selectedOptions에 기존 선택된 메뉴 추가
-            console.log('selectedOption:', selectedOption);
-        }
-    });
-    updateSelectedMenuNames();
-    updateButtonState();  // 페이지 로드 시 확인 버튼 상태 업데이트
+// [UI 업데이트] selected 클래스 추가하는 함수
+function updateItemClassSelected(menuItem, isSelected) {
+    if (isSelected) {
+        menuItem.classList.add('selected');
+    } else {
+        menuItem.classList.remove('selected');
+    }
 }
 
-// 선택된 메뉴 이름 상단 요약 - 업데이트 함수
+// [UI 업데이트] 확인 버튼 상태 업데이트 함수
+function updateConfirmButtonState() {
+    const confirmButton = document.getElementById('confirmButton');
+    if (confirmButton) {
+        confirmButton.disabled = selectedOptions.size === 0;
+    }
+}
+
+// [UI 업데이트] 선택된 메뉴 이름 상단 요약 - 업데이트 함수
 function updateSelectedMenuNames() {
     const selectedMenuNames = Array.from(selectedOptions).map(option => {
         // selectedOption 집합의 option에 저장된 id와 동일한 id를 가진 메뉴 아이템을 불러와서,
@@ -93,28 +94,34 @@ function updateSelectedMenuNames() {
     const selectedMenuNamesElement = document.getElementById('selectedMenuNames');
     
     if (selectedMenuNames.length === 0) { // 선택한 메뉴 아이템이 없는 경우(배열의 길이가 0인 경우)
-        selectedMenuNamesElement.textContent = "아직 고르신 메뉴가 없어요.";
+        selectedMenuNamesElement.textContent = "메뉴를 선택해주세요.";
     } else {
         selectedMenuNamesElement.textContent = selectedMenuNames.join(', ');
     }
 }
 
-// 메뉴 선택 상호작용 - 모달 창(주문 상세 페이지) 상세 정보를 클릭하고 그걸 db로 보내는 ajax
-function setupMenuInteractions() {
-    console.log('# 메뉴 선택 함수 실행');
-    const menuItems = document.querySelectorAll('.menu-item');
-    console.log('menuItems:', menuItems);
-    const modal = document.getElementById('menuDetailModal');
-    console.log('modal:', modal);
-    const modalTitle = document.getElementById('menuDetailModalLabel');
-    console.log('modalTitle:', modalTitle);
-    const modalMenuCategory = document.getElementById('menuCategory');
-    const modalMenuNote = document.getElementById('menuNote');
+// # 전체 아이템 UI 업데이트
+function updateUIFromSelectedOptions() {
+    // 모든 메뉴 항목에 대해 selected 상태를 업데이트
+    document.querySelectorAll('.menu-item').forEach(item => {
+        const menuId = item.getAttribute('data-menu-id');
+        const isSelected = Array.from(selectedOptions).some(option => {
+            // menuId와 option.id를 같은 자료형으로 변환 후 비교 (number로 변환)
+            return Number(option.id) === Number(menuId);
+        });
+        // isSelected에 따라 클래스 업데이트
+        updateItemClassSelected(item, isSelected);
+    });
+     
+    // 선택된 메뉴 이름 업데이트
+    updateSelectedMenuNames();
+    // 확인 버튼 상태 업데이트
+    updateConfirmButtonState();
+}
 
-    const modalImage = document.getElementById('modalMenuImage');
-    console.log('modalImage:', modalImage);
-    
-    // 메뉴 검색창 이벤트리스너 추가
+
+// [메뉴 선택 상호작용] 메뉴 검색창 코드
+function setupSearchFunctionality(menuItems) {
     const searchInput = document.getElementById('menuSearch');
     searchInput.addEventListener('input', function () {
         // '검색어 입력' 이벤트리스너 추가
@@ -132,10 +139,20 @@ function setupMenuInteractions() {
             }
         });
     });
+}
 
-    function toggleButtonActive(button) {
-        button.classList.toggle('active');
-    }
+// # 메뉴 선택 상호작용 - 모달 창(주문 상세 페이지) 상세 정보를 클릭하고 그걸 db로 보내는 ajax
+function setupMenuInteractions() {
+    console.log('# setupMenuInteractions 함수 실행');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const modal = document.getElementById('menuDetailModal');
+    const modalTitle = document.getElementById('menuDetailModalLabel');
+    const modalMenuCategory = document.getElementById('menuCategory');
+    const modalMenuNote = document.getElementById('menuNote');
+    const modalImage = document.getElementById('modalMenuImage');
+    
+    // 메뉴 검색창 이벤트리스너 추가
+    setupSearchFunctionality(menuItems);
 
     // 메뉴 상세 선택 - 버튼 활성화 토글 설정 함수
     function setupToggleButtons(buttonIds) {
@@ -160,35 +177,37 @@ function setupMenuInteractions() {
     menuItems.forEach(item => {
         item.addEventListener('click', function() {
             const menuId = this.getAttribute('data-menu-id');
+            console.log("Clicked menu ID:", menuId);  // menuId가 올바르게 출력되는지 확인
+            if (!menuId) {
+                console.error("Menu ID not found! Something is wrong.");
+                return;  // menuId가 null이거나 undefined이면 동작 중단
+            }
             const menuName = this.querySelector('.menu-name').textContent;
             const menuImageSrc = this.querySelector('.menu-image')?.src;
             const menuCategory = this.getAttribute('data-menu-category');
             const menuNote = this.getAttribute('data-menu-note');
 
-            // 선택된 메뉴를 다시 클릭할 시 선택 취소 [ 커스텀 초기화 코드 ]
+            // 이미 선택된 메뉴를 다시 클릭할 시 선택 취소 및 커스텀 초기화
             if (this.classList.contains('selected')) {
                 this.classList.remove('selected');
-                selectedOptions.delete(Array.from(selectedOptions).find(option => option.id === menuId));
-                updateButtonState();
+                selectedOptions.forEach(option => {
+                    if (option.id === menuId) {
+                        selectedOptions.delete(option); // Set에서 해당 메뉴 삭제
+                    }
+                });
+                updateConfirmButtonState();
                 updateSelectedMenuNames();
-                alert('커스텀을 수정하시겠습니까?')
-                resetModal(); // 모달 초기화 (기존 선택내역 초기화)
-                openMenuModal(); // 사용자 편의를 위해 모달을 다시 열어줌
+
+                // 커스텀 옵션 초기화 후 사용자에게 다시 설정할 수 있도록 모달을 재오픈
+                alert('커스텀 내역을 수정하시겠습니까?');
+                resetModal();
+                openMenuModal();
                 return;
             }
-            
-            modalTitle.textContent = menuName;
-            if (menuCategory == 'None') {
-                modalMenuCategory.textContent = '';
-            } else {
-                modalMenuCategory.textContent = menuCategory;
-            }
-            if (menuNote == 'None') {
-                modalMenuNote.textContent = '';
-            } else {
-                modalMenuNote.textContent = menuNote;
-            }
 
+            modalTitle.textContent = menuName;
+            modalMenuCategory.textContent = menuCategory !== 'None' ? menuCategory : '';
+            modalMenuNote.textContent = menuNote !== 'None' ? menuNote : '';
             // 해당 메뉴 이미지 없으면 display: none
             if (menuImageSrc) {
                 modalImage.src = menuImageSrc;
@@ -199,8 +218,9 @@ function setupMenuInteractions() {
 
             // 모달 초기화 후 열기
             resetModal();
-            openMenuModal();;
-            saveMenuItem.setAttribute('data-menu-id', menuId);
+            openMenuModal();
+            // error! menu 데이터 들어있는 html 코드 업데이트?? 이부분 잘 모르겠음
+            document.getElementById('saveMenuItem').setAttribute('data-menu-id', menuId); // menuId 저장
 
             // 닫기 버튼에 이벤트리스너 추가
             const closeBtn = modal.querySelector('.close');
@@ -273,13 +293,28 @@ function setupMenuInteractions() {
             //     alert('얼음 양을 선택해주세요!');
             //     return;
             // }
-            // 선택된 옵션들을 Set에 추가 - selectedOptions
-            selectedOptions.add({
-                id: menuId,
-                options: { 
-                    temperature, size, ice, note
-                }
-            });
+
+            // 중복 항목 업데이트 로직 추가
+            const existingOption = Array.from(selectedOptions).find(option => option.id === menuId);
+            if (existingOption) {
+                existingOption.options = { temperature, size, ice, note };
+            } else {
+                selectedOptions.add({
+                    id: menuId,
+                    options: { 
+                        temperature, size, ice, note
+                    }
+                });
+            }
+            console.log(selectedOptions);
+
+            // // 선택된 옵션들을 Set에 추가 - selectedOptions
+            // selectedOptions.add({
+            //     id: menuId,
+            //     options: { 
+            //         temperature, size, ice, note
+            //     }
+            // });
             
             // selected_menu_ids.add(menuId);  // 수정된 부분
             const menuItem = document.querySelector(`.menu-item[data-menu-id="${menuId}"]`);
@@ -287,7 +322,7 @@ function setupMenuInteractions() {
                 menuItem.classList.add('selected');
             }
 
-            updateButtonState();
+            updateConfirmButtonState();
             updateSelectedMenuNames();
             closeMenuModal()
 
