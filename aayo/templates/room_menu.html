@@ -31,7 +31,7 @@
                 {% endwith %} -->
             </div>
                 <p class="centered-text">{{ guest_name }}님이 고른 메뉴:
-                    <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span>
+                    <span id="selectedMenuNames">메뉴를 선택해주세요.</span>
                     <!-- 기존에 선택된 메뉴에 대한 id, options 정보 추가 -->
                     <span id="selectedMenuIds" style="display: none;">{{ selected_menu_ids|json_script:"selectedMenuIds" }}</span>
                     <span id="selectedMenuOptions" style="display: none;">{{ selected_menu_options|json_script:"selectedMenuOptions" }}</span>
