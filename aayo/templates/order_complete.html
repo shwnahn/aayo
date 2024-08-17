@@ -17,50 +17,6 @@
 </div>
 {% endblock %}
 
-{% block scripts %}
-<script>
-    // 주문 확정하기 버튼 이벤트 리스너
-    const confirmButton = document.getElementById('confirmButton');
-    if (confirmButton) {
-        confirmButton.addEventListener('click', function(e) {
-            e.preventDefault(); // 폼 제출을 막습니다.
-            
-            if (selectedOptions.size === 0) {
-                alert('최소 하나의 메뉴를 선택해주세요.');
-                return;
-            }
-
-            const formData = new FormData();
-            formData.append('csrfmiddlewaretoken', document.querySelector('[name=csrfmiddlewaretoken]').value);
-            formData.append('menu_details', JSON.stringify(Array.from(selectedOptions)));
-
-            fetch(window.location.href, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // 성공 시 order_complete 페이지로 리다이렉트
-                    window.location.href = data.redirect_url || `/room/${roomUniqueId}/order-complete/`;
-                } else {
-                    throw new Error(data.error || 'Unknown error occurred');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('주문 확정 중 오류가 발생했습니다: ' + error.message);
-            });
-        });
-    }
-
-    // roomUniqueId 변수 설정 (페이지 로드 시 한 번만 실행)
-    const roomUniqueId = document.querySelector('#roomLink').href.split('/').slice(-2, -1)[0];
-</script>
-{% endblock %}
 {% block css %}
 <style>
     body, html {
