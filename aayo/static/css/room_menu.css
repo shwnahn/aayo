@@ -25,6 +25,12 @@
     align-items: center;
 }
 
+#menuForm {
+    width: 100%;
+    max-width: inherit;
+    min-width: inherit;
+}
+
 .guestNameForm {
     width: 100%;
     padding: 10px 15px 10px 15px;
@@ -71,8 +77,14 @@
     margin-bottom: 3vh;
 }
 
+.room-container-wrap {
+    height: 100%;
+}
+
+
 .room-container {
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     max-width: 600px;
@@ -82,6 +94,10 @@
     position: relative;
     z-index: 1;
     overflow-y: hidden;
+}
+
+.context-container{
+    height: 25%;
 }
 
 .centered-text {
@@ -120,9 +136,9 @@
 }
 
 .scrollable-content {
-    width: 90vw;
-    max-width: 340px;
-    max-height: 450px;
+    width: 100%;
+    margin-bottom: 7%;
+    height: 68%;
     overflow-y: auto;
 }
 
