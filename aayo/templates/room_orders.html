@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="order-container">
-    <button id="refresh-orders" class="btn btn-primary mb-3">주문 목록 갱신</button>
+    <!-- <button id="refresh-orders" class="btn btn-primary mb-3">주문 목록 갱신</button> -->
     <h2 id="todaysmenu">TODAY's MENU</h2>
     <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
     <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
@@ -36,6 +36,9 @@
             <p>아직 주문이 없습니다.</p>
         {% endif %}
     </div>
+    <button id="refresh-orders" class="refresh-button">
+        <img src="{% static 'images/reload.png' %}" alt="주문 목록 갱신" width="24" height="24">
+    </button>
 </div>
 <!-- <a href="{% url 'room_menu' room.unique_id %}" class="hidden">메뉴 선택으로 돌아가기</a> -->
 <button id="resetOrderBtn" class="bottomBtn">현재 주문 초기화</button>
