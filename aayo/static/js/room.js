@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nameInput = document.getElementById('name');
     const submitButton = document.querySelector('.submit-button')
     console.log(submitButton)
+
     function checkFormCompletion() {
         console.log("checkForm")
         if (nameInput.value.trim() !== '' && cafeInput.value !== '') {
