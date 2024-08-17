@@ -1,6 +1,7 @@
 :root {
     --header-height: 50px;
-    --wave-top-margin: 75px;
+    --wave-top-height: 5px;
+    --wave-top-margin: calc(40px + var(--wave-top-height));
     --content-padding: 20px;
 }
 
@@ -35,16 +36,19 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: inherit;
+    min-width: inherit;
     height: calc(100% - var(--header-height));
     box-sizing: border-box;
 }
 
 .content {
     width: 100%;
-    max-width: 600px;
+    max-width: inherit;
+    min-width: inherit;
     height: calc(100% - var(--wave-top-margin) - calc(2 * var(--content-padding))); /* margin-top과 padding을 뺀 height */
     margin-top: var(--wave-top-margin);
-    padding: var(--content-padding);
+    padding: 0 var(--content-padding);
     flex-grow: 1;
     box-sizing: border-box;
 }
@@ -86,8 +90,7 @@ header a {
 }
 
 .wave-top {
-
-    margin-top: 25px;
+    margin-top: var(--wave-top-height);
     display: block;
     position: fixed;
     transform: rotate(180deg);
@@ -121,7 +124,12 @@ header a {
     transform: translateX(-50%);
     cursor: pointer;
     z-index: 1000;
-    width: 375px;
+    
+
+    width: 100%;
+    max-width: inherit;
+    min-width: inherit;
+
     height: 7%;
     background-color: #FFD457;
     color: #1e3932;
