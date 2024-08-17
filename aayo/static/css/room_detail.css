@@ -1,5 +1,12 @@
 
-.header-wrap {
+.room-detail-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.detail-top-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +19,37 @@
     position: relative;
     z-index: 1;
 }
+
+.guide-text-wrap {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.guide-text {
+    display: block;
+    margin: 0;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.room-name-and-logo {
+    height: 60%; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cafe-logo {
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+
 .btn > p {
     font-size: 12px;
     font-weight: normal;
@@ -68,8 +106,9 @@
 .room-detail-container {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
     height: 80%;
     flex-direction: column;
     /* position: relative; */
