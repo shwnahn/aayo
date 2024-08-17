@@ -141,15 +141,43 @@ function setupSearchFunctionality(menuItems) {
     });
 }
 
+// [메뉴 선택 상호작용] 메뉴선택 modal 셋업 코드
+function setupMenuModal(modal, menuName, menuImageSrc, menuCategory, menuNote, menuId) {
+    const modalTitle = document.getElementById('menuDetailModalLabel');
+    const modalMenuCategory = document.getElementById('menuCategory');
+    const modalMenuNote = document.getElementById('menuNote');
+    const modalImage = document.getElementById('modalMenuImage');
+    modalTitle.textContent = menuName;
+    modalMenuCategory.textContent = menuCategory !== 'None' ? menuCategory : '';
+    modalMenuNote.textContent = menuNote !== 'None' ? menuNote : '';
+    // 해당 메뉴 이미지 없으면 display: none
+    if (menuImageSrc) {
+        modalImage.src = menuImageSrc;
+        modalImage.style.display = 'block';
+    } else {
+        modalImage.style.display = 'none';
+    }
+
+    resetModal();
+    openMenuModal();
+    document.getElementById('saveMenuItem').setAttribute('data-menu-id', menuId); // menuId 저장
+
+    // 닫기 버튼에 이벤트리스너 추가
+    const closeBtn = modal.querySelector('.close');
+    if (closeBtn && !closeBtn.dataset.listenerAdded) {
+        closeBtn.addEventListener('click', function() {
+            closeMenuModal();
+        });
+        closeBtn.dataset.listenerAdded = 'true'; // 이벤트 리스너 중복 방지 플래그 설정
+    }
+}
+
 // # 메뉴 선택 상호작용 - 모달 창(주문 상세 페이지) 상세 정보를 클릭하고 그걸 db로 보내는 ajax
 function setupMenuInteractions() {
     console.log('# setupMenuInteractions 함수 실행');
     const menuItems = document.querySelectorAll('.menu-item');
     const modal = document.getElementById('menuDetailModal');
-    const modalTitle = document.getElementById('menuDetailModalLabel');
-    const modalMenuCategory = document.getElementById('menuCategory');
-    const modalMenuNote = document.getElementById('menuNote');
-    const modalImage = document.getElementById('modalMenuImage');
+    
     
     // 메뉴 검색창 이벤트리스너 추가
     setupSearchFunctionality(menuItems);
@@ -190,46 +218,27 @@ function setupMenuInteractions() {
             // 이미 선택된 메뉴를 다시 클릭할 시 선택 취소 및 커스텀 초기화
             if (this.classList.contains('selected')) {
                 this.classList.remove('selected');
-                selectedOptions.forEach(option => {
-                    if (option.id === menuId) {
-                        selectedOptions.delete(option); // Set에서 해당 메뉴 삭제
-                    }
-                });
+
+                // selectedOptions에서 해당 메뉴를 삭제합니다.
+                const existingSelection = Array.from(selectedOptions).find(option => Number(option.id) === Number(menuId)); // Number로 비교
+                if (existingSelection) {
+                    selectedOptions.delete(existingSelection); // Set에서 해당 메뉴 삭제
+                }
+
+                // UI 업데이트: 해당 메뉴 항목에서 'selected' 클래스 제거
+                updateItemClassSelected(this, false);
                 updateConfirmButtonState();
+                // UI 업데이트: 선택된 메뉴 이름 상단 요약에서 해당 아이템 삭제
                 updateSelectedMenuNames();
 
                 // 커스텀 옵션 초기화 후 사용자에게 다시 설정할 수 있도록 모달을 재오픈
                 alert('커스텀 내역을 수정하시겠습니까?');
-                resetModal();
-                openMenuModal();
+
+                setupMenuModal(modal, menuName, menuImageSrc, menuCategory, menuNote, menuId);
                 return;
             }
 
-            modalTitle.textContent = menuName;
-            modalMenuCategory.textContent = menuCategory !== 'None' ? menuCategory : '';
-            modalMenuNote.textContent = menuNote !== 'None' ? menuNote : '';
-            // 해당 메뉴 이미지 없으면 display: none
-            if (menuImageSrc) {
-                modalImage.src = menuImageSrc;
-                modalImage.style.display = 'block';
-            } else {
-                modalImage.style.display = 'none';
-            }
-
-            // 모달 초기화 후 열기
-            resetModal();
-            openMenuModal();
-            // error! menu 데이터 들어있는 html 코드 업데이트?? 이부분 잘 모르겠음
-            document.getElementById('saveMenuItem').setAttribute('data-menu-id', menuId); // menuId 저장
-
-            // 닫기 버튼에 이벤트리스너 추가
-            const closeBtn = modal.querySelector('.close');
-            if (closeBtn && !closeBtn.dataset.listenerAdded) {
-                closeBtn.addEventListener('click', function() {
-                    closeMenuModal()
-                });
-                closeBtn.dataset.listenerAdded = 'true'; // 이벤트 리스너 중복 방지 플래그 설정
-            }
+            setupMenuModal(modal, menuName, menuImageSrc, menuCategory, menuNote, menuId);
         });
     });
 
@@ -295,7 +304,7 @@ function setupMenuInteractions() {
             // }
 
             // 중복 항목 업데이트 로직 추가
-            const existingOption = Array.from(selectedOptions).find(option => option.id === menuId);
+            const existingOption = Array.from(selectedOptions).find(option => Number(option.id) === Number(menuId)); // Number로 비교
             if (existingOption) {
                 existingOption.options = { temperature, size, ice, note };
             } else {
@@ -308,18 +317,10 @@ function setupMenuInteractions() {
             }
             console.log(selectedOptions);
 
-            // // 선택된 옵션들을 Set에 추가 - selectedOptions
-            // selectedOptions.add({
-            //     id: menuId,
-            //     options: { 
-            //         temperature, size, ice, note
-            //     }
-            // });
-            
-            // selected_menu_ids.add(menuId);  // 수정된 부분
+            // UI 업데이트: 선택된 메뉴 항목에 'selected' 클래스 추가
             const menuItem = document.querySelector(`.menu-item[data-menu-id="${menuId}"]`);
             if (menuItem) {
-                menuItem.classList.add('selected');
+                updateItemClassSelected(menuItem, true);
             }
 
             updateConfirmButtonState();
