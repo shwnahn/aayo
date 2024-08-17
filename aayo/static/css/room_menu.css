@@ -1,0 +1,498 @@
+
+.login-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 15%;
+    margin-bottom: 75px;
+    background-color: white;
+}
+
+.login-cafe-logo {
+    display: block;
+    width: 50%;
+}
+
+.noGuestName-text {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 1.0em;
+}
+
+#guestNameForm-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guestNameForm {
+    width: 100%;
+    padding: 10px 15px 10px 15px;
+    margin: 2px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+}
+
+.guestNameForm:focus {
+    outline: none;
+    border-color: #FFD54F; /* 포커스 시 테두리 색상 변경 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 포커스 시 그림자 더 강조 */
+}
+
+.cafe-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cafe-logo {
+    width: 23vw;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+}
+
+.wave-bottom {
+    display: none;
+}
+
+.menuSearchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+.room-container {
+    /* width: 92vw; */
+    max-width: 600px;
+    margin-top: 15%;
+    /* padding: 20px; */
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    overflow-y: hidden;
+    /* max-height: calc(100vh - 190px); */
+}
+
+.centered-text {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #1e3932;
+}
+
+#menuSearch {
+    /* width: 63vw;
+    height: 5vh; */
+    padding: 10px 15px 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+}
+
+#menuSearch:focus {
+    outline: none;
+    border: 2px solid #f0c97d;
+}
+
+#selectedMenuNames {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #1e3932;
+}
+
+.scrollable-content {
+    width: 90vw;
+    max-width: 340px;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.itembox {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.itembox:hover {
+    background-color: #f8f8f8;
+}
+
+.itembox.selected {
+    border: 3px solid #FBD68E;
+}
+
+.menu-image {
+    width: 55%;
+    border-radius: 8px;
+}
+
+.menu-name {
+    font-weight: bold;
+    color: #1e3932;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 10px; /* 스크롤바의 너비 */
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 스크롤바 트랙의 배경색 */
+    border-radius: 10px; /* 스크롤바 트랙의 둥근 모서리 */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: #888; /* 스크롤바의 색상 */
+    border-radius: 10px; /* 스크롤바의 둥근 모서리 */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* 스크롤바에 마우스 오버 시 색상 변경 */
+}
+
+.room-container::-webkit-scrollbar {
+    width: 10px; /* 스크롤바의 너비 */
+}
+
+.room-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 스크롤바 트랙의 배경색 */
+    border-radius: 10px; /* 스크롤바 트랙의 둥근 모서리 */
+}
+
+.room-container::-webkit-scrollbar-thumb {
+    background: #888; /* 스크롤바의 색상 */
+    border-radius: 10px; /* 스크롤바의 둥근 모서리 */
+}
+
+.room-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* 스크롤바에 마우스 오버 시 색상 변경 */
+}
+
+#confirmButton:hover {
+    background-color: #f0c97d;
+}
+
+#confirmButton:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+/*  ==== 아래부터는 modal css ==== */
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: auto;
+}
+
+.modal.show {
+    display: block;
+    animation: slideIn 0.5s ease-out,fadeInBackground 0.6s cubic-bezier(0.4, 0, 1, 1) 0.2s forwards; /* 모달 슬라이드 애니메이션 */
+}
+
+.modal-wrap {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 85vh;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    border: none; /* 테두리 제거 */
+    border-radius: 30px 30px 0 0 ; /* 둥근 모서리 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    padding: 15px;
+
+    /* modal 높이에 대한 커스텀 프로퍼티 정의 */
+    --content-height: calc(100% - 40px); /* 전체 높이에서 padding을 뺀 값 */
+    --margin-bottom: 10px;
+    --adjusted-content-height: calc(var(--content-height) - 6 * var(--margin-bottom)); /* margin-bottom을 뺀 값 */
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 18px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal-hr{
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 0 0 var(--margin-bottom) 0; /* 상하 마진을 추가하여 공간을 확보 */
+}
+
+.menu-label-container,
+.image-container,
+.form-group-etc,
+#modal-customization-title,
+#saveMenuItem {
+    flex: 0 0 auto;
+    margin-bottom: var(--margin-bottom);
+}
+
+.menu-label-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--margin-bottom);
+}
+.menu-label-container > p {
+    margin: 0;
+    color: #888;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+#modal-customization-title {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
+
+.image-container {
+    height: calc(var(--adjusted-content-height) * 0.40); /* 40% 높이 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: var(--margin-bottom);
+}
+
+#menuDetailModalLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#menuNote {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-size: 14px;
+    color: #888;
+}
+
+#modalMenuImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 이미지 비율 유지 */
+}
+
+.menu-customization {
+    width: 80%; /* 원하는 넓이 설정 */
+    margin: 0 auto; /* 자동으로 좌우 정렬 */
+    font-size: 14px;
+}
+
+.customization-form {
+    margin-bottom: var(--margin-bottom); /* 각 폼 그룹 간의 간격 추가 */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.customization_label {
+    flex: 0 0 40%;
+    text-align: left;
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-group-size,
+.btn-group-ice {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;;
+}
+
+.btn-group-size {
+    height: calc(var(--adjusted-content-height) * 0.10); /* 10% 높이 */
+}
+
+.btn-group-ice {
+    height: calc(var(--adjusted-content-height) * 0.10); /* 10% 높이 */
+}
+
+.btn-group-temp {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 75%;
+    min-width: 75%;
+    margin: 0 auto var(--margin-bottom) auto;
+    box-sizing: border-box;
+    /* height: 6% */
+    /* height: calc(var(--adjusted-content-height) * 0.10); */
+}
+
+.menu-customization .btn{
+    border: 1px solid #eaeaea;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.btn-group-size .btn {
+    padding: 4px 11%;
+}
+.btn-group-ice .btn {
+    padding: 4px 8%;
+    min-width: 50px;
+}
+
+
+.btn-group-temp .btn-temp{
+    flex: 1;
+    padding: 3px 0;
+    border: none;
+    background-color: #f8f8f8;
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.btn:hover {
+    background-color: #e8e8e8;
+}
+
+.btn.active {
+    background-color: #FFD457;
+    border-color: #FFD457;
+    color: #1e3932;
+}
+
+.btn-group-temp .btn-temp:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 0;
+    padding-left: 10px;
+}
+
+.btn-group-temp .btn-temp:last-child {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 0;
+    padding-right: 10px;
+}
+
+.btn-group-temp .btn-temp:first-child.active {
+    background-color: #ff3737;
+    color: white;
+}
+
+.btn-group-temp .btn-temp:last-child.active {
+    background-color: #4285f4;
+    color: white;
+}
+
+.btn-group-temp .btn-temp:not(.active):hover {
+    background-color: #e8e8e8;
+}
+
+#additionalInstructions {
+    width: 100%; /* 텍스트 영역이 부모 요소의 너비를 차지하도록 */
+    min-height: 50px; /* 최소 높이 설정 */
+    padding: 10px; /* 내부 패딩으로 인덴트 효과 */
+    border: 1px solid #ddd; /* 경계선 설정 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+    resize: vertical; /* 세로 크기 조절 가능 */
+    font-size: 14px; /* 텍스트 크기 설정 */
+}
+
+/* 플레이스홀더 텍스트 스타일 */
+#additionalInstructions::placeholder {
+    color: #888; /* 플레이스홀더 텍스트 색상 */
+    font-style: italic; /* 플레이스홀더 텍스트 기울임 */
+}
+
+#saveMenuItem {
+    height: calc(var(--adjusted-content-height) * 0.10); /* 10% 높이 */
+    margin-bottom: 0; /* 마지막 요소의 margin-bottom 제거 */
+}
+/* 모달 애니메이션 정의 */
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInBackground {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
