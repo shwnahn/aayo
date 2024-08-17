@@ -1,101 +1,77 @@
 
-.header-wrap {
+.room-detail-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.detail-top-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: #FFD457; */
-    justify-content: center;
-    width: 375px;
-    height: 30vh;
-    /* margin-top: -12vh; */
-    /* padding-left: 13vw; */
-    position: relative;
-    z-index: 1;
+    height: 20%;
 }
+
+.guide-text-wrap {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.guide-text {
+    display: block;
+    margin: 0;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.room-name-and-logo {
+    height: 60%; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cafe-logo {
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+
 .btn > p {
     font-size: 12px;
     font-weight: normal;
 }
 
 .btn-wrap-top {
-    width: 375px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 .btn-wrap-bottom {
-    width: 375px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.room-name-and-logo {
-    
-    display: flex;
-    margin-left: 10%;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 2%;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    /* align-content: flex-end; */
-    /* text-align: left; */
-    height: 30%;
-    width: 375px;
-}
 
 .btn-wrap {
     display: flex;
 }
 
-.guide-text-wrap {
-    width: 375px;
-    height: 10%;
+/* BOTTOM */
+.detail-bottom-container {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 10%;
-    margin-top: 6%;
-}
-
-.guide-text {
-    display: block;
-    position: fixed;
-    margin: 0;
-    font-weight: lighter;
-}
-
-.room-detail-container {
-    width: 375px;
-    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
     height: 80%;
-    flex-direction: column;
-    /* position: relative; */
-    z-index: 2;
-}
-
-.cafe-logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-bottom: 30px; */
-}
-
-.cafe-logo {
-    display: block;
-    height: 64%;
-}
-
-.message-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 375px;
-    height: 0%;
     text-align: center;
 }
 
@@ -126,8 +102,6 @@ span {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 80%;
-    width: 375px;
     position: relative;
     z-index: 3;
     flex-direction: row;
