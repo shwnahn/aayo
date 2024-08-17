@@ -5,7 +5,7 @@
     align-items: center;
     /* background-color: #FFD457; */
     justify-content: center;
-    width: 375px;
+    width: 100%;
     height: 30vh;
     /* margin-top: -12vh; */
     /* padding-left: 13vw; */
@@ -18,21 +18,20 @@
 }
 
 .btn-wrap-top {
-    width: 375px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 .btn-wrap-bottom {
-    width: 375px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 .room-name-and-logo {
-    
     display: flex;
     margin-left: 10%;
     justify-content: flex-start;
@@ -51,7 +50,7 @@
 }
 
 .guide-text-wrap {
-    width: 375px;
+    width: 100%;
     height: 10%;
     display: flex;
     justify-content: flex-start;
@@ -67,7 +66,7 @@
 }
 
 .room-detail-container {
-    width: 375px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -94,7 +93,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 375px;
+    width: 100%;
     height: 0%;
     text-align: center;
 }
@@ -127,7 +126,7 @@ span {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 80%;
-    width: 375px;
+    width: 100%;
     position: relative;
     z-index: 3;
     flex-direction: row;
