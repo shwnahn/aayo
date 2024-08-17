@@ -1,65 +1,65 @@
-    .container {
-        text-align: center;
-        flex: 1;
-    }
-    header {
-        display: none !important;
-    }
-    #start-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 60vh; /* 화면 전체 높이 */
-    }
+.container {
+    text-align: center;
+    flex: 1;
+}
+header {
+    display: none !important;
+}
+#start-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh; /* 화면 전체 높이 */
+}
+h1 {
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-family: 'Roboto';
+    text-align: right;
+    font-size: 55px;
+    color: black;
+}
+p {
+    font-family: 'Roboto';
+    margin: 10px 0px;
+    font-size: 15px;
+    color: #666;
+}
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+#start-button {
+    font-family: 'Roboto';
+    /* border: 1px solid #676767; */
+    border: none;
+    padding: 8px 20px;
+    font-size: 15px;
+    font-style: black;
+    background-color: #FFD457;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+#start-button:hover {
+    background-color: #e6b800;
+
+}
+.wave-top {
+    display: none !important;
+}
+/* @media (max-width: 600px) {
     h1 {
-        margin-bottom: 10px;
         font-weight: 900;
         font-family: 'Roboto';
-        text-align: right;
-        font-size: 55px;
-        color: black;
+        margin-bottom: 5px;
+        font-size: 60px;
     }
-    p {
-        font-family: 'Roboto';
-        margin: 10px 0px;
-        font-size: 15px;
-        color: #666;
+    p, .start-button {
+        font-size: 16px;
     }
-    .button-container {
-        display: flex;
-        justify-content: flex-start;
-        width: 100%;
-    }
-    #start-button {
-        font-family: 'Roboto';
-        /* border: 1px solid #676767; */
-        border: none;
-        padding: 8px 20px;
-        font-size: 15px;
-        font-style: black;
-        background-color: #FFD457;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-top: 20px;
-        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); */
-        transition: background-color 0.3s ease, border-color 0.3s ease;
-    }
-    #start-button:hover {
-        background-color: #e6b800;
-
-    }
-    .wave-top {
-        display: none !important;
-    }
-    /* @media (max-width: 600px) {
-        h1 {
-            font-weight: 900;
-            font-family: 'Roboto';
-            margin-bottom: 5px;
-            font-size: 60px;
-        }
-        p, .start-button {
-            font-size: 16px;
-        }
-    } */
+} */

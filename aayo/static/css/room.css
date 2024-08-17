@@ -12,7 +12,6 @@ p {
     color: #666;
 }
 
-
 .main-container {
     display: flex;
     align-items: center; /* 수직 방향으로 중앙 정렬 */
@@ -208,7 +207,7 @@ input[type="text"] {
 
 .submit-button {
     max-width: calc(500px* 0.75);
-    width: 100%;
+    width: 375px;
     padding: 15px;
     background-color: #CCCCCC;
     color: #1e3932;
@@ -225,4 +224,3 @@ input[type="text"] {
     transform: translateX(-50%);
     z-index: 1000;
 }
-
