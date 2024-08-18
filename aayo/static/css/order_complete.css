@@ -1,65 +1,95 @@
+body {
+    background-color: var(--aayo-color);
+}
 
-    body, html {
-        background-color: #FFD457;
+.order-complete-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.check-icon {
+    margin-bottom: 30px;
+}
+
+.check-image {
+    width: 100px;
+    height: 100px;
+    animation: scale-in 0.5s ease-out;
+}
+
+@keyframes scale-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
     }
-    .order-complete-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100%;
-        background-color: #FFD457;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
-    .check-icon {
-        margin-bottom: 20px;
-    }
-    .check-image {
-        width: 80px;
-        height: 80px;
-        animation: scale-in 0.5s ease-out;
-    }
-    @keyframes scale-in {
-        0% {
-            transform: scale(0);
-            opacity: 0;
-        }
-        100% {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-    .complete-title {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    .complete-subtitle {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
-    .button-container {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-    .btn {
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    .btn-white {
-        background-color: white;
-        color: #333;
-        border: 1px solid #ccc;
-        box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5);
-    }
-    .btn-white:hover {
-        background-color: #f0f0f0;
-    }
+}
+
+.complete-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.complete-subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+.btn {
+    padding: 12px 25px;
+    border-radius: 50px; /* 둥근 모서리 */
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    color: white;
+    border: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 */
+}
+
+.btn:hover {
+    transform: translateY(-5px); /* 마우스를 올렸을 때 위로 살짝 이동 */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* 그림자 크기 확대 */
+}
+
+.btn:active {
+    transform: translateY(0); /* 클릭했을 때 원래 위치로 돌아감 */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 원래 크기로 */
+}
+
+.btn-white {
+    background-image: none; /* 기존 배경 제거 */
+    background-color: white;
+    color: #333;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+    background-color: #f0f0f0;
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
