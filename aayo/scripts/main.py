@@ -1,30 +1,40 @@
-from starbucks import crawl_starbucks
-from hasamdong import crawl_hasamdong
-from ediya import crawl_ediya
-from mega import crawl_mega
+from bana import crawl_bana
+from bean import crawl_bean
 from compose import crawl_compose
-from paik import crawl_paik
-from mammoth_ex import crawl_mammoth_ex
-from twosome import crawl_twosome
+from curban import crawl_curban
+from ediya import crawl_ediya
 from gongcha import crawl_gongcha
-# from theventi import crawl_theventi
+from hasamdong import crawl_hasamdong
 from hollys import crawl_hollys
+from mammoth_ex import crawl_mammoth_ex
+from mega import crawl_mega
+from paik import crawl_paik
+from starbucks import crawl_starbucks
+from theventi import crawl_theventi
 from toms import crawl_toms
+from twosome import crawl_twosome
+from yoger import crawl_yoger
+
+
 
 def main():
     cafe_list = [
-        "starbucks",
-        "hasamdong",
-        "ediya",
-        "mega",
-        "compose",
-        "paik",
-        "mammoth_ex",
-        "twosome",
-        "gongcha",
-        "theventi",
-        "hollys",
-        "toms"
+        'bana',
+        'bean',
+        'compose',
+        'curban',
+        'ediya',
+        'gongcha',
+        'hasamdong',
+        'hollys',
+        'mammoth_ex',
+        'mega',
+        'paik',
+        'starbucks',
+        'theventi',
+        'toms',
+        'twosome',
+        'yoger',
     ]
 
     for cafe_name in cafe_list:
