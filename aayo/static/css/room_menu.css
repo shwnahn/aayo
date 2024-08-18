@@ -1,138 +1,15 @@
-{% extends "base.html" %}
-{% load static %}
 
-{% block content %}
-<div class="room-container-wrap">
-    <div class="room-container">
-        {% if not guest_name %}
-        <div class="login-container">
-            <div class="cafe-logo-container">
-            {% with logo_file=cafe.name_eng|add:".png"|lower %}
-                <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="login-cafe-logo">
-            {% endwith %}
-            </div>
-            <div class="guestNameForm-container">
-                <form id="guestNameForm">
-                    {% csrf_token %}
-                    <p class="noGuestName-text">주문자님의 이름을 입력해주세요!</p>
-                    <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름을 입력하세요">    
-                    <!-- <input type="password" class="guestNameForm" name="password" placeholder="비밀번호를 입력하세요"> -->
-                    <button id="goToOrderBtn" type="submit" class="bottomBtn">메뉴 주문하러 가기</button>
-                </form>
-                <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
-                <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
-            </div>
-        </div>
-        {% else %}
-        <div class="context-container">
-            <div class="cafe-logo-container">
-                <!-- {% with logo_file=cafe.name_eng|add:".png"|lower %}
-                    <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
-                {% endwith %} -->
-            </div>
-                <p class="centered-text">{{ guest_name }}님이 고른 메뉴:
-                    <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span>
-                    <!-- 기존에 선택된 메뉴에 대한 id, options 정보 추가 -->
-                    <span id="selectedMenuIds" style="display: none;">{{ selected_menu_ids|json_script:"selectedMenuIds" }}</span>
-                    <span id="selectedMenuOptions" style="display: none;">{{ selected_menu_options|json_script:"selectedMenuOptions" }}</span>
-                </p>
-                <!-- 현재 선택된 메뉴 이름을 가져와서 상단에 보여주게 하도록 만들겠다﹗ -->
-                <div class="menuSearchContainer">
-                    <input type="text" id="menuSearch" placeholder="메뉴 검색...">
-                </div>
-    
-                <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
-                <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
-        </div>
-    
-        <div class="scrollable-content">
-            <div id="menuListContainer" class="menu-grid">
-                {% for menu in menu_items %}
-                <div class="menu-item itembox {% if menu.id in selected_menu_ids %} selected{% endif %}"
-                     data-menu-id="{{ menu.id }}"
-                     data-menu-category="{{ menu.category }}"
-                     data-menu-note="{{ menu.note }}">
-                     <!-- data-temperature="{{ menu.temperature }}"
-                     data-size="{{ menu.size }}"
-                     data-ice="{{ menu.ice }}" -->
-                    {% if menu.image_url %}
-                        <img src="{{ menu.image_url }}" alt="{{ menu.name }}" class="menu-image">
-                    {% endif %}
-                    <p class="menu-name">{{ menu.name }}</p>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        <form id="menuForm">
-            {% csrf_token %}
-            <button type="submit" id="confirmButton" disabled class="bottomBtn">주문 확정하기</button>
-        </form>
-        {% endif %}
-    </div>
-</div>
-
- <!-- Modal -->
- <div class="modal" id="menuDetailModal" style="display: none">
-    <wrap class="modal-wrap">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="image-container">
-                <img id="modalMenuImage" src="" alt="" class="menu-image">
-            </div>
-            <div class="menu-label-container">
-                <p id="menuCategory">카테고리</p>
-                <h2 id="menuDetailModalLabel"></h2>
-                <p id="menuNote">기타 설명...</p>
-            </div>
-            <div class="btn-group-temp">
-                <button type="button" class="btn-temp" id="hotButton">🔥 HOT</button>
-                <button type="button" class="btn-temp active" id="iceButton">🧊 ICE</button>
-            </div>
-            
-            <hr class="modal-hr">
-            
-            
-            <div class="menu-customization">
-                <span id="modal-customization-title">커스터마이징 (선택)</span>
-                <div class="customization-form custom-size">
-                    <span class="customization_label">사이즈</span>
-                    <div class="btn-group-size">
-                        <button type="button" class="btn" id="regularButton">Regular</button>
-                        <button type="button" class="btn" id="extraButton">Extra</button>
-                    </div>
-                </div>
-                <div class="customization-form custom-ice">
-                    <span class="customization_label">얼음 양</span>
-                    <div class="btn-group-ice">
-                        <button type="button" class="btn" id="bigIceButton">많이</button>
-                        <button type="button" class="btn" id="regularIceButton">보통</button>
-                        <button type="button" class="btn" id="lessIceButton">적게</button>
-                    </div>
-                </div>
-                <div class="customization-form form-group-etc">
-                    <textarea id="additionalInstructions" rows="2" placeholder="추가 주문 사항이 있다면 작성해주세요"></textarea>
-                </div>
-            </div>
-            <button type="button" id="saveMenuItem" class="bottomBtn">내 메뉴 저장하기</button>
-        </div>
-    </wrap>
-</div>
-{% endblock %}
-
-{% block css %}
-<<<<<<< HEAD
-<style>
 .login-container {
     text-align: center;
     padding: 20px;
-    margin-top: 10vh;
+    margin-top: 15%;
     margin-bottom: 75px;
-    background-color: white; 
+    background-color: white;
 }
 
 .login-cafe-logo {
     display: block;
-    width: 33vw;
+    width: 50%;
 }
 
 .noGuestName-text {
@@ -194,22 +71,17 @@
     margin-bottom: 3vh;
 }
 
-.context-container {
-    margin-top: 2vh;
-}
-
 .room-container {
-    width: 92vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 600px;
-    margin-top: -4vh;
-    /* padding: 20px; */
     background-color: white;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
     overflow-y: hidden;
-    /* max-height: calc(100vh - 190px); */
 }
 
 .centered-text {
@@ -221,8 +93,8 @@
 }
 
 #menuSearch {
-    width: 63vw;
-    height: 5vh;
+    /* width: 63vw;
+    height: 5vh; */
     padding: 10px 15px 10px 15px;
     border: 2px solid #ddd;
     border-radius: 20px;
@@ -248,6 +120,8 @@
 }
 
 .scrollable-content {
+    width: 90vw;
+    max-width: 340px;
     max-height: 450px;
     overflow-y: auto;
 }
@@ -524,6 +398,7 @@
 }
 .btn-group-ice .btn {
     padding: 4px 8%;
+    min-width: 50px;
 }
 
 
@@ -620,12 +495,3 @@
         background-color: rgba(0, 0, 0, 0.4);
     }
 }
-</style>
-=======
-<link rel="stylesheet" href="{% static 'css/room_menu.css' %}">
->>>>>>> 0d53e55449f22ba853f4eddbb19cf88d2630176c
-{% endblock %}
-
-{% block scripts %}
-<script src="{% static 'js/menu.js' %}"></script>
-{% endblock %}
