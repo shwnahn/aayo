@@ -4,6 +4,7 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
+    margin-top: 4%;
 }
 
 .detail-top-container {
@@ -24,7 +25,7 @@
 .guide-text {
     display: block;
     margin: 1%;
-    font-weight: ;
+    font-weight: normal;
 }
 
 .room-name-and-logo {
@@ -151,4 +152,16 @@ span {
 
 .wave-bottom {
     display: none;
+}
+
+.heart-option a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.emoji {
+    font-size: 35px;
 }

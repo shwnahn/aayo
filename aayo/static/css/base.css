@@ -165,7 +165,7 @@ header a {
     height: 24px;
     color: #000000;
 }
-.share-modal {
+.share-modal, .heart-modal{
     z-index: 1000;
     background: white;
     border-radius: 15px;
@@ -178,36 +178,36 @@ header a {
     /* transform: translate(-50%, -50%); */
     z-index: 1000;
 }
-.share-modal h2 {
+.share-modal h2, .heart-modal h2{
     margin: 0;
     font-size: 18px;
     text-align: center;
     margin-bottom: 20px;
 }
-.share-modal .share-close {
+.share-modal .share-close, .heart-modal .heart-close{
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 18px;
     cursor: pointer;
 }
-.share-modal .share-options {
+.share-modal .share-options, .heart-modal .heart-options{
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
 }
-.share-modal .share-option {
+.share-modal .share-option, .heart-modal .heart-option{
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #555;
 }
-.share-modal .share-option img {
+.share-modal .share-option img, .heart-modal .heart-option img{
     width: 30px;
     height: 30px;
     margin-bottom: 5px;
 }
-.share-modal .share-link {
+.share-modal .share-link, .heart-modal .heart-link{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,7 +222,7 @@ header a {
     width: 100%;
 }
 .share-modal .share-link button {
-    background: none;
+    background: none; 
     border: none;
     cursor: pointer;
 }
