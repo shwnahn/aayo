@@ -31,7 +31,7 @@
                 {% endwith %} -->
             </div>
                 <p class="centered-text">{{ guest_name }}님이 고른 메뉴:
-                    <span id="selectedMenuNames">메뉴를 선택해주세요.</span>
+                    <span id="selectedMenuNames">아직 고르신 메뉴가 없어요.</span>
                     <!-- 기존에 선택된 메뉴에 대한 id, options 정보 추가 -->
                     <span id="selectedMenuIds" style="display: none;">{{ selected_menu_ids|json_script:"selectedMenuIds" }}</span>
                     <span id="selectedMenuOptions" style="display: none;">{{ selected_menu_options|json_script:"selectedMenuOptions" }}</span>
@@ -71,8 +71,8 @@
     </div>
 </div>
 
-<!-- Modal -->
-<div class="modal" id="menuDetailModal" style="display: none">
+ <!-- Modal -->
+ <div class="modal" id="menuDetailModal" style="display: none">
     <wrap class="modal-wrap">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -124,14 +124,14 @@
 .login-container {
     text-align: center;
     padding: 20px;
-    margin-top: 15%;
+    margin-top: 10vh;
     margin-bottom: 75px;
-    background-color: white;
+    background-color: white; 
 }
 
 .login-cafe-logo {
     display: block;
-    width: 50%;
+    width: 33vw;
 }
 
 .noGuestName-text {
@@ -193,10 +193,14 @@
     margin-bottom: 3vh;
 }
 
+.context-container {
+    margin-top: 2vh;
+}
+
 .room-container {
-    /* width: 92vw; */
+    width: 92vw;
     max-width: 600px;
-    margin-top: 15%;
+    margin-top: -4vh;
     /* padding: 20px; */
     background-color: white;
     border-radius: 10px;
@@ -216,8 +220,8 @@
 }
 
 #menuSearch {
-    /* width: 63vw;
-    height: 5vh; */
+    width: 63vw;
+    height: 5vh;
     padding: 10px 15px 10px 15px;
     border: 2px solid #ddd;
     border-radius: 20px;
@@ -243,8 +247,6 @@
 }
 
 .scrollable-content {
-    width: 90vw;
-    max-width: 340px;
     max-height: 450px;
     overflow-y: auto;
 }
@@ -521,7 +523,6 @@
 }
 .btn-group-ice .btn {
     padding: 4px 8%;
-    min-width: 50px;
 }
 
 

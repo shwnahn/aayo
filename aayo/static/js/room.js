@@ -7,16 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const nameInput = document.getElementById('name');
     const submitButton = document.querySelector('.submit-button')
     console.log(submitButton)
+
     function checkFormCompletion() {
         console.log("checkForm")
         if (nameInput.value.trim() !== '' && cafeInput.value !== '') {
-            submitButton.style.backgroundColor = '#FFD457'; // 노란색으로 변경
-            submitButton.style.cursor = 'pointer';
-            submitButton.disabled = false;
-
+            submitButton.style.display = 'block';
         } else {
-            submitButton.disabled = true;
-            submitButton.style.cursor = 'not-allowed';
+            submitButton.style.display = 'none';
         }
     }
 
