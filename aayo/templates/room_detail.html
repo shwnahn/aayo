@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-<<<<<<< HEAD
 <div class="guide-text-wrap">
     <p class="guide-text">방 생성 완료!<br>같이 메뉴를 주문할 분들에게<br>링크를 공유해주세요</p>
 </div>
@@ -14,23 +13,6 @@
     </div>
     <div class="message-container">
         <p class="room_name">{{ room.name }}</p>
-=======
-<div class="room-detail-container">
-    <div class="detail-top-container">
-        <div class="guide-text-wrap">
-            <p class="guide-text">카페 메뉴를 간단하게 주문할 수 있어요! (임시 멘트)</p>
-        </div>
-        <div class="room-name-and-logo">
-                {% with logo_file=cafe.name_eng|add:".png"|lower %}
-            <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
-                {% endwith %}
-            <p class="room_name">{{ room.name }}</p>
-        </div>
-    </div>
-    <div class="detail-bottom-container">
-        <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
-            <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
->>>>>>> 0d53e55449f22ba853f4eddbb19cf88d2630176c
         <div class="btn-container">
             <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
             <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
@@ -46,7 +28,6 @@
 {% endblock %}
 
 {% block css %}
-<<<<<<< HEAD
 <style>
 .btn-wrap {
     display: flex;
@@ -159,9 +140,6 @@ span {
     display: none;
 }
 </style>
-=======
-<link rel="stylesheet" href="{% static 'css/room_detail.css' %}">
->>>>>>> 0d53e55449f22ba853f4eddbb19cf88d2630176c
 {% endblock %}
 
 {% block scripts %}
