@@ -2,6 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager # Chrome driver 자동 업데이트
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 import json
 import os
 import time
@@ -34,6 +37,23 @@ def scroll_down(driver):
             # 새로운 페이지 높이와 이전 페이지 높이를 비교하여 끝에 도달했는지 확인
             if new_height == last_height:
                 break  # 더 이상 새로운 콘텐츠가 로드되지 않으면 반복 종료
+
+def click_more_button(driver, by, selector):
+    while True:
+        try:
+            more_button = WebDriverWait(driver, 3).until(
+                EC.presence_of_element_located((by, selector))
+            )
+            # "더보기" 버튼이 disabled 상태인지 확인
+            if more_button.get_attribute('disabled'):
+                print("'더보기' 버튼이 disabled 상태입니다.")
+                break
+            driver.execute_script("arguments[0].click();", more_button)
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(0.5)
+        except TimeoutException:
+            print("더 이상 '더보기' 버튼이 없습니다.")
+            break
 
 def save_data(cafe_name, data):
     """
