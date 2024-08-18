@@ -8,6 +8,10 @@
     --bottom-btn-height: 7vh;
 }
 
+* {
+    transition: all 0.3s ease;
+}
+
 html {
     width: 100vw;
     height: 100vh;
