@@ -13,14 +13,15 @@ def crawl_bana():
         driver.implicitly_wait(3)
 
         data = []
+        note = ''
 
-        sorts = driver.find_elements(By.CSS_SELECTOR, "nav.menuSidebar__Sidebar-sc-17ijicx-0 geOesu > ul > li")
-        menus = driver.find_elements(By.CSS_SELECTOR, "div.MenuStyles__MenuWrap-sc-1xk9nwn-0.hhkaKC > div > div > div.menu-group")
-        
-        for sort, menu in zip(sorts, menus):
-            category = sort.find_element(By.TAG_NAME, 'a').text
-            menu_items = menu.find_elements(By.CLASS_NAME, "menu_box")
-        
+        menu_groups = driver.find_elements(By.CSS_SELECTOR, 'div.menu-group')
+        for menu_group in menu_groups:
+            category = menu_group.get_attribute("data-category")
+            if category == "MD":
+                break
+
+            menu_items = menu_group.find_elements(By.CLASS_NAME, "menu_box")
             for item in menu_items:
                 menu_name = item.find_element(By.CSS_SELECTOR, 'div > em > div > i').text
                 image_url = item.find_element(By.TAG_NAME, 'img').get_attribute('data-src')
@@ -29,12 +30,13 @@ def crawl_bana():
                     data.append({
                         "menu_name": menu_name,
                         "image_url": image_url,
-                        "category": category
+                        "category": category,
+                        "note": note,
                     })
-                    print(f"[{category}] {menu_name}")
-                    print(menu_name, image_url) 
+                    print(f"[{category}] {menu_name} - {note}")
+                    print(image_url)
 
-            save_data(cafe_name, data)
+        save_data(cafe_name, data)
 
     finally:
         driver.quit()
