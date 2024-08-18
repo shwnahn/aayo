@@ -106,3 +106,35 @@ function fallbackCopyTextToClipboard(text) {
 
     document.body.removeChild(textArea);
 }
+
+// 카카오톡 공유 버튼
+    // SDK를 초기화
+    Kakao.init('{{ KAKAO_APP_KEY }}');
+
+    // 방 링크 가져오기
+    const roomLink = document.getElementById('roomLink').value;
+
+    // 카카오톡 공유 버튼 이벤트 리스너
+    document.getElementById('kakaoShareBtn').addEventListener('click', function() {
+        Kakao.Link.sendDefault({
+            objectType: 'feed',
+            content: {
+                title: '아아요! 에 초대합니다',
+                description: '함께 메뉴를 골라보아요!',
+                imageUrl: 'https://aayo.kr/static/images/aayologo.png', // 실제 로고 이미지 URL로 변경해주세요
+                link: {
+                    mobileWebUrl: roomLink,
+                    webUrl: roomLink,
+                },
+            },
+            buttons: [
+                {
+                    title: '메뉴 고르러 가기',
+                    link: {
+                        mobileWebUrl: roomLink,
+                        webUrl: roomLink,
+                    },
+                },
+            ],
+        });
+    });
