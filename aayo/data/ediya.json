@@ -40,30 +40,6 @@
         "image_url": "https://ediya.com/files/menu/IMG_1716354959737.png"
     },
     {
-        "menu_name": "(R) 생과일 수박주스",
-        "image_url": "https://ediya.com/files/menu/IMG_1716355209699.png"
-    },
-    {
-        "menu_name": "(EX) 생과일 수박주스",
-        "image_url": "https://ediya.com/files/menu/IMG_1716355332366.png"
-    },
-    {
-        "menu_name": "(R) 생과일 살얼음 수박식혜",
-        "image_url": "https://ediya.com/files/menu/IMG_1716355546386.png"
-    },
-    {
-        "menu_name": "(EX) 생과일 살얼음 수박식혜",
-        "image_url": "https://ediya.com/files/menu/IMG_1716355624158.png"
-    },
-    {
-        "menu_name": "(R) 생과일 토마토 주스",
-        "image_url": "https://ediya.com/files/menu/IMG_1716355902460.png"
-    },
-    {
-        "menu_name": "(EX) 생과일 토마토 주스",
-        "image_url": "https://ediya.com/files/menu/IMG_1716355973423.png"
-    },
-    {
         "menu_name": "베리하츄핑 딸기 드링킹 요거트",
         "image_url": "https://ediya.com/files/menu/IMG_1717116214158.png"
     },
@@ -72,7 +48,7 @@
         "image_url": "https://ediya.com/files/menu/IMG_1717116358189.png"
     },
     {
-        "menu_name": "(R)아샷추",
+        "menu_name": "(R) 아샷추",
         "image_url": "https://ediya.com/files/menu/IMG_1718954567383.png"
     },
     {
@@ -117,7 +93,7 @@
     },
     {
         "menu_name": "(EX) 제로슈가 아이스티",
-        "image_url": "https://ediya.com/files/menu/IMG_1718956729437.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1723527075334.png"
     },
     {
         "menu_name": "(L)자몽 포멜로 에이드",
@@ -136,11 +112,11 @@
         "image_url": "https://ediya.com/files/menu/IMG_1721096603111.png"
     },
     {
-        "menu_name": "(L)감귤 레몬 에이드",
+        "menu_name": "(L) 감귤 레몬 에이드",
         "image_url": "https://ediya.com/files/menu/IMG_1721096724373.png"
     },
     {
-        "menu_name": "(EX)감귤 레몬 에이드",
+        "menu_name": "(EX) 감귤 레몬 에이드",
         "image_url": "https://ediya.com/files/menu/IMG_1721096816714.png"
     },
     {
@@ -178,6 +154,26 @@
     {
         "menu_name": "비타민 주스 믹스베리",
         "image_url": "https://ediya.com/files/menu/IMG_1722475826757.png"
+    },
+    {
+        "menu_name": "(L) 미니펄 연유 커피 쉐이크",
+        "image_url": "https://ediya.com/files/menu/IMG_1722989646733.png"
+    },
+    {
+        "menu_name": "(L) 미니펄 딸기 연유 플랫치노",
+        "image_url": "https://ediya.com/files/menu/IMG_1722989853702.png"
+    },
+    {
+        "menu_name": "(L) 미니펄 망고 연유 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1722990006434.png"
+    },
+    {
+        "menu_name": "(L) 미니펄 밀크티",
+        "image_url": "https://ediya.com/files/menu/IMG_1722990159870.png"
+    },
+    {
+        "menu_name": "(L) 디카페인 미니펄 연유 커피 쉐이크",
+        "image_url": "https://ediya.com/files/menu/IMG_1722991123170.png"
     },
     {
         "menu_name": "(R) HOT 토피넛 라떼",
@@ -360,11 +356,11 @@
         "image_url": "https://ediya.com/files/menu/IMG_1697070876514.png"
     },
     {
-        "menu_name": "ICED 바닐라 오트 콜드브루",
+        "menu_name": "(R) 바닐라 오트 콜드브루",
         "image_url": "https://ediya.com/files/menu/IMG_1678753103297.png"
     },
     {
-        "menu_name": "ICED 디카페인 바닐라 오트 콜드브루",
+        "menu_name": "(R) 디카페인 바닐라 오트 콜드브루",
         "image_url": "https://ediya.com/files/menu/IMG_1678753482451.png"
     },
     {
@@ -512,7 +508,7 @@
         "image_url": "https://ediya.com/files/menu/IMG_1709599223774.png"
     },
     {
-        "menu_name": "ICED 콜드브루 아메리카노",
+        "menu_name": "(R) 콜드브루 아메리카노",
         "image_url": "https://ediya.com/files/menu/IMG_1647320805422.png"
     },
     {
@@ -520,7 +516,7 @@
         "image_url": "https://ediya.com/files/menu/IMG_1709599391117.png"
     },
     {
-        "menu_name": "(EX) ICED 콜드브루 아메리카노",
+        "menu_name": "(EX) 콜드브루 아메리카노",
         "image_url": "https://ediya.com/files/menu/IMG_1647320820317.png"
     },
     {
@@ -528,7 +524,7 @@
         "image_url": "https://ediya.com/files/menu/IMG_1709599673354.png"
     },
     {
-        "menu_name": "ICED 디카페인 콜드브루 아메리카노",
+        "menu_name": "(R) 디카페인 콜드브루 아메리카노",
         "image_url": "https://ediya.com/files/menu/IMG_1647320328440.png"
     },
     {
@@ -536,15 +532,15 @@
         "image_url": "https://ediya.com/files/menu/IMG_1648685292664.png"
     },
     {
-        "menu_name": "ICED 디카페인 콜드브루 라떼",
+        "menu_name": "(R) 디카페인 콜드브루 라떼",
         "image_url": "https://ediya.com/files/menu/IMG_1647320345410.png"
     },
     {
-        "menu_name": "(EX) ICED 디카페인 콜드브루 라떼",
+        "menu_name": "(EX) 디카페인 콜드브루 라떼",
         "image_url": "https://ediya.com/files/menu/IMG_1647320357663.png"
     },
     {
-        "menu_name": "ICED 콜드브루 라떼",
+        "menu_name": "(R) 콜드브루 라떼",
         "image_url": "https://ediya.com/files/menu/IMG_1647320848557.png"
     },
     {
@@ -560,43 +556,11 @@
         "image_url": "https://ediya.com/files/menu/IMG_1647320389669.png"
     },
     {
-        "menu_name": "ICED 콜드브루 화이트 비엔나",
+        "menu_name": "(R) 콜드브루 화이트 비엔나",
         "image_url": "https://ediya.com/files/menu/IMG_1647320860534.png"
     },
     {
-        "menu_name": "ICED 디카페인 콜드브루 화이트 비엔나",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320378419.png"
-    },
-    {
-        "menu_name": "ICED 디카페인 흑당 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320406434.png"
-    },
-    {
-        "menu_name": "(EX) ICED 디카페인 흑당 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320424871.png"
-    },
-    {
-        "menu_name": "ICED 콜드브루 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320848557.png"
-    },
-    {
-        "menu_name": "(EX) ICED 콜드브루 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320836186.png"
-    },
-    {
-        "menu_name": "ICED 콜드브루 니트로",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320870899.png"
-    },
-    {
-        "menu_name": "ICED 디카페인 콜드브루 니트로",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320389669.png"
-    },
-    {
-        "menu_name": "ICED 콜드브루 화이트 비엔나",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320860534.png"
-    },
-    {
-        "menu_name": "ICED 디카페인 콜드브루 화이트 비엔나",
+        "menu_name": "(R) 디카페인 콜드브루 화이트 비엔나",
         "image_url": "https://ediya.com/files/menu/IMG_1647320378419.png"
     },
     {

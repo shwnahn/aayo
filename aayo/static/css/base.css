@@ -1,7 +1,11 @@
 :root {
     --header-height: 50px;
-    --wave-top-margin: 75px;
+    --wave-top-height: 5px;
+    --wave-top-margin: calc(40px + var(--wave-top-height));
     --content-padding: 20px;
+    --min-width: 220px;
+    --max-width: 500px;
+    --bottom-btn-height: 7vh;
 }
 
 html {
@@ -24,10 +28,10 @@ body {
     min-height: 100%;
     height: 100vh;
     width: 100%;
-    min-width: 220px;
-    max-width: 500px;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
     background-color: #ffffff;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 main {
@@ -35,16 +39,19 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: inherit;
+    min-width: inherit;
     height: calc(100% - var(--header-height));
     box-sizing: border-box;
 }
 
 .content {
     width: 100%;
-    max-width: 600px;
-    height: calc(100% - var(--wave-top-margin) - calc(2 * var(--content-padding))); /* margin-top과 padding을 뺀 height */
+    max-width: inherit;
+    min-width: inherit;
+    height: calc(100% - var(--wave-top-margin)); /* margin-top(상단바 높이)을 뺀 height */
     margin-top: var(--wave-top-margin);
-    padding: var(--content-padding);
+    padding: 0 var(--content-padding);
     flex-grow: 1;
     box-sizing: border-box;
 }
@@ -86,8 +93,7 @@ header a {
 }
 
 .wave-top {
-
-    margin-top: 25px;
+    margin-top: var(--wave-top-height);
     display: block;
     position: fixed;
     transform: rotate(180deg);
@@ -121,14 +127,15 @@ header a {
     transform: translateX(-50%);
     cursor: pointer;
     z-index: 1000;
-    width: 375px;
-    height: 7%;
+    width: 100%;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    height: var(--bottom-btn-height);
     background-color: #FFD457;
     color: #1e3932;
     border: none;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 /*  ===== 아래부터는 공유하기 버튼, 모달 관련 css  ===== */
