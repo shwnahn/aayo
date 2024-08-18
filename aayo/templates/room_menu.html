@@ -63,13 +63,15 @@
                 {% endfor %}
             </div>
         </div>
-        <form id="menuForm">
-            {% csrf_token %}
-            <button type="submit" id="confirmButton" disabled class="bottomBtn">주문 확정하기</button>
-        </form>
         {% endif %}
     </div>
 </div>
+{% if guest_name %}
+<form id="menuForm">
+    {% csrf_token %}
+    <button type="submit" id="confirmButton" disabled class="bottomBtn">주문 확정하기</button>
+</form>
+{% endif %}
 
 <!-- Modal -->
 <div class="modal" id="menuDetailModal" style="display: none">
