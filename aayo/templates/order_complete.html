@@ -7,8 +7,8 @@
         <img src="{% static 'images/check_icon.png' %}" alt="체크 아이콘" class="check-image">
     </div>
     
-    <h2 class="complete-title">선택 완료❗</h2>
-    <p class="complete-subtitle">{{ guest_name }}님, 주문이 확정되었습니다.</p>
+    <h2 class="complete-title">메뉴 선택 완료!</h2>
+    <p class="complete-subtitle">{{ guest_name }}님의 주문이 성공적으로 접수되었습니다.</p>
     
     <div class="button-container">
         <a href="{% url 'room_orders' room.unique_id %}" id="view-all-orders" class="btn btn-white">전체 주문 보기</a>
