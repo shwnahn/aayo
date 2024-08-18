@@ -1,129 +1,147 @@
-    .aayologo {
-        margin-left: -10%;
-        margin-top: 2%;
-        width: 12%;
-        z-index: 000;
-    }
-    
-    html{
-        width: 100vw;
-        height: 100vh;
-        background-color: lightgray;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+:root {
+    --header-height: 50px;
+    --wave-top-height: 5px;
+    --wave-top-margin: calc(40px + var(--wave-top-height));
+    --content-padding: 20px;
+    --min-width: 220px;
+    --max-width: 500px;
+    --bottom-btn-height: 7vh;
+    --aayo-color: #FFD457;
+}
 
-    body {
-      
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Roboto', Arial, sans-serif;
-        margin: 0 auto !important;
-        padding: 0;
-        min-height: 100%;
-        height: 100vh;
-        width: 100%;
-        min-width: 220px;
-        max-width: 500px;
-        background-color: #ffffff;
-        overflow-x: hidden;
-    }
+* {
+    transition: all 0.3s ease;
+}
 
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-        box-sizing: border-box;
-    }
+html {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .content {
-        margin-top: 75px;
-        width: 100%;
-        max-width: 600px;
-        padding: 20px;
-        flex-grow: 1;
-        box-sizing: border-box;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0 auto !important;
+    padding: 0;
+    min-height: 100%;
+    height: 100vh;
+    width: 100%;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+    background-color: #ffffff;
+    overflow: hidden;
+}
 
-    }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: inherit;
+    min-width: inherit;
+    height: calc(100% - var(--header-height));
+    box-sizing: border-box;
+}
 
-    header {
-        height: 50px;
-        width: inherit;
-        padding: 10px 0;
-        background-color: #FFD457;
-        text-align: left;
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-        display: flex;
-        align-items: center;
-        z-index: 1;
-    }
+.content {
+    width: 100%;
+    max-width: inherit;
+    min-width: inherit;
+    height: calc(100% - var(--wave-top-margin)); /* margin-top(상단바 높이)을 뺀 height */
+    margin-top: var(--wave-top-margin);
+    padding: 0 var(--content-padding);
+    flex-grow: 1;
+    box-sizing: border-box;
+}
 
-    .wave-top, .wave-bottom {
-        width: 100%;
-        min-width: 320px;
-        max-width: 500px;
-    }
-    .wave-bottom {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        height: 150px;
-        background: #FFD457;
-        clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
-        z-index: 0;
-    }
+header {
+    height: var(--header-height);
+    width: inherit;
+    background-color: #FFD457;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
 
-    .wave-top {
+header a {
+    width: 15%;
+    margin-left: 2%;
+}
+.aayologo {
+    width: 50%;
+}
 
-        margin-top: 25px;
-        display: block;
-        position: fixed;
-        transform: rotate(180deg);
-        top: 0;
-        height: 120px;
-        background: #FFD457;
-        clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
-    }
+.wave-top, .wave-bottom {
+    width: 100%;
+    min-width: 320px;
+    max-width: 500px;
+}
+.wave-bottom {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    height: 150px;
+    background: #FFD457;
+    clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
+    z-index: 0;
+}
 
-    header a {
-        text-decoration: none;
-        color: inherit;
-    }
+.wave-top {
+    margin-top: var(--wave-top-height);
+    display: block;
+    position: fixed;
+    transform: rotate(180deg);
+    top: 0;
+    height: 120px;
+    background: #FFD457;
+    clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
+}
 
-    .header-title {
-        color: black;
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-        margin-left: 45px;
-    }
+header a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    .hidden {
-        display: none !important;
-    }
+.header-title {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-left: 45px;
+}
 
-    /* 최하단 버튼 css */
-    .bottomBtn {
-        position: fixed;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        cursor: pointer;
-        z-index: 1000;
-        width: 375px;
-        height: 7%;
-        background-color: #FFD457;
-        color: #1e3932;
-        border: none;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+.hidden {
+    display: none !important;
+}
+
+/* 최하단 버튼 css */
+.bottomBtn {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1000;
+    width: 100%;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    height: var(--bottom-btn-height);
+    background-color: #FFD457;
+    color: #1e3932;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
 
     /*  ===== 아래부터는 공유하기 버튼, 모달 관련 css  ===== */
     .icon-container {

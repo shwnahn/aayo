@@ -6,7 +6,7 @@
 {% block content %}
 <div class="order-container">
     <!-- <button id="refresh-orders" class="btn btn-primary mb-3">주문 목록 갱신</button> -->
-    <h2 id="todaysmenu">TODAY's MENU</h2>
+    <h2 id="todaysmenu">주문 모아보기</h2>
     <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
     <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
     <!-- 간단한 주문 요약 부분 -->
@@ -108,7 +108,7 @@ document.getElementById('refresh-orders').addEventListener('click', function() {
     });
 </script>
 {% endblock %}
-<link rel="stylesheet" href="{% static 'css/room_orders.css' %}">
-{% block css %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/room_orders.css' %}">
 {% endblock %}
