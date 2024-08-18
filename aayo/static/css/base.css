@@ -49,7 +49,7 @@ main {
     width: 100%;
     max-width: inherit;
     min-width: inherit;
-    height: calc(100% - var(--wave-top-margin) - calc(2 * var(--content-padding))); /* margin-top과 padding을 뺀 height */
+    height: calc(100% - var(--wave-top-margin)); /* margin-top과 padding을 뺀 height */
     margin-top: var(--wave-top-margin);
     padding: 0 var(--content-padding);
     flex-grow: 1;
