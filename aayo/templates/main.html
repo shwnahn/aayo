@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="main-container">
+    <h1 class="page-title">방을 생성하세요!</h1>
+    <form method="post">
+      {% csrf_token %}
+        <div class="form-group">
+            <label for="name">방 이름을 입력하세요! <span>🏷️</span></label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="password">비밀번호를 입력하세요(선택사항) <span>🔒</span></label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="form-group">
+            <label for="cafe">카페를 선택하세요 <span>☕</span></label>
+            <input type="hidden" id="cafe" name="cafe" required>
+            <div class="cafe-selection">
+                {% for cafe in cafes %}
+                    <label for="{{ cafe.name }}" class="cafe-logo" style="background-image: url('{% static 'images/' %}{{ cafe.name_eng }}.png')">
+                        <input type="radio" id="{{ cafe.name }}" name="cafe" value="{{ cafe.name }}" style="display: none;"{% if forloop.first %}checked{% endif %}>
+                    </label>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="submit-button-container">
+            <button type="submit" class="submit-button">방 생성하기</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block scripts %}
+<script>
+    function selectCafe(cafeName) {
+        document.getElementById('cafe').value = cafeName;
+        var cafeLogos = document.querySelectorAll('.cafe-logo');
+        cafeLogos.forEach(function(logo) {
+            logo.classList.remove('selected');
+        });
+        var selectedLogo = document.querySelector('.cafe-logo[data-cafe="' + cafeName + '"]');
+        selectedLogo.classList.add('selected');
+    }
+</script>
+{% endblock %}
