@@ -107,34 +107,66 @@ function fallbackCopyTextToClipboard(text) {
     document.body.removeChild(textArea);
 }
 
-// 카카오톡 공유 버튼
-    // SDK를 초기화
-    Kakao.init('{{ KAKAO_APP_KEY }}');
+document.addEventListener('DOMContentLoaded', function () {
+  // 카카오톡 공유 버튼
+  // SDK를 초기화 (HTTP 환경에서는 실제로 초기화되지 않을 수 있음)
+  Kakao.init('{{ KAKAO_APP_KEY }}');
 
-    // 방 링크 가져오기
-    const roomLink = document.getElementById('roomLink').value;
+  console.log('Kakao SDK 초기화 상태:', Kakao.isInitialized());
 
-    // 카카오톡 공유 버튼 이벤트 리스너
-    document.getElementById('kakaoShareBtn').addEventListener('click', function() {
-        Kakao.Link.sendDefault({
-            objectType: 'feed',
-            content: {
-                title: '아아요! 에 초대합니다',
-                description: '함께 메뉴를 골라보아요!',
-                imageUrl: 'https://aayo.kr/static/images/aayologo.png', // 실제 로고 이미지 URL로 변경해주세요
-                link: {
-                    mobileWebUrl: roomLink,
-                    webUrl: roomLink,
-                },
+  // 방 링크 가져오기
+  const roomLink = document.getElementById('roomLink').href;
+
+  // 카카오톡 공유 버튼 이벤트 리스너
+  document
+    .getElementById('kakaoShareBtn')
+    .addEventListener('click', function () {
+      console.log('카카오 공유 버튼이 클릭되었습니다.');
+
+      // 공유할 내용 객체 생성
+      const shareContent = {
+        objectType: 'feed',
+        content: {
+          title: '아아요! 에 초대합니다',
+          description: '함께 메뉴를 골라보아요!',
+          imageUrl: 'https://aayo.kr/static/images/aayologo.png',
+          link: {
+            mobileWebUrl: roomLink,
+            webUrl: roomLink,
+          },
+        },
+        buttons: [
+          {
+            title: '메뉴 고르러 가기',
+            link: {
+              mobileWebUrl: roomLink,
+              webUrl: roomLink,
             },
-            buttons: [
-                {
-                    title: '메뉴 고르러 가기',
-                    link: {
-                        mobileWebUrl: roomLink,
-                        webUrl: roomLink,
-                    },
-                },
-            ],
-        });
+          },
+        ],
+      };
+
+      // 콘솔에 공유 내용 출력
+      console.log('공유할 내용:', JSON.stringify(shareContent, null, 2));
+
+      // alert으로 공유 내용 표시
+      alert(
+        '카카오톡 공유 내용:\n\n' +
+          '제목: ' +
+          shareContent.content.title +
+          '\n' +
+          '설명: ' +
+          shareContent.content.description +
+          '\n' +
+          '링크: ' +
+          shareContent.content.link.webUrl +
+          '\n\n' +
+          '실제 환경에서는 카카오톡 공유 다이얼로그가 열립니다.'
+      );
+
+      // HTTP 환경에서는 실제 Kakao.Link.sendDefault 함수가 작동하지 않으므로 주석 처리
+      /*
+        Kakao.Link.sendDefault(shareContent);
+        */
     });
+});
