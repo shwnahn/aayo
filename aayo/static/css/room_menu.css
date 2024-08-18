@@ -4,16 +4,27 @@
 }
 
 .login-container {
-    text-align: center;
-    padding: 20px;
-    margin-top: 15%;
-    margin-bottom: 75px;
-    background-color: white;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cafe-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    width: 100%;
 }
 
 .login-cafe-logo {
     display: block;
-    width: 50%;
+    height: 100%;
+    width: auto;
 }
 
 .noGuestName-text {
@@ -27,12 +38,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#menuForm {
-    width: 100%;
-    max-width: inherit;
-    min-width: inherit;
 }
 
 .guestNameForm {
@@ -53,16 +58,6 @@
     outline: none;
     border-color: #FFD54F; /* 포커스 시 테두리 색상 변경 */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 포커스 시 그림자 더 강조 */
-}
-
-.cafe-logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cafe-logo {
-    width: 23vw;
 }
 
 .page-title {
@@ -101,6 +96,9 @@
     width: 100%;
     background-color: white;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .centered-text {
@@ -108,6 +106,12 @@
     margin: 8px;
     font-size: 16px;
     color: #1e3932;
+}
+
+#menuForm {
+    width: 100%;
+    max-width: inherit;
+    min-width: inherit;
 }
 
 #menuSearch {
