@@ -21,30 +21,29 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // 링크 공유하기 버튼 눌렀을 때 모달 뜨는 기능
-    const openModalBtn = document.getElementById('open-modal-btn');
-    const shareModal = document.querySelector('.share-modal');
-    const shareCloseBtn = document.querySelector('.share-close');
+    const openHeartBtn = document.getElementById('open-modal-btn');
+    const heartModal = document.querySelector('.share-modal');
+    const heartCloseBtn = document.querySelector('.share-close');
 
-    if (openModalBtn && shareModal) {
+    if (openHeartBtn && heartModal) {
         console.log('openModal 버튼과 모달 요소 찾음');
-        openModalBtn.addEventListener('click', function (event) {
+        openHeartBtn.addEventListener('click', function (event) {
             event.preventDefault();
             event.stopPropagation();
             console.log('open modal 버튼 클릭됨');
-            alert('open modal');
-            shareModal.classList.remove('hidden');
+            heartModal.classList.remove('hidden');
         });
     } else {
         // alert('openModal 버튼 또는 모달 요소를 찾을 수 없음');
     }
     
-    if (shareCloseBtn && shareModal) {
+    if (heartCloseBtn && heartModal) {
         console.log('shareClose 버튼과 모달 요소 찾음');
-        shareCloseBtn.addEventListener('click', function (event) {
+        heartCloseBtn.addEventListener('click', function (event) {
             event.preventDefault();
             event.stopPropagation();
             console.log('close modal 버튼 클릭됨');
-            shareModal.classList.add('hidden');
+            heartModal.classList.add('hidden');
 
         });
     } else {
@@ -52,8 +51,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     console.log('main.js DOM fully loaded');
+
 });
 
+// 하트 버튼 눌렀을 때 후원 모달 뜨게
+document.addEventListener('DOMContentLoaded', function() {
+    const openHeartBtn = document.getElementById('open-heart-btn');
+    const heartModal = document.getElementById('heart-modal');
+    const heartCloseBtn = document.querySelector('.heart-close');
+
+    if (openHeartBtn && heartModal) {
+        console.log('heartModal 버튼과 모달 요소 찾음');
+        openHeartBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            console.log('heart modal 버튼 클릭됨');
+            heartModal.classList.remove('hidden');
+        });
+    } else {
+        console.error('openHeartBtn 또는 heartModal 요소를 찾을 수 없음');
+    }
+
+    if (heartCloseBtn && heartModal) {
+        console.log('heartClose 버튼과 모달 요소 찾음');
+        heartCloseBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            console.log('close modal 버튼 클릭됨');
+            heartModal.classList.add('hidden');
+        });
+    } else {
+        console.error('heartCloseBtn 또는 heartModal 요소를 찾을 수 없음');
+    }
+
+    console.log('DOM fully loaded');
+});
+    
 // 링크 복사 API 안될 때 복사하기 함수(대체기능))
 function fallbackCopyTextToClipboard(text) {
     const textArea = document.createElement("textarea");
