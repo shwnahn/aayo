@@ -4,7 +4,7 @@ import time
 
 def crawl_theventi():
     cafe_name = 'theventi'
-    url = "https://www.theventi.co.kr/new2022/menu/all.html?mode="
+    base_url = "https://www.theventi.co.kr/new2022/menu/all.html?mode="
 
     driver = setup_driver()
 
@@ -14,25 +14,22 @@ def crawl_theventi():
 
         for category in categories:
             
+            url = base_url + category
+            driver.get(url)
+            driver.implicitly_wait(3)
 
-
-
-        driver.get(url)
-        driver.implicitly_wait(3)
-
-        data = []
-        menu_items = driver.find_elements(By.CLASS_NAME, "")
-        
-        for item in menu_items:
-            menu_name = item.find_element(By.TAG_NAME, 'dd').text
-            image_url = item.find_element(By.TAG_NAME, 'img').get_attribute('src')
+            menu_items = driver.find_elements(By.CSS_SELECTOR, "div.menu_list > ul > li")
             
-            print(menu_name, image_url)
+            for item in menu_items:
+                menu_name = item.find_element(By.CLASS_NAME, 'tit').text
+                image_url = item.find_element(By.TAG_NAME, 'img').get_attribute('src')
+                
+                print(menu_name, image_url)
 
-            data.append({
-                "menu_name": menu_name,
-                "image_url": image_url,
-            })
+                data.append({
+                    "menu_name": menu_name,
+                    "image_url": image_url,
+                })
         
         save_data(cafe_name, data)
     finally:
