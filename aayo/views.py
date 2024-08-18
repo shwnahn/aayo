@@ -5,6 +5,7 @@ from django.contrib import messages
 from .models import *
 from django.urls import reverse
 from django.template.loader import render_to_string
+from collections import defaultdict
 import json
 import random
 import string
@@ -180,8 +181,10 @@ def room_orders(request, unique_id):
         order_items = OrderItem.objects.filter(order__room=room)
         
         orders_details = []
+        filtered_orders = defaultdict(lambda: {'count': 0, 'guests': set()})  # 주문 상세 정보를 저장할 리스트와 필터링된 주문을 저장할 딕셔너리 초기화
+
         for item in order_items:
-            orders_details.append({
+            order_detail = {
                 'guest_name': item.order.guest_name,
                 'menu_item': {
                     'name': item.menu_item.name,
@@ -193,11 +196,41 @@ def room_orders(request, unique_id):
                     'ice': item.ice,
                     'note': item.note
                 }
-            })
+            }
+            orders_details.append(order_detail)
+
+            # 중복 메뉴 필터링을 위한 키 생성 (중복 메뉴를 식별하기 위한 고유 키 생성)
+            filter_key = (
+                item.menu_item.name,
+                item.temperature,
+                item.size,
+                item.ice,
+                item.note
+            )
+            filtered_orders[filter_key]['count'] += 1
+            filtered_orders[filter_key]['guests'].add(item.order.guest_name)
+            filtered_orders[filter_key]['menu_item'] = item.menu_item  # 필터링된 주문 정보 업데이트. 수량 증가, 게스트 이름 추가, 메뉴 항목 정보 저장
+
+        filtered_orders_list = [
+            {
+                'menu_item': value['menu_item'],
+                'options': {
+                    'temperature': key[1],
+                    'size': key[2],
+                    'ice': key[3],
+                    'note': key[4]
+                },
+                'count': value['count'],
+                'guests': ', '.join(value['guests'])
+            }
+            for key, value in filtered_orders.items()
+        ]
         
         context = {
             'room': room,
             'orders_details': orders_details,
+            'filtered_orders': filtered_orders_list,
+            'share_link': request.build_absolute_uri(),
         }
         return render(request, 'room_orders.html', context)
 
