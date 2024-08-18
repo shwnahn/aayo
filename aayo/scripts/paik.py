@@ -6,7 +6,7 @@ def test():
     driver = setup_driver()
     driver.get("https://paikdabang.com/menu/menu_coffee/")
 
-def crawl_paik(driver, url, category, is_new_menu=False):
+def crawl_data(driver, url, category, is_new_menu=False):
     print(category)
     data = []
 
@@ -48,7 +48,7 @@ def crawl_paik(driver, url, category, is_new_menu=False):
 
     return data
 
-def main():
+def crawl_paik():
     cafe_name = 'paik'
     all_data = []
 
@@ -66,7 +66,7 @@ def main():
             url = entry["url"]
             category = entry["category"]
             is_new_menu = 'menu_new' in url
-            data = crawl_paik(driver, url, category, is_new_menu)
+            data = crawl_data(driver, url, category, is_new_menu)
             all_data.extend(data)
             time.sleep(2) # 웹사이트 부하 방지
 
@@ -79,5 +79,4 @@ def main():
         driver.quit()
 
 if __name__ == "__main__":
-    # test()
-    main()
+    crawl_paik()
