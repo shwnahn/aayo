@@ -1,44 +1,3 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block content %}
-<div id="start-container">
-    <h1>A A</br>Y<img src="{% static 'images/coffeebean.png' %}" alt="커피콩이미지" style="
-    width: 1em;
-    height: 1em;
-    vertical-align: middle;
-    margin-bottom: 10px;
-    margin-left: 6px;
-    margin-right: -10px;">
-    </h1>
-    <p style="text-align: center;">쉽고 빠른 카페 메뉴 취합, 아아요!</p>
-    <button id="start-button" style="color: black; text-decoration: none;">시작하기</button>
-    <!-- ios 환경에서 파란색 뜨는 버그 -> font-color 명시적으로 주기 -->
-</div>
-<div class="wave-bottom"></div>
-{% endblock %}
-
-{% block scripts %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('#start-button').click(function(){
-            $.ajax({
-                url: "{% url 'room' %}",
-                type: 'GET',
-                success: function(response) {
-                    window.location.href = "{% url 'room' %}";
-                }
-            });
-        });
-    });
-</script>
-{% endblock %}
-
-{% block css %}
-<<<<<<< HEAD
-<style>
-
     .container {
         text-align: center;
         flex: 1;
@@ -74,7 +33,8 @@
     }
     #start-button {
         font-family: 'Roboto';
-        border: 1px solid #676767;
+        /* border: 1px solid #676767; */
+        border: none;
         padding: 8px 20px;
         font-size: 15px;
         font-style: black;
@@ -92,7 +52,7 @@
     .wave-top {
         display: none !important;
     }
-    @media (max-width: 600px) {
+    /* @media (max-width: 600px) {
         h1 {
             font-weight: 900;
             font-family: 'Roboto';
@@ -102,9 +62,4 @@
         p, .start-button {
             font-size: 16px;
         }
-    }
-</style>
-=======
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
->>>>>>> 0d53e55449f22ba853f4eddbb19cf88d2630176c
-{% endblock %}
+    } */
