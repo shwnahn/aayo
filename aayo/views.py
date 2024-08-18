@@ -122,7 +122,7 @@ def room_menu(request, unique_id):
                 except MenuItem.DoesNotExist:
                     return JsonResponse({'error': f'MenuItem with id {menu["id"]} not found'}, status=400)
 
-            return JsonResponse({'success': True, 'redirect_url': reverse('room_orders', args=[unique_id])})
+            return JsonResponse({'success': True, 'redirect_url': reverse('order_complete', args=[unique_id])})
     
     # GET 요청 처리
     if request.method == 'GET':
@@ -207,3 +207,16 @@ def room_orders(request, unique_id):
 
 def ads(request):
     return render(request, 'ads.txt', content_type='text/plain')
+
+def order_complete(request, unique_id):
+    room = get_object_or_404(Room, unique_id=unique_id)
+    guest_name = request.session.get('guest_name')
+    
+    if not guest_name:
+        return redirect('room_menu', unique_id=unique_id)
+    
+    context = {
+        'room': room,
+        'guest_name': guest_name,
+    }
+    return render(request, 'order_complete.html', context)
