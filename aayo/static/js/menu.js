@@ -412,3 +412,18 @@ function resetModal() {
     });
     document.getElementById('additionalInstructions').value = '';
 }
+
+// 카테고리 선택 코드
+function filterMenu(category) {
+    const menuItems = document.querySelectorAll('.menu-item');
+    
+    menuItems.forEach(function(item) {
+        const itemCategory = item.getAttribute('data-menu-category');
+        
+        if (category === '전체' || itemCategory === category) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}

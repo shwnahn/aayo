@@ -40,7 +40,14 @@
                 <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
                 <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
         </div>
-    
+
+        <div class="category-container">
+            <button onclick="filterMenu('전체')">전체</button>
+            {% for category in categories %}
+            <button onclick="filterMenu('{{ category }}')">{{ category }}</button>
+            {% endfor %}
+        </div>
+
         <div class="scrollable-content">
             <div id="menuListContainer" class="menu-grid">
                 {% for menu in menu_items %}
