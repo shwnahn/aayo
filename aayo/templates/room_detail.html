@@ -2,19 +2,19 @@
 {% load static %}
 
 {% block content %}
-<div class="room-detail-container">
-    <div class="detail-top-container">
-        <div class="guide-text-wrap">
-            <p class="guide-text">카페 메뉴를 간단하게 주문할 수 있어요! (임시 멘트)</p>
-        </div>
-        <div class="room-name-and-logo">
-                {% with logo_file=cafe.name_eng|add:".png"|lower %}
-            <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
-                {% endwith %}
-            <p class="room_name">{{ room.name }}</p>
-        </div>
+<div class="header-wrap">
+    <div class="guide-text-wrap">
+        <p class="guide-text">카페 메뉴를 간단하게 주문할 수 있어요! (임시 멘트)</p>
     </div>
-    <div class="detail-bottom-container">
+    <div class="room-name-and-logo">
+            {% with logo_file=cafe.name_eng|add:".png"|lower %}
+        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+            {% endwith %}
+        <p class="room_name">{{ room.name }}</p>
+    </div>
+</div>
+<div class="room-detail-container">
+    <div class="message-container">
         <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
             <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
         <div class="btn-container">
