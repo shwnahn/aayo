@@ -14,8 +14,9 @@
             <div class="guestNameForm-container">
                 <form id="guestNameForm">
                     {% csrf_token %}
-                    <p class="noGuestName-text">이름을 입력하면 자신의 메뉴을 주문할 수 있어요!</p>
-                    <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름을 입력하세요">    
+                    <p class="login-guide login-guide-bold">{{ cafe.name }}에서 메뉴를 선택합니다</p>
+                    <p class="login-guide">다른 사람과 구분되는 주문자명을 입력하세요.</p>
+                    <input type="text" class="guestNameForm-input" name="guest_name" required placeholder="이름(또는 별명)을 입력하세요">    
                     <!-- <input type="password" class="guestNameForm" name="password" placeholder="비밀번호를 입력하세요"> -->
                     <button id="goToOrderBtn" type="submit" class="bottomBtn">메뉴 주문하러 가기</button>
                 </form>
