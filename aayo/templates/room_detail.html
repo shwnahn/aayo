@@ -2,40 +2,26 @@
 {% load static %}
 
 {% block content %}
-<div class="header-wrap">
-    <div class="guide-text-wrap">
-        <p class="guide-text">카페 메뉴를 간단하게 주문할 수 있어요! (임시 멘트)</p>
-    </div>
-    <div class="room-name-and-logo">
-            {% with logo_file=cafe.name_eng|add:".png"|lower %}
-        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
-            {% endwith %}
-        <p class="room_name">{{ room.name }}</p>
-    </div>
+<div class="guide-text-wrap">
+    <p class="guide-text">방 생성 완료!<br>같이 메뉴를 주문할 분들에게<br>링크를 공유해주세요</p>
 </div>
 <div class="room-detail-container">
+    <div class="cafe-logo-container">
+    {% with logo_file=cafe.name_eng|add:".png"|lower %}
+        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+    {% endwith %}
+    </div>
     <div class="message-container">
-        <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
-            <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
+        <p class="room_name">{{ room.name }}</p>
         <div class="btn-container">
-
-            <div class="btn-wrap-top">
-                <button id="open-modal-btn" class="btn btn-white sendlinkbtn" style="border: none;">링크 공유하기
-                    <p>같이 주문할 사람에게<br>링크를 공유하세요!</p>
-                </button>
-                <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow gotoorderbtn">메뉴 주문하기
-                    <p style="margin-bottom: 28px;">메뉴를 주문하러 가볼까요?</p>
-                </a>
-            </div>  
+            <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
+            <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
             
-            <div class="btn-wrap-bottom">
-                <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn">주문 모아보기
-                    <p>현재까지 주문 현황을<br>알려드릴게요</p>
-                </a>
-                <a href="#" class="btn btn-white heart">🖤
-                </a>
+            <a id="open-modal-btn" class="btn btn-yellow sendlinkbtn">링크 공유하기</a>
+            <div class="btn-wrap">
+                <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn">주문 모아보기</a>
+                <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-white gotoorderbtn">메뉴 주문하러 가기</a>
             </div>
-
         </div>
     </div>
 </div>
@@ -43,83 +29,36 @@
 
 {% block css %}
 <style>
-
-.header-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: #FFD457; */
-    justify-content: center;
-    width: 375px;
-    height: 30vh;
-    /* margin-top: -12vh; */
-    /* padding-left: 13vw; */
-    position: relative;
-    z-index: 1;
-}
-.btn > p {
-    font-size: 12px;
-    font-weight: normal;
-}
-
-.btn-wrap-top {
-    width: 375px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.btn-wrap-bottom {
-    width: 375px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.room-name-and-logo {
-    
-    display: flex;
-    margin-left: 10%;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 2%;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    /* align-content: flex-end; */
-    /* text-align: left; */
-    height: 30%;
-    width: 375px;
-}
-
 .btn-wrap {
     display: flex;
 }
 
+.viewallordersbtn {
+    margin-right: 5px;
+}
+
+.gotoorderbtn {
+    margin-left: 5px;
+}
+
 .guide-text-wrap {
-    width: 375px;
-    height: 10%;
+    width: 90vw;
     display: flex;
     justify-content: flex-start;
-    margin-left: 10%;
-    margin-top: 6%;
 }
 
 .guide-text {
-    display: block;
-    position: fixed;
     margin: 0;
-    font-weight: lighter;
+    font-weight: 600;
 }
 
 .room-detail-container {
-    width: 375px;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 80%;
+    align-items: center; 
+    justify-content: center;
+    height: 54vh; 
     flex-direction: column;
-    /* position: relative; */
-    z-index: 2;
+    /* margin-top: 56px; */
 }
 
 .cafe-logo-container {
@@ -131,24 +70,24 @@
 
 .cafe-logo {
     display: block;
-    height: 64%;
+    height: 20vh;
 }
 
 .message-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* 버튼을 하단에 배치 */
     align-items: center;
-    width: 375px;
-    height: 0%;
+    width: 160%;
+    height: 30%; /* 적절한 높이를 설정하세요 */
     text-align: center;
 }
 
 .room_name {
-    margin: 0px;
-    font-size: 15px;
+    font-size: 40px;
     font-weight: bold;
-    margin-left: 3%;
+    /* margin-top: 35px;
+    margin-bottom: 15px; */
 }
 
 span {
@@ -168,56 +107,35 @@ span {
 }
 
 .btn-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 80%;
-    width: 375px;
-    position: relative;
-    z-index: 3;
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: 90vw;
+    margin-bottom: -22vh;
 }
 
-.btn {    
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* height: 19.4%; */
-    /* padding: 15px 0; */
-    margin-top: 17px;
+    height: 19.4%;
+    padding: 15px 0;
+    margin-top: 10px;
     border-radius: 30px;
     text-decoration: none;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-
 }
 
 .btn-yellow {
-    display: flex;
-    flex-direction: column;
-    width: 160px;
-    height: 160px;
-    color: #000;
-    font-size: 21px;
-    /* border: 2px solid #FFE8A4; */
-    background-color: #FFE8A4;  
+    background-color: #FFD54F; 
+    color: #000;   
 }
 
 .btn-white {
-    display: flex;
-    flex-direction: column;
-    width: 160px;
-    height: 160px;
     background-color: #fff;
     color: #000;
-    font-size: 21px;
-    /* /* border: 2px solid #FFD54F;  */
+    border: 2px solid #FFD54F;
 }
-
 .wave-bottom {
     display: none;
 }

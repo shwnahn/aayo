@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +11,12 @@
   
 </head>
 <body>
-
   <header>
     <a href="{% url 'room' %}">
-      <h1 class="header-title">
-        <img class='aayologo' src="{% static 'images/aayologo.png' %}">
-      </h1>
+      <h1 class="header-title">AAYO!</h1>
     </a>
   </header>
   <div class="wave-top"></div>
-  {% block wave-bottom %}{% endblock %}
 
   <main>
     <div class="content">
@@ -28,9 +24,8 @@
       {% endblock %}
     </div>
 
-    <!-- 링크 공유 modal -->
-<!-- 기본 class: hidden -->
-<div id="share-modal" class="share-modal hidden">
+  <!-- 링크 공유 modal -->
+  <div id="share-modal" class="share-modal hidden">
     <span class="share-close">&times;</span>
     <h2>메뉴를 고를 사람을 초대합니다.</h2>
 
@@ -55,55 +50,30 @@
     </div>
 
     <div class="share-link">
-        <input id="roomLink" type="text" value="{% if room.unique_id %}{% url 'room_menu' room.unique_id %}{% else %}{% endif %}" readonly>
-        <!-- <button id="copyLinkBtn"><img src="{% static 'images/copy.svg' %}" alt="Copy" width="20" height="20"></button> -->
+      <input id="roomLink" type="text" value="{% if room.unique_id %}{% url 'room_menu' room.unique_id %}{% else %}{% endif %}" readonly>
+      <!-- <button id="copyLinkBtn"><img src="{% static 'images/copy.svg' %}" alt="Copy" width="20" height="20"></button> -->
     </div>
-</div>
-  <style>
-    
-    .aayologo {
-        margin-top: 39px;
-        width: 63px;
-        z-index: 000;
-    }
-    
-    html{
-        /* width: 100vw;
-        height: 100vh; */
-        /* background-color: lightgray; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  </div>
 
-    body {
-      
+  <style>
+    body, html {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
         font-family: 'Roboto', Arial, sans-serif;
-        margin: 0 auto !important;
+        margin: 0;
         padding: 0;
-        min-height: 100%;
         height: 100vh;
-        /* width: 100%; */
-        min-width: 220px;
-        max-width: 500px;
         background-color: #ffffff;
         overflow-x: hidden;
-        /* min-height: 100%; */
-        /* margin: 0 auto !important; */
-        width: 375px;
     }
 
     main {
         display: flex;
         position: fixed;
-        width: 375px;
         flex-direction: column;
         align-items: center;
         height: 100%;
+        padding-top: 50px;
         box-sizing: border-box;
     }
 
@@ -112,57 +82,50 @@
         width: 100%;
         max-width: 600px;
         padding: 20px;
-        /* box-sizing: border-box; */
+        box-sizing: border-box;
         flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     header {
-        width: 375px;
         position: fixed;
         top: 0;
+        left: 0;
+        width: 100%;
         height: 50px;
         padding: 10px 0;
         background-color: #FFD457;
         text-align: left;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: bold;
         color: #333;
         display: flex;
         align-items: center;
-        z-index: 1;
+        z-index: 0;
     }
 
-    .wave-top, .wave-bottom {
-        width: 100%;
-        min-width: 320px;
-        max-width: 500px;
-    }
     .wave-bottom {
-        width: 375px;
-        /* max-width: 600px; */
         display: block;
         position: fixed;
         bottom: 0;
+        left: 0;
+        width: 100%;
         height: 150px;
         background: #FFD457;
         clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
         z-index: 0;
     }
-
     .wave-top {
-        /* z-index: 0; */
-        width: 375px;
-        margin-top: 20px;
+        margin-top: 25px;
         display: block;
         position: fixed;
         transform: rotate(180deg);
         top: 0;
-        height: 125px;
+        left: 0;
+        width: 100%;
+        height: 120px;
         background: #FFD457;
         clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
+        z-index: -1;
     }
 
     header a {
@@ -174,11 +137,11 @@
         color: black;
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
-        margin-left: 45px;
+        margin-left: 30px;
     }
 
     .hidden {
-        display: none !important;
+        display: none!important;
     }
 
     /* 최하단 버튼 css */
@@ -189,8 +152,8 @@
         transform: translateX(-50%);
         cursor: pointer;
         z-index: 1000;
-        width: 375px;
-        height: 7%;
+        width: 100%;
+        height: 7vh;
         background-color: #FFD457;
         color: #1e3932;
         border: none;
@@ -227,17 +190,15 @@
         color: #000000;
     }
     .share-modal {
-        z-index: 1000;
         background: white;
         border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         padding: 20px;
-        width: 80%;
-        position: fixed;
-        top: 36%;
-        /* left: 50%; */
-        /* transform: translate(-50%, -50%); */
-        z-index: 1000;
+        width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .share-modal h2 {
         margin: 0;
