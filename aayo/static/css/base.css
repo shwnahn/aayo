@@ -5,6 +5,7 @@
     --content-padding: 20px;
     --min-width: 220px;
     --max-width: 500px;
+    --bottom-btn-height: 7%;
 }
 
 html {
@@ -126,19 +127,15 @@ header a {
     transform: translateX(-50%);
     cursor: pointer;
     z-index: 1000;
-    
-
     width: 100%;
     max-width: var(--max-width);
     min-width: var(--min-width);
-
-    height: 7%;
+    height: var(--bottom-btn-height);
     background-color: #FFD457;
     color: #1e3932;
     border: none;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 /*  ===== 아래부터는 공유하기 버튼, 모달 관련 css  ===== */
