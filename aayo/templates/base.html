@@ -1,22 +1,26 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-adsense-account" content="ca-pub-8246848076321652">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  
   <title>아아요!{% block title %}{% endblock %}</title>
   
 </head>
 <body>
+
   <header>
     <a href="{% url 'room' %}">
-      <h1 class="header-title">AAYO!</h1>
+        <img class='aayologo' src="{% static 'images/aayologo.png' %}">
     </a>
   </header>
   <div class="wave-top"></div>
+  {% block wave-bottom %}{% endblock %}
 
   <main>
     <div class="content">
@@ -24,8 +28,9 @@
       {% endblock %}
     </div>
 
-  <!-- 링크 공유 modal -->
-  <div id="share-modal" class="share-modal hidden">
+    <!-- 링크 공유 modal -->
+<!-- 기본 class: hidden -->
+<div id="share-modal" class="share-modal hidden">
     <span class="share-close">&times;</span>
     <h2>메뉴를 고를 사람을 초대합니다.</h2>
 
@@ -50,211 +55,10 @@
     </div>
 
     <div class="share-link">
-      <input id="roomLink" type="text" value="{% if room.unique_id %}{% url 'room_menu' room.unique_id %}{% else %}{% endif %}" readonly>
-      <!-- <button id="copyLinkBtn"><img src="{% static 'images/copy.svg' %}" alt="Copy" width="20" height="20"></button> -->
+        <input id="roomLink" type="text" value="{% if room.unique_id %}{% url 'room_menu' room.unique_id %}{% else %}{% endif %}" readonly>
+        <!-- <button id="copyLinkBtn"><img src="{% static 'images/copy.svg' %}" alt="Copy" width="20" height="20"></button> -->
     </div>
-  </div>
-
-  <style>
-    body, html {
-        display: flex;
-        justify-content: center;
-        font-family: 'Roboto', Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        background-color: #ffffff;
-        overflow-x: hidden;
-    }
-
-    main {
-        display: flex;
-        position: fixed;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-        padding-top: 50px;
-        box-sizing: border-box;
-    }
-
-    .content {
-        margin-top: 75px;
-        width: 100%;
-        max-width: 600px;
-        padding: 20px;
-        box-sizing: border-box;
-        flex-grow: 1;
-    }
-
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        padding: 10px 0;
-        background-color: #FFD457;
-        text-align: left;
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-        display: flex;
-        align-items: center;
-        z-index: 0;
-    }
-
-    .wave-bottom {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 150px;
-        background: #FFD457;
-        clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
-        z-index: 0;
-    }
-    .wave-top {
-        margin-top: 25px;
-        display: block;
-        position: fixed;
-        transform: rotate(180deg);
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 120px;
-        background: #FFD457;
-        clip-path: path('M 0 67 C 150 100 250 0 400 50 C 550 100 650 0 800 50 C 950 100 1050 0 1200 50 C 1350 100 1450 0 1600 50 C 1750 100 1850 0 2000 50 V 150 H 0 Z');
-        z-index: -1;
-    }
-
-    header a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    .header-title {
-        color: black;
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-        margin-left: 30px;
-    }
-
-    .hidden {
-        display: none!important;
-    }
-
-    /* 최하단 버튼 css */
-    .bottomBtn {
-        position: fixed;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        cursor: pointer;
-        z-index: 1000;
-        width: 100%;
-        height: 7vh;
-        background-color: #FFD457;
-        color: #1e3932;
-        border: none;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    /*  ===== 아래부터는 공유하기 버튼, 모달 관련 css  ===== */
-    .icon-container {
-      width: 40px;
-      height: 40px;
-      background-color: #FFD700;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      /* 고정 위치 설정 */
-      position: fixed;
-      bottom: 20px;  /* 하단에서 20px 떨어진 위치 */
-      right: 20px;   /* 우측에서 20px 떨어진 위치 */
-      
-      /* 다른 요소들보다 위에 표시되도록 z-index 설정 */
-      z-index: 1000;
-      
-      /* 선택적: 그림자 효과 추가 */
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    .share-icon {
-        width: 24px;
-        height: 24px;
-        color: #000000;
-    }
-    .share-modal {
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        padding: 20px;
-        width: 300px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .share-modal h2 {
-        margin: 0;
-        font-size: 18px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .share-modal .share-close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 18px;
-        cursor: pointer;
-    }
-    .share-modal .share-options {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 20px;
-    }
-    .share-modal .share-option {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #555;
-    }
-    .share-modal .share-option img {
-        width: 30px;
-        height: 30px;
-        margin-bottom: 5px;
-    }
-    .share-modal .share-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #f0f0f0;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    .share-modal .share-link input {
-        border: none;
-        background: transparent;
-        margin-right: 10px;
-        width: 100%;
-    }
-    .share-modal .share-link button {
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-    /* #open-modal-btn {
-        position: fixed;
-        bottom: 55px;
-        right: 20px;
-        cursor: pointer;
-    } */
-  </style>
+</div>
   {% block css %}{% endblock %}
 
   <!-- base.html 부분 코드 -->

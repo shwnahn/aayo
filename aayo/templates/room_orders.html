@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="order-container">
-    <button id="refresh-orders" class="btn btn-primary mb-3">주문 목록 갱신</button>
+    <!-- <button id="refresh-orders" class="btn btn-primary mb-3">주문 목록 갱신</button> -->
     <h2 id="todaysmenu">TODAY's MENU</h2>
     <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
     <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
@@ -36,10 +36,45 @@
             <p>아직 주문이 없습니다.</p>
         {% endif %}
     </div>
+    <button id="refresh-orders" class="refresh-button">
+        <img src="{% static 'images/reload.png' %}" alt="주문 목록 갱신" width="24" height="24">
+    </button>
 </div>
 <!-- <a href="{% url 'room_menu' room.unique_id %}" class="hidden">메뉴 선택으로 돌아가기</a> -->
 <button id="resetOrderBtn" class="bottomBtn">현재 주문 초기화</button>
 <div class="open-modal-btn-wrap"><a id="open-modal-btn" class="sendlinkbtn"><p class="sendlinktext">앗! 놓치신 분이 계신가요?</p></a></div>
+
+<!-- 링크 공유 modal -->
+<!-- 기본 class: hidden -->
+<div id="share-modal" class="share-modal hidden">
+    <span class="share-close">&times;</span>
+    <h2>메뉴를 고를 사람을 초대합니다.</h2>
+
+    <!-- 추후 확장 예정 기능 -->
+    <div class="share-options">
+        <div class="share-option">
+            <img src="{% static 'images/kakao.png' %}" alt="Kakao">
+            <span>카카오톡</span>
+        </div>
+        <div class="share-option">
+            <img id="copyLinkBtn" src="{% static 'images/copy.svg' %}" alt="Copy" width="10px" height="10px"> 
+            <span>링크 복사</span>
+        </div>
+        <!-- <div class="share-option">
+            <img src="{% static 'images/email.png' %}" alt="Email">
+            <span>E-mail</span>
+        </div>
+        <div class="share-option">
+            <img src="{% static 'images/other.png' %}" alt="Other">
+            <span>기타</span>
+        </div> -->
+    </div>
+
+    <div class="share-link">
+        <input id="roomLink" type="text" value="{% if room.unique_id %}{% url 'room_menu' room.unique_id %}{% else %}{% endif %}" readonly>
+        <!-- <button id="copyLinkBtn"><img src="{% static 'images/copy.svg' %}" alt="Copy" width="20" height="20"></button> -->
+    </div>
+</div>
 
 {% endblock %}
 
@@ -75,141 +110,5 @@ document.getElementById('refresh-orders').addEventListener('click', function() {
 {% endblock %}
 
 {% block css %}
-<style>
-
-    span {
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-    }
-
-    #roomLink {
-        font-size: 18px;
-        align-items: center;
-    }
-
-    .sendlinktext {
-        color: #3c3c3c;
-        font-size: 14px;
-        text-decoration: underline;
-        margin: 0;
-        padding: 24px;
-    }
-
-    .open-modal-btn-wrap {
-        display: flex;
-        justify-content: center;
-    }
-    .order-container {
-        max-width: 800px;
-        margin: 0px auto 0 auto;
-        height: 85%;
-    }
-    
-    h2#todaysmenu{
-        margin: 0;
-        padding: 0;
-    }
-
-    .summary{
-        scrollbar-width: none;
-        height: 90%;
-        margin-top: 10px;
-        margin-bottom: 6vh;
-    }
-    .order-card {
-        display: flex;
-        align-items: center;
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 10px;
-        margin-bottom: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 85vw;
-    }
-    
-    /* 이미지 파트 */
-    .order-menu-img {
-        flex: 2;
-    }
-    .order-card img {
-        width: 100%;
-        height: auto;
-        border-radius: 6px;
-    }
-
-    /* 주문 내용 파트 */
-    .order-menu-info {
-        flex: 6;
-        padding-left: 10px;
-    }
-    .order-card .order-menu-info .guest-names {
-        color: #007bff;
-        margin-top: 5px;
-    }
-    .order-card .order-menu-info .order-menu-details {
-        font-size: 14px;
-        color: #888;
-    }
-    .order-card .order-menu-info .order-menu-count {
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    /* 메뉴 카운트 파트 */
-    .order-menu-count{
-        flex: 1;
-        padding-left: 10px;
-        font-size: 20px;
-        font-weight: 800;
-    }
-
-    /* 삭제버튼 파트 */
-    .order-delete{
-        flex: 1;
-        padding-left: 10px;
-    }
-
-    .order-card .order-delete .delete-btn {
-        background: none;
-        border: none;
-        font-size: 18px;
-        cursor: pointer;
-        color: #dc3545;
-    }
-    
-    .order-card .order-menu-info p {
-        font-size: 18px;
-        margin: 0;
-        padding: 0;
-    }
-    
-    #todaysmenu {
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .wave-bottom {
-        display: none;
-    }
-
-    .btn-primary {
-        background-color: #FFD457;
-        border-color: #FFD457;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        color: #1e3932;
-        font-weight: bold;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    .btn-primary:hover {
-        background-color: #E6BE3F;
-    }
-    .mb-3 {
-        margin-bottom: 1rem;
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/room_orders.css' %}">
 {% endblock %}

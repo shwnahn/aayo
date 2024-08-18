@@ -2,144 +2,47 @@
 {% load static %}
 
 {% block content %}
-<div class="guide-text-wrap">
-    <p class="guide-text">방 생성 완료!<br>같이 메뉴를 주문할 분들에게<br>링크를 공유해주세요</p>
-</div>
 <div class="room-detail-container">
-    <div class="cafe-logo-container">
-    {% with logo_file=cafe.name_eng|add:".png"|lower %}
-        <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
-    {% endwith %}
+    <div class="detail-top-container">
+        <div class="guide-text-wrap">
+            <p class="guide-text">카페 메뉴를 간단하게 주문할 수 있어요! (임시 멘트)</p>
+        </div>
+        <div class="room-name-and-logo">
+                {% with logo_file=cafe.name_eng|add:".png"|lower %}
+            <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+                {% endwith %}
+            <p class="room_name">{{ room.name }}</p>
+        </div>
     </div>
-    <div class="message-container">
-        <p class="room_name">{{ room.name }}</p>
-        <div class="btn-container">
-            <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
+    <div class="detail-bottom-container">
+        <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
             <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
+        <div class="btn-container">
+
+            <div class="btn-wrap-top">
+                <button id="open-modal-btn" class="btn btn-white sendlinkbtn" style="border: none;">링크 공유하기
+                    <p>같이 주문할 사람에게<br>링크를 공유하세요!</p>
+                </button>
+                <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow gotoorderbtn">메뉴 주문하기
+                    <p style="margin-bottom: 28px;">메뉴를 주문하러 가볼까요?</p>
+                </a>
+            </div>  
             
-            <a id="open-modal-btn" class="btn btn-yellow sendlinkbtn">링크 공유하기</a>
-            <div class="btn-wrap">
-                <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn">주문 모아보기</a>
-                <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-white gotoorderbtn">메뉴 주문하러 가기</a>
+            <div class="btn-wrap-bottom">
+                <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn">주문 모아보기
+                    <p>현재까지 주문 현황을<br>알려드릴게요</p>
+                </a>
+                <a href="#" class="btn btn-white heart">🖤
+                </a>
             </div>
+
         </div>
     </div>
 </div>
 {% endblock %}
 
 {% block css %}
-<style>
-.btn-wrap {
-    display: flex;
-}
-
-.viewallordersbtn {
-    margin-right: 5px;
-}
-
-.gotoorderbtn {
-    margin-left: 5px;
-}
-
-.guide-text-wrap {
-    width: 90vw;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.guide-text {
-    margin: 0;
-    font-weight: 600;
-}
-
-.room-detail-container {
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    height: 54vh; 
-    flex-direction: column;
-    /* margin-top: 56px; */
-}
-
-.cafe-logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-bottom: 30px; */
-}
-
-.cafe-logo {
-    display: block;
-    height: 20vh;
-}
-
-.message-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 버튼을 하단에 배치 */
-    align-items: center;
-    width: 160%;
-    height: 30%; /* 적절한 높이를 설정하세요 */
-    text-align: center;
-}
-
-.room_name {
-    font-size: 40px;
-    font-weight: bold;
-    /* margin-top: 35px;
-    margin-bottom: 15px; */
-}
-
-span {
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-}
-
-#roomLink {
-    font-size: 18px;
-    align-items: center;
-}
-
-.btn-primary {
-    background-color: #FFD54F; 
-    color: #000;   
-}
-
-.btn-container {
-    width: 90vw;
-    margin-bottom: -22vh;
-}
-
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 19.4%;
-    padding: 15px 0;
-    margin-top: 10px;
-    border-radius: 30px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.btn-yellow {
-    background-color: #FFD54F; 
-    color: #000;   
-}
-
-.btn-white {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #FFD54F;
-}
-.wave-bottom {
-    display: none;
-}
-</style>
+<link rel="stylesheet" href="{% static 'css/room_detail.css' %}">
 {% endblock %}
 
 {% block scripts %}
