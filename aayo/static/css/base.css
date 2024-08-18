@@ -5,7 +5,7 @@
     --content-padding: 20px;
     --min-width: 220px;
     --max-width: 500px;
-    --bottom-btn-height: 7%;
+    --bottom-btn-height: 7vh;
 }
 
 html {
