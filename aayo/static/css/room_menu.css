@@ -176,15 +176,14 @@
 }
 
 .category-container button:hover {
-    background-color: #45a049; /* 호버 시 배경 색상 */
+    background-color: #f0c97d; /* 호버 시 배경 색상 */
     transform: translateY(-2px); /* 약간 위로 올라가는 효과 */
 }
 
-.category-container button:active {
-    transform: translateY(0); /* 클릭 시 원래 위치로 돌아옴 */
-    background-color: #3e8e41; /* 클릭 시 배경 색상 */
+.category-btn.active {
+    background-color: #f0c97d;
+    color: #1e3932;
 }
-
 
 
 /* 메뉴 아이템 그리드 */
