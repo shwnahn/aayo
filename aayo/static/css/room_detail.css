@@ -17,6 +17,7 @@ body{
     width: 100vw;
     margin-top: 0;
     z-index: -1;
+    height: 2%;
 }
 
 .room-detail-container{
@@ -32,6 +33,7 @@ body{
     flex-direction: column;
     align-items: center;
     height: 20%;
+    margin-left: 5%;
 }
 
 .guide-text-wrap {
@@ -45,6 +47,7 @@ body{
 .guide-text {
     display: block;
     margin: 1%;
+    margin-bottom: 6%;
     font-weight: normal;
 }
 
@@ -59,8 +62,13 @@ body{
 .cafe-logo {
     display: block;
     height: 100%;
-    width: auto;
-    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;    
 }
 
 
@@ -125,6 +133,18 @@ span {
     margin-bottom: 10%;
 }
 
+@media screen and (min-width: 375px) {
+    .btn-container {
+        gap: 5%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .btn-container {
+        margin-bottom: 25%;
+    }
+}
+
 .btn {    
     display: flex;
     justify-content: center;
@@ -148,7 +168,8 @@ span {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    max-width: 190px;
+    aspect-ratio: 1 / 1;
     margin: 0;
     color: #000;
     font-size: 21px;
@@ -176,5 +197,21 @@ span {
 
 .emoji {
     font-size: 35px;
+}
+
+.logo-container {
+    display: block;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    position: relative;
+    border-radius: 20%;
+    overflow: hidden;
+}
+
+/* 탐앤탐스 로고에 대한 특별한 스타일 */
+.logo-container img[src="/static/images/toms.png"] {
+    max-height: 100%;
+    max-width: 100%;
 }
 
