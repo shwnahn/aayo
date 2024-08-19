@@ -57,14 +57,11 @@ input[type="text"] {
 
 .scrollable-cafe-content {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     margin-top: 20px;
-    width: 100vw;
-    max-width: 320px;
-    /* max-height: 435px; */
-    /* max-width: 85vw; */
-    max-height: 52vh;
+    width: 100%;
+    max-width: 370px;
+    max-height: 60vh;
     overflow-y: visible;
     overflow-x: hidden;
     background-color: white;
@@ -132,7 +129,6 @@ input[type="text"] {
     transform: translateX(-50%);
     background-color: #fff;
     color: #333;
-    padding: 2px 5px;
     border-radius: 4px;
     font-size: 12px;
     font-weight: bolder;
