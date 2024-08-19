@@ -23,12 +23,14 @@ env.read_env(str(BASE_DIR / '.env'))
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0qyd9535ifi52fk)@#$t0o@7gwup*_71d$+h%q_a+2n$@*ares'
+SECRET_KEY = env('SECRET_KEY')
+KAKAO_APP_KEY = env('KAKAO_APP_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -66,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'aayo.context_processors.kakao_app_key',
             ],
         },
     },

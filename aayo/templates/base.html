@@ -28,7 +28,7 @@
       {% endblock %}
     </div>
 
-    <!-- 링크 공유 modal -->
+<!-- 링크 공유 modal -->
 <!-- 기본 class: hidden -->
 <div id="share-modal" class="share-modal hidden">
     <span class="share-close">&times;</span>
@@ -36,22 +36,14 @@
 
     <!-- 추후 확장 예정 기능 -->
     <div class="share-options">
-        <div class="share-option">
+        <div id="kakaoShareBtn" class="share-option">
             <img src="{% static 'images/kakao.png' %}" alt="Kakao">
             <span>카카오톡</span>
         </div>
-        <div class="share-option">
-            <img id="copyLinkBtn" src="{% static 'images/copy.svg' %}" alt="Copy" width="10px" height="10px"> 
+        <div id="copyLinkBtn" class="share-option">
+            <img src="{% static 'images/copy.svg' %}" alt="Copy" width="10px" height="10px"> 
             <span>링크 복사</span>
         </div>
-        <!-- <div class="share-option">
-            <img src="{% static 'images/email.png' %}" alt="Email">
-            <span>E-mail</span>
-        </div>
-        <div class="share-option">
-            <img src="{% static 'images/other.png' %}" alt="Other">
-            <span>기타</span>
-        </div> -->
     </div>
 
     <div class="share-link">
@@ -59,12 +51,13 @@
         <!-- <button id="copyLinkBtn"><img src="{% static 'images/copy.svg' %}" alt="Copy" width="20" height="20"></button> -->
     </div>
 </div>
-  {% block css %}{% endblock %}
 
-  <!-- base.html 부분 코드 -->
-  <script src="{% static 'js/main.js' %}"></script>
-  <script>
-  </script>
-  {% block scripts %}{% endblock %}
+    {% block css %}{% endblock %}
+
+    <!-- base.html 부분 코드 -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    
+    {% block scripts %}{% endblock %}
 </body>
 </html>

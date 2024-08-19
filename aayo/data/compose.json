@@ -1,474 +1,492 @@
 [
     {
+        "category": "커피",
         "menu_name": "에스프레소",
         "image_url": "https://composecoffee.com/files/thumbnails/208/384x530.crop.jpg?t=1722850777"
     },
     {
+        "category": "커피",
         "menu_name": "빅포즈 아메리카노",
         "image_url": "https://composecoffee.com/files/thumbnails/253/097/384x530.crop.jpg?t=1722852177"
     },
     {
+        "category": "커피",
         "menu_name": "HOT 아메리카노",
         "image_url": "https://composecoffee.com/files/thumbnails/210/384x530.crop.jpg?t=1722850920"
     },
     {
+        "category": "커피",
         "menu_name": "ICE 아메리카노",
         "image_url": "https://composecoffee.com/files/thumbnails/451/038/384x530.crop.jpg?t=1722850944"
     },
     {
+        "category": "커피",
         "menu_name": "HOT 카페라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/212/384x530.crop.jpg?t=1722850959"
     },
     {
+        "category": "커피",
         "menu_name": "ICE 카페라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/459/038/384x530.crop.jpg?t=1722850972"
     },
     {
+        "category": "커피",
         "menu_name": "카푸치노",
         "image_url": "https://composecoffee.com/files/thumbnails/214/384x530.crop.jpg?t=1722850985"
     },
     {
+        "category": "커피",
         "menu_name": "HOT 바닐라라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/216/384x530.crop.jpg?t=1722851003"
     },
     {
+        "category": "커피",
         "menu_name": "ICE 바닐라라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/593/038/384x530.crop.jpg?t=1722851021"
     },
     {
+        "category": "커피",
         "menu_name": "HOT 헤이즐넛라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/218/384x530.crop.jpg?t=1722851039"
     },
     {
+        "category": "커피",
         "menu_name": "ICE 헤이즐넛 라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/602/038/384x530.crop.jpg?t=1722851056"
     },
     {
+        "category": "커피",
         "menu_name": "HOT 카라멜마끼아또",
         "image_url": "https://composecoffee.com/files/thumbnails/220/384x530.crop.jpg?t=1722851072"
     },
     {
+        "category": "커피",
         "menu_name": "ICE 카라멜마끼아또",
         "image_url": "https://composecoffee.com/files/thumbnails/619/038/384x530.crop.jpg?t=1722851087"
     },
     {
+        "category": "커피",
         "menu_name": "HOT 카페모카",
         "image_url": "https://composecoffee.com/files/thumbnails/222/384x530.crop.jpg?t=1722851103"
     },
     {
+        "category": "커피",
         "menu_name": "ICE 카페모카",
         "image_url": "https://composecoffee.com/files/thumbnails/609/038/384x530.crop.jpg?t=1722851125"
     },
     {
+        "category": "커피",
         "menu_name": "HOT 돌체라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/225/384x530.crop.jpg?t=1722851139"
     },
     {
+        "category": "커피",
         "menu_name": "ICE 돌체라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/623/038/384x530.crop.jpg?t=1722851150"
     },
     {
+        "category": "커피",
         "menu_name": "흑당카페라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/227/384x530.crop.jpg?t=1722851231"
     },
     {
+        "category": "커피",
         "menu_name": "달고나라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/665/034/384x530.crop.jpg?t=1722851245"
     },
     {
+        "category": "커피",
         "menu_name": "아인슈페너라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/229/384x530.crop.jpg?t=1722851261"
     },
     {
-        "menu_name": "에스프레소",
-        "image_url": "https://composecoffee.com/files/thumbnails/208/384x530.crop.jpg?t=1722850777"
-    },
-    {
-        "menu_name": "빅포즈 아메리카노",
-        "image_url": "https://composecoffee.com/files/thumbnails/253/097/384x530.crop.jpg?t=1722852177"
-    },
-    {
-        "menu_name": "HOT 아메리카노",
-        "image_url": "https://composecoffee.com/files/thumbnails/210/384x530.crop.jpg?t=1722850920"
-    },
-    {
-        "menu_name": "ICE 아메리카노",
-        "image_url": "https://composecoffee.com/files/thumbnails/451/038/384x530.crop.jpg?t=1722850944"
-    },
-    {
-        "menu_name": "HOT 카페라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/212/384x530.crop.jpg?t=1722850959"
-    },
-    {
-        "menu_name": "ICE 카페라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/459/038/384x530.crop.jpg?t=1722850972"
-    },
-    {
-        "menu_name": "카푸치노",
-        "image_url": "https://composecoffee.com/files/thumbnails/214/384x530.crop.jpg?t=1722850985"
-    },
-    {
-        "menu_name": "HOT 바닐라라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/216/384x530.crop.jpg?t=1722851003"
-    },
-    {
-        "menu_name": "ICE 바닐라라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/593/038/384x530.crop.jpg?t=1722851021"
-    },
-    {
-        "menu_name": "HOT 헤이즐넛라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/218/384x530.crop.jpg?t=1722851039"
-    },
-    {
-        "menu_name": "ICE 헤이즐넛 라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/602/038/384x530.crop.jpg?t=1722851056"
-    },
-    {
-        "menu_name": "HOT 카라멜마끼아또",
-        "image_url": "https://composecoffee.com/files/thumbnails/220/384x530.crop.jpg?t=1722851072"
-    },
-    {
-        "menu_name": "ICE 카라멜마끼아또",
-        "image_url": "https://composecoffee.com/files/thumbnails/619/038/384x530.crop.jpg?t=1722851087"
-    },
-    {
-        "menu_name": "HOT 카페모카",
-        "image_url": "https://composecoffee.com/files/thumbnails/222/384x530.crop.jpg?t=1722851103"
-    },
-    {
-        "menu_name": "ICE 카페모카",
-        "image_url": "https://composecoffee.com/files/thumbnails/609/038/384x530.crop.jpg?t=1722851125"
-    },
-    {
-        "menu_name": "HOT 돌체라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/225/384x530.crop.jpg?t=1722851139"
-    },
-    {
-        "menu_name": "ICE 돌체라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/623/038/384x530.crop.jpg?t=1722851150"
-    },
-    {
-        "menu_name": "흑당카페라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/227/384x530.crop.jpg?t=1722851231"
-    },
-    {
-        "menu_name": "달고나라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/665/034/384x530.crop.jpg?t=1722851245"
-    },
-    {
-        "menu_name": "아인슈페너라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/229/384x530.crop.jpg?t=1722851261"
-    },
-    {
-        "menu_name": "HOT 더치커피",
-        "image_url": "https://composecoffee.com/files/thumbnails/237/384x530.crop.jpg?t=1705459779"
-    },
-    {
-        "menu_name": "ICE 더치커피",
-        "image_url": "https://composecoffee.com/files/thumbnails/627/038/384x530.crop.jpg?t=1705459846"
-    },
-    {
-        "menu_name": "HOT 더치라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/658/034/384x530.crop.jpg?t=1705459909"
-    },
-    {
-        "menu_name": "ICE 더치라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/633/038/384x530.crop.jpg?t=1705459962"
-    },
-    {
-        "menu_name": "아인슈페너",
-        "image_url": "https://composecoffee.com/files/thumbnails/241/384x530.crop.jpg?t=1709613789"
-    },
-    {
-        "menu_name": "HOT 디카페인 더치커피",
-        "image_url": "https://composecoffee.com/files/thumbnails/239/384x530.crop.jpg?t=1705460110"
-    },
-    {
-        "menu_name": "ICE 디카페인 더치커피",
-        "image_url": "https://composecoffee.com/files/thumbnails/769/038/384x530.crop.jpg?t=1705460131"
-    },
-    {
-        "menu_name": "HOT 디카페인 더치라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/142/068/384x530.crop.jpg?t=1705460158"
-    },
-    {
-        "menu_name": "ICE 디카페인 더치라떼",
-        "image_url": "https://composecoffee.com/files/thumbnails/775/038/384x530.crop.jpg?t=1705460179"
-    },
-    {
+        "category": "커피",
         "menu_name": "HOT 디카페인 아메리카노",
         "image_url": "https://composecoffee.com/files/thumbnails/936/121/384x530.crop.jpg?t=1708914765"
     },
     {
+        "category": "커피",
         "menu_name": "ICE 디카페인 아메리카노",
         "image_url": "https://composecoffee.com/files/thumbnails/938/121/384x530.crop.jpg?t=1708914780"
     },
     {
+        "category": "더치커피",
+        "menu_name": "HOT 더치커피",
+        "image_url": "https://composecoffee.com/files/thumbnails/237/384x530.crop.jpg?t=1723014942"
+    },
+    {
+        "category": "더치커피",
+        "menu_name": "ICE 더치커피",
+        "image_url": "https://composecoffee.com/files/thumbnails/627/038/384x530.crop.jpg?t=1723014961"
+    },
+    {
+        "category": "더치커피",
+        "menu_name": "HOT 더치라떼",
+        "image_url": "https://composecoffee.com/files/thumbnails/658/034/384x530.crop.jpg?t=1723014983"
+    },
+    {
+        "category": "더치커피",
+        "menu_name": "ICE 더치라떼",
+        "image_url": "https://composecoffee.com/files/thumbnails/633/038/384x530.crop.jpg?t=1723014996"
+    },
+    {
+        "category": "더치커피",
+        "menu_name": "아인슈페너",
+        "image_url": "https://composecoffee.com/files/thumbnails/241/384x530.crop.jpg?t=1723016140"
+    },
+    {
+        "category": "더치커피",
+        "menu_name": "HOT 디카페인 더치커피",
+        "image_url": "https://composecoffee.com/files/thumbnails/239/384x530.crop.jpg?t=1705460110"
+    },
+    {
+        "category": "더치커피",
+        "menu_name": "ICE 디카페인 더치커피",
+        "image_url": "https://composecoffee.com/files/thumbnails/769/038/384x530.crop.jpg?t=1705460131"
+    },
+    {
+        "category": "더치커피",
+        "menu_name": "HOT 디카페인 더치라떼",
+        "image_url": "https://composecoffee.com/files/thumbnails/142/068/384x530.crop.jpg?t=1723023877"
+    },
+    {
+        "category": "더치커피",
+        "menu_name": "ICE 디카페인 더치라떼",
+        "image_url": "https://composecoffee.com/files/thumbnails/775/038/384x530.crop.jpg?t=1705460179"
+    },
+    {
+        "category": "논커피 라떼",
         "menu_name": "HOT 곡물라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/243/384x530.crop.jpg?t=1715054826"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "ICE 곡물라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/750/038/384x530.crop.jpg?t=1715054885"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "HOT 고구마라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/245/384x530.crop.jpg?t=1705464095"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "ICE 고구마라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/734/038/384x530.crop.jpg?t=1705467727"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "HOT 더블초코라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/247/384x530.crop.jpg?t=1705464160"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "ICE 더블초코라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/724/038/384x530.crop.jpg?t=1705464258"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "HOT 쿠키초코라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/249/384x530.crop.jpg?t=1715053653"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "ICE 쿠키초코라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/730/038/384x530.crop.jpg?t=1715053706"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "HOT 그린티라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/251/384x530.crop.jpg?t=1705464325"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "ICE 그린티라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/742/038/384x530.crop.jpg?t=1705467755"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "HOT 민트초코오레오라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/253/384x530.crop.jpg?t=1705464387"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "ICE 민트초코오레오라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/746/038/384x530.crop.jpg?t=1705464405"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "흑당밀크(우유)",
         "image_url": "https://composecoffee.com/files/thumbnails/255/384x530.crop.jpg?t=1715055007"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "딸기라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/755/012/384x530.crop.jpg?t=1715055067"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "블루베리라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/891/064/384x530.crop.jpg?t=1705464480"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "망고라떼",
         "image_url": "https://composecoffee.com/files/thumbnails/887/064/384x530.crop.jpg?t=1705464497"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "HOT 밀크티",
         "image_url": "https://composecoffee.com/files/thumbnails/257/384x530.crop.jpg?t=1705464519"
     },
     {
+        "category": "논커피 라떼",
         "menu_name": "ICE 밀크티",
         "image_url": "https://composecoffee.com/files/thumbnails/738/038/384x530.crop.jpg?t=1705467798"
     },
     {
-        "menu_name": "플레인 밀크쉐이크",
-        "image_url": "https://composecoffee.com/files/thumbnails/323/384x530.crop.jpg?t=1705466337"
-    },
-    {
-        "menu_name": "캔디소다 밀크쉐이크",
-        "image_url": "https://composecoffee.com/files/thumbnails/896/064/384x530.crop.jpg?t=1705466405"
-    },
-    {
-        "menu_name": "쿠키 밀크쉐이크",
-        "image_url": "https://composecoffee.com/files/thumbnails/327/384x530.crop.jpg?t=1705466423"
-    },
-    {
-        "menu_name": "커피밀크쉐이크",
-        "image_url": "https://composecoffee.com/files/thumbnails/231/384x530.crop.jpg?t=1722851449"
-    },
-    {
-        "menu_name": "팥절미 밀크쉐이크",
-        "image_url": "https://composecoffee.com/files/thumbnails/325/384x530.crop.jpg?t=1705466468"
-    },
-    {
-        "menu_name": "리얼초코자바칩프라페",
-        "image_url": "https://composecoffee.com/files/thumbnails/315/384x530.crop.jpg?t=1705465925"
-    },
-    {
-        "menu_name": "쿠키초코프라페",
-        "image_url": "https://composecoffee.com/files/thumbnails/317/384x530.crop.jpg?t=1705465942"
-    },
-    {
-        "menu_name": "민트초코오레오프라페",
-        "image_url": "https://composecoffee.com/files/thumbnails/319/384x530.crop.jpg?t=1705465958"
-    },
-    {
-        "menu_name": "그린티프라페",
-        "image_url": "https://composecoffee.com/files/thumbnails/321/384x530.crop.jpg?t=1705465978"
-    },
-    {
-        "menu_name": "모카자바칩프라페",
-        "image_url": "https://composecoffee.com/files/thumbnails/235/384x530.crop.jpg?t=1722851430"
-    },
-    {
-        "menu_name": "딸기스무디",
-        "image_url": "https://composecoffee.com/files/thumbnails/267/384x530.crop.jpg?t=1705464900"
-    },
-    {
-        "menu_name": "망고스무디",
-        "image_url": "https://composecoffee.com/files/thumbnails/269/384x530.crop.jpg?t=1705464919"
-    },
-    {
-        "menu_name": "블루베리스무디",
-        "image_url": "https://composecoffee.com/files/thumbnails/271/384x530.crop.jpg?t=1705464936"
-    },
-    {
-        "menu_name": "유자스무디",
-        "image_url": "https://composecoffee.com/files/thumbnails/480/018/384x530.crop.jpg?t=1705464962"
-    },
-    {
-        "menu_name": "플레인요거트스무디",
-        "image_url": "https://composecoffee.com/files/thumbnails/279/384x530.crop.jpg?t=1705464979"
-    },
-    {
-        "menu_name": "블루베리요거트스무디",
-        "image_url": "https://composecoffee.com/files/thumbnails/079/072/384x530.crop.jpg?t=1705464995"
-    },
-    {
-        "menu_name": "딸기요거트스무디",
-        "image_url": "https://composecoffee.com/files/thumbnails/273/384x530.crop.jpg?t=1705465012"
-    },
-    {
-        "menu_name": "망고요거트스무디",
-        "image_url": "https://composecoffee.com/files/thumbnails/275/384x530.crop.jpg?t=1705465027"
-    },
-    {
+        "category": "주스",
         "menu_name": "복숭아주스",
         "image_url": "https://composecoffee.com/files/thumbnails/487/018/384x530.crop.jpg?t=1705464752"
     },
     {
+        "category": "주스",
         "menu_name": "키위주스",
         "image_url": "https://composecoffee.com/files/thumbnails/485/018/384x530.crop.jpg?t=1705464777"
     },
     {
+        "category": "주스",
         "menu_name": "오렌지당근주스",
         "image_url": "https://composecoffee.com/files/thumbnails/491/018/384x530.crop.jpg?t=1705464798"
     },
     {
+        "category": "주스",
         "menu_name": "샤인머스캣케일주스",
         "image_url": "https://composecoffee.com/files/thumbnails/489/018/384x530.crop.jpg?t=1719541117"
     },
     {
-        "menu_name": "블루레몬 스페셜에이드",
-        "image_url": "https://composecoffee.com/files/thumbnails/289/384x530.crop.jpg?t=1705465702"
+        "category": "스무디",
+        "menu_name": "딸기스무디",
+        "image_url": "https://composecoffee.com/files/thumbnails/267/384x530.crop.jpg?t=1705464900"
     },
     {
-        "menu_name": "청포도 스페셜에이드",
-        "image_url": "https://composecoffee.com/files/thumbnails/291/384x530.crop.jpg?t=1705465718"
+        "category": "스무디",
+        "menu_name": "망고스무디",
+        "image_url": "https://composecoffee.com/files/thumbnails/269/384x530.crop.jpg?t=1705464919"
     },
     {
-        "menu_name": "패션후르츠 스페셜에이드",
-        "image_url": "https://composecoffee.com/files/thumbnails/293/384x530.crop.jpg?t=1705465735"
+        "category": "스무디",
+        "menu_name": "블루베리스무디",
+        "image_url": "https://composecoffee.com/files/thumbnails/271/384x530.crop.jpg?t=1705464936"
     },
     {
-        "menu_name": "자몽에이드",
-        "image_url": "https://composecoffee.com/files/thumbnails/281/384x530.crop.jpg?t=1705465752"
+        "category": "스무디",
+        "menu_name": "유자스무디",
+        "image_url": "https://composecoffee.com/files/thumbnails/480/018/384x530.crop.jpg?t=1705464962"
     },
     {
-        "menu_name": "레몬에이드",
-        "image_url": "https://composecoffee.com/files/thumbnails/283/384x530.crop.jpg?t=1705465774"
+        "category": "스무디",
+        "menu_name": "플레인요거트스무디",
+        "image_url": "https://composecoffee.com/files/thumbnails/279/384x530.crop.jpg?t=1705464979"
     },
     {
-        "menu_name": "망고에이드",
-        "image_url": "https://composecoffee.com/files/thumbnails/285/384x530.crop.jpg?t=1705465792"
+        "category": "스무디",
+        "menu_name": "블루베리요거트스무디",
+        "image_url": "https://composecoffee.com/files/thumbnails/079/072/384x530.crop.jpg?t=1705464995"
     },
     {
-        "menu_name": "유자에이드",
-        "image_url": "https://composecoffee.com/files/thumbnails/287/384x530.crop.jpg?t=1705465811"
+        "category": "스무디",
+        "menu_name": "딸기요거트스무디",
+        "image_url": "https://composecoffee.com/files/thumbnails/273/384x530.crop.jpg?t=1705465012"
     },
     {
+        "category": "스무디",
+        "menu_name": "망고요거트스무디",
+        "image_url": "https://composecoffee.com/files/thumbnails/275/384x530.crop.jpg?t=1705465027"
+    },
+    {
+        "category": "티",
         "menu_name": "HOT 복숭아티",
         "image_url": "https://composecoffee.com/files/thumbnails/307/384x530.crop.jpg?t=1705465124"
     },
     {
+        "category": "티",
         "menu_name": "ICE 복숭아티",
         "image_url": "https://composecoffee.com/files/thumbnails/672/038/384x530.crop.jpg?t=1705465141"
     },
     {
+        "category": "티",
         "menu_name": "HOT 자몽허니블랙티",
         "image_url": "https://composecoffee.com/files/thumbnails/476/018/384x530.crop.jpg?t=1705465166"
     },
     {
+        "category": "티",
         "menu_name": "ICE 자몽허니블랙티",
         "image_url": "https://composecoffee.com/files/thumbnails/676/038/384x530.crop.jpg?t=1705465189"
     },
     {
+        "category": "티",
         "menu_name": "HOT 페퍼민트",
         "image_url": "https://composecoffee.com/files/thumbnails/815/038/384x530.crop.jpg?t=1705465223"
     },
     {
+        "category": "티",
         "menu_name": "ICE 페퍼민트",
         "image_url": "https://composecoffee.com/files/thumbnails/797/038/384x530.crop.jpg?t=1705465243"
     },
     {
+        "category": "티",
         "menu_name": "HOT 캐모마일",
         "image_url": "https://composecoffee.com/files/thumbnails/813/038/384x530.crop.jpg?t=1705465263"
     },
     {
+        "category": "티",
         "menu_name": "ICE 캐모마일",
         "image_url": "https://composecoffee.com/files/thumbnails/795/038/384x530.crop.jpg?t=1705465284"
     },
     {
+        "category": "티",
         "menu_name": "HOT 로즈마리",
         "image_url": "https://composecoffee.com/files/thumbnails/811/038/384x530.crop.jpg?t=1705465308"
     },
     {
+        "category": "티",
         "menu_name": "ICE 로즈마리",
         "image_url": "https://composecoffee.com/files/thumbnails/793/038/384x530.crop.jpg?t=1705465327"
     },
     {
+        "category": "티",
         "menu_name": "HOT 얼그레이",
         "image_url": "https://composecoffee.com/files/thumbnails/809/038/384x530.crop.jpg?t=1705465371"
     },
     {
+        "category": "티",
         "menu_name": "ICE 얼그레이",
         "image_url": "https://composecoffee.com/files/thumbnails/791/038/384x530.crop.jpg?t=1705465387"
     },
     {
+        "category": "티",
         "menu_name": "HOT 블랙퍼스트",
         "image_url": "https://composecoffee.com/files/thumbnails/807/038/384x530.crop.jpg?t=1705465437"
     },
     {
+        "category": "티",
         "menu_name": "ICE 블랙퍼스트",
         "image_url": "https://composecoffee.com/files/thumbnails/789/038/384x530.crop.jpg?t=1705465455"
     },
     {
+        "category": "티",
         "menu_name": "HOT 자몽티",
         "image_url": "https://composecoffee.com/files/thumbnails/309/384x530.crop.jpg?t=1705465488"
     },
     {
+        "category": "티",
         "menu_name": "ICE 자몽티",
         "image_url": "https://composecoffee.com/files/thumbnails/678/038/384x530.crop.jpg?t=1705465504"
     },
     {
+        "category": "티",
         "menu_name": "HOT 레몬티",
         "image_url": "https://composecoffee.com/files/thumbnails/311/384x530.crop.jpg?t=1705465524"
     },
     {
+        "category": "티",
         "menu_name": "ICE 레몬티",
         "image_url": "https://composecoffee.com/files/thumbnails/680/038/384x530.crop.jpg?t=1705465544"
     },
     {
+        "category": "티",
         "menu_name": "HOT 유자티",
         "image_url": "https://composecoffee.com/files/thumbnails/313/384x530.crop.jpg?t=1705465567"
     },
     {
+        "category": "티",
         "menu_name": "ICE 유자티",
         "image_url": "https://composecoffee.com/files/thumbnails/682/038/384x530.crop.jpg?t=1705465592"
+    },
+    {
+        "category": "에이드",
+        "menu_name": "블루레몬 스페셜에이드",
+        "image_url": "https://composecoffee.com/files/thumbnails/289/384x530.crop.jpg?t=1705465702"
+    },
+    {
+        "category": "에이드",
+        "menu_name": "청포도 스페셜에이드",
+        "image_url": "https://composecoffee.com/files/thumbnails/291/384x530.crop.jpg?t=1705465718"
+    },
+    {
+        "category": "에이드",
+        "menu_name": "패션후르츠 스페셜에이드",
+        "image_url": "https://composecoffee.com/files/thumbnails/293/384x530.crop.jpg?t=1705465735"
+    },
+    {
+        "category": "에이드",
+        "menu_name": "자몽에이드",
+        "image_url": "https://composecoffee.com/files/thumbnails/281/384x530.crop.jpg?t=1705465752"
+    },
+    {
+        "category": "에이드",
+        "menu_name": "레몬에이드",
+        "image_url": "https://composecoffee.com/files/thumbnails/283/384x530.crop.jpg?t=1705465774"
+    },
+    {
+        "category": "에이드",
+        "menu_name": "망고에이드",
+        "image_url": "https://composecoffee.com/files/thumbnails/285/384x530.crop.jpg?t=1705465792"
+    },
+    {
+        "category": "에이드",
+        "menu_name": "유자에이드",
+        "image_url": "https://composecoffee.com/files/thumbnails/287/384x530.crop.jpg?t=1705465811"
+    },
+    {
+        "category": "프라페",
+        "menu_name": "리얼초코자바칩프라페",
+        "image_url": "https://composecoffee.com/files/thumbnails/315/384x530.crop.jpg?t=1705465925"
+    },
+    {
+        "category": "프라페",
+        "menu_name": "쿠키초코프라페",
+        "image_url": "https://composecoffee.com/files/thumbnails/317/384x530.crop.jpg?t=1705465942"
+    },
+    {
+        "category": "프라페",
+        "menu_name": "민트초코오레오프라페",
+        "image_url": "https://composecoffee.com/files/thumbnails/319/384x530.crop.jpg?t=1705465958"
+    },
+    {
+        "category": "프라페",
+        "menu_name": "그린티프라페",
+        "image_url": "https://composecoffee.com/files/thumbnails/321/384x530.crop.jpg?t=1705465978"
+    },
+    {
+        "category": "프라페",
+        "menu_name": "모카자바칩프라페",
+        "image_url": "https://composecoffee.com/files/thumbnails/235/384x530.crop.jpg?t=1722851430"
+    },
+    {
+        "category": "밀크쉐이크",
+        "menu_name": "플레인 밀크쉐이크",
+        "image_url": "https://composecoffee.com/files/thumbnails/323/384x530.crop.jpg?t=1705466337"
+    },
+    {
+        "category": "밀크쉐이크",
+        "menu_name": "캔디소다 밀크쉐이크",
+        "image_url": "https://composecoffee.com/files/thumbnails/896/064/384x530.crop.jpg?t=1705466405"
+    },
+    {
+        "category": "밀크쉐이크",
+        "menu_name": "쿠키 밀크쉐이크",
+        "image_url": "https://composecoffee.com/files/thumbnails/327/384x530.crop.jpg?t=1705466423"
+    },
+    {
+        "category": "밀크쉐이크",
+        "menu_name": "커피밀크쉐이크",
+        "image_url": "https://composecoffee.com/files/thumbnails/231/384x530.crop.jpg?t=1722851449"
+    },
+    {
+        "category": "밀크쉐이크",
+        "menu_name": "팥절미 밀크쉐이크",
+        "image_url": "https://composecoffee.com/files/thumbnails/325/384x530.crop.jpg?t=1705466468"
     }
 ]

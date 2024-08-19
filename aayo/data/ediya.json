@@ -1,966 +1,1448 @@
 [
     {
+        "category": "COFFEE",
         "menu_name": "(L)달달커피",
-        "image_url": "https://ediya.com/files/menu/IMG_1713744638856.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1713744638856.png",
+        "note": "이디야의 노하우가 집약된 커피믹스의 맛을 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX)달달커피",
-        "image_url": "https://ediya.com/files/menu/IMG_1713744897555.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1713744897555.png",
+        "note": "이디야의 노하우가 집약된 커피믹스의 맛을 즐길 수 있는 음료"
     },
     {
-        "menu_name": "팥인절미 1인빙수",
-        "image_url": "https://ediya.com/files/menu/IMG_1714010281351.png"
-    },
-    {
-        "menu_name": "망고 요거놀라 1인빙수",
-        "image_url": "https://ediya.com/files/menu/IMG_1714010425104.png"
-    },
-    {
-        "menu_name": "초당 옥수수 1인 빙수",
-        "image_url": "https://ediya.com/files/menu/IMG_1714010526737.png"
-    },
-    {
-        "menu_name": "팥인절미 눈꽃빙수",
-        "image_url": "https://ediya.com/files/menu/IMG_1714010615408.png"
-    },
-    {
-        "menu_name": "애플망고 눈꽃빙수",
-        "image_url": "https://ediya.com/files/menu/IMG_1714010676463.png"
-    },
-    {
-        "menu_name": "이디야 콤부차 복숭아 망고",
-        "image_url": "https://ediya.com/files/menu/IMG_1716354699267.png"
-    },
-    {
-        "menu_name": "이디야 콤부차 청포도 레몬",
-        "image_url": "https://ediya.com/files/menu/IMG_1716354818562.png"
-    },
-    {
-        "menu_name": "이디야 콤부차 석류애플라임",
-        "image_url": "https://ediya.com/files/menu/IMG_1716354959737.png"
-    },
-    {
-        "menu_name": "베리하츄핑 딸기 드링킹 요거트",
-        "image_url": "https://ediya.com/files/menu/IMG_1717116214158.png"
-    },
-    {
-        "menu_name": "말랑핑 블루베리 드링킹 요거트",
-        "image_url": "https://ediya.com/files/menu/IMG_1717116358189.png"
-    },
-    {
-        "menu_name": "(R) 아샷추",
-        "image_url": "https://ediya.com/files/menu/IMG_1718954567383.png"
-    },
-    {
-        "menu_name": "(EX) 아샷추",
-        "image_url": "https://ediya.com/files/menu/IMG_1718954689150.png"
-    },
-    {
-        "menu_name": "(R) 아망추",
-        "image_url": "https://ediya.com/files/menu/IMG_1718954841893.png"
-    },
-    {
-        "menu_name": "(EX) 아망추",
-        "image_url": "https://ediya.com/files/menu/IMG_1718954961563.png"
-    },
-    {
-        "menu_name": "(R) 디카페인 아샷추",
-        "image_url": "https://ediya.com/files/menu/IMG_1718955263377.png"
-    },
-    {
-        "menu_name": "(EX) 디카페인 아샷추",
-        "image_url": "https://ediya.com/files/menu/IMG_1718955385150.png"
-    },
-    {
-        "menu_name": "(R) 제로슈가 아샷추",
-        "image_url": "https://ediya.com/files/menu/IMG_1718955871463.png"
-    },
-    {
-        "menu_name": "(EX) 제로슈가 아샷추",
-        "image_url": "https://ediya.com/files/menu/IMG_1718956065397.png"
-    },
-    {
-        "menu_name": "(R) 디카페인 제로슈가 아샷추",
-        "image_url": "https://ediya.com/files/menu/IMG_1718956330229.png"
-    },
-    {
-        "menu_name": "(EX) 디카페인 제로슈가 아샷추",
-        "image_url": "https://ediya.com/files/menu/IMG_1718956430303.png"
-    },
-    {
-        "menu_name": "(R) 제로슈가 아이스티",
-        "image_url": "https://ediya.com/files/menu/IMG_1718956627613.png"
-    },
-    {
-        "menu_name": "(EX) 제로슈가 아이스티",
-        "image_url": "https://ediya.com/files/menu/IMG_1723527075334.png"
-    },
-    {
-        "menu_name": "(L)자몽 포멜로 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1721096289202.png"
-    },
-    {
-        "menu_name": "(EX)자몽 포멜로 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1721096406297.png"
-    },
-    {
-        "menu_name": "(L) 머스캣 모히또 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1721096519205.png"
-    },
-    {
-        "menu_name": "(EX) 머스캣 모히또 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1721096603111.png"
-    },
-    {
-        "menu_name": "(L) 감귤 레몬 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1721096724373.png"
-    },
-    {
-        "menu_name": "(EX) 감귤 레몬 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1721096816714.png"
-    },
-    {
-        "menu_name": "(L) 파인 피치 우롱 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1721096918523.png"
-    },
-    {
-        "menu_name": "(EX) 파인 피치 우롱 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1721096994703.png"
-    },
-    {
-        "menu_name": "(L) 꿀 복숭아 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1721097090404.png"
-    },
-    {
-        "menu_name": "(EX) 꿀 복숭아 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1721101484760.png"
-    },
-    {
-        "menu_name": "HOT 디카페인 에스프레소",
-        "image_url": "https://ediya.com/files/menu/IMG_1721800750598.png"
-    },
-    {
-        "menu_name": "HOT 디카페인 에스프레소 마끼아또",
-        "image_url": "https://ediya.com/files/menu/IMG_1721800901669.png"
-    },
-    {
-        "menu_name": "HOT 디카페인 에스프레소 콘파냐",
-        "image_url": "https://ediya.com/files/menu/IMG_1721801001714.png"
-    },
-    {
-        "menu_name": "비타민 주스 애플망고",
-        "image_url": "https://ediya.com/files/menu/IMG_1722475731399.png"
-    },
-    {
-        "menu_name": "비타민 주스 믹스베리",
-        "image_url": "https://ediya.com/files/menu/IMG_1722475826757.png"
-    },
-    {
-        "menu_name": "(L) 미니펄 연유 커피 쉐이크",
-        "image_url": "https://ediya.com/files/menu/IMG_1722989646733.png"
-    },
-    {
-        "menu_name": "(L) 미니펄 딸기 연유 플랫치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1722989853702.png"
-    },
-    {
-        "menu_name": "(L) 미니펄 망고 연유 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1722990006434.png"
-    },
-    {
-        "menu_name": "(L) 미니펄 밀크티",
-        "image_url": "https://ediya.com/files/menu/IMG_1722990159870.png"
-    },
-    {
-        "menu_name": "(L) 디카페인 미니펄 연유 커피 쉐이크",
-        "image_url": "https://ediya.com/files/menu/IMG_1722991123170.png"
-    },
-    {
-        "menu_name": "(R) HOT 토피넛 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1694414812893.png"
-    },
-    {
-        "menu_name": "(EX) HOT 토피넛 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1694414794668.png"
-    },
-    {
-        "menu_name": "(R) ICED 토피넛 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1694414746800.png"
-    },
-    {
-        "menu_name": "(EX) ICED 토피넛 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1694415549864.png"
-    },
-    {
-        "menu_name": "(R)딸기 듬뿍 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1703040183528.png"
-    },
-    {
-        "menu_name": "(EX)딸기 듬뿍 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1703040302345.png"
-    },
-    {
-        "menu_name": "소프트 아이스크림",
-        "image_url": "https://ediya.com/files/menu/IMG_1715911790197.png"
-    },
-    {
-        "menu_name": "아이스크림 카페라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1715911919458.png"
-    },
-    {
-        "menu_name": "꿀 인절미 아이스크림",
-        "image_url": "https://ediya.com/files/menu/IMG_1715912156628.png"
-    },
-    {
-        "menu_name": "초코쿠키 아이스크림",
-        "image_url": "https://ediya.com/files/menu/IMG_1715912592793.png"
-    },
-    {
-        "menu_name": "딸기쿠키 아이스크림",
-        "image_url": "https://ediya.com/files/menu/IMG_1715912465575.png"
-    },
-    {
-        "menu_name": "소프트 아이스크림 아포가토",
-        "image_url": "https://ediya.com/files/menu/IMG_1719364105830.png"
-    },
-    {
-        "menu_name": "(L) HOT 디카페인 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721104952889.png"
-    },
-    {
-        "menu_name": "(EX) HOT 디카페인 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721106247362.png"
-    },
-    {
-        "menu_name": "(L) ICED 디카페인 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721106299584.png"
-    },
-    {
-        "menu_name": "(EX) ICED 디카페인 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721106334290.png"
-    },
-    {
-        "menu_name": "(L) ICED 디카페인 카페 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1721106994373.png"
-    },
-    {
-        "menu_name": "(EX) ICED 디카페인 카페 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1721107127469.png"
-    },
-    {
-        "menu_name": "(L) HOT 디카페인 카라멜 마끼아또",
-        "image_url": "https://ediya.com/files/menu/IMG_1721108787230.png"
-    },
-    {
-        "menu_name": "(L) ICED 디카페인 카라멜 마끼아또",
-        "image_url": "https://ediya.com/files/menu/IMG_1721108917355.png"
-    },
-    {
-        "menu_name": "(EX) HOT 디카페인 카라멜 마끼아또",
-        "image_url": "https://ediya.com/files/menu/IMG_1721109611512.png"
-    },
-    {
-        "menu_name": "(EX) ICED 디카페인 카라멜 마끼아또",
-        "image_url": "https://ediya.com/files/menu/IMG_1721109727340.png"
-    },
-    {
-        "menu_name": "(L) ICED 디카페인 넛츠 크림 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721110125100.png"
-    },
-    {
-        "menu_name": "(L) HOT 디카페인 연유 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721112161849.png"
-    },
-    {
-        "menu_name": "(L) ICED 디카페인 연유 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721112356312.png"
-    },
-    {
-        "menu_name": "(EX) HOT 디카페인 연유 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721112509173.png"
-    },
-    {
-        "menu_name": "(EX) ICED 디카페인 연유 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721112622403.png"
-    },
-    {
-        "menu_name": "(L) HOT 디카페인 카페 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1721113750256.png"
-    },
-    {
-        "menu_name": "(L) ICED 디카페인 카페 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1721113857534.png"
-    },
-    {
-        "menu_name": "(EX) HOT 디카페인 카페 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1721113982795.png"
-    },
-    {
-        "menu_name": "(EX) ICED 디카페인 카페 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1721114068117.png"
-    },
-    {
-        "menu_name": "(L) HOT 디카페인 바닐라 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721114505676.png"
-    },
-    {
-        "menu_name": "(L) ICED 디카페인 바닐라 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721114611715.png"
-    },
-    {
-        "menu_name": "(EX) HOT 디카페인 바닐라 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721114762307.png"
-    },
-    {
-        "menu_name": "(EX) ICED 디카페인 바닐라 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1721114864886.png"
-    },
-    {
-        "menu_name": "(L) HOT 디카페인 화이트 초콜릿 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1721115432464.png"
-    },
-    {
-        "menu_name": "(L) ICED 디카페인 화이트 초콜릿 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1721115693501.png"
-    },
-    {
-        "menu_name": "(EX) HOT 디카페인 화이트 초콜릿 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1721116011753.png"
-    },
-    {
-        "menu_name": "(EX) ICED 디카페인 화이트 초콜릿 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1721116116248.png"
-    },
-    {
-        "menu_name": "(L) HOT 디카페인 민트 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1721117168291.png"
-    },
-    {
-        "menu_name": "(L) ICED 디카페인 민트 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1721117254570.png"
-    },
-    {
-        "menu_name": "(L) HOT 디카페인 카푸치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1721117444125.png"
-    },
-    {
-        "menu_name": "(L) ICED 디카페인 카푸치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1721117534865.png"
-    },
-    {
-        "menu_name": "(L) HOT 디카페인 카페 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1697070552345.png"
-    },
-    {
-        "menu_name": "(EX) HOT 디카페인 카페 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1697070876514.png"
-    },
-    {
+        "category": "COFFEE",
         "menu_name": "(R) 바닐라 오트 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1678753103297.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1678753103297.png",
+        "note": "오트의 고소함과 부드러운 바닐라 크림이 콜드브루와 어우러져 담백하게 즐길 수 있는 음료 "
     },
     {
+        "category": "COFFEE",
         "menu_name": "(R) 디카페인 바닐라 오트 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1678753482451.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1678753482451.png",
+        "note": "오트의 고소함과 부드러운 바닐라 크림이 콜드브루와 어우러져 담백하게 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) ICED 넛츠 크림 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1671587873712.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671587873712.png",
+        "note": "부드러운 크림과 에스프레소, 너티 플레이버가 어우러져 만들어진 완벽한 한 잔의 라떼"
     },
     {
-        "menu_name": "ICED 살얼음 식혜",
-        "image_url": "https://ediya.com/files/menu/IMG_1660608743501.png"
-    },
-    {
-        "menu_name": "(EX) ICED 살얼음 식혜",
-        "image_url": "https://ediya.com/files/menu/IMG_1660608842680.png"
-    },
-    {
-        "menu_name": "(R) HOT 그린 루이보스",
-        "image_url": "https://ediya.com/files/menu/IMG_1647324593188.png"
-    },
-    {
-        "menu_name": "(R) ICED 그린 루이보스",
-        "image_url": "https://ediya.com/files/menu/IMG_1647324575877.png"
-    },
-    {
-        "menu_name": "(EX) HOT 그린 루이보스",
-        "image_url": "https://ediya.com/files/menu/IMG_1671596542380.png"
-    },
-    {
-        "menu_name": "(EX) ICED 그린 루이보스",
-        "image_url": "https://ediya.com/files/menu/IMG_1671596605212.png"
-    },
-    {
-        "menu_name": "(R) HOT 샤인 히비스커스",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322695193.png"
-    },
-    {
-        "menu_name": "(R) ICED 샤인 히비스커스",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322703601.png"
-    },
-    {
-        "menu_name": "(EX) HOT 샤인 히비스커스",
-        "image_url": "https://ediya.com/files/menu/IMG_1671595438536.png"
-    },
-    {
-        "menu_name": "(EX) ICED 샤인 히비스커스",
-        "image_url": "https://ediya.com/files/menu/IMG_1671595525825.png"
-    },
-    {
-        "menu_name": "HOT 스프링 캐모마일",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322717592.png"
-    },
-    {
-        "menu_name": "ICED 스프링 캐모마일",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322726556.png"
-    },
-    {
-        "menu_name": "(EX) HOT 스프링 캐모마일",
-        "image_url": "https://ediya.com/files/menu/IMG_1671595271667.png"
-    },
-    {
-        "menu_name": "(EX) ICED 스프링 캐모마일",
-        "image_url": "https://ediya.com/files/menu/IMG_1671595337284.png"
-    },
-    {
-        "menu_name": "(R) HOT 퓨어 페퍼민트",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322800672.png"
-    },
-    {
-        "menu_name": "(R) ICED 퓨어 페퍼민트",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322809136.png"
-    },
-    {
-        "menu_name": "(EX) HOT 퓨어 페퍼민트",
-        "image_url": "https://ediya.com/files/menu/IMG_1671595635409.png"
-    },
-    {
-        "menu_name": "(EX) ICED 퓨어 페퍼민트",
-        "image_url": "https://ediya.com/files/menu/IMG_1671595852837.png"
-    },
-    {
-        "menu_name": "(R) HOT 피치 얼그레이",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322847327.png"
-    },
-    {
-        "menu_name": "(R) ICED 피치 얼그레이",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322855201.png"
-    },
-    {
-        "menu_name": "(EX) HOT 피치 얼그레이",
-        "image_url": "https://ediya.com/files/menu/IMG_1671596309362.png"
-    },
-    {
-        "menu_name": "(EX) ICED 피치 얼그레이",
-        "image_url": "https://ediya.com/files/menu/IMG_1671596392889.png"
-    },
-    {
-        "menu_name": "HOT 쌍화차",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322753151.png"
-    },
-    {
-        "menu_name": "ICED 쌍화차",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322778699.png"
-    },
-    {
-        "menu_name": "HOT 생강차",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322669524.png"
-    },
-    {
-        "menu_name": "ICED 생강차",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322677153.png"
-    },
-    {
-        "menu_name": "이디야 감귤&한라봉 주스",
-        "image_url": "https://ediya.com/files/menu/IMG_1631059961896.png"
-    },
-    {
-        "menu_name": "이디야 사과&당근 주스",
-        "image_url": "https://ediya.com/files/menu/IMG_1631060026295.png"
-    },
-    {
-        "menu_name": "이디야 워터",
-        "image_url": "https://ediya.com/files/menu/IMG_1652751437621.png"
-    },
-    {
-        "menu_name": "ICED 달고나 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321929656.png"
-    },
-    {
-        "menu_name": "(EX) ICED 달고나 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321941152.png"
-    },
-    {
+        "category": "COFFEE",
         "menu_name": "아포가토 오리지널",
-        "image_url": "https://ediya.com/files/menu/IMG_1691731083701.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1691731083701.png",
+        "note": "대중들에게 가장 친숙한 타입의 아포가토로 이디야 빙볼에 에스프레소와 아몬드를 토핑한 제품"
     },
     {
-        "menu_name": "이디야키즈 신비아파트 샤인머스캣",
-        "image_url": "https://ediya.com/files/menu/IMG_1709598676880.png"
-    },
-    {
-        "menu_name": "디카페인 아포가토 오리지널",
-        "image_url": "https://ediya.com/files/menu/IMG_1691731409331.png"
-    },
-    {
-        "menu_name": "이디야키즈 뽀로로 오렌지",
-        "image_url": "https://ediya.com/files/menu/IMG_1709599223774.png"
-    },
-    {
+        "category": "COFFEE",
         "menu_name": "(R) 콜드브루 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320805422.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647320805422.png",
+        "note": "이디야만의 블렌딩을 통해 커피의 깊은 단맛과 바디감, 균형 잡힌 밸런스를 느낄 수 있는 시원한 콜드브루 커피"
     },
     {
-        "menu_name": "이디야키즈 뽀로로 사과매실",
-        "image_url": "https://ediya.com/files/menu/IMG_1709599391117.png"
+        "category": "COFFEE",
+        "menu_name": "(EX) 콜드브루 아메리카노 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647320820317.png",
+        "note": "이디야만의 블렌딩을 통해 커피의 깊은 단맛과 바디감, 균형 잡힌 밸런스를 느낄 수 있는 시원한 콜드브루 커피"
     },
     {
-        "menu_name": "(EX) 콜드브루 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320820317.png"
+        "category": "COFFEE",
+        "menu_name": "(R) 디카페인 콜드브루 아메리카노 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647320328440.png",
+        "note": "(디카페인)이디야만의 블렌딩을 통해 커피의 깊은 단맛과 바디감,균형잡힌 밸런스를 느낄 수 있는 시원한 콜드브루 커피 "
     },
     {
-        "menu_name": "이디야키즈 뽀로로 포도블루베리",
-        "image_url": "https://ediya.com/files/menu/IMG_1709599673354.png"
+        "category": "COFFEE",
+        "menu_name": "(EX) ICED 디카페인 콜드브루 아메리카노 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1648685292664.png",
+        "note": "(디카페인)이디야만의 블렌딩을 통해 커피의 깊은 단맛과 바디감,균형잡힌 밸런스를 느낄 수 있는 시원한 콜드브루 커피 "
     },
     {
-        "menu_name": "(R) 디카페인 콜드브루 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320328440.png"
-    },
-    {
-        "menu_name": "(EX) ICED 디카페인 콜드브루 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1648685292664.png"
-    },
-    {
+        "category": "COFFEE",
         "menu_name": "(R) 디카페인 콜드브루 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320345410.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647320345410.png",
+        "note": "(디카페인)콜드브루의 깔끔하고 쌉싸름한 풍미가 고소한 우유와 만나 누구나 부담없이 즐길 수 있는 음료 "
     },
     {
-        "menu_name": "(EX) 디카페인 콜드브루 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320357663.png"
+        "category": "COFFEE",
+        "menu_name": "(EX) 디카페인 콜드브루 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647320357663.png",
+        "note": "(디카페인)콜드브루의 깔끔하고 쌉싸름한 풍미가 고소한 우유와 만나 누구나 부담없이 즐길 수 있는 음료 "
     },
     {
+        "category": "COFFEE",
         "menu_name": "(R) 콜드브루 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320848557.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647320848557.png",
+        "note": "콜드브루의 깔끔하고 쌉싸름한 풍미가 고소한 우유와 만나 누구나 부담없이 즐길 수 있는 음료"
     },
     {
-        "menu_name": "(EX) ICED 콜드브루 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320836186.png"
+        "category": "COFFEE",
+        "menu_name": "(EX) ICED 콜드브루 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647320836186.png",
+        "note": "콜드브루의 깔끔하고 쌉싸름한 풍미가 고소한 우유와 만나 누구나 부담없이 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "ICED 콜드브루 니트로",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320870899.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647320870899.png",
+        "note": "이디야커피만의 질소투입방식을 통해 신선하고 부드러운 거품과 목넘김, 풍미를 느낄 수 있는 커피"
     },
     {
-        "menu_name": "ICED 디카페인 콜드브루 니트로",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320389669.png"
+        "category": "COFFEE",
+        "menu_name": "ICED 디카페인 콜드브루 니트로 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647320389669.png",
+        "note": "(디카페인)이디야커피만의 질소투입방식을 통해 신선하고 부드러운 거품과 목넘김, 풍미를 느낄 수 있는 커피 "
     },
     {
+        "category": "COFFEE",
         "menu_name": "(R) 콜드브루 화이트 비엔나",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320860534.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647320860534.png",
+        "note": "달콤한 크림과 화이트 초콜릿향, 아이리쉬크림향이 더해져 콜드브루의 풍미가 잘 어우러진 음료 "
     },
     {
-        "menu_name": "(R) 디카페인 콜드브루 화이트 비엔나",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320378419.png"
+        "category": "COFFEE",
+        "menu_name": "(R) 디카페인 콜드브루 화이트 비엔나 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647320378419.png",
+        "note": "(디카페인)달콤한 크림과 화이트 초콜릿향, 아이리쉬크림향이 더해져 콜드브루의 풍미가 잘 어우러진 음료"
     },
     {
-        "menu_name": "ICED 디카페인 흑당 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320406434.png"
+        "category": "COFFEE",
+        "menu_name": "ICED 디카페인 흑당 콜드브루 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647320406434.png",
+        "note": "(디카페인) 밸런스 잡힌 콜드브루에 진하고 달콤한 흑당과 고소한 우유가 어우러진 커피음료 "
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) ICED 디카페인 흑당 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320424871.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647320424871.png",
+        "note": " (디카페인)  밸런스 잡힌 콜드브루에 진하고 달콤한 흑당과 고소한 우유가 어우러진 커피음료 "
     },
     {
+        "category": "COFFEE",
         "menu_name": "ICED 디카페인 연유 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1647387558230.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647387558230.png",
+        "note": "(디카페인) 베트남풍 연유의 달콤한 맛과 밸런스 잡힌 이디야 콜드브루가 어우러져 특색있게 즐길 수 있는 음료 "
     },
     {
-        "menu_name": "(EX) ICED 디카페인 연유 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320633102.png"
+        "category": "COFFEE",
+        "menu_name": "(EX) ICED 디카페인 연유 콜드브루 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647320633102.png",
+        "note": "(디카페인) 베트남풍 연유의 달콤한 맛과 밸런스 잡힌 이디야 콜드브루가 어우러져 특색있게 즐길 수 있는 음료 \n"
     },
     {
-        "menu_name": "ICED 흑당 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322011235.png"
-    },
-    {
-        "menu_name": "(EX) ICED 흑당 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322029671.png"
-    },
-    {
+        "category": "COFFEE",
         "menu_name": "ICED 흑당 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320738273.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647320738273.png",
+        "note": "이디야의 밸런스 잡힌 콜드브루에 진하고 달콤한 흑당과 고소한 우유가 어우러진 커피음료 "
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) ICED 흑당 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320749119.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647320749119.png",
+        "note": "이디야의 밸런스 잡힌 콜드브루에 진하고 달콤한 흑당과 고소한 우유가 어우러진 커피음료 "
     },
     {
-        "menu_name": "ICED 버블 흑당 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647324429590.png"
+        "category": "COFFEE",
+        "menu_name": "(L) HOT 연유 카페 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1671584792635.png",
+        "note": "베트남풍 연유의 달콤한 맛과 에스프레소가 절묘하게 어우러져 누구나 쉽게 즐길 수 있는 부드러운 커피 음료"
     },
     {
-        "menu_name": "(EX) ICED 버블 흑당 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647324410367.png"
+        "category": "COFFEE",
+        "menu_name": "(L) ICED 연유 카페 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1671585023298.png",
+        "note": "베트남풍 연유의 달콤한 맛과 에스프레소가 절묘하게 어우러져 누구나 쉽게 즐길 수 있는 부드러운 커피 음료"
     },
     {
-        "menu_name": "ICED 버블 크림 밀크티",
-        "image_url": "https://ediya.com/files/menu/IMG_1647324346811.png"
+        "category": "COFFEE",
+        "menu_name": "(EX) HOT 연유 카페 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647324689152.png",
+        "note": "베트남풍 연유의 달콤한 맛과 에스프레소가 절묘하게 어우러져 누구나 쉽게 즐길 수 있는 부드러운 커피 음료"
     },
     {
-        "menu_name": "(L) HOT 연유 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1671584792635.png"
+        "category": "COFFEE",
+        "menu_name": "(EX) ICED연유 카페 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647324719307.png",
+        "note": "베트남풍 연유의 달콤한 맛과 에스프레소가 절묘하게 어우러져 누구나 쉽게 즐길 수 있는 부드러운 커피 음료"
     },
     {
-        "menu_name": "(L) ICED 연유 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1671585023298.png"
-    },
-    {
-        "menu_name": "(EX) HOT 연유 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647324689152.png"
-    },
-    {
-        "menu_name": "(EX) ICED연유 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647324719307.png"
-    },
-    {
+        "category": "COFFEE",
         "menu_name": "ICED 연유 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320780643.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647320780643.png",
+        "note": "베트남풍 연유의 달콤한 맛과 밸런스 잡힌 이디야 콜드브루가 어우러져 특색있게 즐길 수 있는 음료"
     },
     {
-        "menu_name": "(EX) ICED 연유 콜드브루",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320793322.png"
+        "category": "COFFEE",
+        "menu_name": "(EX) ICED 연유 콜드브루 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647320793322.png",
+        "note": "베트남풍 연유의 달콤한 맛과 밸런스 잡힌 이디야 콜드브루가 어우러져 특색있게 즐길 수 있는 음료"
     },
     {
-        "menu_name": "자몽네이블오렌지",
-        "image_url": "https://ediya.com/files/menu/IMG_1529902147409.png"
-    },
-    {
-        "menu_name": "(EX) ICED 자몽 네이블오렌지",
-        "image_url": "https://ediya.com/files/menu/IMG_1647323192384.png"
-    },
-    {
-        "menu_name": "유자피나콜라다",
-        "image_url": "https://ediya.com/files/menu/IMG_1529895623589.png"
-    },
-    {
-        "menu_name": "(EX) ICED 유자피나콜라다",
-        "image_url": "https://ediya.com/files/menu/IMG_1647323138803.png"
-    },
-    {
-        "menu_name": "석류애플라임",
-        "image_url": "https://ediya.com/files/menu/IMG_1529902396529.png"
-    },
-    {
-        "menu_name": "(EX) ICED 석류애플라임",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322977844.png"
-    },
-    {
-        "menu_name": "이디야 사과주스",
-        "image_url": "https://ediya.com/files/menu/IMG_1565670650552.png"
-    },
-    {
-        "menu_name": "HOT 석류 오리지널",
-        "image_url": "https://ediya.com/files/menu/IMG_1647323060484.png"
-    },
-    {
-        "menu_name": "HOT 석류 애플라임",
-        "image_url": "https://ediya.com/files/menu/IMG_1647323050118.png"
-    },
-    {
-        "menu_name": "HOT 자몽 네이블 오렌지",
-        "image_url": "https://ediya.com/files/menu/IMG_1647323209240.png"
-    },
-    {
-        "menu_name": "HOT 유자 피나콜라다",
-        "image_url": "https://ediya.com/files/menu/IMG_1647323154740.png"
-    },
-    {
+        "category": "COFFEE",
         "menu_name": "HOT 에스프레소",
-        "image_url": "https://ediya.com/files/menu/IMG_1647320254869.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647320254869.png",
+        "note": "정통 이탈리안 방식으로 고압을 이용하여 빠르게 추출된 커피\n이디야의 모든 음료의 기본"
     },
     {
+        "category": "COFFEE",
         "menu_name": "HOT 에스프레소 마끼아또",
-        "image_url": "https://ediya.com/files/menu/IMG_1511503315349.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1511503315349.png",
+        "note": "진한 에스프레소 위의 부드러운 우유 거품이 조화를 이뤄 에스프레소를 부드럽게 느낄 수 있는 커피"
     },
     {
+        "category": "COFFEE",
         "menu_name": "HOT 에스프레소 콘파냐",
-        "image_url": "https://ediya.com/files/menu/IMG_1511503304139.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1511503304139.png",
+        "note": "진한 에스프레소 위에 달콤한 휘핑을 더한 음료로 에스프레소를 달콤하게 즐길 수 있는 커피"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) HOT 카페 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1671581625569.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671581625569.png",
+        "note": "구운 견과류의 고소한 향미와 다크초콜렛의 Bitter sweet 깊고 깔끔한 애프터테이스트가 특징인 이디야의 대표음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) ICED 카페 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1671581786293.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671581786293.png",
+        "note": "구운 견과류의 고소한 향미와 다크초콜렛의 Bitter sweet 깊고 깔끔한 애프터테이스트가 특징인 이디야의 대표음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) HOT 카페 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321162101.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321162101.png",
+        "note": "구운 견과류의 고소한 향미와 다크초콜렛의 Bitter sweet 깊고 깔끔한 애프터테이스트가 특징인 이디야의 대표음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) ICED 카페 아메리카노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321147600.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321147600.png",
+        "note": "구운 견과류의 고소한 향미와 다크초콜렛의 Bitter sweet 깊고 깔끔한 애프터테이스트가 특징인 이디야의 대표음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) HOT 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1671582054147.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671582054147.png",
+        "note": "진한 에스프레소와 부드러운 우유가 만나 고소한 풍미를 더하는 메뉴 가장 대중적인 메뉴"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) ICED 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1671582134737.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671582134737.png",
+        "note": "진한 에스프레소와 부드러운 우유가 만나 고소한 풍미를 더하는 메뉴 가장 대중적인 메뉴"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) HOT 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1645073265123.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1645073265123.png",
+        "note": "진한 에스프레소와 부드러운 우유가 만나 고소한 풍미를 더하는 메뉴 가장 대중적인 메뉴\n"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) ICED 카페 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1645073339534.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1645073339534.png",
+        "note": "진한 에스프레소와 부드러운 우유가 만나 고소한 풍미를 더하는 메뉴 가장 대중적인 메뉴\n"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) HOT 카푸치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1671582405654.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671582405654.png",
+        "note": "에스프레소에 부드러운 우유 거품을 풍부하게 올린 음료, 시나몬파우더가 첨가되어 강렬한 향과 커피의 풍부함을 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) ICED 카푸치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1671583172436.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671583172436.png",
+        "note": "에스프레소에 부드러운 우유 거품을 풍부하게 올린 음료, 시나몬파우더가 첨가되어 강렬한 향과 커피의 풍부함을 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) HOT 카페 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1671586052246.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671586052246.png",
+        "note": "모카시럽을 만나 한층 풍부해진 에스프레소에 우유로 부드러움을 더한 달콤한 휘핑크림이 곁들여진 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) ICED 카페 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1671586141487.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671586141487.png",
+        "note": "모카시럽을 만나 한층 풍부해진 에스프레소에 우유로 부드러움을 더한 달콤한 휘핑크림이 곁들여진 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) HOT 카페 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1645073368848.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1645073368848.png",
+        "note": "모카시럽을 만나 한층 풍부해진 에스프레소에 우유로 부드러움을 더한 달콤한 휘핑크림이 곁들여진 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) ICED 카페 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1645073377193.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1645073377193.png",
+        "note": "모카시럽을 만나 한층 풍부해진 에스프레소에 우유로 부드러움을 더한 달콤한 휘핑크림이 곁들여진 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) HOT 카라멜 마끼아또",
-        "image_url": "https://ediya.com/files/menu/IMG_1671585699141.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671585699141.png",
+        "note": "폼 밀크 속에 감춰진 카라멜의 달콤함과 에스프레소의 진한 맛이 돋보이는 이디야의 인기 메뉴"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) ICED 카라멜 마끼아또",
-        "image_url": "https://ediya.com/files/menu/IMG_1671585861402.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671585861402.png",
+        "note": "폼 밀크 속에 감춰진 카라멜의 달콤함과 에스프레소의 진한 맛이 돋보이는 이디야의 인기 메뉴"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) HOT 카라멜 마끼아또",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321239141.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321239141.png",
+        "note": "폼 밀크 속에 감춰진 카라멜의 달콤함과 에스프레소의 진한 맛이 돋보이는 이디야의 인기 메뉴"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) ICED 카라멜 마끼아또",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321212721.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321212721.png",
+        "note": "폼 밀크 속에 감춰진 카라멜의 달콤함과 에스프레소의 진한 맛이 돋보이는 이디야의 인기 메뉴"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) HOT 바닐라 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1671583442731.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671583442731.png",
+        "note": "부드러운 라떼에 은은한 바닐라 향이 더해져 더욱 달콤하게 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) ICED 바닐라 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1671583414313.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671583414313.png",
+        "note": "부드러운 라떼에 은은한 바닐라 향이 더해져 더욱 달콤하게 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) HOT 바닐라 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321057747.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321057747.png",
+        "note": "부드러운 라떼에 은은한 바닐라 향이 더해져 더욱 달콤하게 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(EX) ICED 바닐라 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321034823.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321034823.png",
+        "note": "부드러운 라떼에 은은한 바닐라 향이 더해져 더욱 달콤하게 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) HOT 화이트 초콜릿 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1671587353689.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671587353689.png",
+        "note": "화이트 초콜렛과 에스프레소의 조화로운 만남에 달콤한 휘핑크림까지 함께 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) ICED 화이트 초콜릿 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1671587593517.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671587593517.png",
+        "note": "화이트 초콜렛과 에스프레소의 조화로운 만남에 달콤한 휘핑크림까지 함께 즐길 수 있는 음료"
     },
     {
-        "menu_name": "(EX) HOT 화이트 초콜릿 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321390212.png"
+        "category": "COFFEE",
+        "menu_name": "(EX) HOT 화이트 초콜릿 모카 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647321390212.png",
+        "note": "화이트 초콜렛과 에스프레소의 조화로운 만남에 달콤한 휘핑크림까지 함께 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) HOT 민트 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1671588213206.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671588213206.png",
+        "note": "상쾌한 민트향이 더해진 진한 모카와 부드러운 휘핑크림이 잘 어울리는 음료"
     },
     {
-        "menu_name": "(EX) ICED 화이트 초콜릿 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321347859.png"
+        "category": "COFFEE",
+        "menu_name": "(EX) ICED 화이트 초콜릿 모카 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647321347859.png",
+        "note": "화이트 초콜렛과 에스프레소의 조화로운 만남에 달콤한 휘핑크림까지 함께 즐길 수 있는 음료"
     },
     {
+        "category": "COFFEE",
         "menu_name": "(L) ICED 민트 모카",
-        "image_url": "https://ediya.com/files/menu/IMG_1671588274664.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1671588274664.png",
+        "note": "상쾌한 민트향이 더해진 진한 모카와 부드러운 휘핑크림이 잘 어울리는 음료"
     },
     {
+        "category": "BEVERAGE",
+        "menu_name": "(R) HOT 토피넛 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1694414812893.png",
+        "note": "고소한 아몬드의 맛과 달콤한 코코아가 조화롭게 어우러진 달콤한 음료 "
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "(EX) HOT 토피넛 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1694414794668.png",
+        "note": "고소한 아몬드의 맛과 달콤한 코코아가 조화롭게 어우러진 달콤한 음료 "
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "(R) ICED 토피넛 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1694414746800.png",
+        "note": "고소한 아몬드의 맛과 달콤한 코코아가 조화롭게 어우러진 달콤한 음료 "
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "(EX) ICED 토피넛 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1694415549864.png",
+        "note": "고소한 아몬드의 맛과 달콤한 코코아가 조화롭게 어우러진 달콤한 음료 "
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "HOT 쌍화차",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322753151.png",
+        "note": "전통 쌍화차의 느낌을 이디야만의 색깔로 재해석하여 다양한 연령층이 즐길 수 있도록 은은한 향과 고소함을 강조한 음료"
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "ICED 쌍화차",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322778699.png",
+        "note": "전통 쌍화차의 느낌을 이디야만의 색깔로 재해석하여 다양한 연령층이 즐길 수 있도록 은은한 향과 고소함을 강조한 음료"
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "HOT 생강차",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322669524.png",
+        "note": "생강 특유의 진하고 풍부한 맛과 향미를 느낄 수 있으며, 은은하고 부드러운 단맛의 유자와 꿀이 더해진 음료"
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": " ICED 생강차",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322677153.png",
+        "note": "생강 특유의 진하고 풍부한 맛과 향미를 느낄 수 있으며, 은은하고 부드러운 단맛의 유자와 꿀이 더해진 음료"
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "ICED 달고나 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1647321929656.png",
+        "note": "달콤한 달고나와 우유가 조화롭게 어우러져, 달고나 분태의 바삭한 식감과 함께 즐길 수 있는 제품  "
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "(EX) ICED 달고나 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1647321941152.png",
+        "note": "달콤한 달고나와 우유가 조화롭게 어우러져, 달고나 분태의 바삭한 식감과 함께 즐길 수 있는 제품 "
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "ICED 흑당 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322011235.png",
+        "note": "진하고 달콤한 흑당과 고소한 우유가 어우러진 논커피 음료 "
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "(EX) ICED 흑당 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322029671.png",
+        "note": "진하고 달콤한 흑당과 고소한 우유가 어우러진 논커피 음료"
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "ICED 버블 흑당 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1647324429590.png",
+        "note": "진하고 달콤한 흑당에 쫄깃한 버블이 어우러진 논커피 음료 "
+    },
+    {
+        "category": "BEVERAGE",
+        "menu_name": "(EX) ICED 버블 흑당 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1647324410367.png",
+        "note": "진하고 달콤한 흑당에 쫄깃한 버블이 어우러진 논커피 음료"
+    },
+    {
+        "category": "BEVERAGE",
         "menu_name": "HOT 초콜릿",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321825736.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321825736.png",
+        "note": "진한 모카시럽과 부드러운 우유, 그리고 달콤한 휘핑크림의 삼박자가 조화를 이루는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "ICED 초콜릿",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321814289.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321814289.png",
+        "note": "진한 모카시럽과 부드러운 우유, 그리고 달콤한 휘핑크림의 삼박자가 조화를 이루는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "(EX) HOT 초콜릿",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321860843.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321860843.png",
+        "note": "진한 모카시럽과 부드러운 우유, 그리고 달콤한 휘핑크림의 삼박자가 조화를 이루는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "(EX) ICED 초콜릿",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321840843.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321840843.png",
+        "note": "진한 모카시럽과 부드러운 우유, 그리고 달콤한 휘핑크림의 삼박자가 조화를 이루는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "HOT 녹차 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321755481.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321755481.png",
+        "note": "녹차에 우유가 더해져 부담없이 즐길 수 있는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "ICED 녹차 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321741180.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321741180.png",
+        "note": "녹차에 우유가 더해져 부담없이 즐길 수 있는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "(EX) HOT 녹차 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321791414.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321791414.png",
+        "note": "녹차에 우유가 더해져 부담없이 즐길 수 있는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "(EX) ICED 녹차 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321773757.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321773757.png",
+        "note": "녹차에 우유가 더해져 부담없이 즐길 수 있는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "HOT 민트 초콜릿",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321892161.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321892161.png",
+        "note": "상쾌한 민트향이 가득한 진한 초콜렛 위에 달콤한 휘핑크림으로 마무리 한 이디야의 인기메뉴"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "ICED 민트 초콜릿",
-        "image_url": "https://ediya.com/files/menu/IMG_1647321879153.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647321879153.png",
+        "note": "상쾌한 민트향이 가득한 진한 초콜렛 위에 달콤한 휘핑크림으로 마무리 한 이디야의 인기메뉴"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "HOT 12곡 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322114515.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322114515.png",
+        "note": "몸에 이로운 곡물이 들어가 든든하고 포만감을 주는 메뉴, 한끼 식사 대용으로도 충분한 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "ICED 12곡 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322107601.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322107601.png",
+        "note": "몸에 이로운 곡물이 들어가 든든하고 포만감을 주는 메뉴, 한끼 식사 대용으로도 충분한 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "HOT 고구마 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322145592.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322145592.png",
+        "note": "호박고구마를 활용하여 달콤하고 고소한 고구마의 풍미가 진하게 느껴지는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "ICED 고구마 라떼",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322131838.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322131838.png",
+        "note": "호박고구마를 활용하여 달콤하고 고소한 고구마의 풍미가 진하게 느껴지는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "홍시주스",
-        "image_url": "https://ediya.com/files/menu/IMG_1647324236558.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647324236558.png",
+        "note": "부드럽고 달콤한 홍시 본연의 맛을 느낄 수 있는 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "골드키위주스",
-        "image_url": "https://ediya.com/files/menu/IMG_1647324243707.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647324243707.png",
+        "note": "고급 골드키위를 사용하여 비타민 C가 풍부하고 상큼한 음료"
     },
     {
+        "category": "BEVERAGE",
         "menu_name": "딸기주스",
-        "image_url": "https://ediya.com/files/menu/IMG_1647324249886.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647324249886.png",
+        "note": "국내산 딸기 과육을 그대로 넣어 새콤하고 달콤한 딸기 본연의 맛을 느낄 수 있는 음료"
     },
     {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) 아샷추",
+        "image_url": "https://ediya.com/files/menu/IMG_1718954567383.png",
+        "note": "홍차의 깊은 맛과 풍부한 복숭아 향이 어우러진 아이스티에 이디야 에스프레소가 어우러진 음료"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) 아샷추",
+        "image_url": "https://ediya.com/files/menu/IMG_1718954689150.png",
+        "note": "홍차의 깊은 맛과 풍부한 복숭아 향이 어우러진 아이스티에 이디야 에스프레소가 어우러진 음료"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) 아망추",
+        "image_url": "https://ediya.com/files/menu/IMG_1718954841893.png",
+        "note": "홍차의 깊은 맛과 풍부한 복숭아 향이 어우러진 아이스티에 달콤 망고가 올라가 더욱 달콤하게 즐길 수 있는 음료"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) 아망추",
+        "image_url": "https://ediya.com/files/menu/IMG_1718954961563.png",
+        "note": "차의 깊은 맛과 풍부한 복숭아 향이 어우러진 아이스티에 달콤 망고가 올라가 더욱 달콤하게 즐길 수 있는 음료"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) 제로슈가 아샷추 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1718955871463.png",
+        "note": ""
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) 제로슈가 아샷추 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1718956065397.png",
+        "note": ""
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) 제로슈가 아이스티 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1718956627613.png",
+        "note": ""
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) 제로슈가 아이스티 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1723527075334.png",
+        "note": ""
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "ICED 살얼음 식혜 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1660608743501.png",
+        "note": "밥알이 씹히는 정성 가득 식혜에 살얼음을 띄워 더욱 시원하게 즐길 수 있는 메뉴"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) ICED 살얼음 식혜",
+        "image_url": "https://ediya.com/files/menu/IMG_1660608842680.png",
+        "note": "밥알이 씹히는 정성 가득 식혜에 살얼음을 띄워 더욱 시원하게 즐길 수 있는 메뉴"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) HOT 그린 루이보스",
+        "image_url": "https://ediya.com/files/menu/IMG_1647324593188.png",
+        "note": "복숭아 한 조각을 베어 문 잔향이 입안에 남는 맑은 수색의 루이보스 티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) ICED 그린 루이보스",
+        "image_url": "https://ediya.com/files/menu/IMG_1647324575877.png",
+        "note": "복숭아 한 조각을 베어 문 잔향이 입안에 남는 맑은 수색의 루이보스 티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) HOT 그린 루이보스",
+        "image_url": "https://ediya.com/files/menu/IMG_1671596542380.png",
+        "note": "복숭아 한 조각을 베어 문 잔향이 입안에 남는 맑은 수색의 루이보스 티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) ICED 그린 루이보스",
+        "image_url": "https://ediya.com/files/menu/IMG_1671596605212.png",
+        "note": "복숭아 한 조각을 베어 문 잔향이 입안에 남는 맑은 수색의 루이보스 티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) HOT 샤인 히비스커스",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322695193.png",
+        "note": "사과, 오렌지, 레몬그라스 등이 블렌딩된 과일향 가득한 새콤달콤한 맛의 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) ICED 샤인 히비스커스",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322703601.png",
+        "note": "사과, 오렌지, 레몬그라스 등이 블렌딩된 과일향 가득한 새콤달콤한 맛의 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) HOT 샤인 히비스커스",
+        "image_url": "https://ediya.com/files/menu/IMG_1671595438536.png",
+        "note": "사과, 오렌지, 레몬그라스 등이 블렌딩된 과일향 가득한 새콤달콤한 맛의 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) ICED 샤인 히비스커스",
+        "image_url": "https://ediya.com/files/menu/IMG_1671595525825.png",
+        "note": "사과, 오렌지, 레몬그라스 등이 블렌딩된 과일향 가득한 새콤달콤한 맛의 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "HOT 스프링 캐모마일",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322717592.png",
+        "note": "캐모마일과 루이보스, 레몬그라스 등이 블렌딩되어 은은함이 돋보이는 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "ICED 스프링 캐모마일",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322726556.png",
+        "note": "캐모마일과 루이보스, 레몬그라스 등이 블렌딩되어 은은함이 돋보이는 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) HOT 스프링 캐모마일",
+        "image_url": "https://ediya.com/files/menu/IMG_1671595271667.png",
+        "note": "캐모마일과 루이보스, 레몬그라스 등이 블렌딩되어 은은함이 돋보이는 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) ICED 스프링 캐모마일",
+        "image_url": "https://ediya.com/files/menu/IMG_1671595337284.png",
+        "note": "캐모마일과 루이보스, 레몬그라스 등이 블렌딩되어 은은함이 돋보이는 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) HOT 퓨어 페퍼민트",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322800672.png",
+        "note": "입안 가득 청량함이 느껴지는 상쾌한 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) ICED 퓨어 페퍼민트",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322809136.png",
+        "note": "입안 가득 청량함이 느껴지는 상쾌한 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) HOT 퓨어 페퍼민트",
+        "image_url": "https://ediya.com/files/menu/IMG_1671595635409.png",
+        "note": "입안 가득 청량함이 느껴지는 상쾌한 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) ICED 퓨어 페퍼민트",
+        "image_url": "https://ediya.com/files/menu/IMG_1671595852837.png",
+        "note": "입안 가득 청량함이 느껴지는 상쾌한 허브티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) HOT 피치 얼그레이",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322847327.png",
+        "note": "깊고 그윽한 홍차와 달콤한 복숭아 향이 어우러지는 깔끔한 맛의 얼그레이 티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(R) ICED 피치 얼그레이",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322855201.png",
+        "note": "깊고 그윽한 홍차와 달콤한 복숭아 향이 어우러지는 깔끔한 맛의 얼그레이 티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) HOT 피치 얼그레이",
+        "image_url": "https://ediya.com/files/menu/IMG_1671596309362.png",
+        "note": "깊고 그윽한 홍차와 달콤한 복숭아 향이 어우러지는 깔끔한 맛의 얼그레이 티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) ICED 피치 얼그레이",
+        "image_url": "https://ediya.com/files/menu/IMG_1671596392889.png",
+        "note": "깊고 그윽한 홍차와 달콤한 복숭아 향이 어우러지는 깔끔한 맛의 얼그레이 티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "ICED 버블 크림 밀크티",
+        "image_url": "https://ediya.com/files/menu/IMG_1647324346811.png",
+        "note": "베르가못 향과 우롱티의 밸런스를 잡아 풍부하고 깊은 맛과 크림의 부드러움을 함께 느끼고, 타피오카 펄의 쫄깃한 식감까지 즐길 수 있는 음료"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) ICED 자몽 네이블오렌지",
+        "image_url": "https://ediya.com/files/menu/IMG_1647323192384.png",
+        "note": "자몽청에 오렌지, 귤, 로즈힙, 사과, 파인애플 등을 넣어 부드러운 신맛과 오렌지 향을 즐길 수 있는 아이스 블렌딩티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) ICED 유자피나콜라다",
+        "image_url": "https://ediya.com/files/menu/IMG_1647323138803.png",
+        "note": "유자청에 사과, 파인애플, 히비스커스, 로즈힙 열매, 코코넛 등을 넣어 신맛과 달콤한 향의 밸런스가 좋은 아이스 블렌딩티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "(EX) ICED 석류애플라임",
+        "image_url": "https://ediya.com/files/menu/IMG_1647322977844.png",
+        "note": "산뜻한 석류에 다양한 과일과 꽃, 그리고 샴페인의 향이 더해져 보다 깊고 중후한 맛이 느껴지는 아이스 블렌딩티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "HOT 석류 오리지널",
+        "image_url": "https://ediya.com/files/menu/IMG_1647323060484.png",
+        "note": "석류 특유의 산뜻한 향과 깔끔한 뒷맛이 느껴지며, 과육이 한알 한알 살아있는 붉은 빛의 매력적인 과일차"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "HOT 석류 애플라임",
+        "image_url": "https://ediya.com/files/menu/IMG_1647323050118.png",
+        "note": "산뜻한 석류에 다양한 과일과 꽃, 그리고 샴페인의 향이 더해져 보다 깊고 중후한 맛이 느껴지는 블렌딩티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "HOT 자몽 네이블 오렌지",
+        "image_url": "https://ediya.com/files/menu/IMG_1647323209240.png",
+        "note": "자몽청에 오렌지, 귤, 로즈힙, 사과, 파인애플 등을 넣어 부드러운 신맛과 오렌지향을 즐길 수 있는 블렌딩 티"
+    },
+    {
+        "category": "BLENDING TEA",
+        "menu_name": "HOT 유자 피나콜라다",
+        "image_url": "https://ediya.com/files/menu/IMG_1647323154740.png",
+        "note": "유자청에 사과, 파인애플, 히비스커스, 로즈힙 열매, 코코넛 등을 넣어 신맛에 달콤한 향의 밸런스가 좋은 블렌딩 티"
+    },
+    {
+        "category": "BLENDING TEA",
         "menu_name": "아이스티 복숭아",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322896670.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322896670.png",
+        "note": "홍차의 깊은 맛과 풍부한 복숭아 향이 어우러진 달콤한 여름철 인기 음료"
     },
     {
+        "category": "BLENDING TEA",
         "menu_name": "(EX) 아이스티 복숭아",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322914713.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322914713.png",
+        "note": "홍차의 깊은 맛과 풍부한 복숭아 향이 어우러진 달콤한 여름철 인기 음료"
     },
     {
+        "category": "BLENDING TEA",
         "menu_name": "아이스티 레몬",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322929626.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322929626.png",
+        "note": "입안 가득 상큼한 레몬향이 퍼지는 새콤달콤한 맛의 아이스티"
     },
     {
+        "category": "BLENDING TEA",
         "menu_name": "(EX) 아이스티 레몬",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322949688.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322949688.png",
+        "note": "입안 가득 상큼한 레몬향이 퍼지는 새콤달콤한 맛의 아이스티"
     },
     {
+        "category": "BLENDING TEA",
         "menu_name": "(R) HOT 밀크티",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322607583.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322607583.png",
+        "note": "잉글리시 브랙퍼스트와 바닐라향이 어우러져 따뜻한 우유에 은은하게 퍼지는 향이 돋보이는 음료"
     },
     {
+        "category": "BLENDING TEA",
         "menu_name": "ICED 밀크티",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322590353.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322590353.png",
+        "note": "잉글리시 브랙퍼스트와 바닐라향이 어우러져 따뜻한 우유에 은은하게 퍼지는 향이 돋보이는 음료"
     },
     {
+        "category": "BLENDING TEA",
         "menu_name": "HOT 유자차",
-        "image_url": "https://ediya.com/files/menu/IMG_1647323168645.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647323168645.png",
+        "note": "국내산 고흥 유자를 사용하고 유자 과육이 풍부한 홈메이드 방식의 달콤한 과일차"
     },
     {
+        "category": "BLENDING TEA",
         "menu_name": "HOT 자몽차",
-        "image_url": "https://ediya.com/files/menu/IMG_1647323227736.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647323227736.png",
+        "note": "풍부한 자몽 과육으로 신맛과 쓴맛을 내어 천연의 자몽의 맛을 내는 과일차"
     },
     {
+        "category": "FLATCCINO",
         "menu_name": "망고 플랫치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322193229.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322193229.png",
+        "note": "열대과일인 망고의 달콤하고 진한 맛을 그대로 담아낸 여름철 인기 메뉴"
     },
     {
+        "category": "FLATCCINO",
         "menu_name": "꿀복숭아 플랫치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322170791.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322170791.png",
+        "note": "복숭아의 리얼한 풍미와 꿀의 달콤함이 최적의 조화를 이룬 달콤하고 시원한 플랫치노"
     },
     {
+        "category": "FLATCCINO",
         "menu_name": "초콜릿 칩 플랫치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322237789.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322237789.png",
+        "note": "트리플 모카시럽에 초콜릿 칩이 더해져 씹는 재미가 있는 달콤한 플랫치노"
     },
     {
+        "category": "FLATCCINO",
         "menu_name": "민트 초콜릿 칩 플랫치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322244409.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322244409.png",
+        "note": "진한 민트향이 더해진 초코렛에 초콜렛칩이 가득 들어있는 젊은 감성의 이디야 플랫치노"
     },
     {
+        "category": "FLATCCINO",
         "menu_name": "플레인 요거트 플랫치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322311675.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322311675.png",
+        "note": "요거트 고유의 새콤달콤한 맛을 그대로 살린 메뉴로 여성들에게 인기가 좋은 음료"
     },
     {
+        "category": "FLATCCINO",
         "menu_name": "블루베리 요거트 플랫치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322319410.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322319410.png",
+        "note": "블루베리 본연의 맛과 상큼한 요거트의 조화를 이룬 새콤달콤한 요거트 플랫치노"
     },
     {
+        "category": "FLATCCINO",
         "menu_name": "딸기 요거트 플랫치노",
-        "image_url": "https://ediya.com/files/menu/IMG_1647319753205.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647319753205.png",
+        "note": "남녀노소 누구나 좋아하는 딸기와 상큼한 요거트가 조화롭게 어우러진 플랫치노"
     },
     {
+        "category": "SHAKE & ADE",
+        "menu_name": "(L)자몽 포멜로 에이드",
+        "image_url": "https://ediya.com/files/menu/IMG_1721096289202.png",
+        "note": ""
+    },
+    {
+        "category": "SHAKE & ADE",
+        "menu_name": "(EX)자몽 포멜로 에이드",
+        "image_url": "https://ediya.com/files/menu/IMG_1721096406297.png",
+        "note": ""
+    },
+    {
+        "category": "SHAKE & ADE",
+        "menu_name": "(L) 머스캣 모히또 에이드",
+        "image_url": "https://ediya.com/files/menu/IMG_1721096519205.png",
+        "note": ""
+    },
+    {
+        "category": "SHAKE & ADE",
+        "menu_name": "(EX) 머스캣 모히또 에이드",
+        "image_url": "https://ediya.com/files/menu/IMG_1721096603111.png",
+        "note": ""
+    },
+    {
+        "category": "SHAKE & ADE",
+        "menu_name": "(L) 감귤 레몬 에이드",
+        "image_url": "https://ediya.com/files/menu/IMG_1721096724373.png",
+        "note": ""
+    },
+    {
+        "category": "SHAKE & ADE",
+        "menu_name": "(EX) 감귤 레몬 에이드",
+        "image_url": "https://ediya.com/files/menu/IMG_1721096816714.png",
+        "note": ""
+    },
+    {
+        "category": "SHAKE & ADE",
+        "menu_name": "(L) 파인 피치 우롱 에이드",
+        "image_url": "https://ediya.com/files/menu/IMG_1721096918523.png",
+        "note": ""
+    },
+    {
+        "category": "SHAKE & ADE",
+        "menu_name": "(EX) 파인 피치 우롱 에이드",
+        "image_url": "https://ediya.com/files/menu/IMG_1721096994703.png",
+        "note": ""
+    },
+    {
+        "category": "SHAKE & ADE",
+        "menu_name": "(L) 꿀 복숭아 에이드",
+        "image_url": "https://ediya.com/files/menu/IMG_1721097090404.png",
+        "note": ""
+    },
+    {
+        "category": "SHAKE & ADE",
+        "menu_name": "(EX) 꿀 복숭아 에이드",
+        "image_url": "https://ediya.com/files/menu/IMG_1721101484760.png",
+        "note": ""
+    },
+    {
+        "category": "SHAKE & ADE",
         "menu_name": "오리진 쉐이크",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322356739.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322356739.png",
+        "note": "우유 그대로의 부드러운 맛을 느낄 수 있으며, 어린이와 청소년도 즐겨 먹을 수 있는 쉐이크"
     },
     {
+        "category": "SHAKE & ADE",
         "menu_name": "초코쿠키 쉐이크",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322366389.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322366389.png",
+        "note": "초코쿠키의 달콤함과 바삭함을 느낄 수 있어, 어린이와 청소년에게 인기 있는 쉐이크"
     },
     {
+        "category": "SHAKE & ADE",
         "menu_name": "딸기 쉐이크",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322376229.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322376229.png",
+        "note": "부드러운 우유의 맛과 국내산 딸기의 달콤함이 조화로운 쉐이크"
     },
     {
+        "category": "SHAKE & ADE",
         "menu_name": "레몬 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322413547.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322413547.png",
+        "note": "레몬의 상큼함과 톡 쏘는 탄산의 시원함을 함께 즐길 수 있는 음료"
     },
     {
+        "category": "SHAKE & ADE",
         "menu_name": "(EX) 레몬 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322402501.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322402501.png",
+        "note": "레몬의 상큼함과 톡 쏘는 탄산의 시원함을 함께 즐길 수 있는 음료"
     },
     {
+        "category": "SHAKE & ADE",
         "menu_name": "자몽 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322422524.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322422524.png",
+        "note": "자몽의 쌉싸름한 맛과 상큼함을 동시에 느낄 수 있으며, 탄산의 청량함을 함께 맛볼 수 있는 음료"
     },
     {
+        "category": "SHAKE & ADE",
         "menu_name": "(EX) 자몽 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322437795.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322437795.png",
+        "note": "자몽의 쌉싸름한 맛과 상큼함을 동시에 느낄 수 있으며, 탄산의 청량함을 함께 맛볼 수 있는 음료"
     },
     {
+        "category": "SHAKE & ADE",
         "menu_name": "청포도 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322445174.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322445174.png",
+        "note": "청포도의 상큼함과 탄산의 시원함을 느낄 수 있는 음료"
     },
     {
+        "category": "SHAKE & ADE",
         "menu_name": "(EX) 청포도 에이드",
-        "image_url": "https://ediya.com/files/menu/IMG_1647322455866.png"
+        "image_url": "https://ediya.com/files/menu/IMG_1647322455866.png",
+        "note": "청포도의 상큼함과 탄산의 시원함을 느낄 수 있는 음료"
+    },
+    {
+        "category": "ICE FLAKES",
+        "menu_name": "팥인절미 1인빙수 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1714010281351.png",
+        "note": "아삭한 얼음과 팥이 어우러진 베이스에 아이스크림, 통팥, 인절미,시리얼을 올린 빙수"
+    },
+    {
+        "category": "ICE FLAKES",
+        "menu_name": "망고 요거놀라 1인빙수",
+        "image_url": "https://ediya.com/files/menu/IMG_1714010425104.png",
+        "note": "아삭한 얼음과 요거트가 어우러진 베이스에 아이스크림, 망고패션베이스, 그래놀라를 올린 빙수 "
+    },
+    {
+        "category": "ICE FLAKES",
+        "menu_name": "초당 옥수수 1인 빙수",
+        "image_url": "https://ediya.com/files/menu/IMG_1714010526737.png",
+        "note": "알알이 씹히는 고소한 옥수수수와 바삭한 콘후레이크의 식감이 어우러진 여름시즌 한정 초당 옥수수 빙수"
+    },
+    {
+        "category": "ICE FLAKES",
+        "menu_name": "팥인절미 눈꽃빙수",
+        "image_url": "https://ediya.com/files/menu/IMG_1714010615408.png",
+        "note": "부드러운 우유 눈꽃 빙수에 국산팥과 인절미를 올려 고소하고 달콤하게 즐길 수 있는 빙수"
+    },
+    {
+        "category": "ICE FLAKES",
+        "menu_name": "애플망고 눈꽃빙수",
+        "image_url": "https://ediya.com/files/menu/IMG_1714010676463.png",
+        "note": "부드러운 우유 눈꽃 빙수에 달콤한 망고를 더해 시원하고 달콤하게 즐길 수 있는 빙수"
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야 콤부차 복숭아 망고 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1716354699267.png",
+        "note": "홍차와 녹차의 추출액과 프락토올리고당, 스코비로 발효한 콤부차 원액과 정제수, 이디야의 노하우가 담긴 과일 티 농축액을 블렌딩하여 만든 프리바이오틱스를 함유한 병음료 콤부차 "
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야 콤부차 청포도 레몬",
+        "image_url": "https://ediya.com/files/menu/IMG_1716354818562.png",
+        "note": "홍차와 녹차의 추출액과 프락토올리고당, 스코비로 발효한 콤부차 원액과 정제수, 이디야의 노하우가 담긴 과일 티 농축액을 블렌딩하여 만든 프리바이오틱스를 함유한 병음료 콤부차 "
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야 콤부차 석류애플라임",
+        "image_url": "https://ediya.com/files/menu/IMG_1716354959737.png",
+        "note": "홍차와 녹차의 추출액과 프락토올리고당, 스코비로 발효한 콤부차 원액과 정제수, 이디야의 노하우가 담긴 과일 티 농축액을 블렌딩하여 만든 프리바이오틱스를 함유한 병음료 콤부차 "
+    },
+    {
+        "category": "RTD",
+        "menu_name": "비타민 주스 애플망고",
+        "image_url": "https://ediya.com/files/menu/IMG_1722475731399.png",
+        "note": ""
+    },
+    {
+        "category": "RTD",
+        "menu_name": "비타민 주스 믹스베리",
+        "image_url": "https://ediya.com/files/menu/IMG_1722475826757.png",
+        "note": ""
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야 감귤&한라봉 주스",
+        "image_url": "https://ediya.com/files/menu/IMG_1631059961896.png",
+        "note": "감귤의 상큼함에 싱그러운 한라봉의 진한 향이 기분 좋게 느껴지는 착즙주스"
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야 사과&당근 주스",
+        "image_url": "https://ediya.com/files/menu/IMG_1631060026295.png",
+        "note": "은은한 당근 향과 달콤한 사과의 맛이 완벽하게 어우러진 착즙주스"
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야 워터",
+        "image_url": "https://ediya.com/files/menu/IMG_1652751437621.png",
+        "note": "재활용 최우수 등급으로 분리 배출이 용이하며, 작아진 라벨 사이즈로 플라스틱 사용량을 최소화한 친환경 생수\n*에코탭을 통해 라벨을 쉽게 분리할 수 있습니다."
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야키즈 신비아파트 샤인머스캣",
+        "image_url": "https://ediya.com/files/menu/IMG_1709598676880.png",
+        "note": "신비아파트의 인기 캐릭터가 그려져 있는 이디야X신비아파트 콜라보 패트 음료 \n*면역력에 도움이 되는 산화아연이 포함되어 있습니다."
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야키즈 뽀로로 오렌지 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1709599223774.png",
+        "note": " 아이들 건강을 위한 홍삼 성분이 함유된 뽀로로 캐릭터 음료"
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야키즈 뽀로로 사과매실 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1709599391117.png",
+        "note": "아이들 건강을 위한 홍삼 성분이 함유된 뽀로로 캐릭터 음료"
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야키즈 뽀로로 포도블루베리 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1709599673354.png",
+        "note": "아이들 건강을 위한 홍삼 성분이 함유된 뽀로로 캐릭터 음료"
+    },
+    {
+        "category": "RTD",
+        "menu_name": "자몽네이블오렌지",
+        "image_url": "https://ediya.com/files/menu/IMG_1529902147409.png",
+        "note": "자몽의 부드러운 신맛과 오렌지향을 즐길 수 있는 이디야 블렌딩티"
+    },
+    {
+        "category": "RTD",
+        "menu_name": "유자피나콜라다",
+        "image_url": "https://ediya.com/files/menu/IMG_1529895623589.png",
+        "note": "유자의 신맛에 피나콜라다의 달콤한 향이 더해져 밸런스가 좋은 블렌딩티"
+    },
+    {
+        "category": "RTD",
+        "menu_name": "석류애플라임",
+        "image_url": "https://ediya.com/files/menu/IMG_1529902396529.png",
+        "note": "산뜻한 석류에 샴페인의 향이 더해져 보다 깊고 중후한 맛이 느껴지는 블렌딩티"
+    },
+    {
+        "category": "RTD",
+        "menu_name": "이디야 사과주스",
+        "image_url": "https://ediya.com/files/menu/IMG_1565670650552.png",
+        "note": "칠레산 사과의 진한 풍미를 더욱 달콤하게 즐길 수 있는 과채주스"
+    },
+    {
+        "category": "SEASON",
+        "menu_name": "베리하츄핑 딸기 드링킹 요거트 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1717116214158.png",
+        "note": "마시면서 즐기는 드링킹 요거트에 새콤달콤한 딸기가 블렌딩된 음료"
+    },
+    {
+        "category": "SEASON",
+        "menu_name": "말랑핑 블루베리 드링킹 요거트 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1717116358189.png",
+        "note": "마시면서 즐기는 드링킹 요거트에 새콤달콤한 블루베리가 블렌딩된 음료"
+    },
+    {
+        "category": "SEASON",
+        "menu_name": "(L) 미니펄 연유 커피 쉐이크 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1722989646733.png",
+        "note": ""
+    },
+    {
+        "category": "SEASON",
+        "menu_name": "(L) 미니펄 딸기 연유 플랫치노",
+        "image_url": "https://ediya.com/files/menu/IMG_1722989853702.png",
+        "note": ""
+    },
+    {
+        "category": "SEASON",
+        "menu_name": "(L) 미니펄 망고 연유 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1722990006434.png",
+        "note": ""
+    },
+    {
+        "category": "SEASON",
+        "menu_name": "(L) 미니펄 밀크티",
+        "image_url": "https://ediya.com/files/menu/IMG_1722990159870.png",
+        "note": ""
+    },
+    {
+        "category": "SEASON",
+        "menu_name": "(R)딸기 듬뿍 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1703040183528.png",
+        "note": "달콤한 딸기의 식감과 상큼함을 듬뿍 담은 딸기라떼"
+    },
+    {
+        "category": "SEASON",
+        "menu_name": "(EX)딸기 듬뿍 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1703040302345.png",
+        "note": "달콤한 딸기의 식감과 상큼함을 듬뿍 담은 딸기라떼"
+    },
+    {
+        "category": "ICE CREAM",
+        "menu_name": "소프트 아이스크림",
+        "image_url": "https://ediya.com/files/menu/IMG_1715911790197.png",
+        "note": "담백하고 부드러운 우유의 풍미가 가득한 아이스크림\n\n(이디야커피 일부 매장에서만 판매하는 제품입니다.)"
+    },
+    {
+        "category": "ICE CREAM",
+        "menu_name": "아이스크림 카페라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1715911919458.png",
+        "note": "고소한 라떼 위에 우유의 풍미가 가득한 아이스크림을 토핑하여 부드럽게 마실 수 있는 음료\n(이디야커피 일부 매장에서만 판매하는 제품입니다.)"
+    },
+    {
+        "category": "ICE CREAM",
+        "menu_name": "꿀 인절미 아이스크림",
+        "image_url": "https://ediya.com/files/menu/IMG_1715912156628.png",
+        "note": "소프트 밀크 아이스크림과 달콤한 꿀, 인절미의 달달한 만남으로 고소하고 달콤하게 즐길 수 있는 아이스크림\n(이디야커피 일부 매장에서만 판매하는 제품입니다.)"
+    },
+    {
+        "category": "ICE CREAM",
+        "menu_name": "초코쿠키 아이스크림",
+        "image_url": "https://ediya.com/files/menu/IMG_1715912592793.png",
+        "note": "소프트 밀크 아이스크림의 부드러움, 바삭한 초코쿠키와 달콤 쌉싸름한 코코아의 풍미를 즐길 수 있는 아이스크림\n(이디야커피 일부 매장에서만 판매하는 제품입니다.)"
+    },
+    {
+        "category": "ICE CREAM",
+        "menu_name": "딸기쿠키 아이스크림",
+        "image_url": "https://ediya.com/files/menu/IMG_1715912465575.png",
+        "note": "소프트 밀크 아이스크림에 바삭한 초코쿠키와 딸기 시럽을 더해 더욱 상큼 달콤 하게 즐길 수 있는 아이스크림\n(이디야커피 일부 매장에서만 판매하는 제품입니다.)"
+    },
+    {
+        "category": "ICE CREAM",
+        "menu_name": "소프트 아이스크림 아포가토",
+        "image_url": "https://ediya.com/files/menu/IMG_1719364105830.png",
+        "note": "소프트 아이스크림에 에스프레소와 아몬드가 어우러져 부드럽고 달콤하게 즐길 수 있는 디저트(일부 매장 판매)"
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(R) 디카페인 아샷추 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1718955263377.png",
+        "note": "홍차의 깊은 맛과 풍부한 복숭아 향이 어우러진 아이스티에 이디야 디카페인 에스프레소가 어우러진 음료"
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) 디카페인 아샷추 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1718955385150.png",
+        "note": "홍차의 깊은 맛과 풍부한 복숭아 향이 어우러진 아이스티에 이디야 디카페인 에스프레소가 어우러진 음료"
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(R) 디카페인 제로슈가 아샷추 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1718956330229.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) 디카페인 제로슈가 아샷추 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1718956430303.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "HOT 디카페인 에스프레소",
+        "image_url": "https://ediya.com/files/menu/IMG_1721800750598.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "HOT 디카페인 에스프레소 마끼아또",
+        "image_url": "https://ediya.com/files/menu/IMG_1721800901669.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "HOT 디카페인 에스프레소 콘파냐",
+        "image_url": "https://ediya.com/files/menu/IMG_1721801001714.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) 디카페인 미니펄 연유 커피 쉐이크",
+        "image_url": "https://ediya.com/files/menu/IMG_1722991123170.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) HOT 디카페인 카페 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1721104952889.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) HOT 디카페인 카페 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1721106247362.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) ICED 디카페인 카페 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1721106299584.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) ICED 디카페인 카페 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1721106334290.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) ICED 디카페인 카페 아메리카노",
+        "image_url": "https://ediya.com/files/menu/IMG_1721106994373.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) ICED 디카페인 카페 아메리카노",
+        "image_url": "https://ediya.com/files/menu/IMG_1721107127469.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) HOT 디카페인 카라멜 마끼아또 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1721108787230.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) ICED 디카페인 카라멜 마끼아또",
+        "image_url": "https://ediya.com/files/menu/IMG_1721108917355.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) HOT 디카페인 카라멜 마끼아또 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1721109611512.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) ICED 디카페인 카라멜 마끼아또",
+        "image_url": "https://ediya.com/files/menu/IMG_1721109727340.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) ICED 디카페인 넛츠 크림 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1721110125100.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) HOT 디카페인 연유 카페 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1721112161849.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) ICED 디카페인 연유 카페 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1721112356312.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) HOT 디카페인 연유 카페 라떼 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1721112509173.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) ICED 디카페인 연유 카페 라떼  ",
+        "image_url": "https://ediya.com/files/menu/IMG_1721112622403.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) HOT 디카페인 카페 모카",
+        "image_url": "https://ediya.com/files/menu/IMG_1721113750256.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) ICED 디카페인 카페 모카",
+        "image_url": "https://ediya.com/files/menu/IMG_1721113857534.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) HOT 디카페인 카페 모카 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1721113982795.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) ICED 디카페인 카페 모카 ",
+        "image_url": "https://ediya.com/files/menu/IMG_1721114068117.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) HOT 디카페인 바닐라 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1721114505676.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) ICED 디카페인 바닐라 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1721114611715.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) HOT 디카페인 바닐라 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1721114762307.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) ICED 디카페인 바닐라 라떼",
+        "image_url": "https://ediya.com/files/menu/IMG_1721114864886.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) HOT 디카페인 화이트 초콜릿 모카",
+        "image_url": "https://ediya.com/files/menu/IMG_1721115432464.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) ICED 디카페인 화이트 초콜릿 모카",
+        "image_url": "https://ediya.com/files/menu/IMG_1721115693501.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) HOT 디카페인 화이트 초콜릿 모카",
+        "image_url": "https://ediya.com/files/menu/IMG_1721116011753.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) ICED 디카페인 화이트 초콜릿 모카",
+        "image_url": "https://ediya.com/files/menu/IMG_1721116116248.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) HOT 디카페인 민트 모카",
+        "image_url": "https://ediya.com/files/menu/IMG_1721117168291.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) ICED 디카페인 민트 모카",
+        "image_url": "https://ediya.com/files/menu/IMG_1721117254570.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) HOT 디카페인 카푸치노",
+        "image_url": "https://ediya.com/files/menu/IMG_1721117444125.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) ICED 디카페인 카푸치노",
+        "image_url": "https://ediya.com/files/menu/IMG_1721117534865.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(L) HOT 디카페인 카페 아메리카노",
+        "image_url": "https://ediya.com/files/menu/IMG_1697070552345.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "(EX) HOT 디카페인 카페 아메리카노",
+        "image_url": "https://ediya.com/files/menu/IMG_1697070876514.png",
+        "note": ""
+    },
+    {
+        "category": "DECAF",
+        "menu_name": "디카페인 아포가토 오리지널",
+        "image_url": "https://ediya.com/files/menu/IMG_1691731409331.png",
+        "note": "대중들에게 가장 친숙한 타입의 아포가토로 이디야 빙볼에 에스프레소와 아몬드를 토핑한 제품"
     }
 ]
