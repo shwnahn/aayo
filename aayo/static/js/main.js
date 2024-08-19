@@ -162,23 +162,21 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log('공유할 내용:', JSON.stringify(shareContent, null, 2));
 
       // alert으로 공유 내용 표시
-      alert(
-        '카카오톡 공유 내용:\n\n' +
-          '제목: ' +
-          shareContent.content.title +
-          '\n' +
-          '설명: ' +
-          shareContent.content.description +
-          '\n' +
-          '링크: ' +
-          shareContent.content.link.webUrl +
-          '\n\n' +
-          '실제 환경에서는 카카오톡 공유 다이얼로그가 열립니다.'
-      );
+    //   alert(
+    //     '카카오톡 공유 내용:\n\n' +
+    //       '제목: ' +
+    //       shareContent.content.title +
+    //       '\n' +
+    //       '설명: ' +
+    //       shareContent.content.description +
+    //       '\n' +
+    //       '링크: ' +
+    //       shareContent.content.link.webUrl +
+    //       '\n\n' +
+    //       '실제 환경에서는 카카오톡 공유 다이얼로그가 열립니다.'
+    //   );
 
       // HTTP 환경에서는 실제 Kakao.Link.sendDefault 함수가 작동하지 않으므로 주석 처리
-      /*
         Kakao.Link.sendDefault(shareContent);
-        */
     });
 });
