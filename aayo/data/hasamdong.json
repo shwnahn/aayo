@@ -1,0 +1,1160 @@
+[
+    {
+        "menu_name": "바닐라라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/08/03/tpd_af_img_4776.png",
+        "category": "시그니처",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "쿨라임에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/08/03/tpd_af_img_4774.png",
+        "category": "시그니처",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "히비스커스에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/08/03/tpd_af_img_4772.png",
+        "category": "시그니처",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "구룸라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/08/03/tpd_af_img_4770.png",
+        "category": "시그니처",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "허니자몽블랙티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/08/03/tpd_af_img_4768.png",
+        "category": "시그니처",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "흑당버블티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/08/03/tpd_af_img_4766.png",
+        "category": "시그니처",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "클래식 샤케라토",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/08/tpd_af_img_4544.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "위스키 샤케라또",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/08/tpd_af_img_4546.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE/논알콜 성인용 음료"
+    },
+    {
+        "menu_name": "캘리포니아 레몬 하이볼 에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/08/tpd_af_img_4548.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE/논알콜 성인용 음료"
+    },
+    {
+        "menu_name": "블루드래곤 하이볼 에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/08/tpd_af_img_4550.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE/논알콜 성인용 음료"
+    },
+    {
+        "menu_name": "민트쥴랩 하이볼 에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/08/tpd_af_img_4552.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE/논알콜 성인용 음료"
+    },
+    {
+        "menu_name": "히비스커스 릴렉서",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/08/tpd_af_img_4554.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "팥퐁당",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/58_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "딸기 팥퐁당",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/59_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "망고코코넛퐁당",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/60_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "약과 팥퐁당",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/61_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "옛다방커피",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/56_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "수박주스",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/136_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "딸기라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/62_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "크림딸기라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/63_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "딸기돌체라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/64_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "버블티딸기라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/65_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "딸기셰이크",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/66_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "초코셰이크",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/67_1.png",
+        "category": "신메뉴/시즌메뉴",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "아메리카노",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/3_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "카페라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/5_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "돌체라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/7_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "바닐라라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/9_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "헤이즐넛라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/11_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "카라멜라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/13_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "카라멜마끼아또",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/15_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "카푸치노",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/17_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "카페모카",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/19_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "히말라야(소금커피)",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/21_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "구룸라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/23_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "자바칩카페모카",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/25_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "코코넛카페라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/27_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "흑당카페라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/29_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "흑당구룸라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/31_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "달구나카페라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/33_1.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "뽕뽕라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/35_1.png",
+        "category": "커피",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "화이트아메리카노",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4570.png",
+        "category": "커피",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "에스프레소",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4613.png",
+        "category": "커피",
+        "note": "HOT"
+    },
+    {
+        "menu_name": "콜드브루",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/48_1.png",
+        "category": "콜드브루/디카페인",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "콜드브루 라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/49_1.png",
+        "category": "콜드브루/디카페인",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "콜드브루 바닐라라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/50_1.png",
+        "category": "콜드브루/디카페인",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "콜드브루 아인슈페너",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/51_1.png",
+        "category": "콜드브루/디카페인",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "디카페인 콜드브루",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/52_1.png",
+        "category": "콜드브루/디카페인",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "디카페인 콜드브루 라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/53_1.png",
+        "category": "콜드브루/디카페인",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "디카페인 콜드브루 바닐라 라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/54_1.png",
+        "category": "콜드브루/디카페인",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "디카페인 콜드브루 돌체라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/55_1.png",
+        "category": "콜드브루/디카페인",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L아메리카노",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4606.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L카페라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4602.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L돌체라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4600.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L바닐라라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4601.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L초코라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4599.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L복숭아아이스티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4603.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L콜드브루",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4605.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L자몽에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4598.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L레몬에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4597.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L매실차",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4596.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L허니자몽블랙티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4604.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L식혜",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4595.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "1.1L옛다방커피",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4607.png",
+        "category": "보틀",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "딸기라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/17/tpd_af_img_4673.png",
+        "category": "라떼",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "크림딸기라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/17/tpd_af_img_4672.png",
+        "category": "라떼",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "블루베리라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/69_1.png",
+        "category": "라떼",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "망고요거라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/70_1.png",
+        "category": "라떼",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "피치요거라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/71_1.png",
+        "category": "라떼",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "초코라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/72_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "민트초코라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/74_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "자바칩초코라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/76_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "녹차라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/78_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "오곡라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/80_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "고구마라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/82_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "얼그레이라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/84_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "토피넛라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/86_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "밀크티라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/88_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "달구나라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/90_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "약과쿠키라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/92_1.png",
+        "category": "라떼",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "돌체우유",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/93_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "뽕뽕우유",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/95_1.png",
+        "category": "라떼",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "우유",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/96_1.png",
+        "category": "라떼",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "쌍문동 진저돌체라떼",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/98_2.png",
+        "category": "라떼",
+        "note": "HOT"
+    },
+    {
+        "menu_name": "플레인요거트스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/99_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "딸기요거트스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/100_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "블루베리요거트스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/101_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "복숭아요거트스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/102_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "망고요거트스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/103_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "커피스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/108_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "카페모카스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/110_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "베트남콩커피",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/109_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "밀크티스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/112_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "녹차스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/111_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "초코스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/104_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "자바칩초코스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/107_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "민트초코스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/105_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "쿠앤크스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/106_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "유자스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/113_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "자몽스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/114_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "청포도스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/115_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "레몬스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/116_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "오렌지스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/117_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "매실스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/118_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "17곡 스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/119_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "밀크셰이크",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/68_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "식혜 스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/120_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "단호박식혜 스무디",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/121_1.png",
+        "category": "스무디",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "히비스커스에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/122_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "쿨라임에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/123_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "자몽에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/124_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "레몬에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/125_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "청포도에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/126_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "블루레몬에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/127_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "유자에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/128_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "오렌지에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/129_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "딸기에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/130_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "망고에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/131_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "복숭아에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/132_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "블루베리에이드",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/133_1.png",
+        "category": "에이드",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "바나나주스",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/138_1.png",
+        "category": "주스/버블티",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "키위주스",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/137_1.png",
+        "category": "주스/버블티",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "딸바주스",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/135_1.png",
+        "category": "주스/버블티",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "딸기주스",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/134_1.png",
+        "category": "주스/버블티",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "흑당버블티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/139_1.png",
+        "category": "주스/버블티",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "초코버블티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/140_1.png",
+        "category": "주스/버블티",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "타로버블티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/141_1.png",
+        "category": "주스/버블티",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "밀크티버블티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/142_1.png",
+        "category": "주스/버블티",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "녹차버블티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/143_1.png",
+        "category": "주스/버블티",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "허니듀멜론버블티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/144_1.png",
+        "category": "주스/버블티",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "복숭아아이스티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/145_1.png",
+        "category": "차",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "매실차",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/146_1.png",
+        "category": "차",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "허니자몽블랙티",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/148_1.png",
+        "category": "차",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "자몽차",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/150_1.png",
+        "category": "차",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "레몬차",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/152_1.png",
+        "category": "차",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "생강레몬차",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/154_1.png",
+        "category": "차",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "유자차",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/156_1.png",
+        "category": "차",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "페퍼민트",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4707.png",
+        "category": "차",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "캐모마일",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4706.png",
+        "category": "차",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "얼그레이",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4705.png",
+        "category": "차",
+        "note": "ICE/HOT"
+    },
+    {
+        "menu_name": "식혜",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/164_1.png",
+        "category": "차",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "단호박식혜",
+        "image_url": "https://www.hasamdongcoffee.com/upld/pd/165_1.png",
+        "category": "차",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "달룽지",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/19/tpd_af_img_4695.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "페스츄리 호두과자",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/19/tpd_af_img_4697.png",
+        "category": "베이커리",
+        "note": "팥/슈크림/크림치즈팥"
+    },
+    {
+        "menu_name": "리얼버터 소금빵",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/19/tpd_af_img_4698.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "생크림",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4754.png",
+        "category": "베이커리",
+        "note": "뚱와플"
+    },
+    {
+        "menu_name": "후르츠 생크림",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4753.png",
+        "category": "베이커리",
+        "note": "뚱와플"
+    },
+    {
+        "menu_name": "누텔라 생크림",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4752.png",
+        "category": "베이커리",
+        "note": "뚱와플"
+    },
+    {
+        "menu_name": "초코폭탄",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4751.png",
+        "category": "베이커리",
+        "note": "뚱와플"
+    },
+    {
+        "menu_name": "후르츠 크림치즈",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4750.png",
+        "category": "베이커리",
+        "note": "뚱와플"
+    },
+    {
+        "menu_name": "쿠키 누텔라 크림치즈",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4749.png",
+        "category": "베이커리",
+        "note": "뚱와플"
+    },
+    {
+        "menu_name": "슈톨렌",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4748.png",
+        "category": "베이커리",
+        "note": "겨울 한정 수량 판매"
+    },
+    {
+        "menu_name": "크룽지",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4747.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "호떡",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4746.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "츄러스",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4745.png",
+        "category": "베이커리",
+        "note": "+초코디핑소스"
+    },
+    {
+        "menu_name": "약과쿠키",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4744.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "브라우니약과",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4743.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "오울트리 바나나칩",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4742.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "쿠키앤크림",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4741.png",
+        "category": "베이커리",
+        "note": "떠먹는 케이크"
+    },
+    {
+        "menu_name": "마스카포네 크림치즈",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4740.png",
+        "category": "베이커리",
+        "note": "떠먹는 케이크"
+    },
+    {
+        "menu_name": "쿠앤크",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4736.png",
+        "category": "베이커리",
+        "note": "마카롱"
+    },
+    {
+        "menu_name": "솔티드 카라멜",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4735.png",
+        "category": "베이커리",
+        "note": "마카롱"
+    },
+    {
+        "menu_name": "블루베리",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4734.png",
+        "category": "베이커리",
+        "note": "마카롱"
+    },
+    {
+        "menu_name": "브라우니",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4733.png",
+        "category": "베이커리",
+        "note": "마카롱"
+    },
+    {
+        "menu_name": "딸기요거트",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4732.png",
+        "category": "베이커리",
+        "note": "마카롱"
+    },
+    {
+        "menu_name": "초코 하삼빵",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4731.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "녹차 하삼빵",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4730.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "얼그레이 하삼빵",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4729.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "플레인 스콘",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4728.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "초코칩 스콘",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4727.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "초코머핀",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4726.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "치즈머핀",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4725.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리머핀",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4724.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "우유크림카스테라",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4723.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "육쪽마늘빵",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4722.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "마카다미아월넛쿠키",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4720.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "초코렛청크쿠키",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4719.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "햄치즈샌드위치",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4718.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "에그샌드위치",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4717.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "카야잼샌드위치",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4716.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "흑당당",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4715.png",
+        "category": "베이커리",
+        "note": "크로플"
+    },
+    {
+        "menu_name": "솔티드카라멜",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4714.png",
+        "category": "베이커리",
+        "note": "크로플"
+    },
+    {
+        "menu_name": "초코렛폭탄",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4713.png",
+        "category": "베이커리",
+        "note": "크로플"
+    },
+    {
+        "menu_name": "시나몬",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4712.png",
+        "category": "베이커리",
+        "note": "크로플"
+    },
+    {
+        "menu_name": "딸기퓨레&크림",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4711.png",
+        "category": "베이커리",
+        "note": "크로플"
+    },
+    {
+        "menu_name": "블루베리퓨레&크림",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4710.png",
+        "category": "베이커리",
+        "note": "크로플"
+    },
+    {
+        "menu_name": "커피콩빵",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/22/tpd_af_img_4709.png",
+        "category": "베이커리",
+        "note": ""
+    },
+    {
+        "menu_name": "트위스트앤드링크(사과)",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/19/tpd_af_img_4700.png",
+        "category": "MD",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "트위스트앤드링크(와일드베리)",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/19/tpd_af_img_4702.png",
+        "category": "MD",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "트위스트앤드링크(오렌지)",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/19/tpd_af_img_4703.png",
+        "category": "MD",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "트위스트앤드링크(라즈베리)",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/19/tpd_af_img_4704.png",
+        "category": "MD",
+        "note": "ICE"
+    },
+    {
+        "menu_name": "하삼동커피 블렌딩 드립백",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4625.png",
+        "category": "MD",
+        "note": ""
+    },
+    {
+        "menu_name": "하삼동머그컵",
+        "image_url": "https://www.hasamdongcoffee.com/upld/2024/07/09/tpd_af_img_4624.png",
+        "category": "MD",
+        "note": ""
+    }
+]

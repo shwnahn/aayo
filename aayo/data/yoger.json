@@ -1,0 +1,1256 @@
+[
+    {
+        "menu_name": "마시는 요거트 청포도 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202402/thumb/1706758541_m0181896_20240201123541.png",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "마시는 요거트 자몽 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202402/thumb/1706758533_m0110545_20240201123533.png",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "마시는 요거트 코코넛 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202402/thumb/1706758521_m0135486_20240201123521.png",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "마시는 요거트 블루베리 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202402/thumb/1706758510_m0197524_20240201123510.png",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "마시는 요거트 망고 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202402/thumb/1706758433_m0144422_20240201123353.png",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "마시는 요거트 딸기 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202402/thumb/1706758498_m0168729_20240201123458.png",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기 요거트 스무디(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675999644_m0145170_20230210122724.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "망고 요거트 스무디(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675999391_m0143433_20230210122311.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리 요거트 스무디(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675999348_m0164902_20230210122228.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "플레인 요거트 쉐이크(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676956885_m0139709_20230221142125.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기 요거트 쉐이크(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676956843_m0178348_20230221142043.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리 요거트 쉐이크(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676956796_m0168016_20230221141956.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "망고 요거트 쉐이크(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676956752_m0121423_20230221141912.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "그린애플 요거트 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675999907_m0150279_20230210123147.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "그린애플 요거트 스무디(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675999833_m0123945_20230210123033.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "메론 요거트 스무디(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675999617_m0115850_20230210122657.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "레몬 요거트 스무디(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675999586_m0157406_20230210122626.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "복숭아 요거트 스무디(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675999524_m0167439_20230210122524.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "바나나 요거트 스무디(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675999416_m0190949_20230210122336.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "허니자몽 요거트 스무디(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675999272_m0156119_20230210122112.jpg",
+        "category": "요거트",
+        "note": ""
+    },
+    {
+        "menu_name": "아메리카노(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719993232_m0171356_20240703165352.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "카페라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719993518_m0170512_20240703165838.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "콜드브루 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676003374_m0183352_20230210132934.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "콜드브루(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676003341_m0143256_20230210132901.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "카푸치노(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719993499_m0175523_20240703165819.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "카페모카(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719993508_m0169495_20240703165828.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "카라멜 마끼아또(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719993583_m0123229_20240703165943.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "연유 카페라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990371_m0156675_20240703160611.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "헤이즐넛 카페라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990359_m0155339_20240703160559.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "바닐라 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990341_m0161382_20240703160541.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "크림 라떼 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719993995_m0126986_20240703170635.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "흑임자 크림 라떼 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719993968_m0196068_20240703170608.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "토피넛 크림 라떼 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719993984_m0171903_20240703170624.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "달고나 카페 버블라떼(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004877_m0154757_20230210135437.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "흑당 카페 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004834_m0112588_20230210135354.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "연유 크러쉬 카페라떼(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676003690_m0185046_20230210133450.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "크러쉬 아메리카노(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676003643_m0196961_20230210133403.jpg",
+        "category": "커피",
+        "note": ""
+    },
+    {
+        "menu_name": "ICE 자색고구마 버블 라떼 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202310/thumb/1696577032_m0180699_20231006162352.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "HOT 자색고구마 라떼 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202310/thumb/1696576953_m0190506_20231006162233.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "ICE 밤 버블 라떼 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202310/thumb/1696576859_m0143193_20231006162059.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "HOT 밤 라떼 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202310/thumb/1696576764_m0121847_20231006161924.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "ICE 단호박 버블 라떼 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202310/thumb/1696576623_m0140757_20231006161703.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "HOT 단호박 라떼 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202310/thumb/1696576480_m0125167_20231006161440.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "허니자몽 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683513921_m0178315_20230508114521.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "레몬 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683513804_m0148458_20230508114324.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "바나나 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683513706_m0135581_20230508114146.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683513604_m0179403_20230508114004.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "망고 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683513542_m0144808_20230508113902.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683513423_m0192716_20230508113703.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "달고나 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004708_m0124867_20230210135148.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "말차 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004655_m0154874_20230210135055.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "초코바나나 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676002375_m0191884_20230210131255.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "바나나 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676002011_m0139496_20230210130651.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "흑임자라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990411_m0190102_20240703160651.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "흑당 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990428_m0164452_20240703160708.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "토피넛 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990445_m0156652_20240703160725.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "초코라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990457_m0194460_20240703160737.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "오곡라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990471_m0114740_20240703160751.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "밀크티 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990508_m0154377_20240703160828.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "달고나 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990524_m0130123_20240703160844.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "고구마 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990613_m0148790_20240703161013.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "그린티 라떼(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990625_m0146868_20240703161025.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "홍차 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004769_m0177957_20230210135249.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "흑당 말차 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004434_m0165327_20230210134714.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "흑당 홍차 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004382_m0132012_20230210134622.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "토피넛 크러쉬 라떼 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004298_m0131302_20230210134458.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "흑당 쇼콜라 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004610_m0186620_20230210135010.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "흑당 버블티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004471_m0124423_20230210134751.jpg",
+        "category": "논커피",
+        "note": ""
+    },
+    {
+        "menu_name": "메리딸기 (시즌메뉴)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675995632_m0138360_20230210112032.jpg",
+        "category": "메리시리즈",
+        "note": ""
+    },
+    {
+        "menu_name": "메리딸기 치즈큐브(R)(시즌메뉴)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675995698_m0199967_20230210112138.jpg",
+        "category": "메리시리즈",
+        "note": ""
+    },
+    {
+        "menu_name": "메리딸기 초코 브라우니(R)(시즌메뉴)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675995688_m0162876_20230210112128.jpg",
+        "category": "메리시리즈",
+        "note": ""
+    },
+    {
+        "menu_name": "메리베리(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675995420_m0148696_20230210111700.jpg",
+        "category": "메리시리즈",
+        "note": ""
+    },
+    {
+        "menu_name": "메리망고(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675995380_m0198161_20230210111620.jpg",
+        "category": "메리시리즈",
+        "note": ""
+    },
+    {
+        "menu_name": "메리뉴욕(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675995207_m0142151_20230210111327.jpg",
+        "category": "메리시리즈",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리 치즈프라페(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676944611_m0156378_20230221105651.jpg",
+        "category": "블렌디드",
+        "note": ""
+    },
+    {
+        "menu_name": "요거트 요프치노(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676956649_m0146044_20230221141729.jpg",
+        "category": "블렌디드",
+        "note": ""
+    },
+    {
+        "menu_name": "순수 치즈 프라페(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676946414_m0176661_20230221112654.jpg",
+        "category": "블렌디드",
+        "note": ""
+    },
+    {
+        "menu_name": "레몬 쿨캔디 에이드 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202404/thumb/1712017204_m0133703_20240402092004.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "레몬 솜사탕 에이드 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202404/thumb/1712017095_m0111930_20240402091815.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "레몬 쿨캔디 소다 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202404/thumb/1712016982_m0134850_20240402091622.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "레몬 솜사탕 소다 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202404/thumb/1712016887_m0113836_20240402091447.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "생과일주스 딸기(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676000752_m0161130_20230210124552.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "리얼딸기우유(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676000705_m0128173_20230210124505.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "그린애플 스파클링 에이드(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676000620_m0198632_20230210124340.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "순수우유(딸기)(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676000333_m0181851_20230210123853.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "순수우유(딸기바나나)(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676000317_m0135758_20230210123837.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "망고 스파클링 에이드(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675997904_m0127992_20230210115824.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "청포도 스파클링 에이드(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675997852_m0176797_20230210115732.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "자몽 스파클링 에이드(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675997791_m0124515_20230210115631.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "오렌지 스파클링 에이드(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675997756_m0173819_20230210115556.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "레몬 스파클링 에이드(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675997713_m0178205_20230210115513.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스티(복숭아)(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675997561_m0150594_20230210115241.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스티(레몬)(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675997515_m0145078_20230210115155.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "상그리아 자몽티(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990754_m0176219_20240703161234.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "상그리아 유자티(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990771_m0151333_20240703161251.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "상그리아티(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990795_m0153132_20240703161315.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "허니자몽블랙티(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990833_m0111493_20240703161353.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "잉글리쉬브렉퍼스트(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990862_m0161778_20240703161422.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "얼그레이티(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990889_m0164694_20240703161449.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "페퍼민트(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990901_m0172956_20240703161501.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "캐모마일(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990932_m0124533_20240703161532.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "베리마테(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990948_m0117371_20240703161548.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "루이보스 레몬(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990963_m0118548_20240703161603.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "자몽티(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990983_m0184862_20240703161623.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "레몬티(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719990994_m0141895_20240703161634.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "유자티(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719991195_m0191463_20240703161955.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "그린티(R)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1719991208_m0153856_20240703162008.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "레몬 크러쉬 아이스티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004225_m0131477_20230210134345.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "복숭아 크러쉬 아이스티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676004190_m0172448_20230210134310.jpg",
+        "category": "에이드&티",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 딸기 (시즌메뉴)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239585_m0142427_20240509162625.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 플레인",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239805_m0151288_20240509163005.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 딸기펄",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239606_m0198846_20240509162646.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 오렌지펄",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239643_m0117358_20240509162723.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 망고펄",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239655_m0187578_20240509162735.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 리치펄",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239678_m0117538_20240509162758.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 그린애플펄",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239687_m0172651_20240509162807.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 소다펄",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239703_m0120418_20240509162823.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 포도펄",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239713_m0140270_20240509162833.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 마시멜로우",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239726_m0133586_20240509162846.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 마시멜로우 초코",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239738_m0143105_20240509162858.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 코코젤리",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239749_m0144934_20240509162909.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 타피오카펄",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239762_m0118845_20240509162922.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 초코",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202407/thumb/1720143547_m0123625_20240705103907.png",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 치즈",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239841_m0118824_20240509163041.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 블루베리",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239855_m0137993_20240509163055.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 망고",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715239772_m0155548_20240509162932.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "한입 요거트 복숭아",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1715241714_m0142300_20240509170154.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "플레인 요거트 아이스크림 (3인)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993950_m0154379_20230210105230.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "플레인 요거트 아이스크림(2인)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993897_m0166818_20230210105137.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "플레인 요거트 아이스크림",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993887_m0138748_20230210105127.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "치즈큐브(스트로베리)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993782_m0189096_20230210104942.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "치즈큐브(블루베리)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993762_m0133463_20230210104922.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "프루티(망고)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993677_m0176974_20230210104757.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "프루티(스트로베리)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993641_m0136722_20230210104721.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "프루티(블루베리)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993580_m0155447_20230210104620.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "티라미수 밀크 아이스크림",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993450_m0185611_20230210104410.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "밀크 아포가토",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993400_m0125432_20230210104320.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "밀크 아이스크림",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675993344_m0182042_20230210104224.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "구슬아이스크림(캔디프로스)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676947017_m0139541_20230221113657.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "구슬아이스크림(초코바닐라)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676946983_m0132910_20230221113623.jpg",
+        "category": "아이스크림",
+        "note": ""
+    },
+    {
+        "menu_name": "초코 바나나 스노우 빙수",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683513214_m0114158_20230508113334.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "흑임자 한 컵 빙수(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683509083_m0183146_20230508102443.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "녹차 한 컵 빙수(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683509025_m0147747_20230508102345.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리 한 컵 빙수(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683508894_m0177508_20230508102134.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "망고 한 컵 빙수(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683508815_m0123762_20230508102015.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기 한 컵 빙수(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202305/thumb/1683508667_m0169221_20230508101747.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기 마시빙(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676005398_m0198714_20230210140318.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "팥 마시빙(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676005373_m0114608_20230210140253.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "망고 마시빙(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676005325_m0126415_20230210140205.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리 마시빙(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676005279_m0166030_20230210140119.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "초코 마시빙(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676005259_m0154448_20230210140059.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "달고나 마시빙(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676005223_m0141640_20230210140023.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "베리&베리 요거트 빙수",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675992796_m0180445_20230210103316.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기&망고 요거트 빙수",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675992760_m0130715_20230210103240.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "피치&망고 요거트 빙수",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675992609_m0121996_20230210103009.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "치즈 요거트 빙수",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675992589_m0172239_20230210102949.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "트리플 초코 스노우 빙수",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675992518_m0120319_20230210102838.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기&치즈 스노우 빙수",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675992492_m0143504_20230210102812.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "망고&치즈 스노우 빙수",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675992452_m0121383_20230210102732.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "콩고물 스노우 빙수",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1675992343_m0153396_20230210102543.jpg",
+        "category": "빙수",
+        "note": ""
+    },
+    {
+        "menu_name": "치즈 케이크",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717394841_m0191941_20240603150721.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "티라미수 케이크",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717394737_m0161787_20240603150537.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "쇼콜라 케이크",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717394564_m0123110_20240603150244.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "우유치즈 케이크",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717394491_m0186427_20240603150131.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "오레오 사각케이크",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717394429_m0179634_20240603150029.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기 포레누아 사각케이크",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717394233_m0155377_20240603145713.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "치즈 스틱케이크",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717394088_m0146367_20240603145448.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "초코 스틱케이크",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717393996_m0145672_20240603145316.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "티라미수 스틱케이크",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717393873_m0149463_20240603145113.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "초코파이 데코뚱카롱",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717393511_m0167218_20240603144511.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "돼지바 데코뚱카롱",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717393421_m0140343_20240603144341.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "초코바나나 데코뚱카롱",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717392956_m0119757_20240603143556.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기크림치즈 뚱카롱",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717392779_m0154950_20240603143259.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "바닐라 뚱카롱",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717392690_m0143659_20240603143130.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "다크쇼콜라 뚱카롱",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717392607_m0170419_20240603143007.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리크림치즈 뚱카롱",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717392512_m0158827_20240603142832.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "구슬 크로플(초코바닐라)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676006430_m0185155_20230210142030.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "구슬 크로플(캔디프로스)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676006381_m0152876_20230210141941.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기 크로플",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676006343_m0175658_20230210141903.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리 크로플",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676006309_m0144364_20230210141829.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "망고 크로플",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676006268_m0156987_20230210141748.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "다크초코칩 크로플",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676006251_m0146695_20230210141731.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "아몬드초코카라멜 크로플",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676006203_m0176019_20230210141643.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "카라멜 크로플",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676006128_m0123214_20230210141528.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "크로플",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1676006026_m0129353_20230210141346.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "콘어니언 핫도그",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1677054121_m0179759_20230222172201.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "칠리앤치즈 핫도그",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1677054083_m0128844_20230222172123.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "크로크무슈",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1677053976_m0127662_20230222171936.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "허니브래드",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202302/thumb/1677053925_m0184900_20230222171845.jpg",
+        "category": "디저트",
+        "note": ""
+    },
+    {
+        "menu_name": "죠스베리 스무디(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1718775205_m0154146_20240619143325.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "스트류베리 스무디(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1718775145_m0175273_20240619143225.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "뽕소다 스무디(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1718775084_m0194008_20240619143124.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "메로미 스무디(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1718775014_m0139120_20240619143014.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "보라포 스무디 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1718774914_m0183818_20240619142834.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "옥수로달당 스무디 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1718774838_m0140260_20240619142718.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "콩고물팥 밀크컵빙수",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717395860_m0177786_20240603152420.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "초코 밀크컵빙수(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717395742_m0165122_20240603152222.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "커피 밀크컵빙수(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717395582_m0117874_20240603151942.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "살얼음 식혜(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717395385_m0121807_20240603151625.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "살얼음 수정과(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717395317_m0176658_20240603151517.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "리얼 수박주스(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717395251_m0113496_20240603151411.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "리얼 참외주스(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202406/thumb/1717395167_m0193555_20240603151247.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "메리피치(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1714637033_m0197211_20240502170353.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "피치자두 스무디(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1714636966_m0163247_20240502170246.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "피치 요거트 요프치노(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1714636848_m0130768_20240502170048.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "피치우롱티(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1714636752_m0145894_20240502165912.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "피치우롱에이드(XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202405/thumb/1714636400_m0177289_20240502165320.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "초코 체리 요프치노 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202404/thumb/1712017590_m0152736_20240402092630.jpg",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
+        "menu_name": "토피넛 체리 요프치노 (XL)",
+        "image_url": "https://www.yogerpresso.co.kr/upload/all_menu/202404/thumb/1712017516_m0188869_20240402092516.jpg",
+        "category": "신메뉴",
+        "note": ""
+    }
+]
