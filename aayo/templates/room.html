@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="main-container">
-    <h1 class="page-title" style="font-size: 20px; margin-bottom: 7px;">메뉴를 고를 카페 선택해주세요.</h1>
+    <h1 class="page-title" style="font-size: 20px; margin-bottom: 7px;">메뉴를 고를 카페를 선택해주세요.</h1>
     <p class="room-script" style="font-size: 13px;">메뉴를 선택하고, 팀 이름을 적으면 링크가 생성돼요!</p>
     <form id="createRoomForm" method="post">
     {% csrf_token %}
@@ -18,9 +18,9 @@
         <div class="scrollable-cafe-content">
             <div id="cafeListContainer" class="cafe-grid">
                 {% for cafe in cafes %}
-                    <label for="{{ cafe.name }}" class="cafe-logo" style="background-image: url('{% static 'images/' %}{{ cafe.name_eng }}.png')" data-cafe="{{ cafe.name }}">
-                        <input type="radio" id="{{ cafe.name }}" name="cafe" value="{{ cafe.name }}" style="display: none;"{% if forloop.first %}checked{% endif %}>
-                    </label>
+                <label for="{{ cafe.name }}" class="cafe-logo" style="background-image: url('{% static 'images/' %}{{ cafe.name_eng }}.png')" data-cafe="{{ cafe.name }}">
+                    <input type="radio" id="{{ cafe.name }}" name="cafe" value="{{ cafe.name }}" style="display: none;"{% if forloop.first %}checked{% endif %}>
+                </label>
                 {% endfor %}
             </div>
         </div>
