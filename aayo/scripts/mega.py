@@ -18,26 +18,53 @@ def crawl_mega():
         driver.implicitly_wait(3)
 
         data = []
+        note = ''
 
-        while True:
+        # 첫 번째로 '전체 상품 보기' 체크박스 해제
+        all_products_checkbox = driver.find_element(By.CSS_SELECTOR, 'input[type="checkbox"]')
+        driver.execute_script("arguments[0].click();", all_products_checkbox)
+        time.sleep(1)  # 페이지 로드 시간 대기
+
+        # 모든 카테고리 가져오기
+        categories = driver.find_elements(By.CLASS_NAME, 'checkbox_wrap')
+
+        # '전체 상품 보기'를 제외한 나머지 카테고리 순회 (1부터 시작)
+        for category_element in categories[1:]:
+            checkbox_input = category_element.find_element(By.CSS_SELECTOR, 'input[type="checkbox"]')
+            checkbox_label = category_element.find_element(By.CSS_SELECTOR, 'div.checkbox_text')
+            category = checkbox_label.text.strip()
+
+            # 카테고리 클릭
+            driver.execute_script("arguments[0].click();", checkbox_input)
+            time.sleep(1)  # 페이지 로드 시간 대기
+
+            # 현재 선택된 카테고리에서 메뉴 크롤링
             menu_items = driver.find_elements(By.CSS_SELECTOR, "#menu_list > li")
 
-            # for문으로 메뉴 전체 순회하며 'menu_name', 'image_url'를 가져와서 data 리스트에 추가하기
             for item in menu_items:
                 menu_name = item.find_element(By.CSS_SELECTOR, 'div.cont_text_title > div.text1 > b').text
                 image_url = item.find_element(By.TAG_NAME, 'img').get_attribute('src')
-                data.append({'menu_name': menu_name, 'image_url': image_url})
-                #print(menu_name, image_url)
+                data.append({
+                    'menu_name': menu_name,
+                    'image_url': image_url,
+                    'category': category,
+                    'note': note,
+                })
+                print(f"[{category}] {menu_name} - {note}")
+                print(image_url)
 
             try:
                 more_button = WebDriverWait(driver, 10).until(
                     EC.element_to_be_clickable((By.CSS_SELECTOR, "#board_page > li > a.board_page_next"))
                 )
                 driver.execute_script("arguments[0].click();", more_button)
-                time.sleep(1)  
+                time.sleep(1)
             except TimeoutException:
                 print("더 이상 '다음' 버튼이 없습니다.")
-                break
+            
+            # 카테고리 체크박스 해제
+            driver.execute_script("arguments[0].click();", checkbox_input)
+            time.sleep(1)  # 페이지 로드 시간 대기
 
         save_data(cafe_name, data)
 
