@@ -45,6 +45,7 @@ h2#todaysmenu{
 }
 .order-card {
     display: flex;
+    width: 90% ;
     align-items: center;
     justify-content: center;
     border: 1px solid #ddd;
@@ -57,6 +58,7 @@ h2#todaysmenu{
 /* 이미지 파트 */
 .order-menu-img {
     flex: 2;
+    display: flex;
 }
 .order-card img {
     width: 100%;
