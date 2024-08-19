@@ -21,28 +21,24 @@
         <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
             <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
         <div class="btn-container">
-            <div class="btn-wrap-top">
-                <div class="btn-wrap-each">
-                    <button id="open-modal-btn" class="btn btn-white sendlinkbtn initial-animation" style="border: none;">링크 공유하기
-                        <p>같이 주문할 사람에게<br>링크를 공유하세요!</p>
-                    </button>
-                </div>
-                <div class="btn-wrap-each">
-                    <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow gotoorderbtn initial-animation">메뉴 주문하기
-                        <p style="margin-bottom: 28px;">메뉴를 주문하러 가볼까요?</p>
-                    </a>
-                </div>
-            </div>  
-            
-            <div class="btn-wrap-bottom">
-                <div class="btn-wrap-each">
-                    <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn initial-animation">주문 모아보기
-                        <p>현재까지 주문 현황을<br>알려드릴게요</p>
-                    </a>
-                </div>
-                <div class="btn-wrap-each">
-                    <button id="open-heart-btn" class="btn btn-white heart initial-animation" style="border: none; font-size: 100px;">😘
-                </div>
+            <div class="btn-wrap-each">
+                <button id="open-modal-btn" class="btn btn-white sendlinkbtn initial-animation" style="border: none;">링크 공유하기
+                    <p>같이 주문할 사람에게<br>링크를 공유하세요!</p>
+                </button>
+            </div>
+            <div class="btn-wrap-each">
+                <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow gotoorderbtn initial-animation">메뉴 주문하기
+                    <p style="margin-bottom: 28px;">메뉴를 주문하러 가볼까요?</p>
+                </a>
+            </div>
+
+            <div class="btn-wrap-each">
+                <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn initial-animation">주문 모아보기
+                    <p>현재까지 주문 현황을<br>알려드릴게요</p>
+                </a>
+            </div>
+            <div class="btn-wrap-each">
+                <button id="open-heart-btn" class="btn btn-white heart initial-animation" style="border: none; font-size: 100px;">😘
             </div>
 
         </div>
