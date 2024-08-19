@@ -26,7 +26,6 @@ env.read_env(str(BASE_DIR / '.env'))
 SECRET_KEY = env('SECRET_KEY')
 KAKAO_APP_KEY = env('KAKAO_APP_KEY')
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
