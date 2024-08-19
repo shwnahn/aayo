@@ -21,7 +21,7 @@ p {
 }
 
 #createRoomForm{
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,7 +93,7 @@ input[type="text"] {
 }
 
 .cafe-grid {
-    margin: 20px;
+    margin: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
@@ -206,21 +206,17 @@ input[type="text"] {
 }
 
 .submit-button {
-    max-width: calc(500px* 0.75);
-    width: 375px;
-    padding: 15px;
-    background-color: #CCCCCC;
+    position: fixed;
+    bottom: 0; 
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1000;
+    width: 100%;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    height: var(--bottom-btn-height);
     color: #1e3932;
     border: none;
-    /* border-radius: 30px; */
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
 }

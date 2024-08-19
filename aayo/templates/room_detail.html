@@ -2,14 +2,17 @@
 {% load static %}
 
 {% block content %}
+<div id="room-design-asset">
+    
+</div>
 <div class="room-detail-container">
     <div class="detail-top-container">
         <div class="guide-text-wrap">
-            <p class="guide-text">링크가 생성되었어요<br>메뉴 취합을 시작해보세요</p>
+            <p class="guide-text">링크가 생성되었습니다!<br>이제 메뉴 취합을 시작해보세요</p>
         </div>
         <div class="room-name-and-logo">
                 {% with logo_file=cafe.name_eng|add:".png"|lower %}
-            <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+            <div class="logo-container"><img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo"></div>
                 {% endwith %}
             <p class="room_name">{{ room.name }}</p>
         </div>
@@ -18,27 +21,35 @@
         <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
             <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
         <div class="btn-container">
-
             <div class="btn-wrap-top">
-                <button id="open-modal-btn" class="btn btn-white sendlinkbtn" style="border: none;">링크 공유하기
-                    <p>같이 주문할 사람에게<br>링크를 공유하세요!</p>
-                </button>
-                <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow gotoorderbtn">메뉴 주문하기
-                    <p style="margin-bottom: 28px;">메뉴를 주문하러 가볼까요?</p>
-                </a>
+                <div class="btn-wrap-each">
+                    <button id="open-modal-btn" class="btn btn-white sendlinkbtn" style="border: none;">링크 공유하기
+                        <p>같이 주문할 사람에게<br>링크를 공유하세요!</p>
+                    </button>
+                </div>
+                <div class="btn-wrap-each">
+                    <a href="{% url 'room_menu' room.unique_id %}" class="btn btn-yellow gotoorderbtn">메뉴 주문하기
+                        <p style="margin-bottom: 28px;">메뉴를 주문하러 가볼까요?</p>
+                    </a>
+                </div>
             </div>  
             
             <div class="btn-wrap-bottom">
-                <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn">주문 모아보기
-                    <p>현재까지 주문 현황을<br>알려드릴게요</p>
-                </a>
-                <button id="open-heart-btn" class="btn btn-white heart" style="border: none; font-size: 100px;">😘
+                <div class="btn-wrap-each">
+                    <a href="{% url 'room_orders' room.unique_id %}" class="btn btn-white viewallordersbtn">주문 모아보기
+                        <p>현재까지 주문 현황을<br>알려드릴게요</p>
+                    </a>
+                </div>
+                <div class="btn-wrap-each">
+                    <button id="open-heart-btn" class="btn btn-white heart" style="border: none; font-size: 100px;">😘
+                </div>
             </div>
 
         </div>
     </div>
 </div>
 
+<div id="modal-overlay" class="modal-overlay hidden"></div>
 <!-- 하트 버튼 후원, 리뷰 modal -->
     <div id="heart-modal" class="heart-modal hidden">
         <span class="heart-close">&times;</span>
@@ -58,7 +69,6 @@
             </div>
         </div>
     </div>
-    
 {% endblock %}
 
 {% block css %}
