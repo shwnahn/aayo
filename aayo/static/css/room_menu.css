@@ -477,6 +477,7 @@
     border: 1px solid #ddd;
     border-radius: 25px;
     overflow: hidden;
+    align-items: stretch;
 }
 
 .temp-btn-container {
@@ -488,7 +489,7 @@
 
 .btn-group-temp .btn-temp{
     flex: 1;
-    padding: 3px 0;
+    padding: 0px 0;
     border: none;
     background-color: #f8f8f8;
     color: #555;
@@ -559,7 +560,7 @@
     display: block;
     width: 90%;
     text-align: left;
-    font-size: 14px;
+    font-size: 13px;
     color: #5e5e5e;
 }
 
@@ -594,9 +595,8 @@
     min-width: 75px;
 }
 .btn-group-ice .btn {
-    padding: 4px 8%;
+    padding: 4px 7%;
     min-width: 50px;
-
 }
 
 .btn:hover {
@@ -656,13 +656,13 @@
 
 
 .image-container {
-    height: 40%;
+    height: 39%;
 }
 .menu-label-container {
     height: 20%;
 }
 .temp-btn-container {
-    height: 5%;
+    height: 6%;
 }
 .menu-customization {
     height: 35%;
