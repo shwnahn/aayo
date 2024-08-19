@@ -5,6 +5,9 @@
 <div class="order-container">
     <!-- <button id="refresh-orders" class="btn btn-primary mb-3">주문 목록 갱신</button> -->
     <h2 id="todaysmenu">주문 모아보기</h2>
+    <div class="reset-order-btn-wrap">
+        <button id="resetOrderBtn" class="resetlinktext">메뉴 변경이 필요하신가요?</button>
+    </div>
     <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
     <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
     <!-- 간단한 주문 요약 부분 -->
@@ -35,7 +38,7 @@
     </button>
 </div>
 <!-- <a href="{% url 'room_menu' room.unique_id %}" class="hidden">메뉴 선택으로 돌아가기</a> -->
-<button id="resetOrderBtn" class="bottomBtn">현재 주문 초기화</button>
+<button id="returnHomeBtn" class="bottomBtn">홈으로 돌아가기</button>
 <div class="open-modal-btn-wrap"><a id="open-modal-btn" class="sendlinkbtn"><p class="sendlinktext">앗! 놓치신 분이 계신가요?</p></a></div>
 
 <!-- 링크 공유 modal -->
@@ -66,6 +69,15 @@
 
 {% block scripts %}
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const returnHomeBtn = document.getElementById('returnHomeBtn');
+    if (returnHomeBtn) {
+        returnHomeBtn.addEventListener('click', function() {
+            window.location.href = "{% url 'room_detail' room.unique_id %}";
+        });
+    }
+});
+
 document.getElementById('resetOrderBtn').addEventListener('click', function() {
     fetch('', {
         method: 'POST',
