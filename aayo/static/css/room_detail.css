@@ -24,6 +24,7 @@ body{
     flex-direction: column;
     height: 100%;
     width: 100%;
+    margin-top: 4%;
 }
 
 .detail-top-container {
@@ -45,6 +46,8 @@ body{
     display: block;
     margin: 1%;
     font-weight: normal;
+    margin: 1%;
+    font-weight: normal;
 }
 
 .room-name-and-logo {
@@ -58,6 +61,7 @@ body{
 .cafe-logo {
     display: block;
     height: 100%;
+    width: auto;
     width: auto;
 }
 
@@ -162,6 +166,18 @@ span {
 
 .wave-bottom {
     display: none;
+}
+
+.heart-option a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.emoji {
+    font-size: 35px;
 }
 
 .heart-option a {
