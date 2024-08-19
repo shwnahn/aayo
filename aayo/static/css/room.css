@@ -204,6 +204,7 @@ input[type="text"] {
 }
 
 .submit-button {
+    background-color: #ddd;
     position: fixed;
     bottom: 0; 
     transform: translateX(-50%);
