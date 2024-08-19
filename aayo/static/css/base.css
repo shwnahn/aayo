@@ -9,8 +9,16 @@
     --aayo-color: #FFD457;
 }
 
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     transition: all 0.3s ease;
+    font-family: 'SUIT-Regular';
 }
 
 html {
@@ -31,7 +39,7 @@ body {
     margin: 0 auto !important;
     padding: 0;
     min-height: 100%;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     min-width: var(--min-width);
     max-width: var(--max-width);
@@ -177,6 +185,7 @@ header a {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     padding: 20px;
     width: 80%;
+    max-width: 400px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -237,3 +246,23 @@ header a {
     right: 20px;
     cursor: pointer;
 } */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+}
+
+.share-modal {
+    /* 기존 스타일 유지 */
+    z-index: 1001; /* 오버레이보다 위에 표시 */
+}
+
+.hidden {
+    display: none !important;
+}
