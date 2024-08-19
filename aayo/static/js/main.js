@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const openHeartBtn = document.getElementById('open-modal-btn');
     const heartModal = document.querySelector('.share-modal');
     const heartCloseBtn = document.querySelector('.share-close');
+    const modalOverlay = document.getElementById('modal-overlay');
+
 
     if (openHeartBtn && heartModal) {
         console.log('openModal 버튼과 모달 요소 찾음');
@@ -32,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
             event.stopPropagation();
             console.log('open modal 버튼 클릭됨');
             heartModal.classList.remove('hidden');
+            modalOverlay.classList.remove('hidden');
+
         });
     } else {
         // alert('openModal 버튼 또는 모달 요소를 찾을 수 없음');
@@ -44,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
             event.stopPropagation();
             console.log('close modal 버튼 클릭됨');
             heartModal.classList.add('hidden');
+            modalOverlay.classList.add('hidden');
+
 
         });
     } else {
@@ -59,6 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const openHeartBtn = document.getElementById('open-heart-btn');
     const heartModal = document.getElementById('heart-modal');
     const heartCloseBtn = document.querySelector('.heart-close');
+    const modalOverlay = document.getElementById('modal-overlay');
+
 
     if (openHeartBtn && heartModal) {
         console.log('heartModal 버튼과 모달 요소 찾음');
@@ -67,6 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
             event.stopPropagation();
             console.log('heart modal 버튼 클릭됨');
             heartModal.classList.remove('hidden');
+            modalOverlay.classList.remove('hidden');
+
         });
     } else {
         console.error('openHeartBtn 또는 heartModal 요소를 찾을 수 없음');
@@ -79,6 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
             event.stopPropagation();
             console.log('close modal 버튼 클릭됨');
             heartModal.classList.add('hidden');
+            modalOverlay.classList.add('hidden');
+
         });
     } else {
         console.error('heartCloseBtn 또는 heartModal 요소를 찾을 수 없음');
