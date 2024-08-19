@@ -48,6 +48,7 @@ body{
     display: block;
     margin: 1%;
     margin-bottom: 6%;
+    font-size: small;
     font-weight: normal;
 }
 
@@ -62,6 +63,12 @@ body{
 .cafe-logo {
     display: block;
     height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
     object-fit: contain;    
 }
 
@@ -194,15 +201,13 @@ span {
 }
 
 .logo-container {
+    display: block;
     height: 100%;
     aspect-ratio: 1 / 1;
     background-color: white;
     position: relative;
     border-radius: 20%;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* 탐앤탐스 로고에 대한 특별한 스타일 */
