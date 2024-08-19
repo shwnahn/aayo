@@ -2,6 +2,10 @@
     padding-bottom: var(--bottom-btn-height);
 }
 
+.content{
+    padding-bottom: var(--bottom-btn-height);
+}
+
 .login-container {
     width: 100%;
     height: 100%;
