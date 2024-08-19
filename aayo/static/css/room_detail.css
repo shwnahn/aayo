@@ -30,7 +30,7 @@ body{
 
 .detail-top-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     height: 20%;
     margin-left: 5%;
@@ -46,17 +46,18 @@ body{
 
 .guide-text {
     display: block;
-    margin: 1%;
+    margin: 3%;
+    margin-top: 6%;
     margin-bottom: 6%;
     font-weight: normal;
 }
 
-.room-name-and-logo {
+.room-name-and-text {
     height: 60%; 
     width: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .cafe-logo {
@@ -93,7 +94,7 @@ body{
 
 .room_name {
     margin: 0px;
-    font-size: 15px;
+    font-size: 28px;
     font-weight: bold;
     margin-left: 3%;
 }
