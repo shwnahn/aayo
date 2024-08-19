@@ -2,20 +2,17 @@
 {% load static %}
 
 {% block content %}
-<div id="room-design-asset">
-    
-</div>
+<div id="room-design-asset"></div>
 <div class="room-detail-container">
     <div class="detail-top-container">
-        <div class="guide-text-wrap">
-            <p class="guide-text">링크가 생성되었습니다!<br>이제 메뉴 취합을 시작해보세요</p>
-        </div>
-        <div class="room-name-and-logo">
-                {% with logo_file=cafe.name_eng|add:".png"|lower %}
-            <div class="logo-container"><img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo"></div>
-                {% endwith %}
+        <div class="room-name-and-text">
             <p class="room_name">{{ room.name }}</p>
+            <p class="guide-text">한곳에서 모두의 커피를!<br>손쉽게 메뉴를 선택하고,<br>주문을 한 번에 모아보세요.</p>
         </div>
+        {% with logo_file=cafe.name_eng|add:".png"|lower %}
+            <div class="logo-container"><img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo"></div>
+        {% endwith %}
+        
     </div>
     <div class="detail-bottom-container">
         <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
