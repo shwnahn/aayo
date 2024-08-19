@@ -1,5 +1,11 @@
 [
     {
+        "menu_name": "웨이비에이드",
+        "image_url": "http://www.theventi.co.kr/new/upload/menu_new/30927906_OD2XuSPC_20240819094027.png",
+        "category": "신메뉴",
+        "note": ""
+    },
+    {
         "menu_name": "율무 오트라떼 (벤티)",
         "image_url": "http://www.theventi.co.kr/new/upload/menu_new/30927906_4dSRchp5_20240723121930.png"
     },

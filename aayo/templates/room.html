@@ -8,7 +8,7 @@
     <form id="createRoomForm" method="post">
     {% csrf_token %}
         <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="ex) 마케팅 1팀 커피방" required>
+            <input type="text" id="name" name="name" value="Room1" required="">
             <input type="hidden" id="cafe" name="cafe" required>
         </div>
         <div class="form-group hidden">
