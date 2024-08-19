@@ -151,7 +151,7 @@ def room_menu(request, unique_id):
             except Cafe.DoesNotExist:
                 logger.error(f"Cafe not found: {room.cafe}")
         
-        # 카테고리 목록 가져오기
+        # 카테고리 목록 가져오기 
         categories = MenuItem.objects.filter(cafe=cafe).values_list('category', flat=True).distinct()
         context = {
             'room': room,
