@@ -1,32 +1,58 @@
 
+.content{
+    padding-bottom: var(--bottom-btn-height);
+}
+
 .login-container {
-    text-align: center;
-    padding: 20px;
-    margin-top: 15%;
-    margin-bottom: 75px;
-    background-color: white;
-}
-
-.login-cafe-logo {
-    display: block;
-    width: 50%;
-}
-
-.noGuestName-text {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    font-size: 1.0em;
-}
-
-#guestNameForm-container {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.guestNameForm {
+.cafe-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
     width: 100%;
+}
+
+.login-cafe-logo {
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+.login-guide {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 1.0em;
+}
+
+.login-guide-bold{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.guestNameForm-container {
+    width: 100%;
+}
+
+#guestNameForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.guestNameForm-input {
+    width: 75%;
     padding: 10px 15px 10px 15px;
     margin: 2px;
     border: 2px solid #ddd;
@@ -39,20 +65,10 @@
     background-size: 20px;
 }
 
-.guestNameForm:focus {
+.guestNameForm-input:focus {
     outline: none;
-    border-color: #FFD54F; /* 포커스 시 테두리 색상 변경 */
+    /* border-color: #FFD54F; 포커스 시 테두리 색상 변경 */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 포커스 시 그림자 더 강조 */
-}
-
-.cafe-logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cafe-logo {
-    width: 23vw;
 }
 
 .page-title {
@@ -68,33 +84,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3vh;
+}
+
+.room-container-wrap {
+    height: 100%;
 }
 
 .room-container {
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
-    background-color: white;
-    border-radius: 10px;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
     overflow-y: hidden;
+    padding-bottom: 5px;
+}
+
+.context-container{
+    height: 20%;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .centered-text {
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 12px;
+    margin: 8px;
     font-size: 16px;
     color: #1e3932;
 }
 
+#menuForm {
+    width: 100%;
+    max-width: inherit;
+    min-width: inherit;
+}
+
 #menuSearch {
-    /* width: 63vw;
-    height: 5vh; */
+    width: 75%;
     padding: 10px 15px 10px 15px;
     border: 2px solid #ddd;
     border-radius: 20px;
@@ -114,32 +146,72 @@
 #selectedMenuNames {
     display: block;
     text-align: center;
-    margin-bottom: 20px;
     font-weight: bold;
     color: #1e3932;
 }
 
+
+
+/* 카테고리 선택창 */
+.category-container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap; /* 버튼들이 한 줄을 넘어가면 자동으로 랩핑되도록 설정 */
+    gap: 5px; /* 버튼들 간의 간격 설정 */
+    justify-content: center; /* 버튼들이 중앙 정렬되도록 설정 */
+    z-index:1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 */
+}
+
+.category-container button {
+    background-color: #4CAF50; /* 버튼 배경 색상 */
+    color: white; /* 텍스트 색상 */
+    border: none;
+    border-radius: 5px; /* 버튼 모서리를 둥글게 */
+    padding: 8px 10px; /* 버튼 안쪽 여백 */
+    cursor: pointer; /* 커서 모양 변경 */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* 호버 효과를 위한 트랜지션 */
+    font-size: 14px;
+}
+
+.category-container button:hover {
+    background-color: #f0c97d; /* 호버 시 배경 색상 */
+    transform: translateY(-2px); /* 약간 위로 올라가는 효과 */
+}
+
+.category-btn.active {
+    background-color: #f0c97d;
+    color: #1e3932;
+}
+
+
+/* 메뉴 아이템 그리드 */
 .scrollable-content {
-    width: 90vw;
-    max-width: 340px;
-    max-height: 450px;
+    width: 100%;
+    height: 70%;
     overflow-y: auto;
 }
 
 .menu-grid {
     display: grid;
+    padding: 10px;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
 .itembox {
     background-color: #ffffff;
-    border-radius: 10px;
-    padding: 0 10px;
+    border-radius: 12px;
+    padding: 8px;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease; /* 모든 변화를 부드럽게 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 더 부드럽고 깊이 있는 그림자 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .itembox:hover {
@@ -157,7 +229,8 @@
 
 .menu-name {
     font-weight: bold;
-    color: #1e3932;
+    color: #333; /* 텍스트 색상을 다크 그레이로 */
+    margin: 10px 0 0 0;
 }
 
 .scrollable-content::-webkit-scrollbar {
@@ -215,10 +288,14 @@
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0);
     overflow: auto;
+
+    /* modal 내부 프로퍼티 정의 */
+    --content-height: calc(100% - 40px); /* 전체 높이에서 padding을 뺀 값 */
+    --custom-font-size: 12px;
 }
 
 .modal.show {
@@ -229,10 +306,14 @@
 .modal-wrap {
     position: fixed;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80%;
+    width: 100%;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 85vh;
 }
 
 .modal-content {
@@ -240,17 +321,13 @@
     flex-direction: column;
     background-color: #fefefe;
     border: none; /* 테두리 제거 */
-    border-radius: 30px 30px 0 0 ; /* 둥근 모서리 */
+    border-radius: 45px 45px 0 0 ; /* 둥근 모서리 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
+    align-items: center;
     height: 100%;
-    padding: 15px;
-
-    /* modal 높이에 대한 커스텀 프로퍼티 정의 */
-    --content-height: calc(100% - 40px); /* 전체 높이에서 padding을 뺀 값 */
-    --margin-bottom: 10px;
-    --adjusted-content-height: calc(var(--content-height) - 6 * var(--margin-bottom)); /* margin-bottom을 뺀 값 */
+    padding: 15px 15px var(--bottom-btn-height) 15px;
 }
 
 .close {
@@ -259,8 +336,8 @@
     font-weight: bold;
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    right: 18px;
+    top: 15px;
+    left: 25px;
 }
 
 .close:hover,
@@ -269,49 +346,35 @@
     text-decoration: none;
 }
 
-.modal-hr{
-    border: 0;
-    height: 1px;
-    background: #ddd;
-    margin: 0 0 var(--margin-bottom) 0; /* 상하 마진을 추가하여 공간을 확보 */
-}
-
-.menu-label-container,
 .image-container,
+.menu-label-container,
+.btn-group-temp,
 .form-group-etc,
-#modal-customization-title,
-#saveMenuItem {
+.modal-hr{
+    width: 100%;
     flex: 0 0 auto;
-    margin-bottom: var(--margin-bottom);
-}
-
-.menu-label-container {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: var(--margin-bottom);
-}
-.menu-label-container > p {
-    margin: 0;
-    color: #888;
-    text-align: center; /* 텍스트 중앙 정렬 */
-}
-
-#modal-customization-title {
-    display: block;
-    text-align: center;
-    font-size: 14px;
-    color: #888;
 }
 
 .image-container {
-    height: calc(var(--adjusted-content-height) * 0.40); /* 40% 높이 */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    margin-bottom: var(--margin-bottom);
+}
+
+#modalMenuImage {
+    width: auto;
+    height: 100%;
+    object-fit: contain; /* 이미지 비율 유지 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.menu-label-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 #menuDetailModalLabel {
@@ -321,86 +384,31 @@
     margin: 0 0 0 0;
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
 }
 
 #menuNote {
-    text-align: center; /* 텍스트 중앙 정렬 */
     font-size: 14px;
+}
+.menu-label-container > p {
+    margin: 0;
     color: #888;
 }
 
-#modalMenuImage {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* 이미지 비율 유지 */
-}
-
-.menu-customization {
-    width: 80%; /* 원하는 넓이 설정 */
-    margin: 0 auto; /* 자동으로 좌우 정렬 */
-    font-size: 14px;
-}
-
-.customization-form {
-    margin-bottom: var(--margin-bottom); /* 각 폼 그룹 간의 간격 추가 */
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-
-.customization_label {
-    flex: 0 0 40%;
-    text-align: left;
-    display: block;
-    font-weight: bold;
-    color: #333;
-}
-
-.btn-group-size,
-.btn-group-ice {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;;
-}
-
-.btn-group-size {
-    height: calc(var(--adjusted-content-height) * 0.10); /* 10% 높이 */
-}
-
-.btn-group-ice {
-    height: calc(var(--adjusted-content-height) * 0.10); /* 10% 높이 */
-}
-
 .btn-group-temp {
+    width: 80%;
     display: flex;
     justify-content: space-evenly;
     border: 1px solid #ddd;
     border-radius: 25px;
     overflow: hidden;
-    width: 75%;
-    min-width: 75%;
-    margin: 0 auto var(--margin-bottom) auto;
-    box-sizing: border-box;
-    /* height: 6% */
-    /* height: calc(var(--adjusted-content-height) * 0.10); */
 }
 
-.menu-customization .btn{
-    border: 1px solid #eaeaea;
-    background-color: #f8f8f8;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+.temp-btn-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
-.btn-group-size .btn {
-    padding: 4px 11%;
-}
-.btn-group-ice .btn {
-    padding: 4px 8%;
-    min-width: 50px;
-}
-
 
 .btn-group-temp .btn-temp{
     flex: 1;
@@ -412,17 +420,6 @@
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-}
-
-
-.btn:hover {
-    background-color: #e8e8e8;
-}
-
-.btn.active {
-    background-color: #FFD457;
-    border-color: #FFD457;
-    color: #1e3932;
 }
 
 .btn-group-temp .btn-temp:first-child {
@@ -455,15 +452,104 @@
     background-color: #e8e8e8;
 }
 
+.menu-customization {
+    width: 90%; /* 원하는 넓이 설정 */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: var(--custom-font-size);
+    color: #888;
+}
+
+.menu-customization .btn{
+    border: 1px solid #eaeaea;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.modal-hr{
+    border: 0;
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+    background: #ddd;
+}
+
+#modal-customization-title {
+    display: block;
+    width: 90%;
+    text-align: left;
+    font-size: 14px;
+    color: #5e5e5e;
+}
+
+.customization-form {
+    margin-top: 5px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.customization_label {
+    flex: 0 0 40%;
+    text-align: left;
+    display: block;
+}
+
+.btn-group-size,
+.btn-group-ice {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-group-size .btn,
+.btn-group-ice .btn {
+    color: #888;
+    font-size: var(--custom-font-size);
+}
+
+.btn-group-size .btn {
+    padding: 4px 11%;
+    min-width: 75px;
+}
+.btn-group-ice .btn {
+    padding: 4px 8%;
+    min-width: 50px;
+
+}
+
+.btn:hover {
+    background-color: #e8e8e8;
+}
+
+.btn.active {
+    background-color: #FFD457;
+    border-color: #FFD457;
+    color: #1e3932;
+}
+
+.form-group-etc{
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    min-height: 30px;
+    margin: 5px;
+}
+
 #additionalInstructions {
-    width: 100%; /* 텍스트 영역이 부모 요소의 너비를 차지하도록 */
-    min-height: 50px; /* 최소 높이 설정 */
+    width: 100%;
+    height: 100%;
     padding: 10px; /* 내부 패딩으로 인덴트 효과 */
     border: 1px solid #ddd; /* 경계선 설정 */
     border-radius: 5px; /* 모서리 둥글게 */
     box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
     resize: vertical; /* 세로 크기 조절 가능 */
-    font-size: 14px; /* 텍스트 크기 설정 */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* 안쪽에 약간의 그림자 추가 */
 }
 
 /* 플레이스홀더 텍스트 스타일 */
@@ -472,10 +558,6 @@
     font-style: italic; /* 플레이스홀더 텍스트 기울임 */
 }
 
-#saveMenuItem {
-    height: calc(var(--adjusted-content-height) * 0.10); /* 10% 높이 */
-    margin-bottom: 0; /* 마지막 요소의 margin-bottom 제거 */
-}
 /* 모달 애니메이션 정의 */
 @keyframes slideIn {
     from {
@@ -493,5 +575,34 @@
     }
     to {
         background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+.image-container {
+    height: 40%;
+}
+.menu-label-container {
+    height: 20%;
+}
+.temp-btn-container {
+    height: 5%;
+}
+.menu-customization {
+    height: 35%;
+}
+
+@media (max-height: 635px) {
+    .image-container {
+        height: 22%;
+    }
+    .menu-label-container {
+        height: 25%;
+    }
+    .temp-btn-container {
+        height: 8%;
+    }
+    .menu-customization {
+        height: 45%;
     }
 }

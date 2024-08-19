@@ -14,8 +14,9 @@
             <div class="guestNameForm-container">
                 <form id="guestNameForm">
                     {% csrf_token %}
-                    <p class="noGuestName-text">주문자님의 이름을 입력해주세요!</p>
-                    <input type="text" class="guestNameForm" name="guest_name" required placeholder="이름을 입력하세요">    
+                    <p class="login-guide login-guide-bold">{{ cafe.name }}에서 메뉴를 선택합니다</p>
+                    <p class="login-guide">다른 사람과 구분되는 주문자명을 입력하세요.</p>
+                    <input type="text" class="guestNameForm-input" name="guest_name" required placeholder="이름(또는 별명)을 입력하세요">    
                     <!-- <input type="password" class="guestNameForm" name="password" placeholder="비밀번호를 입력하세요"> -->
                     <button id="goToOrderBtn" type="submit" class="bottomBtn">메뉴 주문하러 가기</button>
                 </form>
@@ -25,12 +26,7 @@
         </div>
         {% else %}
         <div class="context-container">
-            <div class="cafe-logo-container">
-                <!-- {% with logo_file=cafe.name_eng|add:".png"|lower %}
-                    <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
-                {% endwith %} -->
-            </div>
-                <p class="centered-text">{{ guest_name }}님이 고른 메뉴:
+                <p class="centered-text">{{ guest_name }}님이 선택한 메뉴:
                     <span id="selectedMenuNames">메뉴를 선택해주세요.</span>
                     <!-- 기존에 선택된 메뉴에 대한 id, options 정보 추가 -->
                     <span id="selectedMenuIds" style="display: none;">{{ selected_menu_ids|json_script:"selectedMenuIds" }}</span>
@@ -44,7 +40,14 @@
                 <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
                 <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
         </div>
-    
+
+        <div class="category-container">
+            <button onclick="filterMenu('전체')" class="category-btn active">전체</button>
+            {% for category in categories %}
+            <button onclick="filterMenu('{{ category }}')" class="category-btn">{{ category }}</button>
+            {% endfor %}
+        </div>
+
         <div class="scrollable-content">
             <div id="menuListContainer" class="menu-grid">
                 {% for menu in menu_items %}
@@ -63,13 +66,15 @@
                 {% endfor %}
             </div>
         </div>
-        <form id="menuForm">
-            {% csrf_token %}
-            <button type="submit" id="confirmButton" disabled class="bottomBtn">주문 확정하기</button>
-        </form>
         {% endif %}
     </div>
 </div>
+{% if guest_name %}
+<form id="menuForm">
+    {% csrf_token %}
+    <button type="submit" id="confirmButton" disabled class="bottomBtn">주문 확정하기</button>
+</form>
+{% endif %}
 
 <!-- Modal -->
 <div class="modal" id="menuDetailModal" style="display: none">
@@ -84,15 +89,15 @@
                 <h2 id="menuDetailModalLabel"></h2>
                 <p id="menuNote">기타 설명...</p>
             </div>
-            <div class="btn-group-temp">
-                <button type="button" class="btn-temp" id="hotButton">🔥 HOT</button>
-                <button type="button" class="btn-temp active" id="iceButton">🧊 ICE</button>
+            <div class="temp-btn-container">
+                <div class="btn-group-temp">
+                    <button type="button" class="btn-temp" id="hotButton">🔥 HOT</button>
+                    <button type="button" class="btn-temp active" id="iceButton">🧊 ICE</button>
+                </div>
             </div>
             
-            <hr class="modal-hr">
-            
-            
             <div class="menu-customization">
+                <hr class="modal-hr">
                 <span id="modal-customization-title">커스터마이징 (선택)</span>
                 <div class="customization-form custom-size">
                     <span class="customization_label">사이즈</span>
@@ -113,7 +118,7 @@
                     <textarea id="additionalInstructions" rows="2" placeholder="추가 주문 사항이 있다면 작성해주세요"></textarea>
                 </div>
             </div>
-            <button type="button" id="saveMenuItem" class="bottomBtn">내 메뉴 저장하기</button>
+            <button type="button" id="saveMenuItem" class="bottomBtn">메뉴 선택하기</button>
         </div>
     </wrap>
 </div>

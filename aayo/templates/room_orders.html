@@ -6,29 +6,28 @@
 {% block content %}
 <div class="order-container">
     <!-- <button id="refresh-orders" class="btn btn-primary mb-3">주문 목록 갱신</button> -->
-    <h2 id="todaysmenu">TODAY's MENU</h2>
+    <h2 id="todaysmenu">주문 모아보기</h2>
     <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
     <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
     <!-- 간단한 주문 요약 부분 -->
     <div class="summary">
-        {% if orders_details %}
-            {% for order in orders_details %}
+        {% if filtered_orders %}
+            {% for order in filtered_orders %}
                 <div class="order-card">
                     <div class="order-menu-img">
-                        <img src="{{ order.menu_item.image_url }}" alt="img">
+                        <img src="{{ order.menu_item.image_url }}" alt="{{ order.menu_item.name }}">
                     </div>
                     <div class="order-menu-info">
-                        <p>{{ order.menu_item.name }}</p> <!-- 메뉴 이름 표시 -->
-                        <p class="order-menu-details">
-                            {{ order.options.temperature }} / {{ order.options.size }} / {{ order.options.ice }} / {{ order.options.note }} <!-- 옵션 표시 -->
-                        </p>
-                        <p class="guest-names">🙋🏻 {{ order.guest_name }}</p> <!-- 게스트 이름 표시 -->
+                        {{ order.menu_item.name }}
+                        <p>{{ order.options.temperature }} / {{ order.options.size }} / {{ order.options.ice }}
+                        {% if order.options.note %} / {{ order.options.note }}{% endif %}</p>
+                        <p>🙋🏻 {{ order.guests }}</p>
                     </div>
                     <div class="order-menu-count">
-                        <span class="menu-count">1</span>
+                        <span class="menu-count">{{ order.count }}</span>
                     </div>
                     <div class="order-delete">
-                        <button class="delete-btn">🗑️</button>
+                        🗑️
                     </div>
                 </div>
             {% endfor %}

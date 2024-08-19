@@ -1,7 +1,16 @@
 :root {
     --header-height: 50px;
-    --wave-top-margin: 75px;
+    --wave-top-height: 5px;
+    --wave-top-margin: calc(40px + var(--wave-top-height));
     --content-padding: 20px;
+    --min-width: 220px;
+    --max-width: 500px;
+    --bottom-btn-height: 7vh;
+    --aayo-color: #FFD457;
+}
+
+* {
+    transition: all 0.3s ease;
 }
 
 html {
@@ -24,10 +33,10 @@ body {
     min-height: 100%;
     height: 100vh;
     width: 100%;
-    min-width: 220px;
-    max-width: 500px;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
     background-color: #ffffff;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 main {
@@ -35,16 +44,19 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: inherit;
+    min-width: inherit;
     height: calc(100% - var(--header-height));
     box-sizing: border-box;
 }
 
 .content {
     width: 100%;
-    max-width: 600px;
-    height: calc(100% - var(--wave-top-margin) - calc(2 * var(--content-padding))); /* margin-top과 padding을 뺀 height */
+    max-width: inherit;
+    min-width: inherit;
+    height: calc(100% - var(--wave-top-margin)); /* margin-top(상단바 높이)을 뺀 height */
     margin-top: var(--wave-top-margin);
-    padding: var(--content-padding);
+    padding: 0 var(--content-padding);
     flex-grow: 1;
     box-sizing: border-box;
 }
@@ -86,8 +98,7 @@ header a {
 }
 
 .wave-top {
-
-    margin-top: 25px;
+    margin-top: var(--wave-top-height);
     display: block;
     position: fixed;
     transform: rotate(180deg);
@@ -121,14 +132,15 @@ header a {
     transform: translateX(-50%);
     cursor: pointer;
     z-index: 1000;
-    width: 375px;
-    height: 7%;
+    width: 100%;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    height: var(--bottom-btn-height);
     background-color: #FFD457;
     color: #1e3932;
     border: none;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 /*  ===== 아래부터는 공유하기 버튼, 모달 관련 css  ===== */
@@ -158,7 +170,7 @@ header a {
     height: 24px;
     color: #000000;
 }
-.share-modal {
+.share-modal, .heart-modal{
     z-index: 1000;
     background: white;
     border-radius: 15px;
@@ -167,40 +179,40 @@ header a {
     width: 80%;
     position: fixed;
     top: 36%;
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1000;
 }
-.share-modal h2 {
+.share-modal h2, .heart-modal h2{
     margin: 0;
     font-size: 18px;
     text-align: center;
     margin-bottom: 20px;
 }
-.share-modal .share-close {
+.share-modal .share-close, .heart-modal .heart-close{
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 18px;
     cursor: pointer;
 }
-.share-modal .share-options {
+.share-modal .share-options, .heart-modal .heart-options{
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
 }
-.share-modal .share-option {
+.share-modal .share-option, .heart-modal .heart-option{
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #555;
 }
-.share-modal .share-option img {
+.share-modal .share-option img, .heart-modal .heart-option img{
     width: 30px;
     height: 30px;
     margin-bottom: 5px;
 }
-.share-modal .share-link {
+.share-modal .share-link, .heart-modal .heart-link{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,7 +227,7 @@ header a {
     width: 100%;
 }
 .share-modal .share-link button {
-    background: none;
+    background: none; 
     border: none;
     cursor: pointer;
 }

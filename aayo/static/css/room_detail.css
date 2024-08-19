@@ -4,6 +4,7 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
+    margin-top: 4%;
 }
 
 .detail-top-container {
@@ -23,9 +24,8 @@
 
 .guide-text {
     display: block;
-    margin: 0;
-    font-weight: lighter;
-    text-align: center;
+    margin: 1%;
+    font-weight: normal;
 }
 
 .room-name-and-logo {
@@ -52,12 +52,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 .btn-wrap-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 
@@ -115,7 +117,8 @@ span {
     width: 100%;
     /* height: 19.4%; */
     /* padding: 15px 0; */
-    margin-top: 17px;
+    margin: 2%;
+    margin-top: 5%;
     border-radius: 30px;
     text-decoration: none;
     text-align: center;
@@ -133,7 +136,7 @@ span {
     color: #000;
     font-size: 21px;
     /* border: 2px solid #FFE8A4; */
-    background-color: #FFE8A4;  
+    background-color: #FFE8A4;
 }
 
 .btn-white {
@@ -149,4 +152,16 @@ span {
 
 .wave-bottom {
     display: none;
+}
+
+.heart-option a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.emoji {
+    font-size: 35px;
 }

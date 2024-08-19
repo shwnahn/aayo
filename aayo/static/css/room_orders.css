@@ -42,7 +42,6 @@
         align-items: center;
     }
     .order-card {
-        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -51,8 +50,6 @@
         padding: 10px;
         margin-bottom: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 85vw;
-        max-width: 330px;
     }
     
     /* 이미지 파트 */
