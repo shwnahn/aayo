@@ -52,12 +52,11 @@ input[type="text"] {
 
 .scrollable-cafe-content {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     margin-top: 20px;
     width: 100%;
     max-width: 370px;
-    max-height: 52vh;
+    max-height: 60vh;
     overflow-y: visible;
     overflow-x: hidden;
     background-color: white;
