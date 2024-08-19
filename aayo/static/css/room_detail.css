@@ -1,4 +1,3 @@
-
 .room-detail-container{
     display: flex;
     flex-direction: column;
@@ -39,7 +38,7 @@
 .cafe-logo {
     display: block;
     height: 100%;
-    width: auto;
+    width: 10%;
 }
 
 
