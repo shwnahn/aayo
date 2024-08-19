@@ -3,12 +3,14 @@
 
 {% block content %}
 <div class="main-container">
-    <h1 class="page-title" style="font-size: 20px; margin-bottom: 7px;">메뉴를 고를 카페를 선택해주세요.</h1>
-    <p class="room-script" style="font-size: 13px;">메뉴를 선택하고, 팀 이름을 적으면 링크가 생성돼요!</p>
+    <div class="room_menu_labels">
+        <h1 class="page-title">메뉴를 고를 카페를 선택해주세요.</h1>
+        <p class="room-script">메뉴를 선택하고, 팀 이름을 적으면 링크가 생성돼요!</p>
+    </div>
     <form id="createRoomForm" method="post">
     {% csrf_token %}
         <div class="form-group">
-            <input type="text" id="name" name="name" value="{{ today }} 커피주문" required="">
+            <input type="text" id="name" name="name" placeholder="팀 이름을 입력해주세요." value="{{ today }} 커피주문" required="">
             <input type="hidden" id="cafe" name="cafe" required>
         </div>
         <div class="form-group hidden">
