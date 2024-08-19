@@ -119,65 +119,29 @@ function fallbackCopyTextToClipboard(text) {
     document.body.removeChild(textArea);
 }
 
-// Kakao SDK를 비동기적으로 로드
-(function loadKakaoSDK() {
-    const script = document.createElement('script');
-    script.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js";
-    script.integrity = "sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4";
-    script.crossOrigin = "anonymous";
-    script.onload = initKakao;
-    document.head.appendChild(script);
-})();
-
-function initKakao() {
-    if (typeof Kakao === 'undefined') {
-        console.error('Kakao SDK가 로드되지 않았습니다.');
-        return;
-    }
-
-    // SDK 초기화
-    Kakao.init('{{ KAKAO_APP_KEY }}');
-    console.log('Kakao SDK 초기화 상태:', Kakao.isInitialized());
-
-    // 카톡 공유 버튼 이벤트 리스너 설정
-    const kakaoShareBtn = document.getElementById('kakaoShareBtn');
-    if (kakaoShareBtn) {
-        kakaoShareBtn.addEventListener('click', shareKakao);
-    } else {
-        console.error('카카오 공유 버튼을 찾을 수 없습니다.');
-    }
-}
-
-function shareKakao() {
+// 카톡 공유
+// based on 템플릿 코드
+function shareMessage() {
     const roomLink = document.getElementById('roomLink')?.href;
-    if (!roomLink) {
-        console.error('방 링크를 찾을 수 없습니다.');
-        return;
-    }
-
     Kakao.Share.sendDefault({
-        objectType: 'feed',
-        content: {
-            title: '아아요! 에 초대합니다',
-            description: '함께 메뉴를 골라보아요!',
-            imageUrl: '/static/images/aayo_logo_yellow.png', // 절대 경로로 수정
-            link: {
-                mobileWebUrl: roomLink,
-                webUrl: roomLink,
-            },
+      objectType: 'feed',
+      content: {
+        title: '아아요! 에 초대합니다',
+        description: '함께 메뉴를 골라보아요!',
+        imageUrl: 'https://aayo.kr/static/images/aayo_logo_yellow.png',
+        link: {
+          mobileWebUrl: roomLink,
+          webUrl: roomLink,
         },
-        buttons: [
-            {
-                title: '메뉴 고르러 가기',
-                link: {
-                    mobileWebUrl: roomLink,
-                    webUrl: roomLink,
-                },
-            },
-        ],
-    }).then(function(response) {
-        console.log(response);
-    }).catch(function(error) {
-        console.error('카카오 공유 중 오류 발생:', error);
+      },
+      buttons: [
+        {
+          title: '메뉴 고르러 가기',
+          link: {
+            mobileWebUrl: roomLink,
+            webUrl: roomLink,
+          },
+        },
+      ],
     });
-}
+    }
