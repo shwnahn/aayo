@@ -10,6 +10,22 @@ span {
 }
 
 .sendlinktext {
+    cursor: pointer;
+    color: #3c3c3c;
+    font-size: 14px;
+    text-decoration: underline;
+    margin: 0;
+}
+
+.reset-order-btn-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.resetlinktext {
+    cursor: pointer;
+    border: none;
+    background: none;
     color: #3c3c3c;
     font-size: 14px;
     text-decoration: underline;
@@ -29,7 +45,8 @@ span {
 
 h2#todaysmenu{
     font-size: 20px;
-    margin-top: 2px;
+    margin-top: 10px;
+    margin-bottom: 7px;
     padding: 0;
 }
 
@@ -178,7 +195,7 @@ h2#todaysmenu{
 @media (min-width: 501px) {
     .refresh-button {
         position: static;
-        margin-top: -5%;
+        margin-top: -8%;
     }
 }
 
