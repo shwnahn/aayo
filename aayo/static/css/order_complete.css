@@ -20,8 +20,9 @@ body {
 }
 
 .check-image {
-    width: 100px;
-    height: 100px;
+    filter: brightness(0) invert(1);
+    width: 45%;
+    height: auto;
     animation: scale-in 0.5s ease-out;
 }
 

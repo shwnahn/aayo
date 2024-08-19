@@ -10,6 +10,7 @@ import json
 import random
 import string
 import logging
+from datetime import date
 
 def generate_unique_id(): # 방 뒤에 생성되는 유니크 url을 생성하는 함수이다.
     return ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
@@ -27,6 +28,7 @@ def room(request): # 방 생성 함수
         cafe = Cafe.objects.get(name=cafe_name)
         print(cafe)
         unique_id = generate_unique_id()
+        
         while Room.objects.filter(unique_id=unique_id).exists():
             unique_id = generate_unique_id()
         new_room = Room.objects.create(
@@ -34,7 +36,6 @@ def room(request): # 방 생성 함수
             password=password,
             cafe=cafe,
             unique_id=unique_id,
-            
         )
         # 추가된 부분: 새 방을 생성할 때 게스트 이름 초기화
         if 'guest_name' in request.session:
@@ -43,8 +44,10 @@ def room(request): # 방 생성 함수
         return redirect('room_detail', unique_id=new_room.unique_id)
     
     # GET 요청 처리
+    today = date.today().strftime('%m/%d')
     ctx = {
         'cafes': Cafe.objects.all(),
+        'today': today
     }
     return render(request, 'room.html', ctx)
 
