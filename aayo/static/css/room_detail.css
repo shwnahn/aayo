@@ -24,6 +24,7 @@ body{
     flex-direction: column;
     height: 100%;
     width: 100%;
+    margin-top: 4%;
 }
 
 .detail-top-container {
@@ -58,6 +59,7 @@ body{
 .cafe-logo {
     display: block;
     height: 100%;
+    width: auto;
     width: auto;
 }
 
@@ -175,3 +177,4 @@ span {
 .emoji {
     font-size: 35px;
 }
+

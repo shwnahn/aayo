@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block title %} 주문 목록 - {{ room.name }}{% endblock %}
-
 {% block content %}
 <div class="order-container">
     <!-- <button id="refresh-orders" class="btn btn-primary mb-3">주문 목록 갱신</button> -->
@@ -27,7 +25,7 @@
                         <span class="menu-count">{{ order.count }}</span>
                     </div>
                     <div class="order-delete">
-                        🗑️
+                        <button class="delete-btn">🗑️</button>
                     </div>
                 </div>
             {% endfor %}
@@ -48,25 +46,17 @@
 <div id="share-modal" class="share-modal hidden">
     <span class="share-close">&times;</span>
     <h2>메뉴를 고를 사람을 초대합니다.</h2>
-
+    
     <!-- 추후 확장 예정 기능 -->
     <div class="share-options">
-        <div class="share-option">
+        <div id="kakaoShareBtn" class="share-option">
             <img src="{% static 'images/kakao.png' %}" alt="Kakao">
             <span>카카오톡</span>
         </div>
-        <div class="share-option">
-            <img id="copyLinkBtn" src="{% static 'images/copy.svg' %}" alt="Copy" width="10px" height="10px"> 
+        <div id="copyLinkBtn" class="share-option">
+            <img src="{% static 'images/copy.svg' %}" alt="Copy" width="10px" height="10px"> 
             <span>링크 복사</span>
         </div>
-        <!-- <div class="share-option">
-            <img src="{% static 'images/email.png' %}" alt="Email">
-            <span>E-mail</span>
-        </div>
-        <div class="share-option">
-            <img src="{% static 'images/other.png' %}" alt="Other">
-            <span>기타</span>
-        </div> -->
     </div>
 
     <div class="share-link">
@@ -104,7 +94,7 @@ document.getElementById('resetOrderBtn').addEventListener('click', function() {
 
 document.getElementById('refresh-orders').addEventListener('click', function() {
         location.reload();
-    });
+});
 </script>
 {% endblock %}
 
