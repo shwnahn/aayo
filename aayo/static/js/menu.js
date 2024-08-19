@@ -412,3 +412,27 @@ function resetModal() {
     });
     document.getElementById('additionalInstructions').value = '';
 }
+
+// 카테고리 선택 코드
+function filterMenu(category) {
+    const menuItems = document.querySelectorAll('.menu-item');
+    const buttons = document.querySelectorAll('.category-container button');
+    
+    // 모든 버튼에서 active 클래스 제거
+    buttons.forEach(function(button) {
+        button.classList.remove('active');
+    });
+
+    // 클릭한 버튼에만 active 클래스 추가
+    const clickedButton = event.target;
+    clickedButton.classList.add('active');
+    menuItems.forEach(function(item) {
+        const itemCategory = item.getAttribute('data-menu-category');
+        
+        if (category === '전체' || itemCategory === category) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}

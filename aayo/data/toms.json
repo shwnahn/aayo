@@ -1,442 +1,728 @@
 [
     {
-        "menu_name": "오렌지 콜드브루",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%98%C2%A4%C3%AB%C2%A0%C2%8C%C3%AC%C2%A7%C2%80%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8_2000.png_1717982333838.png"
-    },
-    {
-        "menu_name": "소트프 콜드브루 아포가토",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AB%C2%B8%C2%94%C3%AB%C2%9E%C2%99_%C3%AC%C2%86%C2%8C%C3%AD%C2%94%C2%84%C3%AD%C2%8A%C2%B8%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8%C3%AC%C2%95%C2%84%C3%AD%C2%8F%C2%AC%C3%AA%C2%B0%C2%80%C3%AD%C2%86%C2%A0_2000.png_1717982204817.png"
-    },
-    {
-        "menu_name": "콜드브루 아포가토",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8%C3%AC%C2%95%C2%84%C3%AD%C2%8F%C2%AC%C3%AA%C2%B0%C2%80%C3%AD%C2%86%C2%A0_2000.png_1717981575745.png"
-    },
-    {
-        "menu_name": "흑당 콜드브루라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AD%C2%9D%C2%91%C3%AB%C2%8B%C2%B9%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8_2000.png_1717981297421.png"
-    },
-    {
-        "menu_name": "콜드브루 라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8%C3%AB%C2%9D%C2%BC%C3%AB%C2%96%C2%BC_2000.png_1717981167292.png"
-    },
-    {
-        "menu_name": "콜드브루 예가체프",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8%C3%AC%C2%98%C2%88%C3%AA%C2%B0%C2%80%C3%AC%C2%B2%C2%B4%C3%AD%C2%94%C2%84_2000.png_1717980909531.png"
-    },
-    {
-        "menu_name": "스프링 슈크림 라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/KakaoTalk_20240307_103644568_01.png_1709776901680.png"
-    },
-    {
-        "menu_name": "미숫크림 탐앤치노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/%C3%AB%C2%AF%C2%B8%C3%AC%C2%88%C2%AB%C3%AD%C2%81%C2%AC%C3%AB%C2%A6%C2%BC%C3%AD%C2%83%C2%90%C3%AC%C2%95%C2%A4%C3%AC%C2%B9%C2%98%C3%AB%C2%85%C2%B8.png_1708562284018.png"
-    },
-    {
-        "menu_name": "에너제틱 파인 토닉",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%97%C2%90%C3%AB%C2%84%C2%88%C3%AC%C2%A0%C2%9C%C3%AD%C2%8B%C2%B1_%C3%AD%C2%8C%C2%8C%C3%AC%C2%9D%C2%B8_2000.png_1713316076916.png"
-    },
-    {
-        "menu_name": "에너제틱 베리 토닉",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%97%C2%90%C3%AB%C2%84%C2%88%C3%AC%C2%A0%C2%9C%C3%AD%C2%8B%C2%B1_%C3%AB%C2%B2%C2%A0%C3%AB%C2%A6%C2%AC_2000.png_1713316168168.png"
-    },
-    {
-        "menu_name": "꼰대라떼 스테비아 아이스",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_D1af92nq_20221212040237.png"
-    },
-    {
-        "menu_name": "꼰대라떼 스테비아",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_rlkp1vdu_20221212040023.png"
-    },
-    {
-        "menu_name": "커피 토닉",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_OvEPaXlC_20220726123811.png"
-    },
-    {
-        "menu_name": "그래놀라 요거트",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_N8ToB3bZ_20211112025426.png"
-    },
-    {
-        "menu_name": "딸기주스",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_FE57VHyS_20200821052053.png"
-    },
-    {
-        "menu_name": "곡성 멜론 스무디",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_ki5lpORn_20210607083543.png"
-    },
-    {
-        "menu_name": "얼그레이",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_hJTvtMIg_20211115022402.png"
-    },
-    {
-        "menu_name": "아이스 꼰대라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_Ms34FE9V_20200728122950.png"
-    },
-    {
-        "menu_name": "허니 제주 그린라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_j5ulRnO3_20200831123700.png"
-    },
-    {
-        "menu_name": "군고구마 라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_sDiuA0H4_20200728124808.png"
-    },
-    {
-        "menu_name": "제주 그린라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_x2E186hp_20200728124825.png"
-    },
-    {
-        "menu_name": "그린민트 초코 탐앤치노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_YLc2wSqo_20200728031848.png"
-    },
-    {
-        "menu_name": "그린민트 초콜릿",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_5u3rPLay_20200728124837.png"
-    },
-    {
-        "menu_name": "제주 그린티 초코칩 탐앤치노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_uWSfvNOs_20210910061422.png"
-    },
-    {
-        "menu_name": "그린티 탐앤치노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_jVCgcWi7_20200728031902.png"
-    },
-    {
-        "menu_name": "당근사과 주스",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_NehFXHEc_20210910061654.png"
-    },
-    {
-        "menu_name": "딸기 스무디",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_nuT1vUD8_20200728024327.png"
-    },
-    {
-        "menu_name": "딸기 요거트 스무디",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_oUTnKsq9_20200728024352.png"
-    },
-    {
-        "menu_name": "레몬 에이드",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_XKUcZ3PA_20200728115105.png"
-    },
-    {
-        "menu_name": "허니 레몬티",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_g4Guny52_20221011102328.png"
-    },
-    {
-        "menu_name": "로얄 밀크티",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_C8sXdZHx_20200831122519.png"
-    },
-    {
-        "menu_name": "루이보스 오렌지",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_7mP9TAc3_20200728115416.png"
-    },
-    {
-        "menu_name": "마시는요거트(딸기)",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_LIlKXCuW_20211116104839.png"
-    },
-    {
-        "menu_name": "마시는요거트(블루베리)",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_AQX3naUF_20211116105258.png"
-    },
-    {
-        "menu_name": "마시는요거트(플레인)",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_Drjt1klH_20211116104916.png"
-    },
-    {
-        "menu_name": "망고 스무디",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_mcASXwWv_20200728024516.png"
-    },
-    {
-        "menu_name": "망고 요거트 스무디",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_VQrdaFfG_20200728024529.png"
-    },
-    {
-        "menu_name": "밀싹케일 주스",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_PMxNXF6r_20210910061517.png"
-    },
-    {
-        "menu_name": "밀크티 (얼그레이)",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_p8ZfiB25_20220127041722.png"
-    },
-    {
-        "menu_name": "바닐라 라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_qdM19VOx_20200728110937.png"
-    },
-    {
-        "menu_name": "바닐라 탐앤치노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_9DZAi7Sw_20200728031458.png"
-    },
-    {
-        "menu_name": "바닐라 라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_oMfVnQ5b_20210913102438.png"
-    },
-    {
-        "menu_name": "복숭아 아이스티",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_VdRqJ5Nl_20200728115620.png"
-    },
-    {
-        "menu_name": "블루 레몬 슬러시",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_t3rU5y9a_20200807051140.png"
-    },
-    {
-        "menu_name": "블루 레몬 에이드",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_t9RjHMbg_20200728115655.png"
-    },
-    {
-        "menu_name": "블루베리 스무디",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_v46metB7_20200728024623.png"
-    },
-    {
-        "menu_name": "블루베리 요거트 스무디",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_602DiaKC_20200728024638.png"
-    },
-    {
-        "menu_name": "비트파인애플 주스",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_I7UarPq1_20210910061707.png"
-    },
-    {
-        "menu_name": "소프트 플레인 요거트 스무디",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_8aphSPnC_20200807051046.png"
-    },
-    {
-        "menu_name": "싱글오리진 동티모르",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_OZ2P1mWM_20200831123156.png"
-    },
-    {
-        "menu_name": "싱글오리진 디카페인",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_OLPvJEYA_20200831123206.png"
-    },
-    {
-        "menu_name": "싱글오리진 스페셜티",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_Upox5YP6_20200831123223.png"
-    },
-    {
-        "menu_name": "싱글오리진 시다모",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_6eSLHklF_20200831123241.png"
-    },
-    {
-        "menu_name": "싱글오리진 예가체프",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_IqCHtvd6_20200831123301.png"
-    },
-    {
-        "menu_name": "싱글오리진 케냐 AA",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_zqjZS6w3_20200831123319.png"
-    },
-    {
-        "menu_name": "싱글오리진 콜롬비아",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_90TBvEfL_20200831123147.png"
-    },
-    {
-        "menu_name": "아이스 군고구마라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_4YOFehka_20200831122114.png"
-    },
-    {
-        "menu_name": "아이스 제주 그린라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_7iNPM8R2_20200807031217.png"
-    },
-    {
-        "menu_name": "아이스 그린민트 초콜릿",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_csrSPnTp_20200728024002.png"
-    },
-    {
-        "menu_name": "아이스 허니 레몬티",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_siXk2J5j_20221011102300.png"
-    },
-    {
-        "menu_name": "아이스 로얄 밀크티",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_A7Fal9sG_20200728115303.png"
-    },
-    {
-        "menu_name": "아이스 밀크티 (얼그레이)",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_LQre4ZVS_20200728120254.png"
-    },
-    {
-        "menu_name": "아이스 바닐라 라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_FDju7XJl_20200831122547.png"
-    },
-    {
-        "menu_name": "아이스 싱글오리진 동티모르",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_veB5hJUH_20200805084217.png"
-    },
-    {
-        "menu_name": "아이스 싱글오리진 디카페인",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_jcFit9b3_20200805084233.png"
-    },
-    {
-        "menu_name": "아이스 싱글오리진 스페셜티",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_hz1E5PmU_20200805084247.png"
-    },
-    {
-        "menu_name": "아이스 싱글오리진 시다모",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_TtLidzE6_20200805084301.png"
-    },
-    {
-        "menu_name": "아이스 싱글오리진 예가체프",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_glDCNSom_20200805084313.png"
-    },
-    {
-        "menu_name": "아이스 싱글오리진 케냐AA",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_U2csIiQ0_20200805084324.png"
-    },
-    {
-        "menu_name": "아이스 싱글오리진 콜롬비아",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_nz3CJuSo_20200805084335.png"
-    },
-    {
-        "menu_name": "아이스 얼그레이",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_7FX0cLe3_20211115022412.png"
-    },
-    {
-        "menu_name": "아이스 오리엔탈 라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_nWHQh6D1_20210910061640.png"
-    },
-    {
-        "menu_name": "아이스 허니 유자차",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_pEvdo2Fy_20221011102130.png"
-    },
-    {
-        "menu_name": "아이스 허니 자몽 얼그레이",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_uPQygdEJ_20221011102543.png"
-    },
-    {
-        "menu_name": "아이스 초코",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_kvyfHTFd_20200728024037.png"
-    },
-    {
-        "menu_name": "아이스 카라멜 마끼아또",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_l809YZgf_20200728122041.png"
-    },
-    {
-        "menu_name": "아이스 아메리카노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_SvFITgHd_20200728122052.png"
-    },
-    {
-        "menu_name": "아이스 카페라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_cdsFXetN_20200728122111.png"
-    },
-    {
-        "menu_name": "아이스 카페모카",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_itodkILR_20200728122151.png"
-    },
-    {
-        "menu_name": "아이스 카푸치노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_YM53nPUD_20200807031414.png"
-    },
-    {
-        "menu_name": "아이스 캐모마일",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_7aJLoDys_20200728120413.png"
-    },
-    {
-        "menu_name": "아이스 페퍼민트",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_30XiJNrp_20200728120449.png"
-    },
-    {
-        "menu_name": "아이스 제주 허니 그린라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_5GTOwoDz_20200807050646.png"
-    },
-    {
-        "menu_name": "아이스 헤이즐넛 라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_eDwKCj5P_20200831123738.png"
-    },
-    {
         "menu_name": "에스프레소",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_ylAFY8So_20200807050529.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_ylAFY8So_20200807050529.png",
+        "category": "ESPRESSO",
+        "note": ""
     },
     {
         "menu_name": "에스프레소 - 마끼아또",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_r3KRHMtI_20200728124738.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_r3KRHMtI_20200728124738.png",
+        "category": "ESPRESSO",
+        "note": ""
     },
     {
         "menu_name": "에스프레소 - 콘파냐",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_qNalZLjy_20200728124748.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_qNalZLjy_20200728124748.png",
+        "category": "ESPRESSO",
+        "note": ""
     },
     {
-        "menu_name": "엑스트라 자바칩 탐앤치노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_VbpnlA3h_20200807050931.png"
+        "menu_name": "싱글오리진 동티모르",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_OZ2P1mWM_20200831123156.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
     },
     {
-        "menu_name": "오렌지 에이드",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_SE8BZ4sQ_20200728120503.png"
+        "menu_name": "싱글오리진 디카페인",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_OLPvJEYA_20200831123206.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
     },
     {
-        "menu_name": "오렌지 자몽 주스",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_yWrjoHzE_20210910061747.png"
+        "menu_name": "싱글오리진 스페셜티",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_Upox5YP6_20200831123223.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "싱글오리진 시다모",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_6eSLHklF_20200831123241.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "싱글오리진 예가체프",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_IqCHtvd6_20200831123301.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "싱글오리진 케냐 AA",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_zqjZS6w3_20200831123319.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "싱글오리진 콜롬비아",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_90TBvEfL_20200831123147.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 싱글오리진 동티모르",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_veB5hJUH_20200805084217.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 싱글오리진 디카페인",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_jcFit9b3_20200805084233.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 싱글오리진 스페셜티",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_hz1E5PmU_20200805084247.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 싱글오리진 시다모",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_TtLidzE6_20200805084301.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 싱글오리진 예가체프",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_glDCNSom_20200805084313.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 싱글오리진 케냐AA",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_U2csIiQ0_20200805084324.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 싱글오리진 콜롬비아",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_nz3CJuSo_20200805084335.png",
+        "category": "SINGLE ORIGIN",
+        "note": ""
+    },
+    {
+        "menu_name": "오렌지 콜드브루",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%98%C2%A4%C3%AB%C2%A0%C2%8C%C3%AC%C2%A7%C2%80%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8_2000.png_1717982333838.png",
+        "category": "COLDBREW",
+        "note": ""
+    },
+    {
+        "menu_name": "소트프 콜드브루 아포가토",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AB%C2%B8%C2%94%C3%AB%C2%9E%C2%99_%C3%AC%C2%86%C2%8C%C3%AD%C2%94%C2%84%C3%AD%C2%8A%C2%B8%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8%C3%AC%C2%95%C2%84%C3%AD%C2%8F%C2%AC%C3%AA%C2%B0%C2%80%C3%AD%C2%86%C2%A0_2000.png_1717982204817.png",
+        "category": "COLDBREW",
+        "note": ""
+    },
+    {
+        "menu_name": "콜드브루 아포가토",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8%C3%AC%C2%95%C2%84%C3%AD%C2%8F%C2%AC%C3%AA%C2%B0%C2%80%C3%AD%C2%86%C2%A0_2000.png_1717981575745.png",
+        "category": "COLDBREW",
+        "note": ""
+    },
+    {
+        "menu_name": "흑당 콜드브루라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AD%C2%9D%C2%91%C3%AB%C2%8B%C2%B9%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8_2000.png_1717981297421.png",
+        "category": "COLDBREW",
+        "note": ""
+    },
+    {
+        "menu_name": "콜드브루 라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8%C3%AB%C2%9D%C2%BC%C3%AB%C2%96%C2%BC_2000.png_1717981167292.png",
+        "category": "COLDBREW",
+        "note": ""
+    },
+    {
+        "menu_name": "콜드브루 예가체프",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%BD%C2%9C%C3%AB%C2%93%C2%9C%C3%AB%C2%B8%C2%8C%C3%AB%C2%A3%C2%A8%C3%AC%C2%98%C2%88%C3%AA%C2%B0%C2%80%C3%AC%C2%B2%C2%B4%C3%AD%C2%94%C2%84_2000.png_1717980909531.png",
+        "category": "COLDBREW",
+        "note": ""
+    },
+    {
+        "menu_name": "스프링 슈크림 라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/KakaoTalk_20240307_103644568_01.png_1709776901680.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "커피 토닉",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_OvEPaXlC_20220726123811.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 꼰대라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_Ms34FE9V_20200728122950.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "바닐라 라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_qdM19VOx_20200728110937.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "바닐라 라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_oMfVnQ5b_20210913102438.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 바닐라 라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_FDju7XJl_20200831122547.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 오리엔탈 라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_nWHQh6D1_20210910061640.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 카라멜 마끼아또",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_l809YZgf_20200728122041.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 아메리카노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_SvFITgHd_20200728122052.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 카페라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_cdsFXetN_20200728122111.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 카페모카",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_itodkILR_20200728122151.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 카푸치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_YM53nPUD_20200807031414.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 헤이즐넛 라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_eDwKCj5P_20200831123738.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
     },
     {
         "menu_name": "오리엔탈 라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_pXRDo5bO_20200728122545.png"
-    },
-    {
-        "menu_name": "허니 유자차",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_DpBAsUld_20221011102207.png"
-    },
-    {
-        "menu_name": "자몽 에이드",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_DaosHLKb_20200728120735.png"
-    },
-    {
-        "menu_name": "허니 자몽 얼그레이",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_cWETKDzx_20221011100726.png"
-    },
-    {
-        "menu_name": "자바칩 탐앤치노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_93827dnB_20200728032010.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_pXRDo5bO_20200728122545.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
     },
     {
         "menu_name": "카라멜 마끼아또",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_M0FVBHmd_20200728122602.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_M0FVBHmd_20200728122602.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
     },
     {
         "menu_name": "아메리카노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_vtlMJjgb_20200728122614.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_vtlMJjgb_20200728122614.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
     },
     {
         "menu_name": "카페라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_lmzfF10h_20200728122627.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_lmzfF10h_20200728122627.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
     },
     {
         "menu_name": "카페모카",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_2uKcXGEd_20210910061448.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_2uKcXGEd_20210910061448.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
     },
     {
         "menu_name": "카푸치노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_TcObusrK_20200728122654.png"
-    },
-    {
-        "menu_name": "캐모마일",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_e9HdUFlq_20200728120817.png"
-    },
-    {
-        "menu_name": "쿠키앤크림 탐앤치노",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_1KLxGblE_20210910061531.png"
-    },
-    {
-        "menu_name": "페퍼민트",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_gLXG2pES_20200728120858.png"
-    },
-    {
-        "menu_name": "플레인 요거트 스무디",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_7Dg6SIKz_20200728024934.png"
-    },
-    {
-        "menu_name": "핫 초코",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_seHzaAyV_20200728024142.png"
-    },
-    {
-        "menu_name": "허니 레몬티",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_OSBInQ3l_20200805092050.png"
-    },
-    {
-        "menu_name": "허니 자몽티",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_uVkvyQaz_20200805092101.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_TcObusrK_20200728122654.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
     },
     {
         "menu_name": "헤이즐넛 라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_XPaG1sHc_20200728122707.png"
-    },
-    {
-        "menu_name": "흑당 버블티",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_jBiJ7ueW_20200728024238.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_XPaG1sHc_20200728122707.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
     },
     {
         "menu_name": "꼰대라떼",
-        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_r6lJSGzp_20200728122740.png"
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_r6lJSGzp_20200728122740.png",
+        "category": "AMERICANO & LATTE",
+        "note": ""
+    },
+    {
+        "menu_name": "꼰대라떼 스테비아 아이스",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_D1af92nq_20221212040237.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "꼰대라떼 스테비아",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_rlkp1vdu_20221212040023.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "그래놀라 요거트",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_N8ToB3bZ_20211112025426.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "허니 제주 그린라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_j5ulRnO3_20200831123700.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "군고구마 라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_sDiuA0H4_20200728124808.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "제주 그린라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_x2E186hp_20200728124825.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "그린민트 초콜릿",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_5u3rPLay_20200728124837.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 군고구마라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_4YOFehka_20200831122114.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 제주 그린라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_7iNPM8R2_20200807031217.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 그린민트 초콜릿",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_csrSPnTp_20200728024002.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 초코",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_kvyfHTFd_20200728024037.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 제주 허니 그린라떼",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_5GTOwoDz_20200807050646.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "핫 초코",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_seHzaAyV_20200728024142.png",
+        "category": "LATTE & CHOCOLATE",
+        "note": ""
+    },
+    {
+        "menu_name": "에너제틱 파인 토닉",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%97%C2%90%C3%AB%C2%84%C2%88%C3%AC%C2%A0%C2%9C%C3%AD%C2%8B%C2%B1_%C3%AD%C2%8C%C2%8C%C3%AC%C2%9D%C2%B8_2000.png_1713316076916.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "에너제틱 베리 토닉",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/24%C3%AD%C2%81%C2%B4%C3%AB%C2%9E%C2%98%C3%AC%C2%8B%C2%9D_%C3%AC%C2%97%C2%90%C3%AB%C2%84%C2%88%C3%AC%C2%A0%C2%9C%C3%AD%C2%8B%C2%B1_%C3%AB%C2%B2%C2%A0%C3%AB%C2%A6%C2%AC_2000.png_1713316168168.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기주스",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_FE57VHyS_20200821052053.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "얼그레이",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_hJTvtMIg_20211115022402.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "당근사과 주스",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_NehFXHEc_20210910061654.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "레몬 에이드",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_XKUcZ3PA_20200728115105.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "허니 레몬티",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_g4Guny52_20221011102328.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "로얄 밀크티",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_C8sXdZHx_20200831122519.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "루이보스 오렌지",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_7mP9TAc3_20200728115416.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "밀싹케일 주스",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_PMxNXF6r_20210910061517.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "밀크티 (얼그레이)",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_p8ZfiB25_20220127041722.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "복숭아 아이스티",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_VdRqJ5Nl_20200728115620.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "블루 레몬 에이드",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_t9RjHMbg_20200728115655.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "비트파인애플 주스",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_I7UarPq1_20210910061707.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 허니 레몬티",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_siXk2J5j_20221011102300.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 로얄 밀크티",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_A7Fal9sG_20200728115303.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 밀크티 (얼그레이)",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_LQre4ZVS_20200728120254.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 얼그레이",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_7FX0cLe3_20211115022412.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 허니 유자차",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_pEvdo2Fy_20221011102130.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 허니 자몽 얼그레이",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_uPQygdEJ_20221011102543.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 캐모마일",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_7aJLoDys_20200728120413.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "아이스 페퍼민트",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_30XiJNrp_20200728120449.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "오렌지 에이드",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_SE8BZ4sQ_20200728120503.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "오렌지 자몽 주스",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_yWrjoHzE_20210910061747.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "허니 유자차",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_DpBAsUld_20221011102207.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "자몽 에이드",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_DaosHLKb_20200728120735.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "허니 자몽 얼그레이",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/3717365327_cWETKDzx_20221011100726.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "캐모마일",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_e9HdUFlq_20200728120817.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "페퍼민트",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_gLXG2pES_20200728120858.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "허니 레몬티",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_OSBInQ3l_20200805092050.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "허니 자몽티",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_uVkvyQaz_20200805092101.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "흑당 버블티",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_jBiJ7ueW_20200728024238.png",
+        "category": "TEA & ADE & JUICE",
+        "note": ""
+    },
+    {
+        "menu_name": "바닐라 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_9DZAi7Sw_20200728031458.png",
+        "category": "TOMNCHINO & COFFEE",
+        "note": ""
+    },
+    {
+        "menu_name": "미숫크림 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/%C3%AB%C2%AF%C2%B8%C3%AC%C2%88%C2%AB%C3%AD%C2%81%C2%AC%C3%AB%C2%A6%C2%BC%C3%AD%C2%83%C2%90%C3%AC%C2%95%C2%A4%C3%AC%C2%B9%C2%98%C3%AB%C2%85%C2%B8.png_1708562284018.png",
+        "category": "TOMNCHINO & NON COFFEE",
+        "note": ""
+    },
+    {
+        "menu_name": "그린민트 초코 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_YLc2wSqo_20200728031848.png",
+        "category": "TOMNCHINO & NON COFFEE",
+        "note": ""
+    },
+    {
+        "menu_name": "제주 그린티 초코칩 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_uWSfvNOs_20210910061422.png",
+        "category": "TOMNCHINO & NON COFFEE",
+        "note": ""
+    },
+    {
+        "menu_name": "그린티 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_jVCgcWi7_20200728031902.png",
+        "category": "TOMNCHINO & NON COFFEE",
+        "note": ""
+    },
+    {
+        "menu_name": "엑스트라 자바칩 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_VbpnlA3h_20200807050931.png",
+        "category": "TOMNCHINO & NON COFFEE",
+        "note": ""
+    },
+    {
+        "menu_name": "자바칩 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_93827dnB_20200728032010.png",
+        "category": "TOMNCHINO & NON COFFEE",
+        "note": ""
+    },
+    {
+        "menu_name": "쿠키앤크림 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_1KLxGblE_20210910061531.png",
+        "category": "TOMNCHINO & NON COFFEE",
+        "note": ""
+    },
+    {
+        "menu_name": "미숫크림 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/%C3%AB%C2%AF%C2%B8%C3%AC%C2%88%C2%AB%C3%AD%C2%81%C2%AC%C3%AB%C2%A6%C2%BC%C3%AD%C2%83%C2%90%C3%AC%C2%95%C2%A4%C3%AC%C2%B9%C2%98%C3%AB%C2%85%C2%B8.png_1708562284018.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "곡성 멜론 스무디",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_ki5lpORn_20210607083543.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "그린민트 초코 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_YLc2wSqo_20200728031848.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "제주 그린티 초코칩 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_uWSfvNOs_20210910061422.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "그린티 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_jVCgcWi7_20200728031902.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기 스무디",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_nuT1vUD8_20200728024327.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "딸기 요거트 스무디",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_oUTnKsq9_20200728024352.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "망고 스무디",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_mcASXwWv_20200728024516.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "망고 요거트 스무디",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_VQrdaFfG_20200728024529.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리 스무디",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_v46metB7_20200728024623.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "블루베리 요거트 스무디",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_602DiaKC_20200728024638.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "소프트 플레인 요거트 스무디",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_8aphSPnC_20200807051046.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "엑스트라 자바칩 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_VbpnlA3h_20200807050931.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "자바칩 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_93827dnB_20200728032010.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "쿠키앤크림 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_1KLxGblE_20210910061531.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "플레인 요거트 스무디",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_7Dg6SIKz_20200728024934.png",
+        "category": "SMOOTHIE",
+        "note": ""
+    },
+    {
+        "menu_name": "미숫크림 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/uploads/menu/%C3%AB%C2%AF%C2%B8%C3%AC%C2%88%C2%AB%C3%AD%C2%81%C2%AC%C3%AB%C2%A6%C2%BC%C3%AD%C2%83%C2%90%C3%AC%C2%95%C2%A4%C3%AC%C2%B9%C2%98%C3%AB%C2%85%C2%B8.png_1708562284018.png",
+        "category": "SLUSH",
+        "note": ""
+    },
+    {
+        "menu_name": "그린민트 초코 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_YLc2wSqo_20200728031848.png",
+        "category": "SLUSH",
+        "note": ""
+    },
+    {
+        "menu_name": "제주 그린티 초코칩 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_uWSfvNOs_20210910061422.png",
+        "category": "SLUSH",
+        "note": ""
+    },
+    {
+        "menu_name": "그린티 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_jVCgcWi7_20200728031902.png",
+        "category": "SLUSH",
+        "note": ""
+    },
+    {
+        "menu_name": "블루 레몬 슬러시",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_t3rU5y9a_20200807051140.png",
+        "category": "SLUSH",
+        "note": ""
+    },
+    {
+        "menu_name": "엑스트라 자바칩 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_VbpnlA3h_20200807050931.png",
+        "category": "SLUSH",
+        "note": ""
+    },
+    {
+        "menu_name": "자바칩 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_93827dnB_20200728032010.png",
+        "category": "SLUSH",
+        "note": ""
+    },
+    {
+        "menu_name": "쿠키앤크림 탐앤치노",
+        "image_url": "https://kr.object.ncloudstorage.com/tomntoms-bucket/menu/2038868156_1KLxGblE_20210910061531.png",
+        "category": "SLUSH",
+        "note": ""
     }
 ]
