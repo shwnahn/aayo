@@ -122,12 +122,14 @@ function fallbackCopyTextToClipboard(text) {
 document.addEventListener('DOMContentLoaded', function () {
   // 카카오톡 공유 버튼
   // SDK를 초기화 (HTTP 환경에서는 실제로 초기화되지 않을 수 있음)
-  Kakao.init('{{ KAKAO_APP_KEY }}');
+  if (!Kakao.isInitialized()) {
+    Kakao.init('{{ KAKAO_APP_KEY }}');
+  }
 
   console.log('Kakao SDK 초기화 상태:', Kakao.isInitialized());
 
   // 방 링크 가져오기
-  const roomLink = document.getElementById('roomLink').href;
+  const roomLink = document.getElementById('roomLink').href; 
 
   // 카카오톡 공유 버튼 이벤트 리스너
   document
@@ -161,7 +163,13 @@ document.addEventListener('DOMContentLoaded', function () {
       // 콘솔에 공유 내용 출력
       console.log('공유할 내용:', JSON.stringify(shareContent, null, 2));
 
-      // HTTP 환경에서는 실제 Kakao.Link.sendDefault 함수가 작동하지 않으므로 주석 처리
-        Kakao.Link.sendDefault(shareContent);
+      // 최신 방식으로 공유 기능 호출
+      Kakao.Share.sendDefault(shareContent)
+        .then(function (response) {
+          console.log('공유 성공:', response);
+        })
+        .catch(function (error) {
+          console.error('공유 실패:', error);
+        });
     });
 });
