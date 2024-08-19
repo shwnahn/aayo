@@ -1,3 +1,23 @@
+body{
+    z-index: 0;
+}
+.content{
+    padding: 0;
+}
+
+#room-design-asset{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: var(--aayo-color);
+    padding: 0 0 40vh 0;
+    text-align: center;
+    width: 100vw;
+    margin-top: 0;
+    z-index: -1;
+}
 
 .room-detail-container{
     display: flex;
@@ -40,6 +60,7 @@
     display: block;
     height: 100%;
     width: auto;
+    width: auto;
 }
 
 
@@ -48,20 +69,11 @@
     font-weight: normal;
 }
 
-.btn-wrap-top {
+.btn-wrap-top, .btn-wrap-bottom {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     width: 100%;
+    height: 50%;
 }
-
-.btn-wrap-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
 
 .btn-wrap {
     display: flex;
@@ -108,46 +120,46 @@ span {
     z-index: 3;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    height: 90%;
+    margin-bottom: 10%;
 }
 
 .btn {    
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    /* height: 19.4%; */
-    /* padding: 15px 0; */
-    margin: 2%;
-    margin-top: 5%;
     border-radius: 30px;
     text-decoration: none;
     text-align: center;
-    font-size: 16px;
     font-weight: bold;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.btn-wrap-each{
+    margin: 5%;
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.btn-yellow, .btn-white {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    color: #000;
+    font-size: 21px;
 }
 
 .btn-yellow {
-    display: flex;
-    flex-direction: column;
-    width: 160px;
-    height: 160px;
-    color: #000;
-    font-size: 21px;
-    /* border: 2px solid #FFE8A4; */
     background-color: #FFE8A4;
 }
 
 .btn-white {
-    display: flex;
-    flex-direction: column;
-    width: 160px;
-    height: 160px;
     background-color: #fff;
-    color: #000;
-    font-size: 21px;
-    /* /* border: 2px solid #FFD54F;  */
 }
 
 .wave-bottom {
@@ -165,3 +177,4 @@ span {
 .emoji {
     font-size: 35px;
 }
+

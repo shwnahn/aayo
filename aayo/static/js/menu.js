@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupMenuInteractions();
         updateUIFromSelectedOptions();
     }
+    
 });
 
 // # 서버(html 코드)에서 가져온 데이터를 사용해 selectedOptions에 기존값 불러오기
@@ -436,3 +437,4 @@ function filterMenu(category) {
         }
     });
 }
+
