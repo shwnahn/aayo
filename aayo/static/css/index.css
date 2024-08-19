@@ -5,12 +5,18 @@
     header {
         display: none !important;
     }
+    main{
+        height:100%;
+    }
+    .content{
+        margin-top: 0;
+    }
     #start-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 60vh; /* 화면 전체 높이 */
+        height: 100%;
     }
     h1 {
         margin-bottom: 10px;
