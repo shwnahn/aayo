@@ -72,12 +72,6 @@
         "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
     },
     {
-        "menu_name": "제주 비자림 콜드 브루",
-        "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2022/03/[9200000002672]_20220311105511600.jpg",
-        "category": "콜드 브루 커피",
-        "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
-    },
-    {
         "menu_name": "콜드 브루",
         "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000038]_20210430113202458.jpg",
         "category": "콜드 브루 커피",
@@ -372,6 +366,12 @@
         "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
     },
     {
+        "menu_name": "더블 에스프레소 칩 프라푸치노",
+        "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2024/04/[9200000002760]_20240419145156375.jpg",
+        "category": "프라푸치노",
+        "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
+    },
+    {
         "menu_name": "에스프레소 프라푸치노",
         "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[168007]_20210415144337428.jpg",
         "category": "프라푸치노",
@@ -432,12 +432,6 @@
         "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
     },
     {
-        "menu_name": "스타벅스 판다 쿠키 블렌디드",
-        "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2024/07/[9200000005379]_20240709130615114.jpg",
-        "category": "블렌디드",
-        "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
-    },
-    {
         "menu_name": "망고 패션 티 블렌디드",
         "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2023/02/[9200000004512]_20230207150514347.jpg",
         "category": "블렌디드",
@@ -470,6 +464,12 @@
     {
         "menu_name": "망고 바나나 블렌디드",
         "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[169001]_20210419130701792.jpg",
+        "category": "블렌디드",
+        "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
+    },
+    {
+        "menu_name": "스타벅스 판다 쿠키 블렌디드",
+        "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2024/07/[9200000005379]_20240709130615114.jpg",
         "category": "블렌디드",
         "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
     },
@@ -571,7 +571,7 @@
     },
     {
         "menu_name": "아이스 유스베리 티",
-        "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000229]_20210415142219481.jpg",
+        "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2024/08/[9200000000229]_20240813134939709.jpg",
         "category": "티(티바나)",
         "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
     },
@@ -840,20 +840,8 @@
         "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
     },
     {
-        "menu_name": "아이스 제주 까망 라떼",
-        "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2020/09/[9200000001302]_20200921171804529.jpg",
-        "category": "기타 제조 음료",
-        "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
-    },
-    {
         "menu_name": "우유",
         "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[18]_20210426095514018.jpg",
-        "category": "기타 제조 음료",
-        "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
-    },
-    {
-        "menu_name": "제주 까망 라떼",
-        "image_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2020/09/[9200000001301]_20200921171639781.jpg",
         "category": "기타 제조 음료",
         "note": "디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)"
     },

@@ -34,7 +34,7 @@ def crawl_starbucks():
 
             menu_items = menu.find_elements(By.CSS_SELECTOR, "li.menuDataSet")
             for item in menu_items:
-                menu_name = item.find_element(By.TAG_NAME, 'dd').textdma
+                menu_name = item.find_element(By.TAG_NAME, 'dd').text
                 image_url = item.find_element(By.TAG_NAME, 'img').get_attribute('src')
                 if menu_name:
                     data.append({
