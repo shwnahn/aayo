@@ -14,13 +14,13 @@ span {
     font-size: 14px;
     text-decoration: underline;
     margin: 0;
-
 }
 
 .open-modal-btn-wrap {
     display: flex;
     justify-content: center;
 }
+
 .order-container {
     max-width: 800px;
     margin: 0px auto 0 auto;
@@ -67,7 +67,7 @@ h2#todaysmenu{
 /* 주문 내용 파트 */
 .order-menu-info {
     font-size: 14px;
-    flex: 6;
+    flex: 7;
     padding-left: 10px;
 }
 .order-card .order-menu-info .guest-names {
