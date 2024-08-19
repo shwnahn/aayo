@@ -132,7 +132,7 @@ header {
 
 header a {
     width: 15%;
-    margin-left: 5%;
+    margin-left: 3%;
     margin-top: 3%;
 }
 .aayologo {
@@ -313,4 +313,23 @@ header a {
 
 .hidden {
     display: none !important;
+}
+
+/* 애니메이션 정의 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 요소에 애니메이션 적용 */
+.initial-animation {
+    animation: fadeInUp 1s ease-out;
+    opacity: 0; /* 페이지 로드 전에 요소가 보이지 않도록 설정 */
+    animation-fill-mode: forwards; /* 애니메이션 후에 최종 상태를 유지 */
 }
