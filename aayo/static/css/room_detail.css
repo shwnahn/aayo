@@ -32,7 +32,7 @@ body{
 
 .detail-top-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     height: 20%;
     padding-left: 5%;
@@ -52,12 +52,12 @@ body{
     font-weight: normal;
 }
 
-.room-name-and-logo {
+.room-name-and-text {
     height: 60%; 
     width: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .cafe-logo {
@@ -95,7 +95,7 @@ body{
 
 .room_name {
     margin: 0px;
-    font-size: 15px;
+    font-size: 28px;
     font-weight: bold;
     margin-left: 3%;
 }
