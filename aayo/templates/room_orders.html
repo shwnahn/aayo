@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block title %} 주문 목록 - {{ room.name }}{% endblock %}
-
 {% block content %}
 <div class="order-container">
     <!-- <button id="refresh-orders" class="btn btn-primary mb-3">주문 목록 갱신</button> -->
@@ -27,7 +25,7 @@
                         <span class="menu-count">{{ order.count }}</span>
                     </div>
                     <div class="order-delete">
-                        🗑️
+                        <button class="delete-btn">🗑️</button>
                     </div>
                 </div>
             {% endfor %}
@@ -96,7 +94,6 @@ document.getElementById('resetOrderBtn').addEventListener('click', function() {
 
 document.getElementById('refresh-orders').addEventListener('click', function() {
         location.reload();
-    });
 </script>
 {% endblock %}
 
