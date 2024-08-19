@@ -36,16 +36,22 @@
                 <div class="menuSearchContainer">
                     <input type="text" id="menuSearch" placeholder="메뉴 검색...">
                 </div>
-    
+                
                 <a href="{% url 'room_menu' room.unique_id %}" id="roomLink" style="display: none;">{{ share_link }}</a>
                 <!-- 링크 버튼 작동 위해 방 링크 가져와서 display: none 설정 -->
         </div>
 
         <div class="category-container">
-            <button onclick="filterMenu('전체')" class="category-btn active">전체</button>
-            {% for category in categories %}
-            <button onclick="filterMenu('{{ category }}')" class="category-btn">{{ category }}</button>
-            {% endfor %}
+            <div class="category-scroll">
+              <button class="category-btn active" onclick="filterMenu('전체')">
+                <i class="fas fa-th-large"></i> 전체
+              </button>
+              {% for category in categories %}
+              <button class="category-btn" onclick="filterMenu('{{ category }}')">
+                <i class="fas fa-{{ category|lower }}"></i> {{ category }}
+              </button>
+              {% endfor %}
+            </div>
         </div>
 
         <div class="scrollable-content">

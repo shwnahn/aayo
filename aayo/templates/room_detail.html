@@ -8,11 +8,11 @@
 <div class="room-detail-container">
     <div class="detail-top-container">
         <div class="guide-text-wrap">
-            <p class="guide-text">링크가 생성되었어요<br>메뉴 취합을 시작해보세요</p>
+            <p class="guide-text">링크가 생성되었습니다!<br>이제 메뉴 취합을 시작해보세요</p>
         </div>
         <div class="room-name-and-logo">
                 {% with logo_file=cafe.name_eng|add:".png"|lower %}
-            <img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo">
+            <div class="logo-container"><img src="{% static 'images/'|add:logo_file %}" alt="{{ room.cafe }} 로고" class="cafe-logo"></div>
                 {% endwith %}
             <p class="room_name">{{ room.name }}</p>
         </div>
@@ -49,6 +49,7 @@
     </div>
 </div>
 
+<div id="modal-overlay" class="modal-overlay hidden"></div>
 <!-- 하트 버튼 후원, 리뷰 modal -->
     <div id="heart-modal" class="heart-modal hidden">
         <span class="heart-close">&times;</span>
