@@ -21,14 +21,14 @@
     h1 {
         margin-bottom: 10px;
         font-weight: 900;
-        font-family: 'Roboto';
+        font-family: 'SUIT-Regular';
         text-align: right;
         font-size: 55px;
         color: black;
     }
     p {
-        font-family: 'Roboto';
         margin: 10px 0px;
+        font-family: 'SUIT-Regular';
         font-size: 15px;
         color: #666;
     }
@@ -38,7 +38,6 @@
         width: 100%;
     }
     #start-button {
-        font-family: 'Roboto';
         /* border: 1px solid #676767; */
         border: none;
         padding: 8px 20px;
@@ -61,7 +60,6 @@
     /* @media (max-width: 600px) {
         h1 {
             font-weight: 900;
-            font-family: 'Roboto';
             margin-bottom: 5px;
             font-size: 60px;
         }
