@@ -19,9 +19,9 @@
                     </div>
                     <div class="order-menu-info">
                         {{ order.menu_item.name }}
-                        <p>{{ order.options.temperature }} / {{ order.options.size }} / {{ order.options.ice }}
+                        <p class="order-menu-details">{{ order.options.temperature }} / {{ order.options.size }} / {{ order.options.ice }}
                         {% if order.options.note %} / {{ order.options.note }}{% endif %}</p>
-                        <p>🙋🏻 {{ order.guests }}</p>
+                        <p class="guest-names">🙋🏻 {{ order.guests }}</p>
                     </div>
                     <div class="order-menu-count">
                         <span class="menu-count">{{ order.count }}</span>
