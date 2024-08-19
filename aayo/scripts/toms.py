@@ -38,7 +38,6 @@ def crawl_toms():
 
     # 웹드라이버 설정
     driver = setup_driver()
-    crawled_items = set()
 
     try:
         driver.get(url)
