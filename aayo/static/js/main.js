@@ -119,57 +119,65 @@ function fallbackCopyTextToClipboard(text) {
     document.body.removeChild(textArea);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  // 카카오톡 공유 버튼
-  // SDK를 초기화 (HTTP 환경에서는 실제로 초기화되지 않을 수 있음)
-  if (!Kakao.isInitialized()) {
+// Kakao SDK를 비동기적으로 로드
+(function loadKakaoSDK() {
+    const script = document.createElement('script');
+    script.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js";
+    script.integrity = "sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4";
+    script.crossOrigin = "anonymous";
+    script.onload = initKakao;
+    document.head.appendChild(script);
+})();
+
+function initKakao() {
+    if (typeof Kakao === 'undefined') {
+        console.error('Kakao SDK가 로드되지 않았습니다.');
+        return;
+    }
+
+    // SDK 초기화
     Kakao.init('{{ KAKAO_APP_KEY }}');
-  }
+    console.log('Kakao SDK 초기화 상태:', Kakao.isInitialized());
 
-  console.log('Kakao SDK 초기화 상태:', Kakao.isInitialized());
+    // 카톡 공유 버튼 이벤트 리스너 설정
+    const kakaoShareBtn = document.getElementById('kakaoShareBtn');
+    if (kakaoShareBtn) {
+        kakaoShareBtn.addEventListener('click', shareKakao);
+    } else {
+        console.error('카카오 공유 버튼을 찾을 수 없습니다.');
+    }
+}
 
-  // 방 링크 가져오기
-  const roomLink = document.getElementById('roomLink').href; 
+function shareKakao() {
+    const roomLink = document.getElementById('roomLink')?.href;
+    if (!roomLink) {
+        console.error('방 링크를 찾을 수 없습니다.');
+        return;
+    }
 
-  // 카카오톡 공유 버튼 이벤트 리스너
-  document
-    .getElementById('kakaoShareBtn')
-    .addEventListener('click', function () {
-      console.log('카카오 공유 버튼이 클릭되었습니다.');
-
-      // 공유할 내용 객체 생성
-      const shareContent = {
+    Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: '아아요! 에 초대합니다',
-          description: '함께 메뉴를 골라보아요!',
-          imageUrl: 'https://aayo.kr/static/images/aayologo.png',
-          link: {
-            mobileWebUrl: roomLink,
-            webUrl: roomLink,
-          },
+            title: '아아요! 에 초대합니다',
+            description: '함께 메뉴를 골라보아요!',
+            imageUrl: '/static/images/aayo_logo_yellow.png', // 절대 경로로 수정
+            link: {
+                mobileWebUrl: roomLink,
+                webUrl: roomLink,
+            },
         },
         buttons: [
-          {
-            title: '메뉴 고르러 가기',
-            link: {
-              mobileWebUrl: roomLink,
-              webUrl: roomLink,
+            {
+                title: '메뉴 고르러 가기',
+                link: {
+                    mobileWebUrl: roomLink,
+                    webUrl: roomLink,
+                },
             },
-          },
         ],
-      };
-
-      // 콘솔에 공유 내용 출력
-      console.log('공유할 내용:', JSON.stringify(shareContent, null, 2));
-
-      // 최신 방식으로 공유 기능 호출
-      Kakao.Share.sendDefault(shareContent)
-        .then(function (response) {
-          console.log('공유 성공:', response);
-        })
-        .catch(function (error) {
-          console.error('공유 실패:', error);
-        });
+    }).then(function(response) {
+        console.log(response);
+    }).catch(function(error) {
+        console.error('카카오 공유 중 오류 발생:', error);
     });
-});
+}
