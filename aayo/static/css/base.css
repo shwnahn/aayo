@@ -263,6 +263,7 @@ header a {
     flex-direction: column;
     align-items: center;
     color: #555;
+    cursor: pointer;
 }
 .share-modal .share-option img, .heart-modal .heart-option img{
     width: 30px;
