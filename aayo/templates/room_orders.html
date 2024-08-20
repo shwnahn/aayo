@@ -20,8 +20,12 @@
                     </div>
                     <div class="order-menu-info">
                         {{ order.menu_item.name }}
-                        <p class="order-menu-details">{{ order.options.temperature }} / {{ order.options.size }} / {{ order.options.ice }}
-                        {% if order.options.note %} / {{ order.options.note }}{% endif %}</p>
+                        <p class="order-menu-details">
+                            {{ order.options.temperature }}
+                            {% if order.options.size %} / {{ order.options.size }}{% endif %}
+                            {% if order.options.ice %} / {{ order.options.ice }}{% endif %}
+                            {% if order.options.note %} / {{ order.options.note }}{% endif %}
+                        </p>
                         <p class="guest-names">🙋🏻 {{ order.guests }}</p>
                     </div>
                     <div class="order-menu-count">
