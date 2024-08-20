@@ -36,10 +36,10 @@
 
     <!-- 추후 확장 예정 기능 -->
     <div class="share-options">
-        <div id="kakaoShareBtn" class="share-option">
+        <a id="kakaoShareBtn" class="share-option" href="javascript:shareMessage()" style="text-decoration: none;">
             <img src="{% static 'images/kakao.png' %}" alt="Kakao">
             <span>카카오톡</span>
-        </div>
+        </a>
         <div id="copyLinkBtn" class="share-option">
             <img src="{% static 'images/copy.svg' %}" alt="Copy" width="10px" height="10px"> 
             <span>링크 복사</span>
@@ -56,7 +56,12 @@
 
     <!-- base.html 부분 코드 -->
     <script src="{% static 'js/main.js' %}"></script>
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
+    integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
+    <script>
+    Kakao.init('{{ KAKAO_APP_KEY }}'); // 사용하려는 앱의 JavaScript 키 입력
+    </script>
     
     {% block scripts %}{% endblock %}
 </body>
