@@ -54,6 +54,9 @@ p {
 
 .guide-text {
     display: block;
+    margin: 1%;
+    margin-bottom: 6%;
+    font-size: small;
     font-weight: normal;
 }
 
@@ -101,6 +104,12 @@ p {
 .cafe-logo {
     display: block;
     height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
     object-fit: contain;    
 }
 
@@ -152,7 +161,7 @@ span {
     grid-template-columns: 1fr 1fr; /* 2열로 설정 */
     grid-template-rows: 1fr 1fr;   /* 2행으로 설정 */
     gap: 5%; /* 요소들 사이의 간격 */
-    width: 100%;
+    width: 90%;
     height: 90%;
     margin-bottom: 5%;
     position: relative;
@@ -190,12 +199,15 @@ span {
 .btn-yellow, .btn-white {
     display: flex;
     flex-direction: column;
+    align-items: center;     
+    justify-content: center;     
+    gap: 10px;
     width: 100%;
     height: 100%;
     cursor: pointer;
     margin: 0;
     color: #000;
-    font-size: 21px;
+    font-size: 100%;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
@@ -221,5 +233,10 @@ span {
 
 .emoji {
     font-size: 35px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
 }
 
