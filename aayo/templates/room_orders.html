@@ -20,8 +20,12 @@
                     </div>
                     <div class="order-menu-info">
                         {{ order.menu_item.name }}
-                        <p class="order-menu-details">{{ order.options.temperature }} / {{ order.options.size }} / {{ order.options.ice }}
-                        {% if order.options.note %} / {{ order.options.note }}{% endif %}</p>
+                        <p class="order-menu-details">
+                            {{ order.options.temperature }}
+                            {% if order.options.size %} / {{ order.options.size }}{% endif %}
+                            {% if order.options.ice %} / {{ order.options.ice }}{% endif %}
+                            {% if order.options.note %} / {{ order.options.note }}{% endif %}
+                        </p>
                         <p class="guest-names">🙋🏻 {{ order.guests }}</p>
                     </div>
                     <div class="order-menu-count">
@@ -41,18 +45,19 @@
 <button id="returnHomeBtn" class="bottomBtn">홈으로 돌아가기</button>
 <div class="open-modal-btn-wrap"><a id="open-modal-btn" class="sendlinkbtn"><p class="sendlinktext">앗! 놓치신 분이 계신가요?</p></a></div>
 
+<div id="modal-overlay" class="modal-overlay hidden"></div>
 <!-- 링크 공유 modal -->
 <!-- 기본 class: hidden -->
 <div id="share-modal" class="share-modal hidden">
     <span class="share-close">&times;</span>
     <h2>메뉴를 고를 사람을 초대합니다.</h2>
-    
+
     <!-- 추후 확장 예정 기능 -->
     <div class="share-options">
-        <div id="kakaoShareBtn" class="share-option">
+        <a id="kakaoShareBtn" class="share-option" href="javascript:shareMessage()" style="text-decoration: none;">
             <img src="{% static 'images/kakao.png' %}" alt="Kakao">
             <span>카카오톡</span>
-        </div>
+        </a>
         <div id="copyLinkBtn" class="share-option">
             <img src="{% static 'images/copy.svg' %}" alt="Copy" width="10px" height="10px"> 
             <span>링크 복사</span>
@@ -60,7 +65,7 @@
     </div>
 
     <div class="share-link">
-        <input id="roomLink" type="text" value="{% if room.unique_id %}{% url 'room_menu' room.unique_id %}{% else %}{% endif %}" readonly>
+        <input id="roomLink" type="text" value="{% if room.unique_id %}https://aayo.kr{% url 'room_menu' room.unique_id %}{% else %}{% endif %}" readonly>
         <!-- <button id="copyLinkBtn"><img src="{% static 'images/copy.svg' %}" alt="Copy" width="20" height="20"></button> -->
     </div>
 </div>
