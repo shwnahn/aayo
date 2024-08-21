@@ -37,6 +37,7 @@
 - '10초만에 메뉴 모으기' 버튼을 통해 시작
   
 ![image.jpg1](https://github.com/user-attachments/assets/9634c69c-3572-42a0-b78f-4dba2ca3b275)
+--- |
 
 
 ### 카페 선택 & 방 이름 생성
@@ -77,6 +78,7 @@
 - 전체 주문 보기 / 홈으로 돌아가기 중 선택 가능
 
 ![image.jpg1](https://github.com/user-attachments/assets/c272427b-337f-4721-bf4d-b00d58e467c7)
+--- |
 
 
 
