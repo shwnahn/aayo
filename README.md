@@ -36,9 +36,7 @@
 - 서비스 목적을 간단하게 설명해주는 랜딩 문구
 - '10초만에 메뉴 모으기' 버튼을 통해 시작
   
-<div>
-  <img width="500" src="https://github.com/user-attachments/assets/9634c69c-3572-42a0-b78f-4dba2ca3b275">
-</div>
+![image.jpg1](https://github.com/user-attachments/assets/9634c69c-3572-42a0-b78f-4dba2ca3b275)
 
 
 ### 카페 선택 & 방 이름 생성
@@ -81,9 +79,9 @@
 - 유저에게 메뉴 취합이 끝났음을 명시적으로 알림
 - 전체 주문 보기 / 홈으로 돌아가기 중 선택 가능
 
-<div>
-<img width="499" alt="스크린샷 2024-08-21 오후 10 07 01" src="https://github.com/user-attachments/assets/c272427b-337f-4721-bf4d-b00d58e467c7">
-</div>
+![image.jpg1](https://github.com/user-attachments/assets/c272427b-337f-4721-bf4d-b00d58e467c7)
+
+
 
 
 
@@ -94,10 +92,8 @@
   - 현재 주문자가 본인이 주문한 메뉴를 수정할 수 있음(초기화 후 다시 고르는 방식)
 - '앗! 놓치신 분이 계신가요?' 버튼
   - 메뉴 주문자를 추가로 초대할 수 있음, 링크 공유하기 버튼과 동일한 모달 생성
-
-<div>
-<img width="503" alt="스크린샷 2024-08-21 오후 10 07 30" src="https://github.com/user-attachments/assets/a5851040-9727-4908-9a66-f5d22e65865e">
-</div>
+  
+![image.jpg1](https://github.com/user-attachments/assets/a5851040-9727-4908-9a66-f5d22e65865e)
 
 ## ✨ 주요 기능
 
