@@ -46,11 +46,8 @@
 - 카페 목록에서 메뉴를 주문할 카페를 선택
 - 방 생성
 
-<div>
-<img width="503" alt="스크린샷 2024-08-21 오후 10 02 57" src="https://github.com/user-attachments/assets/0c2e5d65-26ae-4e2b-97be-d347e4e0c1f0">
-<img width="502" alt="스크린샷 2024-08-21 오후 10 03 16" src="https://github.com/user-attachments/assets/655072ea-341d-48d8-bbc3-efffec80a42a">
-</div>
-
+![image.jpg1](https://github.com/user-attachments/assets/0c2e5d65-26ae-4e2b-97be-d347e4e0c1f0) |![image.jpg2](https://github.com/user-attachments/assets/655072ea-341d-48d8-bbc3-efffec80a42a)
+--- | --- | 
 
 ### 방 상세 페이지(메인 페이지)
 - 좌상단에 생성한 방 이름, 우상단에 선택된 카페 로고를 보여줌
@@ -63,11 +60,9 @@
 - 🖤
   - 서비스에 대한 리뷰 설문과 후원을 할 수 있는 모달창을 생성함
 
-<div>
-<img width="504" alt="스크린샷 2024-08-21 오후 10 04 01" src="https://github.com/user-attachments/assets/0758327f-4437-4788-a564-1c2d601ddcc9">
-<img width="504" alt="스크린샷 2024-08-21 오후 10 04 26" src="https://github.com/user-attachments/assets/c44d7ca0-6ff9-4751-bc25-60697fa19f7d">
-<img width="499" alt="스크린샷 2024-08-21 오후 10 04 53" src="https://github.com/user-attachments/assets/92e60903-0d32-4e83-82d7-eca375749aca">
-</div>
+![image.jpg1](https://github.com/user-attachments/assets/0758327f-4437-4788-a564-1c2d601ddcc9) |![image.jpg2](https://github.com/user-attachments/assets/c44d7ca0-6ff9-4751-bc25-60697fa19f7d) |![image.jpg3](https://github.com/user-attachments/assets/92e60903-0d32-4e83-82d7-eca375749aca)
+--- | --- | --- |
+
 
 
 ### 메뉴 주문하기 페이지
@@ -76,11 +71,9 @@
 - 메뉴 선택 시 상세 커스텀 기능(아이스/핫, 사이즈, 얼음 양, 기타 상세 내용)
 - 메뉴를 선택하고 '주문 확정하기' 버튼을 누르면 메뉴 취합 절차가 완료되었음을 알려주는 가이드 페이지로 넘어감
 
-<div>
-<img width="503" alt="스크린샷 2024-08-21 오후 10 05 13" src="https://github.com/user-attachments/assets/8cd76608-f42c-4d06-b3d3-0beb08a3f229">
-<img width="500" alt="스크린샷 2024-08-21 오후 10 06 32" src="https://github.com/user-attachments/assets/79d8972b-669f-4a05-bee3-59b8cc205b0f">
-<img width="500" alt="스크린샷 2024-08-21 오후 10 06 50" src="https://github.com/user-attachments/assets/06a90563-1cf0-4edf-b823-13608842f915">
-</div>
+![image.jpg1](https://github.com/user-attachments/assets/8cd76608-f42c-4d06-b3d3-0beb08a3f229) |![image.jpg2](https://github.com/user-attachments/assets/79d8972b-669f-4a05-bee3-59b8cc205b0f) |![image.jpg3](https://github.com/user-attachments/assets/06a90563-1cf0-4edf-b823-13608842f915)
+--- | --- | --- |
+
 
 
 
@@ -91,6 +84,7 @@
 <div>
 <img width="499" alt="스크린샷 2024-08-21 오후 10 07 01" src="https://github.com/user-attachments/assets/c272427b-337f-4721-bf4d-b00d58e467c7">
 </div>
+
 
 
 ### 주문 모아보기 페이지
@@ -209,5 +203,5 @@ wsproto            1.2.0
 
 | **[안시환](https://github.com/shwnahn)** | **[이지현](https://github.com/ljh130334)** | **[이송민](https://github.com/songmin0111)** | **[김민수](https://github.com/devkev00)** |
 | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/user-attachments/assets/e7ad1054-b376-47af-9875-eb94904b5d28" width="400"> | <img src="https://github.com/user-attachments/assets/3b4f3618-885f-4890-8a64-c7a1e5b62c5f" width="400"> | <img src="https://github.com/user-attachments/assets/26b89c43-6b93-41f1-b127-b00081906815" width="400"> | <img src="https://github.com/user-attachments/assets/d539ecd3-a57e-41e9-8d42-6d56af2edbef" width="400"> |
+| <img src="https://github.com/user-attachments/assets/85120724-35f9-4ad9-81aa-96bd20f0384f" width="400"> | <img src="https://github.com/user-attachments/assets/9c198861-7d2b-4825-aa2c-dbc8203f24a2" width="400"> | <img src="https://github.com/user-attachments/assets/0e7bbabb-ca4e-4e81-b9fe-4e282562152a" width="400"> | <img src="https://github.com/user-attachments/assets/d539ecd3-a57e-41e9-8d42-6d56af2edbef" width="400"> |
 | PM | FE Leader | PR LEADER | BE Leader |
