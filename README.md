@@ -207,7 +207,7 @@ wsproto            1.2.0
 # 💞 팀원 소개
 ##### ❤️‍🔥 AAYO를 개발한 `피로그래밍 21기` 팀원들을 소개합니다!
 
-| **[안시환](https://github.com/shwnahn)** | **[이지현](https://github.com/ljh130334)** | **[이송민](https://github.com/min)** | **[김민수](https://github.com/devkev00)** |
+| **[안시환](https://github.com/shwnahn)** | **[이지현](https://github.com/ljh130334)** | **[이송민](https://github.com/songmin0111)** | **[김민수](https://github.com/devkev00)** |
 | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/user-attachments/assets/740a1882-f24a-4438-9bb0-d5224877f9f4" width="400"> | <img src="https://github.com/user-attachments/assets/3b4f3618-885f-4890-8a64-c7a1e5b62c5f" width="400"> | <img src="https://github.com/user-attachments/assets/26b89c43-6b93-41f1-b127-b00081906815" width="400"> | <img src="https://github.com/user-attachments/assets/aacf64bd-2eff-416e-881f-f83c4110925a" width="400"> |
+| <img src="https://github.com/user-attachments/assets/e7ad1054-b376-47af-9875-eb94904b5d28" width="400"> | <img src="https://github.com/user-attachments/assets/3b4f3618-885f-4890-8a64-c7a1e5b62c5f" width="400"> | <img src="https://github.com/user-attachments/assets/26b89c43-6b93-41f1-b127-b00081906815" width="400"> | <img src="https://github.com/user-attachments/assets/aacf64bd-2eff-416e-881f-f83c4110925a" width="400"> |
 | PM | FE Leader | PR LEADER | BE Leader |
