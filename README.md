@@ -24,6 +24,8 @@
 ## ✨ AAYO의 소통 플랫폼 
 ##### 🏆 [노션](https://ahnsh.notion.site/76c36ea84a464b1dad4e8c8d0eb935fa)
 ##### 🏆 [ZEP](https://zep.us/)
+##### 🏆 [Discord](https://discord.com/)
+
 
 
 ## 👀 서비스 화면
