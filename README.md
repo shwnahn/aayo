@@ -181,7 +181,7 @@ wsproto            1.2.0
 
 ## 💫 UserFlow
 
-![image](https://github.com/user-attachments/assets/4540ef33-6cb1-4606-befb-d00b0edf4b0d)
+![image](https://github.com/user-attachments/assets/86b9e86c-9da0-4300-8f17-fab66a3e5d49)
 
 ## 📂 기획 및 설계 산출물
 
@@ -189,11 +189,10 @@ wsproto            1.2.0
 
 ### [🎨 화면 설계서](https://www.figma.com/design/7vG5sJUBdX44xBhu0uT6Q1/aayo_2nd-FE?node-id=0-1&t=CkVkcoi24cAQW8MD-1)
 
-
 # 💞 팀원 소개
 ##### ❤️‍🔥 AAYO를 개발한 `피로그래밍 21기` 팀원들을 소개합니다!
 
 | **[안시환](https://github.com/shwnahn)** | **[이지현](https://github.com/ljh130334)** | **[이송민](https://github.com/songmin0111)** | **[김민수](https://github.com/devkev00)** |
 | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/user-attachments/assets/85120724-35f9-4ad9-81aa-96bd20f0384f" width="400"> | <img src="https://github.com/user-attachments/assets/9c198861-7d2b-4825-aa2c-dbc8203f24a2" width="400"> | <img src="https://github.com/user-attachments/assets/0e7bbabb-ca4e-4e81-b9fe-4e282562152a" width="400"> | <img src="https://github.com/user-attachments/assets/d539ecd3-a57e-41e9-8d42-6d56af2edbef" width="400"> |
+| <img src="https://github.com/user-attachments/assets/66969d42-e4df-4849-b4bb-4851b057664c" width="400"> | <img src="https://github.com/user-attachments/assets/5e639a86-554e-4f33-b809-dcf233f8547d" width="400"> | <img src="https://github.com/user-attachments/assets/68a08750-ffc4-432d-a343-1b449979a20e" width="400"> | <img src="https://github.com/user-attachments/assets/2a0bec5f-203a-403d-b298-ba0db69efefc" width="400"> |
 | PM | FE LEADER | PR LEADER | BE LEADER |
