@@ -60,7 +60,7 @@
 - 🖤
   - 서비스에 대한 리뷰 설문과 후원을 할 수 있는 모달창을 생성함
 
-![image.jpg3](https://github.com/user-attachments/assets/fb9c6d2d-7d83-488c-aae1-85282f0eb8ef) |![image.jpg1](https://github.com/user-attachments/assets/6fac058f-3ee9-4af1-89f1-6d347cfefda5) |![image.jpg2](ttps://github.com/user-attachments/assets/0217d13c-d166-44ca-8773-70dd71889147)
+![image.jpg3](https://github.com/user-attachments/assets/fb9c6d2d-7d83-488c-aae1-85282f0eb8ef) |![image.jpg1](https://github.com/user-attachments/assets/6fac058f-3ee9-4af1-89f1-6d347cfefda5) |![image.jpg2](https://github.com/user-attachments/assets/a465843b-5bd1-4a5f-a41b-5e81f9024096)
 --- | --- | --- |
 
 
