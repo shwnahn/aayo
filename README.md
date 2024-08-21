@@ -68,10 +68,8 @@
 - 메뉴 선택 시 상세 커스텀 기능(아이스/핫, 사이즈, 얼음 양, 기타 상세 내용)
 - 메뉴를 선택하고 '주문 확정하기' 버튼을 누르면 메뉴 취합 절차가 완료되었음을 알려주는 가이드 페이지로 넘어감
 
-![image.jpg1](https://github.com/user-attachments/assets/8cd76608-f42c-4d06-b3d3-0beb08a3f229) |![image.jpg2](https://github.com/user-attachments/assets/79d8972b-669f-4a05-bee3-59b8cc205b0f) |![image.jpg3](https://github.com/user-attachments/assets/06a90563-1cf0-4edf-b823-13608842f915)
---- | --- | --- |
-
-
+![image.jpg3](https://github.com/user-attachments/assets/06a90563-1cf0-4edf-b823-13608842f915) |![image.jpg1](https://github.com/user-attachments/assets/8cd76608-f42c-4d06-b3d3-0beb08a3f229) |![image.jpg2](https://github.com/user-attachments/assets/79d8972b-669f-4a05-bee3-59b8cc205b0f) |![image.jpg3](https://github.com/user-attachments/assets/06a90563-1cf0-4edf-b823-13608842f915)
+--- | --- | --- | --- |
 
 
 ### 주문 완료 페이지
