@@ -58,9 +58,8 @@
 - 🖤
   - 서비스에 대한 리뷰 설문과 후원을 할 수 있는 모달창을 생성함
 
-![image.jpg1](https://github.com/user-attachments/assets/0758327f-4437-4788-a564-1c2d601ddcc9) |![image.jpg2](https://github.com/user-attachments/assets/c44d7ca0-6ff9-4751-bc25-60697fa19f7d) |![image.jpg3](https://github.com/user-attachments/assets/92e60903-0d32-4e83-82d7-eca375749aca)
+![image.jpg3](https://github.com/user-attachments/assets/93fbef60-b314-47fb-9bc8-cffb26b410c7) |![image.jpg1](https://github.com/user-attachments/assets/0758327f-4437-4788-a564-1c2d601ddcc9) |![image.jpg2](https://github.com/user-attachments/assets/c44d7ca0-6ff9-4751-bc25-60697fa19f7d)
 --- | --- | --- |
-
 
 
 ### 메뉴 주문하기 페이지
@@ -92,7 +91,7 @@
   - 현재 주문자가 본인이 주문한 메뉴를 수정할 수 있음(초기화 후 다시 고르는 방식)
 - '앗! 놓치신 분이 계신가요?' 버튼
   - 메뉴 주문자를 추가로 초대할 수 있음, 링크 공유하기 버튼과 동일한 모달 생성
-  
+
 ![image.jpg1](https://github.com/user-attachments/assets/a5851040-9727-4908-9a66-f5d22e65865e)
 
 ## ✨ 주요 기능
@@ -200,4 +199,4 @@ wsproto            1.2.0
 | **[안시환](https://github.com/shwnahn)** | **[이지현](https://github.com/ljh130334)** | **[이송민](https://github.com/songmin0111)** | **[김민수](https://github.com/devkev00)** |
 | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: |
 | <img src="https://github.com/user-attachments/assets/85120724-35f9-4ad9-81aa-96bd20f0384f" width="400"> | <img src="https://github.com/user-attachments/assets/9c198861-7d2b-4825-aa2c-dbc8203f24a2" width="400"> | <img src="https://github.com/user-attachments/assets/0e7bbabb-ca4e-4e81-b9fe-4e282562152a" width="400"> | <img src="https://github.com/user-attachments/assets/d539ecd3-a57e-41e9-8d42-6d56af2edbef" width="400"> |
-| PM | FE Leader | PR LEADER | BE Leader |
+| PM | FE LEADER | PR LEADER | BE LEADER |
