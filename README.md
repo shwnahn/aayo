@@ -1,4 +1,4 @@
-![aayo_logo_yellow](![aayo_logo_yellow](https://github.com/user-attachments/assets/736920e6-068a-4a5d-8f2d-f808b2fb7cd4)
+![aayo_logo_yellow](https://github.com/user-attachments/assets/736920e6-068a-4a5d-8f2d-f808b2fb7cd4)
 
 # 📰 AAYO
 ##### 🏆 피로그래밍 21기 최종 프로젝트 작품
