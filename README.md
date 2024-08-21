@@ -1,4 +1,4 @@
-![aayo_logo_yellow](https://github.com/user-attachments/assets/728c3ad0-e162-4cd6-b99e-5cc7028bea71)
+![aayo_logo_yellow](![aayo_logo_yellow](https://github.com/user-attachments/assets/736920e6-068a-4a5d-8f2d-f808b2fb7cd4)
 
 # 📰 AAYO
 ##### 🏆 피로그래밍 21기 최종 프로젝트 작품
@@ -37,7 +37,7 @@
 - 서비스 목적을 간단하게 설명해주는 랜딩 문구
 - '10초만에 메뉴 모으기' 버튼을 통해 시작
   
-![image.jpg1](https://github.com/user-attachments/assets/9634c69c-3572-42a0-b78f-4dba2ca3b275)
+![image.jpg1](https://github.com/user-attachments/assets/96eeae02-5e3b-4f0b-a14c-998bfcd8b8eb)
 --- |
 
 
@@ -46,7 +46,7 @@
 - 카페 목록에서 메뉴를 주문할 카페를 선택
 - 방 생성
 
-![image.jpg1](https://github.com/user-attachments/assets/0c2e5d65-26ae-4e2b-97be-d347e4e0c1f0) |![image.jpg2](https://github.com/user-attachments/assets/655072ea-341d-48d8-bbc3-efffec80a42a)
+![image.jpg1](https://github.com/user-attachments/assets/8cd6a796-60a3-46bb-904a-225b823136c8) |![image.jpg2](https://github.com/user-attachments/assets/bafeb4c4-8038-4b77-b465-1f457a9aae55)
 --- | --- | 
 
 ### 방 상세 페이지(메인 페이지)
@@ -60,7 +60,7 @@
 - 🖤
   - 서비스에 대한 리뷰 설문과 후원을 할 수 있는 모달창을 생성함
 
-![image.jpg3](https://github.com/user-attachments/assets/93fbef60-b314-47fb-9bc8-cffb26b410c7) |![image.jpg1](https://github.com/user-attachments/assets/0758327f-4437-4788-a564-1c2d601ddcc9) |![image.jpg2](https://github.com/user-attachments/assets/c44d7ca0-6ff9-4751-bc25-60697fa19f7d)
+![image.jpg3](https://github.com/user-attachments/assets/fb9c6d2d-7d83-488c-aae1-85282f0eb8ef) |![image.jpg1](https://github.com/user-attachments/assets/6fac058f-3ee9-4af1-89f1-6d347cfefda5) |![image.jpg2](ttps://github.com/user-attachments/assets/0217d13c-d166-44ca-8773-70dd71889147)
 --- | --- | --- |
 
 
@@ -70,7 +70,7 @@
 - 메뉴 선택 시 상세 커스텀 기능(아이스/핫, 사이즈, 얼음 양, 기타 상세 내용)
 - 메뉴를 선택하고 '주문 확정하기' 버튼을 누르면 메뉴 취합 절차가 완료되었음을 알려주는 가이드 페이지로 넘어감
 
-![image.jpg4](https://github.com/user-attachments/assets/26e59581-2cba-4c3f-aff3-cedf0532e19e) |![image.jpg1](https://github.com/user-attachments/assets/8cd76608-f42c-4d06-b3d3-0beb08a3f229) |![image.jpg2](https://github.com/user-attachments/assets/79d8972b-669f-4a05-bee3-59b8cc205b0f) |![image.jpg3](https://github.com/user-attachments/assets/06a90563-1cf0-4edf-b823-13608842f915)
+![image.jpg4](https://github.com/user-attachments/assets/f3010b38-aedb-4054-9432-8dfee9a38f05) |![image.jpg1](https://github.com/user-attachments/assets/39dcc944-156b-4dac-a629-bfb7b22b01f7) |![image.jpg2](https://github.com/user-attachments/assets/99bb98d8-728b-4a44-9e46-658be6b4572c) |![image.jpg3](https://github.com/user-attachments/assets/08c33b82-d744-4877-a808-91b50310a805)
 --- | --- | --- | --- |
 
 
@@ -78,12 +78,8 @@
 - 유저에게 메뉴 취합이 끝났음을 명시적으로 알림
 - 전체 주문 보기 / 홈으로 돌아가기 중 선택 가능
 
-![image.jpg1](https://github.com/user-attachments/assets/c272427b-337f-4721-bf4d-b00d58e467c7)
+![image.jpg1](https://github.com/user-attachments/assets/6919dc0c-7997-4e23-affd-4ebaa3b698e3)
 --- |
-
-
-
-
 
 ### 주문 모아보기 페이지
 - 해당 방에 초대된 모든 게스트들이 주문한 메뉴를 확인할 수 있음
@@ -93,7 +89,7 @@
 - '앗! 놓치신 분이 계신가요?' 버튼
   - 메뉴 주문자를 추가로 초대할 수 있음, 링크 공유하기 버튼과 동일한 모달 생성
 
-![image.jpg1](https://github.com/user-attachments/assets/a5851040-9727-4908-9a66-f5d22e65865e)
+![image.jpg1](https://github.com/user-attachments/assets/9f0539eb-ffa7-4953-831c-7b52ed7cd3e8)
 
 ## ✨ 주요 기능
 
